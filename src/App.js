@@ -1,7 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { AppContext } from "./AppContext";
 
 function App() {
+  const { data, setData } = useContext(AppContext);
+
   return (
     <div className="App">
       <header className="App-header">
