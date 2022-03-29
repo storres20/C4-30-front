@@ -2,7 +2,7 @@
   "carta":[
   {
    "id_productos":0,
-   "name":"Double Porto Burger",
+   "nombre":"Double Porto Burger",
    "descripcion":"Dos hamburguesas de hongos con cheddar de zanahoria y papa, portobellos en vinagreta, lechuga, tomate y salsa mkm en pan brioche. Acompañada de papas al horno y ensalda coleslaw.",
    "precio":13,
    "categoria":"hamburguesas",
@@ -12,7 +12,7 @@
   },
   {
     "id_productos":1,
-    "name":"Mega Burger",
+    "nombre":"Mega Burger",
     "descripcion":"Pan de hamburguesa de zapallo y harina de arroz + hamburguesa de lentejas y tofu + lechuga + tomate + palta + cebolla caramelizada + queso fundido de calabaza + berenjenas shichimi togarashi. Acompañada de papas al horno y ensalda coleslaw.",
     "precio":11,
     "categoria":"hamburguesas",
@@ -23,7 +23,7 @@
   },
   {
     "id_productos":2,
-    "name":"Power",
+    "nombre":"Power",
     "descripcion":"Milanesa de Girgola, lechuga, tomate, salsa golf, guacamole, pan de chipa. Acompañada de papas al horno y ensalda coleslaw.",
     "precio":11,
     "categoria":"hamburguesas",
@@ -33,7 +33,7 @@
   },
   {
     "id_productos":3,
-    "name":"Borde Relleno",
+    "nombre":"Borde Relleno",
     "descripcion":"Salsa pomodoro, queso de maní, portobellos crispy en tempura, tofu salteados con barbacoa y finalizar con queso cheddar.",
     "precio":20,
     "categoria":"pizzas",
@@ -43,7 +43,7 @@
   },
   {
     "id_productos":4,
-    "name":"Hot",
+    "nombre":"Hot",
     "descripcion":"Picante, salsa pomodoro y seitan adobado en salsa picante de chipotle, tomates confitados en hierbas aromáticas, mozzarella caju y terminación con reducción de aceto balsámico.",
     "precio":12,
     "categoria":"pizzas",
@@ -53,7 +53,7 @@
   },
   {
     "id_productos":5,
-    "name":"Margherita",
+    "nombre":"Margherita",
     "descripcion":"Mozzarella de cajú, pomodoro, pesto de albahaca.",
     "precio":11,
     "categoria":"pizzas",
@@ -63,7 +63,7 @@
   },
   {
     "id_productos":6,
-    "name":"Fugazzetta",
+    "nombre":"Fugazzetta",
     "descripcion":"Queso de arroz, cebolla, orégano, olivas negras.",
     "precio":12,
     "categoria":"pizzas",
@@ -73,7 +73,7 @@
   },
   {
     "id_productos":7,
-    "name":"Trufa y gírgolas",
+    "nombre":"Trufa y gírgolas",
     "descripcion":"Crema de trufas, gírgolas y kale.",
     "precio":16,
     "categoria":"pizzas",
@@ -83,7 +83,7 @@
   },
   {
     "id_productos":8,
-    "name":"Bianca",
+    "nombre":"Bianca",
     "descripcion":"Papa, romero, crema de ajo.",
     "precio":11,
     "categoria":"pizzas",
@@ -93,7 +93,7 @@
   },
   {
     "id_productos":9,
-    "name":"Ceviche Vasquez",
+    "nombre":"Ceviche Vasquez",
     "descripcion":"Shitake,palta,batata cocida,cebolla morada, mayonesa cevichera, falso caviar de aji, aceite de cilantro.",
     "precio":10,
     "categoria":"Ensaladas",
@@ -103,7 +103,7 @@
   },
   {
     "id_productos":10,
-    "name":"Tempura Vegetal",
+    "nombre":"Tempura Vegetal",
     "descripcion":"Coliflor en tempura, con crema cevichera de ají amarillo, palta rostizada, batata, tomate cherry, aceite de ajíes, hojas de cilantro.",
     "precio":11,
     "categoria":"Ensaladas",
@@ -113,7 +113,7 @@
   },
   {
     "id_productos":11,
-    "name":"Nigiri Shitake",
+    "nombre":"Nigiri Shitake",
     "descripcion":"Shari, shitake, Hoisin, edamame (x2)",
     "precio":5,
     "categoria":"sushi",
@@ -123,7 +123,7 @@
   },
   {
     "id_productos":12,
-    "name":"Nigiri de peras en almibar",
+    "nombre":"Nigiri de peras en almibar",
     "descripcion":"Viene con furikake vvegano y sal marina de wasabi.",
     "precio":5,
     "categoria":"sushi",
@@ -133,7 +133,7 @@
   },
   {
     "id_productos":13,
-    "name":"Uramaki Super Kale",
+    "nombre":"Uramaki Super Kale",
     "descripcion":"Queso trufado, palta, girgolas salteadas, cubierto de zanahoria, crispy kale. 10 PIEZAS",
     "precio":12,
     "categoria":"sushi",
@@ -143,7 +143,7 @@
   },
   {
     "id_productos":14,
-    "name":"Uramaki Mango",
+    "nombre":"Uramaki Mango",
     "descripcion":"Shari, alga nori, queso crema cajú, remolacha glaseada, verdeo rostizado, cubierto de mango, garrapiñada de semillas, sweet chilli. 10 PIEZAS",
     "precio":12,
     "categoria":"sushi",
@@ -153,7 +153,7 @@
   },
   {
     "id_productos":15,
-    "name":"Uramaki Crispy",
+    "nombre":"Uramaki Crispy",
     "descripcion":"Shari, alga nori, portobellos anticucheros, queso crema tofu, verdeo rostizado, cubierto de palta, crema de ajo ahumada, batata crispy. 10 PIEZAS",
     "precio":12,
     "categoria":"sushi",
@@ -163,7 +163,7 @@
   },
   {
     "id_productos":16,
-    "name":"Uramaki Furai",
+    "nombre":"Uramaki Furai",
     "descripcion":"Shari, alga nori, palta, queso crema de tofu, pepino japonés, tempura, panko, sweet chilli. 10 PIEZAS",
     "precio":12,
     "categoria":"sushi",
@@ -173,7 +173,7 @@
   },
   {
     "id_productos":17,
-    "name":"Uramaki Gírgola Pank",
+    "nombre":"Uramaki Gírgola Pank",
     "descripcion":"Gírgolas en panko, queso de cajú, palta, cobertura de remolacha, hilos de papa crocante y salsa tari.",
     "precio":11,
     "categoria":"sushi",
@@ -183,7 +183,7 @@
   },
   {
     "id_productos":18,
-    "name":"Uramaki Acebichado",
+    "nombre":"Uramaki Acebichado",
     "descripcion":"Shari, algo nori, girgolas empanizadas, batata, palta. Cubierto de mayonesa cebichera y furikake.",
     "precio":12,
     "categoria":"sushi",
@@ -193,7 +193,7 @@
   },
   {
     "id_productos":19,
-    "name":"Uramaki Spicy New",
+    "nombre":"Uramaki Spicy New",
     "descripcion":"Shari, alga nori, verdeo tempurizado, palta, tartar de portobellos picantes.",
     "precio":12,
     "categoria":"sushi",
@@ -203,7 +203,7 @@
   },
   {
     "id_productos":20,
-    "name":"Torta de chocolate",
+    "nombre":"Torta de chocolate",
     "descripcion":"Base de cacao y harina de almsendras, mousse y salsa de chocolate.",
     "precio":9,
     "categoria":"postres",
@@ -213,7 +213,7 @@
   },
   {
     "id_productos":21,
-    "name":"Cobbler",
+    "nombre":"Cobbler",
     "descripcion":"Relleno de frutas de estación, con masa cobbler, servido caliente con sorbete de maracuyá.",
     "precio":9,
     "categoria":"postres",
@@ -223,7 +223,7 @@
   },
   {
     "id_productos":22,
-    "name":"Mousse de Chocolate",
+    "nombre":"Mousse de Chocolate",
     "descripcion":"Mouse de chocolate, con dulce de leche de coco, tierra de cacao, nibs, menta y flowers.",
     "precio":9,
     "categoria":"postres",
@@ -233,7 +233,7 @@
   },
   {
     "id_productos":23,
-    "name":"Cheesecake frutos rojos",
+    "nombre":"Cheesecake frutos rojos",
     "descripcion":"Crema de cheescake cocida, base de almendras, mermelada de frutos rojos",
     "precio":9,
     "categoria":"postres",
@@ -243,7 +243,7 @@
   },
   {
     "id_productos":24,
-    "name":"Chessecake DDL",
+    "nombre":"Chessecake DDL",
     "descripcion":"Base de almendra y dátiles, crema de cajú, y dulce de leche sin gluten a base de coco.",
     "precio":9,
     "categoria":"postres",
@@ -253,7 +253,7 @@
   },
   {
     "id_productos":25,
-    "name":"Tiramisú",
+    "nombre":"Tiramisú",
     "descripcion":"Bizcochuelo húmedo, almibar de café, mascarpone a base de tofu, merengue italiano de aquafaba y crema.",
     "precio":8,
     "categoria":"postres",
@@ -263,7 +263,7 @@
   },
   {
     "id_productos":26,
-    "name":"Agua",
+    "nombre":"Agua",
     "descripcion":"",
     "precio":2,
     "categoria":"bebidas",
@@ -273,7 +273,7 @@
   },
   {
     "id_productos":27,
-    "name":"Limonada Clásica",
+    "nombre":"Limonada Clásica",
     "descripcion":"",
     "precio":4,
     "categoria":"bebidas",
@@ -283,7 +283,7 @@
   },
   {
     "id_productos":28,
-    "name":"Gin Tonic",
+    "nombre":"Gin Tonic",
     "descripcion":"",
     "precio":7,
     "categoria":"bebidas",
@@ -293,7 +293,7 @@
   },
   {
     "id_productos":29,
-    "name":"Old Fashioned",
+    "nombre":"Old Fashioned",
     "descripcion":"",
     "precio":7,
     "categoria":"bebidas",
@@ -303,7 +303,7 @@
   },
   {
     "id_productos":30,
-    "name":"Aperol Spritz",
+    "nombre":"Aperol Spritz",
     "descripcion":"",
     "precio":7,
     "categoria":"bebidas",
@@ -312,7 +312,7 @@
     "estado":"disponible"
   },  {
     "id_productos":31,
-    "name":"Refresco de naranja",
+    "nombre":"Refresco de naranja",
     "descripcion":"Jugo de naranja, jugo de limón y almíbar de canela y café",
     "precio":6,
     "categoria":"bebidas",
@@ -322,7 +322,7 @@
   },
   {
     "id_productos":32,
-    "name":"Refresco de pomelo",
+    "nombre":"Refresco de pomelo",
     "descripcion":"Jugo de pomelo, jugo de limón y almíbar de hibiscus",
     "precio":6,
     "categoria":"bebidas",
@@ -332,7 +332,7 @@
   },
   {
     "id_productos":33,
-    "name":"Té Chai",
+    "nombre":"Té Chai",
     "descripcion":"té negro, cardamomo, canela, jengibre, clavo de olor, anís estrellado",
     "precio":3,
     "categoria":"bebidas",
