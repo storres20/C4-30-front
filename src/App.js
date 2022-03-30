@@ -4,6 +4,7 @@ import { AppContext } from "./AppContext";
 
 function App() {
   const { data, setData } = useContext(AppContext);
+  //Esto es un comment
 
   return (
     <div className="App">
@@ -11,6 +12,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
+        
         </p>
         <a
           className="App-link"
