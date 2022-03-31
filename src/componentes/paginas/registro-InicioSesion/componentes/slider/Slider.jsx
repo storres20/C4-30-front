@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Slider.scss";
 
-
-
-
 function Slider() {
-  const colors = ["#CE972B", "#336990", "#33907C", "#EB5757"];
+  const banners = ['/img/Slide1.png', '/img/Slide2.png', '/img/Slide3.png', '/img/Slide4.png'];
   const delay = 2500;
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
@@ -22,7 +19,7 @@ function Slider() {
     timeoutRef.current = setTimeout(
       () =>
         setIndex((prevIndex) =>
-          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+          prevIndex === banners.length - 1 ? 0 : prevIndex + 1
         ),
       delay
     );
@@ -37,13 +34,15 @@ function Slider() {
         className="slideshowSlider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        {colors.map((backgroundColor, index) => (
-          <div className="slide" key={index} style={{ backgroundColor }}></div>
+        {banners.map((backgroundImage, index) => (
+          <div className="slide" >
+            <img className="slide" key={index} src={ backgroundImage } alt="" />
+          </div>
         ))}
       </div>
 
       <div className="slideshowDots">
-        {colors.map((_, idx) => (
+        {banners.map((_, idx) => (
           <div
             key={idx}
             className={`slideshowDot${index === idx ? " active" : ""}`}
