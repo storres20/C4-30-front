@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@material-ui/core": "^5.0.0-beta.5",
+    "@mui/icons-material": "^5.5.1",
+    "@mui/material": "^5.5.3",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -10,11 +15,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.2",
-<<<<<<< HEAD
-    "react-scripts": "^5.0.0",
-=======
     "react-scripts": "5.0.0",
->>>>>>> ac03533e16eb946386801c64f37e1f237d8af0a4
     "sass": "^1.49.10",
     "web-vitals": "^2.1.4"
   },
