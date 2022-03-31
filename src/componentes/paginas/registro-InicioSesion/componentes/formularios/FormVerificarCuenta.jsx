@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Formularios.scss"
 
 function FormVerificarCuenta() {
   return (

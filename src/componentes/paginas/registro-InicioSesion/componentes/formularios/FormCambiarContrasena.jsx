@@ -1,10 +1,9 @@
 import React from 'react'
+import "./Formularios.scss"
 
 function FormCambiarContrasena() {
   return (
-    <div>
-      
-    </div>
+    <div>FormCambiarContrasena</div>
   )
 }
 
