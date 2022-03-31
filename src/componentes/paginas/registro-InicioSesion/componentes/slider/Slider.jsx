@@ -1,10 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-function Slider(props) {
+function Slider() {
   return (
     <section>
-      
+
     </section>
   )
 }

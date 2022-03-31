@@ -25,3 +25,17 @@
   grid-area: contenedirDerecho;
   background-color: blue;
 }
+
+@media screen and (max-width: 1000px) {
+  .grid-Contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-Contenedor {
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+  }
+}
