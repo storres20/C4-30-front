@@ -1,0 +1,27 @@
+.grid-Contenedor {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-rows: 100vh;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-content: stretch;
+  align-content: stretch;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-areas: "contenedorIzquierdo contenedirDerecho";
+}
+
+.contenedorIzquierdo {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: contenedorIzquierdo;
+  background-color: green;
+}
+
+.contenedirDerecho {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: contenedirDerecho;
+  background-color: blue;
+}
