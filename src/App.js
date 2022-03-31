@@ -19,7 +19,6 @@ function App() {
         <Route path="/Registro" element={<Registro />} />
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login form={<FormAdmin />} />} />
       </Routes>
     </div>
   );
