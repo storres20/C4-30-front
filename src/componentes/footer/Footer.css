@@ -13,6 +13,9 @@
   .style {
     margin-left: 38px;
   }
+  .divcontactanos {
+    margin-bottom: 34px;
+  }
   .title {
     font-family: "Nunito";
     font-style: normal;
@@ -35,6 +38,9 @@
   }
   .icon {
     margin-right: 10px;
+  }
+  .iconred {
+    margin-right: 20px;
   }
 }
 /*# sourceMappingURL=Footer.css.map */
