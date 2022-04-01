@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import "./Formularios.scss";
 import Logo from "../../imagenes/Logo3-Largo.png";
 
-function FormRecuperarContrasena() {
-  const [verificarCorreo, setverificarCorreo] = useState("");
+function FormVerificarCuentaNuevoUsuario() {
+  const [verificarCuenta, setverificarCuenta] = useState("");
   return (
     <section className="container">
       <div className="btnVolver">
@@ -19,24 +19,22 @@ function FormRecuperarContrasena() {
         <img src={Logo} alt="Veridé" />
       </div>
       <form className="centerForm">
-        <h2>Verifica tu correo electrónico</h2>
+        <h2>Solo queda un último paso</h2>
         <div className="start">
           <p>
-            Escríbelo a continuación para comprobar que sea tu correo
-            electrónico.
+          Introduce el código de 6 dígitos enviado a <strong>karol733@gmail.com</strong> 
           </p>
         </div>
         <div className="inputsBoxB">
-          <label className="textInput">Correo Electrónico</label>
           <input
             className="inputB"
-            type="email"
-            placeholder="nombre@ejemplo.com"
-            onChange={(e) => verificarCorreo(e.target.value)}
+            type="number"
+            placeholder="*"
+            onChange={(e) => verificarCuenta(e.target.value)}
           />
           <div className="btnsIngresarOtros">
-            <Link to="/Verificar-Cuenta">
-              <button type="submit">Enviar Clave</button>
+            <Link to="/Home">
+              <button type="submit">Verificar Cuenta</button>
             </Link>
           </div>
         </div>
@@ -45,4 +43,4 @@ function FormRecuperarContrasena() {
   );
 }
 
-export default FormRecuperarContrasena;
+export default FormVerificarCuentaNuevoUsuario;

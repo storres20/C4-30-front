@@ -36,7 +36,7 @@ const Inicio = ({ isSelectedInicio }) => {
           <label className="textInput">Correo</label>
           <input
             className="input"
-            type="text"
+            type="email"
             placeholder="nombre@ejemplo.com*"
             onChange={(e) => setUserName(e.target.value)}
           />

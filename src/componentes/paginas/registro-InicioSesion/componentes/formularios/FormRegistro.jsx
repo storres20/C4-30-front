@@ -34,7 +34,7 @@ const Registro = ({ isSelectedRegistro }) => {
           <span> Mantenme conectado</span>
         </div>
         <div className="btnsIngresar">
-          <Link to="/Verificar-Cuenta">
+          <Link to="/Verificar-Cuenta/Nuevo-Usuario">
             <button type="submit">Registrarse</button>
           </Link>
         </div>

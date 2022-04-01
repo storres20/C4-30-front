@@ -25,7 +25,7 @@ function FormCambiarContrasena() {
             servicios de Veride.
           </p>
         </div>
-        <div className="inputsBox">
+        <div className="inputsBoxC">
           <label className="textInputB">Contraseña Nueva</label>
           <input
             className="input"

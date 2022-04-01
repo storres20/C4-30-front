@@ -82,6 +82,12 @@
   width: 70%;
 }
 
+.inputsBoxC {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .inputB {
   padding: 0.7rem 1rem;
   border-radius: var(--border-rad);
