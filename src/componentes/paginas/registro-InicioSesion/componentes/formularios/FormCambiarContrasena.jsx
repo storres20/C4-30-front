@@ -20,10 +20,13 @@ function FormCambiarContrasena() {
       <form className="centerForm">
         <h2>Cambiar contraseña</h2>
         <div className="start">
-          <p>A continuación ingresa tu nueva contraseña y disfruta de los servicios de Veride.</p>
+          <p>
+            A continuación ingresa tu nueva contraseña y disfruta de los
+            servicios de Veride.
+          </p>
         </div>
         <div className="inputsBox">
-          <label className="textInput">Contraseña Nueva</label>
+          <label className="textInputB">Contraseña Nueva</label>
           <input
             className="input"
             type="password"
@@ -37,12 +40,11 @@ function FormCambiarContrasena() {
             placeholder="mín. 8 carácteres"
             onChange={(e) => newpassword(e.target.value)}
           />
-        </div>
-
-        <div className="btnsIngresarOtros">
-          <Link to="/Inicio-Sesion">
-            <button type="submit">Cambiar Contraseña</button>
-          </Link>
+          <div className="btnsIngresarOtros">
+            <Link to="/Inicio-Sesion">
+              <button type="submit">Cambiar Contraseña</button>
+            </Link>
+          </div>
         </div>
       </form>
     </section>
