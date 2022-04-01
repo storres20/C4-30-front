@@ -7,6 +7,8 @@ import VerificarCuentaNuevoUsuario from "./componentes/paginas/registro-InicioSe
 import RecuperarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/RecuperarContrasena";
 import CambiarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/CambiarContrasena";
 
+import Footer from './componentes/footer/Footer'
+
 function App() {
   //const { data, setData } = useContext(AppContext);
 
@@ -21,6 +23,8 @@ function App() {
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
         <Route path="/" element={<Home />} />
       </Routes>
+      
+      <Footer/>
     </div>
   );
 }
