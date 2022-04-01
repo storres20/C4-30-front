@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Formularios.scss";
+import Logo from "../../imagenes/Logo3-Largo.png";
 
 function FormVerificarCuenta() {
   return (
@@ -11,6 +12,9 @@ function FormVerificarCuenta() {
             <i class="uil uil-arrow-left"></i>
           </button>
         </Link>
+      </div>
+      <div className="logoInicioRegistro">
+        <img src={Logo} alt="Veridé" />
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Inicio from "./FormInicioSesion";
 import Registro from "./FormRegistro";
 import "./Formularios.scss";
+import Logo from "../../imagenes/Logo3-Largo.png";
 
 const InicioRegistro = () => {
   const [isSelectedInicio, setSelectedInicio] = useState(true);
@@ -27,6 +28,10 @@ const InicioRegistro = () => {
               <i class="uil uil-arrow-left"></i>
             </button>
           </Link>
+        </div>
+        
+        <div className="logoInicioRegistro">
+          <img src={Logo} alt="Veridé" />
         </div>
 
         <div className="btnsInicioRegistro" role="tablist">

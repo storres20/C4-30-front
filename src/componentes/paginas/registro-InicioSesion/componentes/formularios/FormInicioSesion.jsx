@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import SocialMedia from "../SocialMedia";
+import { FcGoogle } from 'react-icons/fc';
 import "./Formularios.scss";
 
 const Inicio = ({ isSelectedInicio }) => {
+  const style = { fontSize: "3em" }
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
@@ -58,19 +59,19 @@ const Inicio = ({ isSelectedInicio }) => {
           </Link>
         </div>
         <br />
+        <div className="center">
           <span> ¿Olvidaste tu contraseña?</span>
             <span className="forget">
             <Link to="/Recuperar-Contrasena">Recuperala aquí</Link>
           </span> 
+        </div>
       </form>
 
-      <div className="htc__social__connect">
+      <div className="RedesSocialesBox">
         <h4>O inicia sesión con</h4>
-        <ul className="htc__soaial__list">
-          {/* <SocialMedia bgName="instagram" icon="instagram" />
-          <SocialMedia bgName="facebook" icon="facebook" />
-          <SocialMedia bgName="googleplus" icon="google-plus" /> */}
-        </ul>
+        <div className="RedesSocialesInicio">
+              <FcGoogle style={style} />
+        </div>
       </div>
       
     </section>
