@@ -16,24 +16,30 @@ const Registro = ({ isSelectedRegistro }) => {
     >
       <form className="login" method="post">
         <div className="inputsBox">
-          <label className="textInput">Correo</label>
+        <label>
+          <span className="textInput">Correo</span>
           <input
             className="input"
             required="true"
             type="email"
             placeholder="nombre@ejemplo.com*"
           />
-          <label className="textInput">Contraseña</label>
+        </label>
+        <label>
+          <span className="textInput">Contraseña</span>
           <input
             className="input"
             required="true"
             type="password"
             placeholder="mín. 8 carácteres"
           />
+        </label>
         </div>
         <div className="tabsCheckbox">
-          <input type="checkbox" />
-          <span> Mantenme conectado</span>
+          <label>
+            <input type="checkbox" className="checkbox"/>
+            <span className="checkmark"> Mantenme conectado</span>
+          </label>
         </div>
         <div className="btnsIngresar">
           <Link to="/Verificar-Cuenta/Nuevo-Usuario">

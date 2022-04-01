@@ -33,27 +33,34 @@ const Inicio = ({ isSelectedInicio }) => {
     >
       <form className="Inicio" onSubmit={handleSubmit}>
         <div className="inputsBox">
-          <label className="textInput">Correo</label>
-          <input
-            className="input"
-            required="true"
-            type="email"
-            placeholder="nombre@ejemplo.com*"
-            onChange={(e) => setUserName(e.target.value)}
-          />
-          <label className="textInput">Contraseña</label>
-          <input
-            className="input"
-            required="true"
-            type="password"
-            placeholder="mín. 8 carácteres"
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <label>
+            <span className="textInput">Correo</span>
+            <input
+              className="input"
+              required="true"
+              type="email"
+              placeholder="nombre@ejemplo.com*"
+              onChange={(e) => setUserName(e.target.value)}
+            />
+          </label>
+          <label>
+            <span className="textInput">Contraseña</span>
+            <input
+              className="input"
+              required="true"
+              type="password"
+              placeholder="mín. 8 carácteres"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
         </div>
 
         <div className="tabsCheckbox">
-          <input type="checkbox" />
-          <span> Mantenme conectado</span>
+          <label>
+            <input type="checkbox" className="checkbox"/>
+            <span className="checkmark"> Mantenme conectado</span>
+          </label>
+
         </div>
         <div className="btnsIngresar">
           <Link to="/Home">
