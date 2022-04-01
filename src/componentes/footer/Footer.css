@@ -1,0 +1,40 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 575px) {
+  .hide-phone {
+    display: none;
+  }
+  .style {
+    margin-left: 38px;
+  }
+  .title {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #4f4f4f;
+    text-align: left;
+  }
+  .subtitle {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin: 5px 0;
+  }
+  .icon {
+    margin-right: 10px;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */
