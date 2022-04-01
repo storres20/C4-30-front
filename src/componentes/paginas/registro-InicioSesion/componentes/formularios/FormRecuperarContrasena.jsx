@@ -13,7 +13,7 @@ function FormRecuperarContrasena() {
         </button>
       </Link>
     </div>
-    <div className="logoInicioRegistro">
+    <div className="logoInicioOtros">
       <img src={Logo} alt="Veridé" />
     </div>
   </section>
