@@ -1,6 +1,9 @@
 import React from "react";
 import logo from '../../imagenes/LogoVeride/LogosSinFondo/Logo3-Largo.png';
 
+// const isLoggedIn = false;
+// const isAdmin = false;
+
 export default function NavBarHome() {
     return (
     <nav>
@@ -12,9 +15,13 @@ export default function NavBarHome() {
         <div>
             <form>
                 <input type="text" placeholder="Buscar..." />
-                <button type="submit">boton lupa</button>
+                <button type="submit">
+                    <i class="uil uil-search"></i>
+                </button>
             </form>
-            <a href="/carrito">boton carrito</a>
+            <a href="/carrito">
+                <i class="uil uil-shopping-cart"></i>
+            </a>
             {/* {isLoggedIn ?
                 <div>
                     {!isAdmin ?
@@ -27,7 +34,9 @@ export default function NavBarHome() {
                                 <li>
                                     <a href="historial-de-compras">Historial de compras</a>
                                 </li>
-                                <button>logout</button>
+                                <button>
+                                    <i class="uil uil-signout"></i>
+                                </button>
                             </ul>
                         </div>
                     :
@@ -43,12 +52,14 @@ export default function NavBarHome() {
                                 <li>
                                     <a href="editar-productos">Editar productos</a>
                                 </li>
-                                <button>logout</button>
+                                <button>
+                                    <i class="uil uil-signout"></i>
+                                </button>
                             </ul>
                         </div>}
                 </div>
             :
-                <a href="/ingreso">Ingresa aquí</a>} */}
+                <a href="/inicio-sesion">Ingresa aquí</a>} */}
         </div>        
     </nav>
     );
