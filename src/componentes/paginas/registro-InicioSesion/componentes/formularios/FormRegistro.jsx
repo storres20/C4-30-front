@@ -1,25 +1,28 @@
+import { Link } from "react-router-dom";
 import './Formularios.scss';
 
 const Registro = ({ isSelectedRegistro }) => {
   return (
-    <div id="register" role="tabpanel" className={`single__tabs__panel tab-pane fade ${isSelectedRegistro ? "in active" : ""}`}>
+    <section id="register" role="tabpanel" className={`single__tabs__panel tab-pane fade ${isSelectedRegistro ? "in active" : ""}`}>
       <form className="login" method="post">
-        <div className="input-loginReg">
-          <p className="textInput">Correo</p>
-          <input type="email" placeholder="nombre@ejemplo.com" />
-          <p className="textInput">Contraseña</p>
-          <input type="password" placeholder="mín. 8 carácteres" />
+        <div className="inputsBox">
+          <label className="textInput">Correo</label>
+          <input className="input" type="email" placeholder="nombre@ejemplo.com*" />
+          <label className="textInput">Contraseña</label>
+          <input className="input" type="password" placeholder="mín. 8 carácteres" />
         </div>
       </form>
-      <div className="tabs__checkbox">
+      <div className="tabsCheckbox">
         <input type="checkbox" />
         <span> Mantenme conectado</span>
       </div>
-      <div className="htc__login__btn">
-        <a href="#">Registrate</a>
-      </div>
+      <div className="btnsIngresar">
+          <Link to="/Verificar-Cuenta">
+            <button type="submit">Registrarse</button>
+          </Link>
+        </div>
       <div className="htc__social__connect">
-        <h2>O ingresa con</h2>
+        <h4>O registrate con</h4>
         <ul className="htc__soaial__list">
           {/* <SocialMedia bgName="instagram" icon="instagram" />
           <SocialMedia bgName="facebook" icon="facebook" />
@@ -27,7 +30,7 @@ const Registro = ({ isSelectedRegistro }) => {
           <SocialMedia bgName="twitter" icon="twitter" /> */}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 
