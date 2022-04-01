@@ -30,6 +30,7 @@ function FormRecuperarContrasena() {
           <label className="textInput">Correo Electrónico</label>
           <input
             className="inputB"
+            required="true"
             type="email"
             placeholder="nombre@ejemplo.com"
             onChange={(e) => verificarCorreo(e.target.value)}

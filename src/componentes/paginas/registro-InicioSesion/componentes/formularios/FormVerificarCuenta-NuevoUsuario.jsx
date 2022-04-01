@@ -28,6 +28,7 @@ function FormVerificarCuentaNuevoUsuario() {
         <div className="inputsBoxB">
           <input
             className="inputB"
+            required="true"
             type="number"
             placeholder="*"
             onChange={(e) => verificarCuenta(e.target.value)}

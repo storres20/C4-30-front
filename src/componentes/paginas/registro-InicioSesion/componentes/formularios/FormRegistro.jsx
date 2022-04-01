@@ -19,12 +19,14 @@ const Registro = ({ isSelectedRegistro }) => {
           <label className="textInput">Correo</label>
           <input
             className="input"
+            required="true"
             type="email"
             placeholder="nombre@ejemplo.com*"
           />
           <label className="textInput">Contraseña</label>
           <input
             className="input"
+            required="true"
             type="password"
             placeholder="mín. 8 carácteres"
           />

@@ -29,6 +29,7 @@ function FormCambiarContrasena() {
           <label className="textInputB">Contraseña Nueva</label>
           <input
             className="input"
+            required="true"
             type="password"
             placeholder="mín. 8 carácteres"
             onChange={(e) => newpassword(e.target.value)}
@@ -36,6 +37,7 @@ function FormCambiarContrasena() {
           <label className="textInput">Confirmar Contraseña Nueva</label>
           <input
             className="input"
+            required="true"
             type="password"
             placeholder="mín. 8 carácteres"
             onChange={(e) => newpassword(e.target.value)}

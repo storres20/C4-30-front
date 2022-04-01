@@ -36,6 +36,7 @@ const Inicio = ({ isSelectedInicio }) => {
           <label className="textInput">Correo</label>
           <input
             className="input"
+            required="true"
             type="email"
             placeholder="nombre@ejemplo.com*"
             onChange={(e) => setUserName(e.target.value)}
@@ -43,6 +44,7 @@ const Inicio = ({ isSelectedInicio }) => {
           <label className="textInput">Contraseña</label>
           <input
             className="input"
+            required="true"
             type="password"
             placeholder="mín. 8 carácteres"
             onChange={(e) => setPassword(e.target.value)}
