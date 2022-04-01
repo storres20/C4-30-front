@@ -57,6 +57,11 @@ const Inicio = ({ isSelectedInicio }) => {
             <button type="submit">Ingresar</button>
           </Link>
         </div>
+        <br />
+          <span> ¿Olvidaste tu contraseña?</span>
+            <span className="forget">
+            <Link to="/Recuperar-Contrasena">Recuperala aquí</Link>
+          </span> 
       </form>
 
       <div className="htc__social__connect">
@@ -67,6 +72,7 @@ const Inicio = ({ isSelectedInicio }) => {
           <SocialMedia bgName="googleplus" icon="google-plus" /> */}
         </ul>
       </div>
+      
     </section>
   );
 };
