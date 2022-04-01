@@ -1,15 +1,22 @@
 import React from 'react'
 
-import phone from "../../imagenes/iconos/bx_bx-phone.svg"
-import map from "../../imagenes/iconos/bx_bx-map.svg"
-import send from "../../imagenes/iconos/carbon_send-alt.svg"
+import phone from "./imagenes/bx_bx-phone.svg"
+import map from "./imagenes/bx_bx-map.svg"
+import send from "./imagenes/carbon_send-alt.svg"
+
+import facebook from './imagenes/ant-design_facebook-filled.svg'
+import instagram from './imagenes/ant-design_instagram-outlined.svg'
+import twitter from './imagenes/ant-design_twitter-outlined.svg'
+
+
+
 
 import './Footer.css'
 
 export default function Footer() {
   return (
     <div className='style'>
-      <div>
+      <div className='divcontactanos'>
         <h1 className='title'>Contáctanos</h1>
         <div className='flex'>
           <img className='icon' src={phone} alt="phone" />
@@ -25,7 +32,14 @@ export default function Footer() {
         </div>
       </div>
       
-      
+      <div>
+        <h1 className='title'>Redes sociales</h1>
+        <div className='flex'>
+          <img className='iconred' src={facebook} alt="facebook" />
+          <img className='iconred' src={instagram} alt="instagram" />
+          <img className='iconred' src={twitter} alt="twitter" />
+        </div>
+      </div>
     </div>
   )
 }
