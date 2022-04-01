@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+
+:root {
+  --primary-color: #ce972b;
+  --primary-text: rgb(19 18 18 / 67%);
+  --primary-box-lighter: #ffffff;
+  --primary-box-dark: #a27520;
+
+  --secundary-box-lighter: #c7c8d2;
+
+  --font-family: "Nunito", sans-serif;
+
+  --border-rad: 8px;
+  --shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.container {
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+
+  a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--primary-color);
+  }
+}
+
+.input {
+  width: 300px;
+  padding: 0.7rem 1rem;
+  border-radius: var(--border-rad);
+  border: 1px solid var(--secundary-box-lighter);
+  &:focus {
+    outline: none;
+    border:1.8px solid var(--primary-color);
+    // background-color:#F0F8FF;
+    // margin-right:10px;
+  }
+  // &:checked ~ .textInput{
+  //   font-weight: 500;
+  //   color: var(--primary-color);
+  // }
+}
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnsInicioRegistro {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+
+  div {
+    list-style: none;
+    width: 100px;
+    text-align: center;
+    font-weight: bolder;
+
+    a {
+      text-decoration: none;
+      list-style: none;
+      padding: 0 1rem;
+    }
+  }
+}
+
+#Inicio,
+#register {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.inputsBoxB {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 70%;
+  label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.inputsBoxC {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.inputB {
+  padding: 0.7rem 1rem;
+  border-radius: var(--border-rad);
+  border: 1px solid var(--secundary-box-lighter);
+  &:focus {
+    outline: none;
+    border:1.8px solid var(--primary-color);
+  }
+}
+
+.tabsCheckbox {
+  width: 100%;
+  margin: 1rem 0;
+  cursor: pointer;
+  .checkmark {
+    cursor: pointer;
+  }
+  .checkbox {
+    cursor: pointer;
+    &:checked  ~ .checkmark{
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+  }
+}
+
+.RedesSocialesBox,
+.center {
+  text-align: center;
+  div {
+    cursor: pointer;
+  }
+}
+
+.start {
+  text-align: justify;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.btnsIngresar {
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: var(--border-rad);
+    background-color: var(--primary-color);
+    color: var(--primary-box-lighter);
+    border: transparent;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: var(--primary-box-dark);
+    }
+  }
+}
+
+.btns-Duo {
+  color: black;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 80px;
+  padding-bottom: 0.5rem;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover:after {
+    color: var(--primary-color);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+.forget {
+  margin-left: 0.5rem;
+  span {
+    font-weight: bold;
+  }
+}
+
+.btnVolver {
+  position: absolute;
+  bottom: 90%;
+  left: 2%;
+  button {
+    border: transparent;
+    background: none;
+    i {
+      font-size: 1.8rem;
+      color: var(--primary-text);
+    }
+    &:hover {
+      transform: scale(1.5);
+      color: var(--primary-box-dark);
+    }
+  }
+}
+
+.logoInicioRegistro {
+  width: 100%;
+  text-align: center;
+  img {
+    width: 40%;
+  }
+}
+
+.centerForm {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnsIngresarOtros {
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 5rem;
+  button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: var(--border-rad);
+    background-color: var(--primary-color);
+    color: var(--primary-box-lighter);
+    border: transparent;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: var(--primary-box-dark);
+    }
+  }
+}
+
+.logoInicioOtros {
+  width: 200px;
+  position: absolute;
+  bottom: 88%;
+  left: 29%;
+  img {
+    width: 200px;
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+  .logoInicioOtros {
+    width: 200px;
+    position: absolute;
+    top: 2%;
+    left: auto;
+    left: 100;
+    right: 0;
+    bottom: auto;
+    img {
+      width: 200px;
+    }
+  }
+}
