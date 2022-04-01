@@ -1,8 +1,8 @@
 import './Formularios.scss';
 
-const Registration = ({ isSelectedRegister }) => {
+const Registro = ({ isSelectedRegistro }) => {
   return (
-    <div id="register" role="tabpanel" className={`single__tabs__panel tab-pane fade ${isSelectedRegister ? "in active" : ""}`}>
+    <div id="register" role="tabpanel" className={`single__tabs__panel tab-pane fade ${isSelectedRegistro ? "in active" : ""}`}>
       <form className="login" method="post">
         <div className="input-loginReg">
           <p className="textInput">Correo</p>
@@ -16,10 +16,10 @@ const Registration = ({ isSelectedRegister }) => {
         <span> Mantenme conectado</span>
       </div>
       <div className="htc__login__btn">
-        <a href="#">register</a>
+        <a href="#">Registrate</a>
       </div>
       <div className="htc__social__connect">
-        <h2>Or Login With</h2>
+        <h2>O ingresa con</h2>
         <ul className="htc__soaial__list">
           {/* <SocialMedia bgName="instagram" icon="instagram" />
           <SocialMedia bgName="facebook" icon="facebook" />
@@ -31,4 +31,4 @@ const Registration = ({ isSelectedRegister }) => {
   );
 };
 
-export default Registration;
+export default Registro;

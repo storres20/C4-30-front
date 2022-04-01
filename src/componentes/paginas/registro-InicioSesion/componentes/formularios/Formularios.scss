@@ -1,14 +1,47 @@
 
+.container {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
 
-.login {
+.htc__Inicio__register{
+  width: 30rem;
+  height: 80%;
+
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+  justify-content: center;
+}
+
+.inicio {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.input-loginReg {
+.input-loginReg .input-InicioReg {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  input {
+    height: 1.5rem;
+    width: 14rem;
+  }
+  // width: 30%;
+}
+
+.Inicio__register__menu {
+  display: flex;
+  justify-content: center;
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      list-style:none;
+      padding: 0 1rem;
+    }
+  }
 
 }
+
