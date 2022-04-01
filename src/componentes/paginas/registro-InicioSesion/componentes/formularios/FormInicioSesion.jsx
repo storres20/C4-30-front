@@ -63,7 +63,7 @@ const Inicio = ({ isSelectedInicio }) => {
 
         </div>
         <div className="btnsIngresar">
-          <Link to="/Home">
+          <Link to="/">
             <button type="submit">Ingresar</button>
           </Link>
         </div>

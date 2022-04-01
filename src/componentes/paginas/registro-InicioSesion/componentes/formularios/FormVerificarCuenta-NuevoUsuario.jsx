@@ -34,7 +34,7 @@ function FormVerificarCuentaNuevoUsuario() {
             onChange={(e) => verificarCuenta(e.target.value)}
           />
           <div className="btnsIngresarOtros">
-            <Link to="/Home">
+            <Link to="/">
               <button type="submit">Verificar Cuenta</button>
             </Link>
           </div>

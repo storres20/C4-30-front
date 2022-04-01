@@ -23,7 +23,7 @@ const InicioRegistro = () => {
     <>
       <section className="container">
         <div className="btnVolver">
-          <Link to="/Home">
+          <Link to="/">
             <button type="button">
               <i class="uil uil-arrow-left"></i>
             </button>
