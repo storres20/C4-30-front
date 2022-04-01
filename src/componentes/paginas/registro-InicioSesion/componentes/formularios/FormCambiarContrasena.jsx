@@ -26,7 +26,8 @@ function FormCambiarContrasena() {
           </p>
         </div>
         <div className="inputsBoxC">
-          <label className="textInputB">Contraseña Nueva</label>
+        <label>
+          <span className="textInputB">Contraseña Nueva</span>
           <input
             className="input"
             required="true"
@@ -34,7 +35,9 @@ function FormCambiarContrasena() {
             placeholder="mín. 8 carácteres"
             onChange={(e) => newpassword(e.target.value)}
           />
-          <label className="textInput">Confirmar Contraseña Nueva</label>
+        </label>
+        <label>
+          <span className="textInput">Confirmar Contraseña Nueva</span>
           <input
             className="input"
             required="true"
@@ -42,6 +45,7 @@ function FormCambiarContrasena() {
             placeholder="mín. 8 carácteres"
             onChange={(e) => newpassword(e.target.value)}
           />
+        </label>
           <div className="btnsIngresarOtros">
             <Link to="/Inicio-Sesion">
               <button type="submit">Cambiar Contraseña</button>

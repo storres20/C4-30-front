@@ -27,14 +27,16 @@ function FormRecuperarContrasena() {
           </p>
         </div>
         <div className="inputsBoxB">
-          <label className="textInput">Correo Electrónico</label>
-          <input
-            className="inputB"
-            required="true"
-            type="email"
-            placeholder="nombre@ejemplo.com"
-            onChange={(e) => verificarCorreo(e.target.value)}
-          />
+          <label >
+            <span className="textInput">Correo Electrónico</span>
+            <input
+              className="inputB"
+              required="true"
+              type="email"
+              placeholder="nombre@ejemplo.com"
+              onChange={(e) => verificarCorreo(e.target.value)}
+            />
+          </label>
           <div className="btnsIngresarOtros">
             <Link to="/Verificar-Cuenta">
               <button type="submit">Enviar Clave</button>
