@@ -41,5 +41,11 @@
   .slideshow {
     display: none;
   }
+  .input {
+    width: 250px;
+    padding: 0.7rem 1rem;
+    border-radius: var(--border-rad);
+    border: 1px solid var(--secundary-box-lighter);
+  }
 }
 

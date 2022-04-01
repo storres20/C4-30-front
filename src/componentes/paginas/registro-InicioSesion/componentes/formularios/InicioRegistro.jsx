@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Inicio from "./FormInicio";
+import Inicio from "./FormInicioSesion";
 import Registro from "./FormRegistro";
+import "./Formularios.scss";
 
 const InicioRegistro = () => {
   const [isSelectedInicio, setSelectedInicio] = useState(true);
@@ -20,7 +21,7 @@ const InicioRegistro = () => {
   return (
     <>
       <section className="container">
-        <div>
+        <div className="btnVolver">
           <Link to="/Home">
             <button type="button">
               <i class="uil uil-arrow-left"></i>
