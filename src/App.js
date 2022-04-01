@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./componentes/paginas/Home";
 
+import Footer from './componentes/footer/Footer'
+
 function App() {
   //const { data, setData } = useContext(AppContext);
 
@@ -13,6 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      
+      <Footer/>
     </div>
   );
 }
