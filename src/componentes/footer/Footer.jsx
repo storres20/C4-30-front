@@ -16,18 +16,18 @@ import './Footer.css'
 export default function Footer() {
   return (
     <div className='style'>
-      <div className='flex'>
+      <div className='flex-desktop'>
         <div className='flex hide-phone'>
-          <div>
+          <div className='divspace'>
             <h1 className='title'>Contenido</h1>
-            <h2 className='subtitle'>Conocenos</h2>
-            <h2 className='subtitle'>Nuestra Carta</h2>
-            <h2 className='subtitle'>Contactanos</h2>
+            <h2 className='subtitle'>Sobre Veridé</h2>
+            <h2 className='subtitle'>Productos</h2>
+            <h2 className='subtitle'>Contáctanos</h2>
           </div>
 
-          <div>
-            <h1 className='title'>Unete</h1>
-            <h2 className='subtitle'>Inicia Sesion</h2>
+          <div className='divspace'>
+            <h1 className='title'>Únete</h1>
+            <h2 className='subtitle'>Inicia Sesión</h2>
             <h2 className='subtitle'>Registrate</h2>
           </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div>
+      <div className='flex-red'>
         <h1 className='title'>Redes sociales</h1>
         <div className='flex'>
           <img className='iconred' src={facebook} alt="facebook" />
