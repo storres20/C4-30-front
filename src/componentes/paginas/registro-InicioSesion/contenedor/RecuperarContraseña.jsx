@@ -1,15 +1,14 @@
 import React from 'react'
-import FormRegistro from '../componentes/formularios/FormRegistro'
+import FormRecuperarContrasena from '../componentes/formularios/FormRecuperarContrasena'
 import Slider from '../componentes/slider/Slider'
 import './Contenedor.scss' 
 
 
-
-function Registro() {
+function RecuperarContraseña() {
   return (
     <section className='grid-Contenedor'>
       <div className='contenedorIzquierdo'>
-        <FormRegistro />
+        <FormRecuperarContrasena />
       </div>
       <div className='contenedorDerecho'>
         <Slider />
@@ -18,4 +17,4 @@ function Registro() {
   )
 }
 
-export default Registro
+export default RecuperarContraseña

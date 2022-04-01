@@ -1,10 +1,10 @@
 import React from 'react'
 import "./Formularios.scss"
 
-function FormLogin() {
+function FormInicioSesion() {
   return (
-    <div>FormLogin</div>
+    <div>FormInicioSesion</div>
   )
 }
 
-export default FormLogin
+export default FormInicioSesion
