@@ -1,9 +1,12 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
 
 .flex {
 	display: flex;
 }
+
+/* Mobile View */
 
 $phone: 575px;
 
@@ -15,9 +18,9 @@ $phone: 575px;
 	.style {
 		margin-left: 38px;
 	}
-	
-	.divcontactanos{
-	  margin-bottom: 34px;
+
+	.divcontactanos {
+		margin-bottom: 34px;
 	}
 
 	.title {
@@ -28,7 +31,7 @@ $phone: 575px;
 		line-height: 24px;
 		letter-spacing: 0.1px;
 		color: #4f4f4f;
-		
+
 		text-align: left;
 	}
 
@@ -42,12 +45,36 @@ $phone: 575px;
 		color: #737373;
 		margin: 5px 0;
 	}
-	
-	.icon{
-	  margin-right: 10px;
+
+	.icon {
+		margin-right: 10px;
 	}
-	
-	.iconred{
-	  margin-right: 20px;
+
+	.iconred {
+		margin-right: 20px;
+	}
+}
+
+/* Desktop View */
+
+@media (min-width: 576px){
+	.title {
+		font-family: "Montserrat";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.1px;
+		color: #252b42;
+	}
+
+	.subtitle {
+		font-family: "Montserrat";
+		font-style: normal;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: 0.2px;
+		color: #737373;
 	}
 }

@@ -1,11 +1,13 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+/* Mobile View */
 @media (max-width: 575px) {
   .hide-phone {
     display: none;
@@ -41,6 +43,28 @@
   }
   .iconred {
     margin-right: 20px;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 576px) {
+  .title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #252b42;
+  }
+  .subtitle {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #737373;
   }
 }
 /*# sourceMappingURL=Footer.css.map */
