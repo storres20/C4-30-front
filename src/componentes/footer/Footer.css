@@ -7,6 +7,15 @@
   display: flex;
 }
 
+.icon {
+  margin-right: 10px;
+}
+
+.iconred {
+  margin-right: 20px;
+  height: 24px;
+}
+
 /* Mobile View */
 @media (max-width: 575px) {
   .hide-phone {
@@ -38,16 +47,38 @@
     color: #737373;
     margin: 5px 0;
   }
-  .icon {
-    margin-right: 10px;
-  }
-  .iconred {
-    margin-right: 20px;
-  }
 }
 
 /* Desktop View */
 @media (min-width: 576px) {
+  .flex-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 30px;
+  }
+  .flex-red {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 18.7%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 74px;
+  }
+  .divspace {
+    padding-right: 60px;
+  }
   .title {
     font-family: "Montserrat";
     font-style: normal;
@@ -56,6 +87,7 @@
     line-height: 24px;
     letter-spacing: 0.1px;
     color: #252b42;
+    text-align: left;
   }
   .subtitle {
     font-family: "Montserrat";
@@ -65,6 +97,7 @@
     line-height: 24px;
     letter-spacing: 0.2px;
     color: #737373;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=Footer.css.map */
