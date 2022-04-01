@@ -75,21 +75,22 @@ const Login = ({ isSelectedLogin }) => {
     <div id="login" role="tabpanel" className={`single__tabs__panel tab-pane fade ${isSelectedLogin ? "in active" : ""}`}>
       <form className="login" onSubmit={handleSubmit}>
         <div className="input-loginReg">
-          <p className="textInput">Email</p>
+          <p className="textInput">Correo</p>
           <input type="text" placeholder="nombre@ejemplo.com*" onChange={(e) => setUserName(e.target.value)} />
-          <p className="textInput">Password</p>
+          <p className="textInput">Contraseña</p>
           <input type="password" placeholder="mín. 8 carácteres" onChange={(e) => setPassword(e.target.value)} />
         </div>
 
         <div className="tabs__checkbox">
           <input type="checkbox" />
-          <span> Remember me</span>
+          {/* <span> Remember me</span>
           <span className="forget">
             <Link to="#">Forget Pasword?</Link>
-          </span>
+          </span> */}
+          <span> Mantenme conectado</span>
         </div>
         <div className="htc__login__btn mt--30">
-          <button type="submit">Login</button>
+          <button type="submit">Inicio</button>
         </div>
       </form>
 

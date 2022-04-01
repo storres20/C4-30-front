@@ -17,6 +17,11 @@
   align-self: stretch;
   grid-area: contenedorIzquierdo;
   background-color: green;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
 }
 
 .contenedirDerecho {

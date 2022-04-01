@@ -28,12 +28,12 @@ const LoginRegister = () => {
               <ul className="login__register__menu" role="tablist">
                 <li role="presentation" className={`login ${isSelectedLogin ? "active" : ""}`}>
                   <Link to="#" role="tab" data-toggle="tab" onClick={handleLogin}>
-                    Login
+                    Inicio
                   </Link>
                 </li>
                 <li role="presentation" className={`register ${isSelectedRegister ? "active" : ""}`}>
                   <Link to="#" role="tab" data-toggle="tab" onClick={handleRegistration}>
-                    Register
+                    Registro
                   </Link>
                 </li>
               </ul>
