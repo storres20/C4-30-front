@@ -1,11 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Home from "./componentes/paginas/Home";
-import InicioSesion from "./componentes/paginas/registro-InicioSesion/contenedor/InicioSesion";
-import VerificarCuentaUsuario from "./componentes/paginas/registro-InicioSesion/contenedor/VerificarCuenta-Usuario";
-import VerificarCuentaNuevoUsuario from "./componentes/paginas/registro-InicioSesion/contenedor/VerificarCuenta-NuevoUsuario";
-import RecuperarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/RecuperarContrasena";
-import CambiarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/CambiarContrasena";
+import { CambiarContrasena, InicioSesion, RecuperarContrasena, Registro, VerificarCuentaNuevoUsuario,  VerificarCuentaUsuario} from './componentes/paginas/registro-InicioSesion/contenedor';
+import {  Home, SobreVerede} from './componentes/paginas';
 
 function App() {
   //const { data, setData } = useContext(AppContext);
@@ -20,6 +16,7 @@ function App() {
 {/*         <Route path="/Registro" element={<Registro />} /> */}
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
         <Route path="/" element={<Home />} />
+        <Route path="/Sobre-Verede" element={<SobreVerede />}/>
       </Routes>
     </div>
   );
