@@ -1,17 +1,21 @@
 import styled from 'styled-components'
 import { Link as LinkR} from 'react-router-dom'
 import { Link as LinkS}from 'react-scroll'
+import '../formularios/Formularios.scss'
 
 export const Nav = styled.nav`
-  background: #dfdada;
-  heigth: 80px;
-  /* margin-top: -80px; */
+  /* background: #dfdada; */
+  background: #dfdada1f;;
+  height: 80px;
+  margin-top: -80px;
   display: flex;
   justify-content:center;
   font-size: 1rem;
   position: sticky;
   top: 0;
   z-index: 10;
+  font-family: var(--font-family);
+  font-weight:bold ;
 
   @media screen and (max-width: 960px) {
     transtion: 0.8s all ease
@@ -34,7 +38,7 @@ export const ArrowHome = styled.nav `
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: bold;
 `
 
@@ -43,7 +47,7 @@ export const NavLogo = styled(LinkR)`
   /* justify-self: flex-start; */
   justify-self:space-around;
   cursor:pointer;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display:flex;
   align-items: center;
   margin-left: 24px;
@@ -82,7 +86,7 @@ height: 80px;
 `
 
 export const NavLinks = styled(LinkS)`
-  color: #fff;
+  color: #ffff;
   display: flex;
   align-items:center;
   text-decoration: none;
@@ -102,6 +106,23 @@ export const NavBtn =styled.nav`
   }
 `
 export const NavBtnLink =styled.nav`
-  border-radius: 50px;
-  background: #01bf71;
+  border-radius: 8px;
+  background: #CE972B;
+  white-space:nowrap;
+  padding: 13px 36px;
+  color: #ffff;
+  font-size: 16px;
+  outline:none;
+  border:none;
+  cursor:pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration:none;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background:#ffff ;
+    color:#f333d2;
+  }
 `
+
+
+

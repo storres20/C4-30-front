@@ -3,7 +3,7 @@ import {BiMenuAltRight, BiArrowBack} from 'react-icons/bi'
 import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, ArrowHome, NavBtn, NavBtnLink} from './NavbarElements'
 
 
-function Navbar() {
+function Navbar({toggle}) {
   return (
     <>
       <Nav>
@@ -14,7 +14,7 @@ function Navbar() {
           <NavLogo to='/'>
             Sobre Veredé
           </NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <BiMenuAltRight />
           </MobileIcon>
           <NavMenu>
@@ -32,7 +32,7 @@ function Navbar() {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/Home">Ingresa Aquí</NavBtnLink>
+            <NavBtnLink to="/Sobre-Verede">Ingresa Aquí</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>
