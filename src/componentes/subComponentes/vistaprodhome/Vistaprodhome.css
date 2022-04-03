@@ -1,6 +1,6 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap");
-/* Mobile View */
+/* Desktop View */
 /* Desktop View */
 @media (min-width: 576px) {
   .contenedorVPH {
@@ -9,11 +9,24 @@
     border-radius: 10px;
     width: 343px;
     height: 279px;
+    position: relative;
   }
   .contenedorVPH img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 343px;
+  }
+  .contenedorVPH .postexto {
+    position: absolute;
+    /* top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%); */
+    top: 0;
+    right: 0;
+    background: #4e60ff;
+    border-radius: 0 10px;
+    margin: 0;
+    padding: 8px 16px;
   }
   .contenedorVPH .contenedorTexto {
     margin-left: 16px;
@@ -52,6 +65,14 @@
     margin-top: 4px;
     margin-bottom: 4px;
   }
+  .contenedorVPH h4 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 16px;
+    color: #ffffff;
+  }
   .contenedorVPH .flex1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -81,16 +102,22 @@
     margin-bottom: 19px;
     margin-right: 8px;
   }
+  .contenedorVPH .iconinfo {
+    margin-top: 18px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+  }
   .contenedorVPH .iconheart {
     margin-top: 16px;
     margin-right: 10px;
     width: 24px;
-    height: auto;
+    height: 21px;
   }
   .contenedorVPH .iconbag {
     margin-top: 16px;
     width: 20px;
-    height: auto;
+    height: 19px;
   }
   .contenedorVPH .iconclock {
     margin-top: 4px;
@@ -104,5 +131,11 @@
     margin-left: 10px;
     margin-right: 8px;
   }
+  .contenedorVPH .hidden {
+    display: none;
+  }
 }
+
+/* Mobile View */
+/* Mobile View */
 /*# sourceMappingURL=Vistaprodhome.css.map */
