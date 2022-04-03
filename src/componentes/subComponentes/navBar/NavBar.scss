@@ -1,0 +1,111 @@
+nav {
+    //vars
+    $primary-color: #828282;
+    $secondary-color: #C9A731;
+    $element-background-color: #EDEEF2;
+    $secondary-color-dark: #CE972B;
+    $primary-button-hover: #A27520;
+
+    font-family: Nunito;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    .navbar-left {
+        .productos {
+            color: $secondary-color;
+        }
+        a {
+            margin: 0 3vw;
+            color: $primary-color;
+        }
+    }
+
+    .navbar-right {
+        .form-inline {
+            display: inline-block;
+            input {
+                box-sizing: border-box;
+                padding: 0.5em;
+                border: none;
+                border-radius: 0.5em;
+                background-color: $element-background-color;
+            }
+            button {
+                border: none;
+                background-color: inherit;
+                cursor: pointer;
+            }
+        }
+        .carrito {
+            border: 1px;
+            border-style: none;
+            padding: 0.25em 0.5em;
+            border-radius: 0.5em;
+        }
+        .ingreso {
+            border: solid 1px;
+            padding: 0.25em 1.75em;
+            border-radius: 0.5em;
+            color: $secondary-color;
+        }
+        a {
+            margin: 0 1vw;
+            color: $primary-color;
+        }
+    }
+
+    img {
+        width: 16vw;
+        vertical-align: middle;
+    }
+
+    //nav sobre veride
+    .alternative-navbar {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-alpha-sig.figma.com/img/d260/09c2/c536a28aa1da7a71c1aac71007821d24?Expires=1649635200&Signature=aw3QYh7baF3B8EiX4j0smR~OP0l6YXmM1ertIAyjQOzfVzSmLKx3TYeeDO6xiMztHM7QWGnZfsL8qcCykNadNXa8GNCzF4m78zUzErVa3CzES-GU4GMSl~V0DdTh5nipuQ1r2-PjbNVnqtF1lQwCXT3rpZ-CQKHtSHnmcYxUF0d-Gzjg-Bvl6AjfIcwylsBvyop6qi7RgQIjCasywAhcLfBlKMg-Ev~d-MFFKl1m7h7Y95Mh-AAcxFrw~D7P680NgGtS3hDdltN5Gsat7xHt1hYyXoF5EzGmj-MtGKE1t40JAbiT37u9oGb6Q9L~-6mS4Gl~p-g5mvISE9wtQon3kw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+        display: flex;
+        align-items: center;
+        width: 100%;
+       
+        i {
+            font-size: 4em;
+        }
+        
+        a {
+            color: #FFFFFF;
+            margin: 0 1vw;
+        }
+        h2 {
+            color: #FFFFFF;
+            margin: 0 5vw 0 10vw;
+        }
+        .alternative-navbar-left {
+            display: flex;
+            align-items: center;
+            padding: 0 15vw 0 0;
+            
+        }
+        .alternative-navbar-right {
+            .alternative-ingreso {
+                border: solid 1px;
+                padding: 0.5em 1.5em;
+                border-radius: 0.5em;
+                border-color: $secondary-color-dark;
+                color: #FFFFFF;
+                background-color: $secondary-color-dark;
+                float: right;
+                &:hover {
+                    background-color: $primary-button-hover;
+                    border-color: $primary-button-hover;
+                }
+            }
+        }
+    }
+
+}
