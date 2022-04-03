@@ -1,5 +1,173 @@
-.contenedorConfigCuenta {
+@import "~antd/dist/antd.css";
+
+.flexBox-CG {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  margin: 2% 10%;
+  .container-A {
+    width: 30%;
+  }
+  .container-B {
+    width: 70%;
+  }
+}
+
+.flex-Inputs {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  border-left: 1px solid var(--secundary-box-lighter);
+  border-right: 1px solid var(--secundary-box-lighter);
+  border-top: 1px solid var(--secundary-box-lighter);
+  padding: 2rem;
   div {
-    color: green;
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: -webkit-fill-available;
+    input {
+      padding: 0.7rem 1rem;
+      border-radius: var(--border-rad);
+      border: 1px solid var(--secundary-box-lighter);
+    }
+  }
+}
+
+.titleContainer {
+  text-align: center;
+}
+
+.subtitleContainer {
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem 1rem 0.7rem;
+  border: 1px solid var(--secundary-box-lighter);
+}
+
+.btnsContainer {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--secundary-box-lighter);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem 2rem;
+  div {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btnCancelar {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: var(--border-rad);
+    background-color: transparent;
+    color: var(--secundary-box-dark);
+    border: 1px solid var(--secundary-box-dark);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btnGuardar {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: var(--border-rad);
+    background-color: var(--primary-color);
+    color: var(--primary-box-lighter);
+    border: transparent;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btnCerrarSesion {
+    padding: 0.7rem 1rem;
+    border-radius: var(--border-rad);
+    background-color: transparent;
+    color: var(--secundary-box-btnCancel);
+    border: 1px solid var(--secundary-box-btnCancel);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.btnsOptionalContainer {
+  padding: 1rem;
+  border-left: 1px solid var(--secundary-box-lighter);
+  border-right: 1px solid var(--secundary-box-lighter);
+  label {
+    display: flex;
+    gap: 1rem;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flexBox-CG {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    .container-A {
+      width: 100%;
+    }
+    .container-B {
+      width: 100%;
+    }
+  }
+
+  .flex-Inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 1px solid var(--secundary-box-lighter);
+    border-right: 1px solid var(--secundary-box-lighter);
+    border-top: 1px solid var(--secundary-box-lighter);
+    padding: 2rem;
+    div {
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: -webkit-fill-available;
+      input {
+        padding: 0.7rem 1rem;
+        border-radius: var(--border-rad);
+        border: 1px solid var(--secundary-box-lighter);
+      }
+    }
+  }
+
+  .btnsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    div {
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--secundary-box-lighter);
+    }
   }
 }
