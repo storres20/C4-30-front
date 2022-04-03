@@ -23,11 +23,16 @@ export default function Vistaprodhome() {
   const buttonBag = () => {
     setIsBag(current => !current)
   }
+  
+  const [isImg, setIsImg] = useState(false)
+  const buttonImg = () => {
+    setIsImg(current => !current)
+  }
 
   return (
     <div className='contenedorVPH'>
-      <img src={imagen} alt="imagen" />
-      <h4 className='postexto'>AGOTADO</h4>
+      <img src={imagen} alt="imagen" onClick={buttonImg} />
+      <h4 className={`postexto ${isImg ? "hidden" : ""}`}>AGOTADO</h4>
 
       <div className='contenedorTexto'>
         <div className='flex1'>
