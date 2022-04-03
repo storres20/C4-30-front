@@ -9,12 +9,31 @@
 
 		width: 343px;
 		height: 279px;
+		
+		position: relative;
 
 		img {
 			border-top-left-radius: 10px;
 			border-top-right-radius: 10px;
 
 			width: 343px;
+		}
+
+		.postexto {
+			position: absolute;
+			
+			//opcional: centro del centro
+			/* top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%); */
+			
+			top: 0;
+			right: 0;
+
+			background: #4e60ff;
+			border-radius: 0 10px;
+			margin: 0;
+			padding: 8px 16px;
 		}
 
 		.contenedorTexto {
@@ -55,6 +74,10 @@
 			margin-bottom: 4px;
 		}
 
+		h4 {
+			@include texto(700, 11px, 16px, #ffffff);
+		}
+
 		.flex1 {
 			display: flex;
 			justify-content: space-between;
@@ -75,6 +98,13 @@
 			margin-top: 11px;
 			margin-bottom: 19px;
 			margin-right: 8px;
+		}
+
+		.iconinfo {
+			margin-top: 18px;
+			margin-left: 10px;
+			width: 20px;
+			height: 20px;
 		}
 
 		.iconheart {
