@@ -1,0 +1,6 @@
+export { default as CambiarContrasena } from './CambiarContrasena'
+export { default as InicioSesion } from './InicioSesion'
+export { default as RecuperarContrasena } from './RecuperarContrasena'
+export { default as Registro } from './Registro'
+export { default as VerificarCuentaNuevoUsuario } from './VerificarCuenta-NuevoUsuario'
+export { default as VerificarCuentaUsuario } from './VerificarCuenta-Usuario'
