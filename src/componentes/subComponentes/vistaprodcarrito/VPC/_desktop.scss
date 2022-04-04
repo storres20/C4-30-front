@@ -1,0 +1,176 @@
+/* Desktop View */
+
+@media (min-width: 576px) {
+	.contenedorVPC {
+		border: 1px solid black;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+		border-radius: 16px;
+
+		width: 627px;
+		height: auto;
+
+		display: flex;
+		
+		//margin-bottom: 30px;
+		
+		.contenedorImagen{
+		  position: relative;
+		  margin-top: 24px;
+		  margin-left: 19px;
+		  margin-bottom: 23px;
+		  height: 142px;
+		}
+
+		img {
+			border-top-left-radius: 16px;
+			border-top-right-radius: 16px;
+
+			width: 175px;
+			height: auto;
+		}
+
+		.postexto {
+			position: absolute;
+
+			//opcional: centro del centro
+			/* top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%); */
+
+			bottom: 0;
+			left: 0;
+
+			background: #4e60ff;
+			border-radius: 0 16px;
+			margin: 0;
+			width: 109px;
+			height: 26px;
+			
+			display: flex;
+      align-items: center;
+      justify-content: center;
+		}
+
+		.contenedorTexto {
+			margin: 28px 33px 21px 20px;
+		}
+
+		@mixin texto($f-weight, $f-size, $l-height, $color) {
+			font-family: "Nunito";
+			font-style: normal;
+			font-weight: $f-weight;
+			font-size: $f-size;
+			line-height: $l-height;
+			color: $color;
+		}
+		
+		p{
+		  @include texto(400, 11px, 15px, #83859c);
+		  margin: 0;
+		  margin-top: 6px;
+		}
+
+		h1 {
+			@include texto(700, 20px, 20px, #2b2b43);
+
+			margin: 0;
+		}
+
+		h2 {
+			@include texto(600, 12px, 16px, #83859c);
+
+			margin: 0;
+			display: flex;
+			align-items: center
+		}
+
+		h3 {
+			@include texto(700, 12px, 16px, #ffffff);
+
+			margin: 0;
+		}
+
+		h4 {
+			@include texto(600, 12px, 16px, #545563);
+			margin: 0;
+			
+			margin-right: 10px;
+			margin-top: 4px;
+			margin-bottom: 4px;
+		}
+		
+		h5 {
+			@include texto(400, 10px, 12px, #3c444c);
+			margin: 0;
+		}
+		
+		h6 {
+			@include texto(800, 20px, 27px, #2b2b43);
+			margin: 0;
+		}
+
+		.flex1 {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.flex2 {
+			display: flex;
+			justify-content: start;
+			align-items: center;
+		}
+
+		.flex3 {
+			display: flex;
+			justify-content: start;
+
+			background-color: #edeef2;
+			border-radius: 100px;
+
+			margin-right: 8px;
+		}
+		
+		.flex4 {
+			display: flex;
+			justify-content: end;
+		}
+
+		.iconclock {
+			width: 12px;
+			height: auto;
+		}
+		
+		.icondown{
+		  width: 11px;
+		  height: 14px;
+		}
+
+    //Burger and pizza
+		.icon {
+			width: 12px;
+			height: auto;
+
+			margin-left: 10px;
+			margin-right: 8px;
+		}
+		
+		//Plus and Minus
+		.iconpm{
+		  width: 27px;
+		  //height: 22px;
+		}
+		
+		.textopm{
+		  margin: 0 14px;
+		}
+		
+		.contenedorPM{
+		  margin-top: 16px;
+		}
+
+		.hidden {
+			display: none;
+		}
+	}
+}
