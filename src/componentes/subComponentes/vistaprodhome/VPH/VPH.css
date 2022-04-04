@@ -18,6 +18,9 @@
     border-top-right-radius: 16px;
     width: 350px;
   }
+  .contenedorVPH .VPHimg {
+    cursor: pointer;
+  }
   .contenedorVPH .postexto {
     position: absolute;
     /* top: 50%;
@@ -115,11 +118,13 @@
     margin-right: 10px;
     width: 24px;
     height: 21px;
+    cursor: pointer;
   }
   .contenedorVPH .iconbag {
     margin-top: 16px;
     width: 20px;
     height: 19px;
+    cursor: pointer;
   }
   .contenedorVPH .iconclock {
     margin-top: 4px;
