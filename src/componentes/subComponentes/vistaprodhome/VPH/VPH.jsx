@@ -31,7 +31,7 @@ export default function VPH() {
 
   return (
     <div className='contenedorVPH'>
-      <img src={imagen} alt="imagen" onClick={buttonImg} />
+      <img className='VPHimg' src={imagen} alt="imagen" onClick={buttonImg} />
       <h4 className={`postexto ${isImg ? "hidden" : ""}`}>AGOTADO</h4>
 
       <div className='contenedorTexto'>
