@@ -1,7 +1,8 @@
 import React from "react";
 import "./ConfiguracionCuenta.scss";
-import 'antd/dist/antd.css';
-import { Switch } from 'antd';
+import "antd/dist/antd.css";
+import { Switch } from "antd";
+import {FiUser } from 'react-icons/fi';
 
 function ConfigutacionCuenta() {
   function onChange(checked) {
@@ -9,7 +10,40 @@ function ConfigutacionCuenta() {
   }
   return (
     <section className="contenedorConfigCuenta flexBox-CG">
-      <div className="container-A">Btns ConfigutacionCuenta</div>
+      <div className="container-A">
+        <div className="titleContainerLeft">
+          <h1>Configuración</h1>
+        </div>
+        <div className="btnsContainer-Configuration">
+          <button className="btnLeft-CG">
+            <label className="iconbtn-CG">
+              <FiUser className="icon-React"/>
+            </label>
+            <aside>
+              <h3>Cuenta</h3>
+              <p>Información Personal</p>
+            </aside>
+          </button>
+          <button className="btnLeft-CG">
+            <label className="iconbtn-CG">
+              <FiUser className="icon-React"/>
+            </label>
+            <aside>
+              <h3>Dirección</h3>
+              <p>Información Personal</p>
+            </aside>
+          </button>
+          <button className="btnLeft-CG">
+            <label className="iconbtn-CG">
+              <FiUser className="icon-React"/>
+            </label>
+            <aside>
+              <h3>Método de Pago</h3>
+              <p>Información Personal</p>
+            </aside>
+          </button>
+        </div>
+      </div>
 
       <div className="container-B">
         <div className="titleContainer">
