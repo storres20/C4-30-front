@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
-export const HeroContainer = styled.div`
-/* background: #f9f9f9; */
-background:#ffff;
+export const PortadaContainer = styled.div`
+background:#E5E5E5;
 display:flex;
 justify-content: center;
 align-items: center;
@@ -10,6 +9,30 @@ padding: 0 30px;
 height: 800px;
 position:relative;
 z-index: 1;
+
+/* :before {
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0,2) 0%),rgba(0,0,0,0,6) 100%,linear-gradient(180deg, rgba(0,0,0,0,2) 0%,transparent 100%);
+  z-index:2;
+  
+} */
+`
+
+export const PortadaBg = styled.div `
+position: absolute;
+top: 0 ;
+right: 0 ;
+bottom: 0;
+left: 0;
+width: 100%;
+/* height:100%; */
+height: 68%;
+overflow:hidden;
 
 :before {
   content:"";
@@ -20,19 +43,9 @@ z-index: 1;
   bottom:0;
   background: linear-gradient(180deg, rgba(0,0,0,0,2) 0%),rgba(0,0,0,0,6) 100%,linear-gradient(180deg, rgba(0,0,0,0,2) 0%,transparent 100%);
   z-index:2;
+  background: rgba(0,0,0,0.5);
+  
 }
-`
-
-export const HeroBg = styled.div `
-position: absolute;
-top: 0 ;
-right: 0 ;
-bottom: 0;
-left: 0;
-width: 100%;
-/* height:100%; */
-height: 68%;
-overflow:hidden;
 @media screen and (max-width: 1096px){
   height:100%
 }
@@ -43,13 +56,12 @@ export const VideoBg = styled.video `
   height:100%;
   -o-object-fit:cover;
   object-fit: cover;
-  /* background: #232323b5; */
 
   @media screen and (max-width: 480px){
   }
 
 `
-export const HeroContent = styled.div `
+export const PortadaContent = styled.div `
   top: 6rem;
   z-index:3;
   max-width: 1200px;
@@ -65,7 +77,7 @@ export const HeroContent = styled.div `
     top: 2rem;
   }
 `
-export const HeroH1 = styled.h1 `
+export const PortadaH1 = styled.h1 `
   color:#ffff;
   font-size:48px;
   text-aling:center;
@@ -77,7 +89,7 @@ export const HeroH1 = styled.h1 `
     font-size: 32px;
   }
 `
-export const HeroP = styled.p `
+export const PortadaP = styled.p `
   margin-top:24px;
   color: #fff;
   font-size: 24px;
@@ -92,7 +104,7 @@ export const HeroP = styled.p `
   }
 
 `
-export const HeroBoxs = styled.div `
+export const PortadaBoxs = styled.div `
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -110,7 +122,7 @@ export const HeroBoxs = styled.div `
     margin-top: 2rem;
   }
 `
-export const HeroBox = styled.div  `
+export const PortadaBox = styled.div  `
   background-color: #f46532;
   border-radius: 8px;
   width: 20rem;

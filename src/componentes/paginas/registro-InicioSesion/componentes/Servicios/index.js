@@ -16,12 +16,12 @@ function Services() {
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Icon2}/>
-              <ServicesH2>Delivery</ServicesH2>
+              <ServicesH2>Eventos</ServicesH2>
               <ServicesP>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</ServicesP>
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Icon3}/>
-              <ServicesH2>Delivery</ServicesH2>
+              <ServicesH2>Atención Personalizada</ServicesH2>
               <ServicesP>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</ServicesP>
           </ServicesCard>
         </ServicesWrapper>

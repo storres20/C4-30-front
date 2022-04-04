@@ -4,7 +4,6 @@ import { Link as LinkS}from 'react-scroll'
 import '../formularios/Formularios.scss'
 
 export const Nav = styled.nav`
-  /* background: #dfdada; */
   background: #dfdada1f;;
   height: 80px;
   margin-top: -80px;
@@ -44,7 +43,6 @@ export const ArrowHome = styled.nav `
 
 export const NavLogo = styled(LinkR)`
   color: #CE972B;
-  /* justify-self: flex-start; */
   justify-self:space-around;
   cursor:pointer;
   font-size: 1.2rem;
@@ -65,7 +63,7 @@ export const MobileIcon = styled.nav`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #999999;
+    color: #000000;
   }
 `
 

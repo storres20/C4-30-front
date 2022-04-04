@@ -5,7 +5,8 @@ export const InfoContainer = styled.nav `
   height: 508px;
   display:flex;
   flex-direction:column;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: flex-start;
   align-items:center;
   background: #E5E5E5;
 
@@ -20,12 +21,10 @@ export const InfoContainer = styled.nav `
 `
 
 export const InfoSubtitulo = styled.p `
-  font-size:1rem;
-  margin-bottom:10px;
+  /* margin-bottom:10px; */
   margin-top:24px;
   color: hsla(228, 28%, 20%, 1);
-;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align:center;
   max-width: 900px;
 `

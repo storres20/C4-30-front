@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import NavBar from './registro-InicioSesion/componentes/NavBar'
+import NavBar from './registro-InicioSesion/componentes/NavBarSobreVerede'
 import {BrowserRouter as Router} from 'react-router-dom'
-import Sidebar from './registro-InicioSesion/componentes/Sidebar/Index'
-import HeroSection from './registro-InicioSesion/componentes/HeroSection';
-import InfoSection from './registro-InicioSesion/componentes/InfoSection';
-import Services from './registro-InicioSesion/componentes/Services';
+import Sidebar from './registro-InicioSesion/componentes/SidebarSobreVerede/Index'
+import PortadaSection from './registro-InicioSesion/componentes/Portada';
+import InfoSection from './registro-InicioSesion/componentes/Informacion';
+import Services from './registro-InicioSesion/componentes/Servicios';
 import Reconocimiento from './registro-InicioSesion/componentes/Reconocimiento';
 import Sucursales from './registro-InicioSesion/componentes/Sucursales';
 
@@ -19,7 +19,7 @@ const toggle = () => {
     <div>
       <Sidebar isOpen={isOpen} toggle= {toggle}/>
       <NavBar toggle= {toggle}/>
-      <HeroSection />
+      <PortadaSection />
       <InfoSection />
       <Services />
       <Reconocimiento />
