@@ -11,16 +11,20 @@
 		height: auto;
 
 		position: relative;
-		
+
 		display: inline-block;
-		
+
 		margin-bottom: 30px;
 
 		img {
 			border-top-left-radius: 16px;
 			border-top-right-radius: 16px;
 
-			width: 343px;
+			width: 350px;
+		}
+
+		.VPHimg {
+			cursor: pointer;
 		}
 
 		.postexto {
@@ -116,12 +120,14 @@
 			margin-right: 10px;
 			width: 24px;
 			height: 21px;
+			cursor: pointer;
 		}
 
 		.iconbag {
 			margin-top: 16px;
 			width: 20px;
 			height: 19px;
+			cursor: pointer;
 		}
 
 		.iconclock {
