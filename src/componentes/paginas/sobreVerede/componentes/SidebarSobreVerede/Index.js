@@ -19,7 +19,7 @@ function Sidebar({isOpen, toggle}) {
           <SidebarLink to='testimony' onClick={toggle}>
               Testimonios
           </SidebarLink>
-          <SidebarLink to='branchOffices' onClick={toggle}>
+          <SidebarLink to='sucursales' onClick={toggle}>
               Sucursales
           </SidebarLink>
         </SidebarMenu>

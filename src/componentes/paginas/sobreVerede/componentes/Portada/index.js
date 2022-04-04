@@ -5,11 +5,9 @@ import Video from '../../video/veganFood.mp4'
 function PortadaSection () {
   return (
     <PortadaContainer>
-      <div>
         <PortadaBg>
           <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
         </PortadaBg>
-      </div>
 
       <PortadaContent>
         <PortadaH1>

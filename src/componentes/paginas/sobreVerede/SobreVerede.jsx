@@ -1,13 +1,8 @@
 import React, {useState} from 'react'
 import NavBar from './componentes/NavBarSobreVerede'
 import {BrowserRouter as Router} from 'react-router-dom'
-import Sidebar from './componentes/SidebarSobreVerede/Index'
-import PortadaSection from './componentes/Portada';
-import InfoSection from './componentes/Informacion';
-import Services from './componentes/Servicios';
-import Reconocimiento from './componentes/Reconocimiento';
-import Sucursales from './componentes/Sucursales';
-
+import {Sidebar ,PortadaSection,InfoSection,Servicios, Reconocimiento,Sucursales} from './componentes'
+import Footer from '../../subComponentes/footer/Footer'
 
 function SobreVerede() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,13 +13,14 @@ const toggle = () => {
 
   return (
     <div>
-      <Sidebar isOpen={isOpen} toggle= {toggle}/>
+      <Sidebar  isOpen={isOpen} toggle= {toggle}/>
       <NavBar toggle= {toggle}/>
       <PortadaSection />
       <InfoSection />
-      <Services />
+      <Servicios />
       <Reconocimiento />
-      <Sucursales />
+      <Sucursales path='sucursales'/>
+      <Footer />
     </div>
   )
 }

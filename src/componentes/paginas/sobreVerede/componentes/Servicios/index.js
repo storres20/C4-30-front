@@ -2,31 +2,31 @@ import React from 'react'
 import Icon1 from '../../../registro-InicioSesion/imagenes/icon5.png'
 import Icon2 from '../../../registro-InicioSesion/imagenes/icon6.png'
 import Icon3 from '../../../registro-InicioSesion/imagenes/icon7.png'
-import {ServicesContainer, ServicesH1, ServicesWrapper,ServicesCard, ServicesIcon,ServicesH2,ServicesP} from './ServicesElements'
+import {ServiciosContainer, ServiciosH1, ServiciosWrapper,ServiciosCard, ServiciosIcon,ServiciosH2,ServiciosP} from './ServiciosElements'
 
-function Services() {
+function Servicios() {
   return (
-    <ServicesContainer>
-      <ServicesH1>Servicios</ServicesH1>
-        <ServicesWrapper>
-          <ServicesCard>
-            <ServicesIcon src={Icon1}/>
-              <ServicesH2>Delivery</ServicesH2>
-              <ServicesP>En Veredé siempre es hora de comer. Prueba nuestro sabor único y tradicional. Entra a nuestra web y haz tu pedido. </ServicesP>
-          </ServicesCard>
-          <ServicesCard>
-            <ServicesIcon src={Icon2}/>
-              <ServicesH2>Eventos</ServicesH2>
-              <ServicesP>Siempre a tu servicio. Veredé ha conquistado a los paladares más exigentes .Junto a Veredé puedes realizar eventos familiares exclusivos de comida vegana. </ServicesP>
-          </ServicesCard>
-          <ServicesCard>
-            <ServicesIcon src={Icon3}/>
-              <ServicesH2>Atención Personalizada</ServicesH2>
-              <ServicesP> Veredé ha conquistado a los paladares más exigentes. Llegamos dispuestos a deleitarlo y a brindarle un excelente servicio personalizado</ServicesP>
-          </ServicesCard>
-        </ServicesWrapper>
-    </ServicesContainer>
+    <ServiciosContainer>
+      <ServiciosH1>Servicios</ServiciosH1>
+        <ServiciosWrapper>
+          <ServiciosCard>
+            <ServiciosIcon src={Icon1}/>
+              <ServiciosH2>Delivery</ServiciosH2>
+              <ServiciosP>En Veredé siempre es hora de comer. Prueba nuestro sabor único y tradicional. Entra a nuestra web y haz tu pedido. </ServiciosP>
+          </ServiciosCard>
+          <ServiciosCard>
+            <ServiciosIcon src={Icon2}/>
+              <ServiciosH2>Eventos</ServiciosH2>
+              <ServiciosP>Siempre a tu servicio. Veredé ha conquistado a los paladares más exigentes .Junto a Veredé puedes realizar eventos familiares exclusivos de comida vegana. </ServiciosP>
+          </ServiciosCard>
+          <ServiciosCard>
+            <ServiciosIcon src={Icon3}/>
+              <ServiciosH2>Atención Personalizada</ServiciosH2>
+              <ServiciosP> Veredé ha conquistado a los paladares más exigentes. Llegamos dispuestos a deleitarlo y a brindarle un excelente servicio personalizado</ServiciosP>
+          </ServiciosCard>
+        </ServiciosWrapper>
+    </ServiciosContainer>
   )
 }
 
-export default Services
+export default Servicios

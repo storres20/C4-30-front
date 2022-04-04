@@ -39,6 +39,7 @@ export const ArrowHome = styled.nav `
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
+    cursor:pointer
 `
 
 export const NavLogo = styled(LinkR)`
