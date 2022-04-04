@@ -1,8 +1,8 @@
 import React from 'react'
-import Icon1 from '../../imagenes/icon5.png'
-import Icon2 from '../../imagenes/icon6.png'
-import Icon3 from '../../imagenes/icon7.png'
-import Icon4 from '../../imagenes/icon8.png'
+import Icon1 from '../../../registro-InicioSesion/imagenes/icon5.png'
+import Icon2 from '../../../registro-InicioSesion/imagenes/icon6.png'
+import Icon3 from '../../../registro-InicioSesion/imagenes/icon7.png'
+import Icon4 from '../../../registro-InicioSesion/imagenes/icon8.png'
 import {ReconocimientoContainer, ReconocimientoH1, ReconocimientoWrapper,ReconocimientoCard, ReconocimientoIcon,ReconocimientoH2,ReconocimientoP,ReconocimientoEstrellas,ReconocimientoIconEstrellas} from './ReconocimientoElements'
 
 function Reconocimiento() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon1 from '../../imagenes/icon9.png'
+import Icon1 from '../../../registro-InicioSesion/imagenes/icon9.png'
 // import Icon2 from '../../imagenes/icon6.png'
 // import Icon3 from '../../imagenes/icon7.png'
 import {SucursalesContainer, SucursalesH1, SucursalesWrapper,SucursalesCard, SucursalesIcon,SucursalesH2,SucursalesP} from './SucursalesElements'

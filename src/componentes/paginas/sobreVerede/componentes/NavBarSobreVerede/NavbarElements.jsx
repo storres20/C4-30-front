@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link as LinkR} from 'react-router-dom'
 import { Link as LinkS}from 'react-scroll'
-import '../formularios/Formularios.scss'
+import '../../../registro-InicioSesion/componentes/formularios/Formularios.scss'
 
 export const Nav = styled.nav`
   background: #dfdada1f;;

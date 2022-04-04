@@ -1,7 +1,7 @@
 import React from 'react'
-import Icon1 from '../../imagenes/icon5.png'
-import Icon2 from '../../imagenes/icon6.png'
-import Icon3 from '../../imagenes/icon7.png'
+import Icon1 from '../../../registro-InicioSesion/imagenes/icon5.png'
+import Icon2 from '../../../registro-InicioSesion/imagenes/icon6.png'
+import Icon3 from '../../../registro-InicioSesion/imagenes/icon7.png'
 import {ServicesContainer, ServicesH1, ServicesWrapper,ServicesCard, ServicesIcon,ServicesH2,ServicesP} from './ServicesElements'
 
 function Services() {
