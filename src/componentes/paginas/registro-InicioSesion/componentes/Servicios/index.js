@@ -12,17 +12,17 @@ function Services() {
           <ServicesCard>
             <ServicesIcon src={Icon1}/>
               <ServicesH2>Delivery</ServicesH2>
-              <ServicesP>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</ServicesP>
+              <ServicesP>En Veredé siempre es hora de comer. Prueba nuestro sabor único y tradicional. Entra a nuestra web y haz tu pedido. </ServicesP>
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Icon2}/>
               <ServicesH2>Eventos</ServicesH2>
-              <ServicesP>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</ServicesP>
+              <ServicesP>Siempre a tu servicio. Veredé ha conquistado a los paladares más exigentes .Junto a Veredé puedes realizar eventos familiares exclusivos de comida vegana. </ServicesP>
           </ServicesCard>
           <ServicesCard>
             <ServicesIcon src={Icon3}/>
               <ServicesH2>Atención Personalizada</ServicesH2>
-              <ServicesP>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</ServicesP>
+              <ServicesP> Veredé ha conquistado a los paladares más exigentes. Llegamos dispuestos a deleitarlo y a brindarle un excelente servicio personalizado</ServicesP>
           </ServicesCard>
         </ServicesWrapper>
     </ServicesContainer>
