@@ -10,7 +10,7 @@ export const SucursalesContainer =styled.div`
   background: #ffff;
 
   @media screen and (max-width: 768px){
-    height: 1100px;
+    height: 1600px;
   }
 
   @media screen and (max-width:480px) {
@@ -20,7 +20,7 @@ export const SucursalesContainer =styled.div`
 `
 export const  SucursalesH1 =styled.h1`
   font-size:2.5rem;
-  color:#ffff;
+  color:hsla(228, 28%, 20%, 1);
   margin-bottom:64px;
   @media screen and (max-width: 480px) {
     font-size:2rem;

@@ -11,7 +11,7 @@ export const ReconocimientoContainer =styled.div`
   background: #E5E5E5;
 
   @media screen and (max-width: 768px){
-    height: 1100px;
+    height: 1500px;
   }
 
   @media screen and (max-width:480px) {
