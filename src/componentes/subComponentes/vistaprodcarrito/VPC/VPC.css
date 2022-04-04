@@ -8,23 +8,23 @@
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
-    width: 627px;
-    height: auto;
+    width: 474px;
+    height: 140px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .contenedorVPC .contenedorImagen {
     position: relative;
-    margin-top: 24px;
-    margin-left: 19px;
-    margin-bottom: 23px;
-    height: 142px;
+    margin-top: 16px;
+    margin-left: 17px;
+    margin-bottom: 17px;
+    height: 107px;
   }
   .contenedorVPC img {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    width: 175px;
+    width: 132px;
     height: auto;
   }
   .contenedorVPC .postexto {
@@ -35,9 +35,9 @@
     bottom: 0;
     left: 0;
     background: #4e60ff;
-    border-radius: 0 16px;
+    border-radius: 0 10px;
     margin: 0;
-    width: 109px;
+    width: 89px;
     height: 26px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -50,14 +50,14 @@
             justify-content: center;
   }
   .contenedorVPC .contenedorTexto {
-    margin: 28px 33px 21px 20px;
+    margin: 16px 31px 17px 17px;
   }
   .contenedorVPC p {
     font-family: "Nunito";
     font-style: normal;
     font-weight: 400;
-    font-size: 11px;
-    line-height: 15px;
+    font-size: 8px;
+    line-height: 9px;
     color: #83859c;
     margin: 0;
     margin-top: 6px;
@@ -66,7 +66,7 @@
     font-family: "Nunito";
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 20px;
     color: #2b2b43;
     margin: 0;
@@ -75,7 +75,7 @@
     font-family: "Nunito";
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 8px;
     line-height: 16px;
     color: #83859c;
     margin: 0;
@@ -99,20 +99,20 @@
     font-family: "Nunito";
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 8px;
     line-height: 16px;
     color: #545563;
     margin: 0;
     margin-right: 10px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
   }
   .contenedorVPC h5 {
     font-family: "Nunito";
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 6px;
+    line-height: 7px;
     color: #3c444c;
     margin: 0;
   }
@@ -120,7 +120,7 @@
     font-family: "Nunito";
     font-style: normal;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 27px;
     color: #2b2b43;
     margin: 0;
@@ -184,7 +184,7 @@
     margin: 0 14px;
   }
   .contenedorVPC .contenedorPM {
-    margin-top: 16px;
+    margin-top: 5px;
   }
   .contenedorVPC .hidden {
     display: none;

@@ -7,8 +7,8 @@
 
 		border-radius: 16px;
 
-		width: 627px;
-		height: auto;
+		width: 474px;
+		height: 140px;
 
 		display: flex;
 		
@@ -16,17 +16,17 @@
 		
 		.contenedorImagen{
 		  position: relative;
-		  margin-top: 24px;
-		  margin-left: 19px;
-		  margin-bottom: 23px;
-		  height: 142px;
+		  margin-top: 16px;
+		  margin-left: 17px;
+		  margin-bottom: 17px;
+		  height: 107px;
 		}
 
 		img {
 			border-top-left-radius: 16px;
 			border-top-right-radius: 16px;
 
-			width: 175px;
+			width: 132px;
 			height: auto;
 		}
 
@@ -42,9 +42,9 @@
 			left: 0;
 
 			background: #4e60ff;
-			border-radius: 0 16px;
+			border-radius: 0 10px;
 			margin: 0;
-			width: 109px;
+			width: 89px;
 			height: 26px;
 			
 			display: flex;
@@ -53,7 +53,7 @@
 		}
 
 		.contenedorTexto {
-			margin: 28px 33px 21px 20px;
+			margin: 16px 31px 17px 17px;
 		}
 
 		@mixin texto($f-weight, $f-size, $l-height, $color) {
@@ -66,19 +66,19 @@
 		}
 		
 		p{
-		  @include texto(400, 11px, 15px, #83859c);
+		  @include texto(400, 8px, 9px, #83859c);
 		  margin: 0;
 		  margin-top: 6px;
 		}
 
 		h1 {
-			@include texto(700, 20px, 20px, #2b2b43);
+			@include texto(700, 15px, 20px, #2b2b43);
 
 			margin: 0;
 		}
 
 		h2 {
-			@include texto(600, 12px, 16px, #83859c);
+			@include texto(600, 8px, 16px, #83859c);
 
 			margin: 0;
 			display: flex;
@@ -92,21 +92,21 @@
 		}
 
 		h4 {
-			@include texto(600, 12px, 16px, #545563);
+			@include texto(600, 8px, 16px, #545563);
 			margin: 0;
 			
 			margin-right: 10px;
-			margin-top: 4px;
-			margin-bottom: 4px;
+			margin-top: 2px;
+			margin-bottom: 2px;
 		}
 		
 		h5 {
-			@include texto(400, 10px, 12px, #3c444c);
+			@include texto(400, 6px, 7px, #3c444c);
 			margin: 0;
 		}
 		
 		h6 {
-			@include texto(800, 20px, 27px, #2b2b43);
+			@include texto(800, 14px, 27px, #2b2b43);
 			margin: 0;
 		}
 
@@ -166,7 +166,7 @@
 		}
 		
 		.contenedorPM{
-		  margin-top: 16px;
+		  margin-top: 5px;
 		}
 
 		.hidden {
