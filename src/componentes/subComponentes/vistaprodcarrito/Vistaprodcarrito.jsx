@@ -9,11 +9,6 @@ export default function Vistaprodcarrito() {
     <div className='flex0'>
       {/* Estos VPH luego pueden ser mapeados con la data de la API */}
       <VPC/>
-      <VPC/>
-      <VPC/>
-      <VPC/>
-      <VPC/>
-      <VPC/>
     </div>
   )
 }
