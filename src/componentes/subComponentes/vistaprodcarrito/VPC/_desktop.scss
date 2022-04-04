@@ -11,15 +11,15 @@
 		height: 140px;
 
 		display: flex;
-		
-		//margin-bottom: 30px;
-		
-		.contenedorImagen{
-		  position: relative;
-		  margin-top: 16px;
-		  margin-left: 17px;
-		  margin-bottom: 17px;
-		  height: 107px;
+
+		margin-bottom: 15px;
+
+		.contenedorImagen {
+			position: relative;
+			margin-top: 16px;
+			margin-left: 17px;
+			margin-bottom: 17px;
+			height: 107px;
 		}
 
 		img {
@@ -28,6 +28,8 @@
 
 			width: 132px;
 			height: auto;
+
+			cursor: pointer;
 		}
 
 		.postexto {
@@ -46,14 +48,14 @@
 			margin: 0;
 			width: 89px;
 			height: 26px;
-			
+
 			display: flex;
-      align-items: center;
-      justify-content: center;
+			align-items: center;
+			justify-content: center;
 		}
 
 		.contenedorTexto {
-			margin: 16px 31px 17px 17px;
+			margin: 0px 31px 0px 17px;
 		}
 
 		@mixin texto($f-weight, $f-size, $l-height, $color) {
@@ -64,11 +66,24 @@
 			line-height: $l-height;
 			color: $color;
 		}
-		
-		p{
-		  @include texto(400, 8px, 9px, #83859c);
-		  margin: 0;
-		  margin-top: 6px;
+
+		.equis {
+			@include texto(500, 12px, 20px, #737373);
+			font-family: "Montserrat";
+			align-items: center;
+			display: flex;
+			justify-content: end;
+			margin: 0;
+			margin-top: 7px;
+			margin-right: 8px;
+			height: 12px;
+			cursor: pointer;
+		}
+
+		p {
+			@include texto(400, 8px, 9px, #83859c);
+			margin: 0;
+			margin-top: 6px;
 		}
 
 		h1 {
@@ -82,7 +97,7 @@
 
 			margin: 0;
 			display: flex;
-			align-items: center
+			align-items: center;
 		}
 
 		h3 {
@@ -94,17 +109,19 @@
 		h4 {
 			@include texto(600, 8px, 16px, #545563);
 			margin: 0;
-			
+
 			margin-right: 10px;
 			margin-top: 2px;
 			margin-bottom: 2px;
 		}
-		
+
 		h5 {
 			@include texto(400, 6px, 7px, #3c444c);
 			margin: 0;
+			display: flex;
+			align-items: center;
 		}
-		
+
 		h6 {
 			@include texto(800, 14px, 27px, #2b2b43);
 			margin: 0;
@@ -130,7 +147,7 @@
 
 			margin-right: 8px;
 		}
-		
+
 		.flex4 {
 			display: flex;
 			justify-content: end;
@@ -139,14 +156,15 @@
 		.iconclock {
 			width: 12px;
 			height: auto;
-		}
-		
-		.icondown{
-		  width: 11px;
-		  height: 14px;
+			margin-right: 4.5px;
 		}
 
-    //Burger and pizza
+		.icondown {
+			width: 11px;
+			height: 14px;
+		}
+
+		//Burger and pizza
 		.icon {
 			width: 12px;
 			height: auto;
@@ -154,19 +172,20 @@
 			margin-left: 10px;
 			margin-right: 8px;
 		}
-		
+
 		//Plus and Minus
-		.iconpm{
-		  width: 27px;
-		  //height: 22px;
+		.iconpm {
+			width: 27px;
+			//height: 22px;
+			cursor: pointer;
 		}
-		
-		.textopm{
-		  margin: 0 14px;
+
+		.textopm {
+			margin: 0 14px;
 		}
-		
-		.contenedorPM{
-		  margin-top: 5px;
+
+		.contenedorPM {
+			margin-top: 5px;
 		}
 
 		.hidden {
