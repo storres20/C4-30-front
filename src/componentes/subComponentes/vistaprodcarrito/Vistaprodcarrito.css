@@ -1,1 +1,10 @@
-/* No CSS *//*# sourceMappingURL=Vistaprodcarrito.css.map */
+/* Desktop View */
+@media (min-width: 576px) {
+  .flex0 {
+    display: inline-block;
+    overflow-y: scroll;
+    height: 500px;
+    width: 500px;
+  }
+}
+/*# sourceMappingURL=Vistaprodcarrito.css.map */

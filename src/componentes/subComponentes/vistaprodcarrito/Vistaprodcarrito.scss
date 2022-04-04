@@ -1,0 +1,15 @@
+/* Desktop View */
+
+@media (min-width: 576px) {
+	.flex0 {
+		display: inline-block;
+		//justify-content: space-between;
+		//flex-wrap: wrap;
+
+		overflow-y: scroll;
+		height: 500px;
+		width: 500px;
+	}
+}
+
+
