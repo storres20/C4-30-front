@@ -1,5 +1,6 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 /* Desktop View */
 /* Desktop View */
 @media (min-width: 576px) {
@@ -13,6 +14,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-bottom: 15px;
   }
   .contenedorVPC .contenedorImagen {
     position: relative;
@@ -26,6 +28,7 @@
     border-top-right-radius: 16px;
     width: 132px;
     height: auto;
+    cursor: pointer;
   }
   .contenedorVPC .postexto {
     position: absolute;
@@ -50,7 +53,30 @@
             justify-content: center;
   }
   .contenedorVPC .contenedorTexto {
-    margin: 16px 31px 17px 17px;
+    margin: 0px 31px 0px 17px;
+  }
+  .contenedorVPC .equis {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    font-family: "Montserrat";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    margin: 0;
+    margin-top: 7px;
+    margin-right: 8px;
+    height: 12px;
+    cursor: pointer;
   }
   .contenedorVPC p {
     font-family: "Nunito";
@@ -115,6 +141,12 @@
     line-height: 7px;
     color: #3c444c;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .contenedorVPC h6 {
     font-family: "Nunito";
@@ -166,6 +198,7 @@
   .contenedorVPC .iconclock {
     width: 12px;
     height: auto;
+    margin-right: 4.5px;
   }
   .contenedorVPC .icondown {
     width: 11px;
@@ -179,6 +212,7 @@
   }
   .contenedorVPC .iconpm {
     width: 27px;
+    cursor: pointer;
   }
   .contenedorVPC .textopm {
     margin: 0 14px;
