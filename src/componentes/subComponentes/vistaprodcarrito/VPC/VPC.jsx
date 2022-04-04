@@ -35,7 +35,10 @@ export default function VPC() {
         <h3 className={`postexto ${isImg ? "hidden" : ""}`}>AGOTADO</h3>
       </div>
 
+      <div>
+      <p className='equis'>X</p>
       <div className='contenedorTexto'>
+      
         <div className='flex1'>
           <div>
             <h1>Nigiri Set</h1>
@@ -74,6 +77,7 @@ export default function VPC() {
             </div>
           </div>
         </div>
+      </div>
       </div>
 
     </div>
