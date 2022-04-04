@@ -12,4 +12,18 @@
 	}
 }
 
+/* Mobile View */
+
+@media (max-width: 575px) {
+	.flex0 {
+		display: inline-block;
+		//justify-content: space-between;
+		//flex-wrap: wrap;
+
+		overflow-y: scroll;
+		height: 500px;
+		width: 390px;
+	}
+}
+
 

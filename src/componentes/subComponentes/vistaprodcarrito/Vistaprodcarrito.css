@@ -7,4 +7,14 @@
     width: 500px;
   }
 }
+
+/* Mobile View */
+@media (max-width: 575px) {
+  .flex0 {
+    display: inline-block;
+    overflow-y: scroll;
+    height: 500px;
+    width: 390px;
+  }
+}
 /*# sourceMappingURL=Vistaprodcarrito.css.map */
