@@ -1,1 +1,195 @@
-/* No CSS *//*# sourceMappingURL=VPC.css.map */
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap");
+/* Desktop View */
+/* Desktop View */
+@media (min-width: 576px) {
+  .contenedorVPC {
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    width: 627px;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contenedorVPC .contenedorImagen {
+    position: relative;
+    margin-top: 24px;
+    margin-left: 19px;
+    margin-bottom: 23px;
+    height: 142px;
+  }
+  .contenedorVPC img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    width: 175px;
+    height: auto;
+  }
+  .contenedorVPC .postexto {
+    position: absolute;
+    /* top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%); */
+    bottom: 0;
+    left: 0;
+    background: #4e60ff;
+    border-radius: 0 16px;
+    margin: 0;
+    width: 109px;
+    height: 26px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contenedorVPC .contenedorTexto {
+    margin: 28px 33px 21px 20px;
+  }
+  .contenedorVPC p {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    color: #83859c;
+    margin: 0;
+    margin-top: 6px;
+  }
+  .contenedorVPC h1 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #2b2b43;
+    margin: 0;
+  }
+  .contenedorVPC h2 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #83859c;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedorVPC h3 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+    margin: 0;
+  }
+  .contenedorVPC h4 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #545563;
+    margin: 0;
+    margin-right: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .contenedorVPC h5 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #3c444c;
+    margin: 0;
+  }
+  .contenedorVPC h6 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    color: #2b2b43;
+    margin: 0;
+  }
+  .contenedorVPC .flex1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contenedorVPC .flex2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedorVPC .flex3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    background-color: #edeef2;
+    border-radius: 100px;
+    margin-right: 8px;
+  }
+  .contenedorVPC .flex4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .contenedorVPC .iconclock {
+    width: 12px;
+    height: auto;
+  }
+  .contenedorVPC .icondown {
+    width: 11px;
+    height: 14px;
+  }
+  .contenedorVPC .icon {
+    width: 12px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 8px;
+  }
+  .contenedorVPC .iconpm {
+    width: 27px;
+  }
+  .contenedorVPC .textopm {
+    margin: 0 14px;
+  }
+  .contenedorVPC .contenedorPM {
+    margin-top: 16px;
+  }
+  .contenedorVPC .hidden {
+    display: none;
+  }
+}
+
+/* Mobile View */
+/*# sourceMappingURL=VPC.css.map */
