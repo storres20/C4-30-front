@@ -1,5 +1,48 @@
-.contenedorHome {
-  div {
-    color: rgb(190, 35, 141);
+// refactorizar
+
+div {
+    border: solid 1px black;
+    margin: 2vh 1vw;
+    display: inline-block;
+}
+
+span {
+  padding: 2vh 1vw;
+}
+
+.article-promociones {
+  display: flex;
+  justify-content: space-around;
+  .promo {
+    height: 188px;
+    width: 539px;
+  }
+}
+
+.container-destacados {
+  display: flex;
+  justify-content: space-around;
+  .destacado {
+    width: 350px;
+    height: 276px;
+  }
+}
+
+.container-categorias {
+  display: flex;
+  justify-content: space-around;
+  .categoria {
+    width: 160px;
+    height: 80px;
+  }
+}
+
+.container-productos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .producto {
+    width: 350px;
+    height: 276px;
   }
 }
