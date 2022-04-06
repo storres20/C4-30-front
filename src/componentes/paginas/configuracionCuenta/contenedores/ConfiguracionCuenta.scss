@@ -6,6 +6,7 @@
   display: flex;
   margin: 2% 15%;
   gap: 1rem;
+  justify-content: center;
   .container-A {
     width: 30%;
   }
@@ -24,17 +25,6 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    label {
-      width: 25%;
-      padding: 0.7rem 0;
-      border-radius: 15px;
-      background-color: var(--secundary-box-lighter);
-    }
-    aside {
-      width: 75%;
-    }
-  }
-  button {
     width: 100%;
     padding: 0.7rem 1rem;
     border-radius: 20px;
@@ -43,9 +33,19 @@
     border: 1px solid var(--secundary-box-lighter);
     box-shadow: var(--shadow);
     cursor: pointer;
-    display: flex;
     justify-content: center;
-    align-items: center;
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      padding: 0.7rem 0;
+      border-radius: 15px;
+      background-color: var(--secundary-box-lighter);
+    }
+    aside {
+      width: 75%;
+    }
     h3,
     p {
       color: var(--secundary-box-dark);
@@ -55,7 +55,8 @@
     .icon-React {
       font-size: x-large;
     }
-    &:hover {
+    &:hover,
+    &:active {
       background-color: #f2f2f2;
       color: var(--secundary-text);
       border: 2px solid var(--primary-color);
@@ -73,7 +74,6 @@
       }
     }
   }
-
 }
 
 .flex-Inputs {
@@ -101,7 +101,8 @@
       padding: 0.7rem 1rem;
       border-radius: var(--border-rad);
       border: 1px solid var(--secundary-box-lighter);
-      &:focus {
+      &:focus,
+      &:active {
         outline: none;
         border: 1.8px solid var(--primary-color);
       }
@@ -135,6 +136,18 @@
   }
 }
 
+.flex-CG--MP {
+  display: flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  .label-CG-MP {
+    width: 40%;
+  }
+}
+
 .btnCancelar {
   width: 100%;
   padding: 0.7rem 1rem;
@@ -147,7 +160,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  &:hover {
+  &:hover,
+  &:active {
     background-color: var(--secundary-box-dark);
     color: var(--secundary-text);
     border: 1px solid var(--secundary-box-dark);
@@ -166,7 +180,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  &:hover {
+  &:hover,
+  &:active {
     background-color: var(--primary-box-dark);
     color: var(--secundary-text);
     border: 1px solid var(--primary-box-dark);
@@ -184,7 +199,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  &:hover {
+  &:hover,
+  &:active {
     background-color: var(--secundary-box-btnCancel);
     color: var(--secundary-text);
     border: 1px solid var(--secundary-box-btnCancel);

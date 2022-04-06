@@ -21,12 +21,13 @@ function FormCuentaUser() {
           <div className="flex-Inputs inputsContainer">
             <div>
               <label>
-                <span className="textInput">Correo</span>
+                <span className="textInput">Nombre</span>
                 <input
                   className="inputCG"
                   required="true"
-                  type="email"
-                  placeholder="nombre@ejemplo.com*"
+                  type="text"
+                  placeholder="Ingresa tu nombre*"
+
                 />
               </label>
               <label>
@@ -41,21 +42,21 @@ function FormCuentaUser() {
             </div>
             <div>
               <label>
-                <span className="textInput">Correo</span>
+                <span className="textInput">Apellidos</span>
                 <input
                   className="inputCG"
                   required="true"
-                  type="email"
-                  placeholder="nombre@ejemplo.com*"
+                  type="text"
+                  placeholder="Ingresa tus apellidos*"
                 />
               </label>
               <label>
-                <span className="textInput">Correo</span>
+                <span className="textInput">Número Telefónico</span>
                 <input
                   className="inputCG"
                   required="true"
-                  type="email"
-                  placeholder="nombre@ejemplo.com*"
+                  type="text"
+                  placeholder="Ingresa tu número telefónico*"
                 />
               </label>
             </div>
@@ -63,11 +64,7 @@ function FormCuentaUser() {
           <div className="btnsOptionalContainer">
             <div>
               <label>
-                <span className="textInput">Correo</span>
-                <Switch defaultChecked onChange={onChange} />
-              </label>
-              <label>
-                <span className="textInput">Correo</span>
+                <span className="textInput">¿Te gustaría recibir notificaciones sobre novedades a tu correo electrónico?</span>
                 <Switch defaultChecked onChange={onChange} />
               </label>
             </div>

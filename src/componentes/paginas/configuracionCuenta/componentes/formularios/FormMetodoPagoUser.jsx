@@ -21,23 +21,34 @@ function FormMetodoPagoUser() {
           <div className="flex-Inputs inputsContainer">
             <div>
               <label>
-                <span className="textInput">Correo</span>
+                <span className="textInput">N° de la tarjeta</span>
+                <input
+                  className="inputCG"
+                  required="true"
+                  type="text"
+                  placeholder="Ingrese n° de la tarjeta*"
+                />
+              </label>
+              <section className='flex-CG--MP'>
+              <label className='label-CG-MP'>
+                <span className="textInput">Expiración</span>
                 <input
                   className="inputCG"
                   required="true"
                   type="email"
-                  placeholder="nombre@ejemplo.com*"
+                  placeholder="Mes/Año*"
                 />
               </label>
-              <label>
-                <span className="textInput">Correo</span>
+              <label className='label-CG-MP'>
+                <span className="textInput">CVV</span>
                 <input
                   className="inputCG"
                   required="true"
                   type="email"
-                  placeholder="nombre@ejemplo.com*"
+                  placeholder="CVV*"
                 />
               </label>
+              </section>
             </div>
             <div>
               <label>
@@ -50,7 +61,7 @@ function FormMetodoPagoUser() {
                 />
               </label>
               <label>
-                <span className="textInput">Correo</span>
+                <span className="textInput">Correo Electrónico</span>
                 <input
                   className="inputCG"
                   required="true"
@@ -63,11 +74,11 @@ function FormMetodoPagoUser() {
           <div className="btnsOptionalContainer">
             <div>
               <label>
-                <span className="textInput">Correo</span>
+                <span className="textInput">¿Desea incluir el 10% de propina?</span>
                 <Switch defaultChecked onChange={onChange} />
               </label>
               <label>
-                <span className="textInput">Correo</span>
+                <span className="textInput">¿Desea brindar propina en efectivo?</span>
                 <Switch defaultChecked onChange={onChange} />
               </label>
             </div>
