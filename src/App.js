@@ -10,7 +10,6 @@ import SobreVerede from "./componentes/paginas/sobreVerede/SobreVerede";
 import ConfigutacionCuenta from "./componentes/paginas/configuracionCuenta/ConfiguracionCuenta";
 import CarritoCompras from "./componentes/paginas/carritoCompras/CarritoCompras";
 import Home from "./componentes/paginas/home/Home";
-import Vistaprodhome from "./componentes/subComponentes/vistaprodhome/Vistaprodhome";
 
 function App() {
   //const { data, setData } = useContext(AppContext);
@@ -28,9 +27,6 @@ function App() {
         <Route path="/Sobre-Verede" element={<SobreVerede/> } />
         <Route path="/" element={<Home />} />
       </Routes> 
-      
-      {/* Para pruebas del subcomponente "Vistaprodhome" */}
-      <Vistaprodhome/>
     </div>
   );
 }
