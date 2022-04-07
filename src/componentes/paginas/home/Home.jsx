@@ -1,9 +1,11 @@
 import React from "react";
 import "./Home.scss";
+import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
 
 function Home() {
 
   // setProductos.js
+
 
   return (
     <section>
@@ -18,8 +20,8 @@ function Home() {
           <h2>Más Vendidos</h2>
         <div className="container-destacados">
           {/* <ListadoDestacados> */}
-          <div className="destacado"></div>
-          <div className="destacado"></div>
+          <VPH />
+          <VPH />
           <div className="destacado"></div>
         </div>
       </article>
@@ -41,10 +43,10 @@ function Home() {
           <h2>Todos los productos (n)</h2>
         <div className="container-productos">
           {/* <ListadoProductos {productos}> */}
-          <div className="producto"></div>
-          <div className="producto"></div>
-          <div className="producto"></div>
-          <div className="producto"></div>
+          <VPH />
+          <VPH />
+          <VPH />
+          <VPH />
           <div className="producto"></div>
           <div className="producto"></div>
           <div className="producto"></div>

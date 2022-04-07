@@ -1,6 +1,12 @@
 // refactorizar
 
-div {
+// div {
+//     border: solid 1px black;
+//     margin: 2vh 1vw;
+//     display: inline-block;
+// }
+
+section, article, .container-productos, .producto, .container-categorias, .categoria, .container-destacados, .destacado, .promo {
     border: solid 1px black;
     margin: 2vh 1vw;
     display: inline-block;
