@@ -10,6 +10,11 @@ import SobreVerede from "./componentes/paginas/sobreVerede/SobreVerede";
 import ConfigutacionCuenta from "./componentes/paginas/configuracionCuenta/ConfiguracionCuenta";
 import CarritoCompras from "./componentes/paginas/carritoCompras/CarritoCompras";
 import Home from "./componentes/paginas/home/Home";
+//navs testing
+import NavBarHome from "./componentes/subComponentes/navBar/NavBarHome";
+import NavBarSobreVeride from "./componentes/subComponentes/navBar/NavBarSobreVeride";
+
+
 
 function App() {
   //const { data, setData } = useContext(AppContext);
@@ -26,6 +31,9 @@ function App() {
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
         <Route path="/Sobre-Verede" element={<SobreVerede/> } />
         <Route path="/" element={<Home />} />
+        {/* navs testing */}
+        <Route path="/nav" element={<NavBarHome />} />
+        <Route path="/nav2" element={<NavBarSobreVeride />} />
       </Routes> 
     </div>
   );
