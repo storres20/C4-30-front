@@ -148,6 +148,51 @@
   }
 }
 
+.e-btn-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  justify-content: space-between;
+  img {
+    width: 80px;
+    height: 50px;
+    border: 1px solid var(--secundary-box-dark);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-rad);
+    padding: 0.7rem;
+    &:hover {
+      border: 1px solid var(--primary-color);
+    }
+  } 
+}
+
+.e-btn {
+  display: flex;
+  align-items: center;
+}
+
+.flex-TP {
+  display: contents !important; 
+  div {
+    display: flex;
+    justify-content: center;
+    input {
+      position: absolute;
+      background-color: transparent;
+      color: var(--primary-color);
+    }
+  }
+}
+
+.tipoTarjetas {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
 .btnCancelar {
   width: 100%;
   padding: 0.7rem 1rem;
