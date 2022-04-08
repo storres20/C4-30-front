@@ -19,20 +19,20 @@ function Navbar({toggle}) {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about" >¿Quienes somos?</NavLinks>
+              <NavLinks to="about" href="#infoSection">¿Quienes somos?</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="about" >Servicios</NavLinks>
+              <NavLinks to="servicios" href="#servicios" >Servicios</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="about" >Testimonios</NavLinks>
+              <NavLinks to="testimonios" href="#reconocimiento">Reconocimiento</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="about" >Sucursales</NavLinks>
+              <NavLinks to="sucursales" href="#sucursales" >Sucursales</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/Sobre-Verede">Ingresa Aquí</NavBtnLink>
+            <NavBtnLink to="/Sobre-Verede" >Ingresa Aquí</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InfoContainer = styled.nav `
+export const InfoContainer = styled.section `
   /* height: 800px; */
   height: 508px;
   display:flex;
