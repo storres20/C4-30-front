@@ -23,7 +23,8 @@ export default function NavBarHome() {
                 <i class="uil uil-shopping-cart"></i>
             </a>
             {isLoggedIn ?
-                    <div className="logged-dropdown">
+            <div className="dropdown">
+                    <div className="logged-dropdown-mobile">
                         <i class="uil uil-ellipsis-v"></i>
                         <div className="logged-mobile-dropdown-content">
                             <a className="link-usuario" href="/cuenta">usuario</a>
@@ -33,7 +34,8 @@ export default function NavBarHome() {
                             <a href="historial-de-compras">Historial de Compras</a>
                             <a href="logout">Cerrar Sesión<i class="uil uil-signout"></i></a>
                         </div>
-                        
+                    </div>
+                    <div className="logged-dropdown-desktop">
                         <a href="/cuenta" className="cuenta">nombre usuario<i class="uil uil-angle-down"></i></a>
                         <div className="logged-desktop-dropdown-content">
                             <a href="configuracion-de-cuenta">Configuración de Cuenta</a>
@@ -41,6 +43,7 @@ export default function NavBarHome() {
                             <a href="logout">Cerrar Sesión<i class="uil uil-signout"></i></a>
                         </div>
                     </div>
+            </div>
             :
                 <div className="ingreso-container">
                     <a className="ingreso" href="/inicio-sesion"><span>Ingresa aquí</span></a>
