@@ -2,18 +2,34 @@ import React from "react";
 import "./Home.scss";
 import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
 
-function Home() {
+export default function Home() {
 
-  // setProductos.js
+  //import cargarCategorias.js
 
+    // async function cargarCategorias() {
+    //   const response = await fetch('https://country-app-v3.herokuapp.com/categories', {
+    //     method: "GET"
+    //   })
+    //   const data = await response.json();
+
+    //   return data;
+    // }
+
+    // async function main() {
+    //   categorias = await cargarCategorias();
+
+
+    // }
+    
+    // main();
 
   return (
     <section>
       <article className="article-promociones">
         {/* <TarjetaDescuento {1}> */}
-        <div className="promo"></div>
+        <a href="/promociones"><img src="https://i.ibb.co/1X7npWT/promo1.png" alt="Promo" className="promo"/></a>
         {/* <TarjetaDescuento {2}> */}
-        <div className="promo"></div>
+        <a href="/promociones"><img src="https://i.ibb.co/8dQpZgy/promo2.png" alt="Promo" className="promo"/></a>
       </article>
 
       <article className="article-destacados">
@@ -22,7 +38,7 @@ function Home() {
           {/* <ListadoDestacados> */}
           <VPH />
           <VPH />
-          <div className="destacado"></div>
+          <VPH />
         </div>
       </article>
 
@@ -30,6 +46,9 @@ function Home() {
           <h2>Categorías</h2>
         <div className="container-categorias">
           {/* <ListadoCategorias> */}
+          {
+          
+          }
           <div className="categoria"></div>
           <div className="categoria"></div>
           <div className="categoria"></div>
@@ -47,15 +66,13 @@ function Home() {
           <VPH />
           <VPH />
           <VPH />
-          <div className="producto"></div>
-          <div className="producto"></div>
-          <div className="producto"></div>
-          <div className="producto"></div>
-          <div className="producto"></div>
+          <VPH />
+          <VPH />
+          <VPH />
+          <VPH />
+          <VPH />
         </div>
       </article>
     </section>
   );
 }
-
-export default Home;

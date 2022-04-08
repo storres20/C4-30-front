@@ -1,20 +1,17 @@
 // refactorizar
 
-// div {
-//     border: solid 1px black;
-//     margin: 2vh 1vw;
-//     display: inline-block;
-// }
-
-section, article, .container-productos, .producto, .container-categorias, .categoria, .container-destacados, .destacado, .promo {
-    border: solid 1px black;
+section, .container-productos, .producto, .container-categorias, .categoria, .container-destacados, .destacado, .promo {
     margin: 2vh 1vw;
     display: inline-block;
 }
 
-span {
-  padding: 2vh 1vw;
+h2 {
+  padding-left: 2vw;
 }
+
+// span {
+//   padding: 2vh 1vw;
+// }
 
 .article-promociones {
   display: flex;
@@ -28,15 +25,17 @@ span {
 .container-destacados {
   display: flex;
   justify-content: space-around;
-  .destacado {
-    width: 350px;
-    height: 276px;
-  }
 }
 
 .container-categorias {
   display: flex;
   justify-content: space-around;
+  
+  border: solid 1px black;
+  div {
+    border: solid 1px black;
+  }
+  
   .categoria {
     width: 160px;
     height: 80px;
@@ -47,8 +46,9 @@ span {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  .producto {
-    width: 350px;
-    height: 276px;
-  }
 }
+
+.contenedorVPH {
+  margin: 1vh 1vw;
+}
+
