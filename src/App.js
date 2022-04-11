@@ -7,9 +7,11 @@ import VerificarCuentaNuevoUsuario from "./componentes/paginas/registro-InicioSe
 import RecuperarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/RecuperarContrasena";
 import CambiarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/CambiarContrasena";
 import SobreVerede from "./componentes/paginas/sobreVerede/SobreVerede";
-import ConfigutacionCuenta from "./componentes/paginas/configuracionCuenta/ConfiguracionCuenta";
 import CarritoCompras from "./componentes/paginas/carritoCompras/CarritoCompras";
 import Home from "./componentes/paginas/home/Home";
+import CuentaUser from "./componentes/paginas/configuracionCuenta/contenedores/CuentaUser";
+import DireccionUser from "./componentes/paginas/configuracionCuenta/contenedores/DireccionUser";
+import MetodoPagoUser from "./componentes/paginas/configuracionCuenta/contenedores/MetodoPagoUser";
 //navs testing
 import NavBarHome from "./componentes/subComponentes/navBar/NavBarHome";
 import NavBarSobreVeride from "./componentes/subComponentes/navBar/NavBarSobreVeride";
@@ -22,7 +24,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/Carrito-Compras" element={<CarritoCompras/> } />
-        <Route path="/Configuracion-Cuenta" element={<ConfigutacionCuenta/> } />
+        <Route path="/Configuracion-Cuenta/Metodo-Pago" element={<MetodoPagoUser/> } />
+        <Route path="/Configuracion-Cuenta/Direccion" element={<DireccionUser/> } />
+        <Route path="/Configuracion-Cuenta/Personal" element={<CuentaUser/> } />
         <Route path="/Cambiar-Contrasena" element={<CambiarContrasena/>} />
         <Route path="/Recuperar-Contrasena" element={<RecuperarContrasena />} />
         <Route path="/Verificar-Cuenta" element={<VerificarCuentaUsuario />} />
