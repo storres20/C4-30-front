@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import "./Home.scss";
 import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
 
@@ -6,22 +6,36 @@ export default function Home() {
 
   //import cargarCategorias.js
 
-    // async function cargarCategorias() {
-    //   const response = await fetch('https://country-app-v3.herokuapp.com/categories', {
-    //     method: "GET"
-    //   })
-    //   const data = await response.json();
+    const [categorias, setCategorias] = useState([{name: "asd"}]);
 
-    //   return data;
-    // }
+    async function cargarCategorias() {
 
-    // async function main() {
-    //   categorias = await cargarCategorias();
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      headers.append('Accept', 'application/json');
+      headers.append('Origin','http://localhost:3000');
 
+      const response = await fetch('https://country-app-v3.herokuapp.com/categories', {
+        mode: 'cors',
+        method: 'GET',
+        headers: {
+          headers
+        }
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("HTTP error " + response.status);
+      }
+      return response.json();
+    })
+      .then(data => {
+        setCategorias(data)
+      })
+      .catch(err => console.log("fetch error: " + err));
+      
+    };
 
-    // }
-    
-    // main();
+    cargarCategorias();
 
   return (
     <section>
@@ -47,14 +61,13 @@ export default function Home() {
         <div className="container-categorias">
           {/* <ListadoCategorias> */}
           {
-          
+            categorias.map((categoria) => (
+              <li className='card' key={categoria.id}>
+                <img src={categoria.image} alt='' />
+                <h3>{categoria.name}</h3>
+              </li>
+            ))
           }
-          <div className="categoria"></div>
-          <div className="categoria"></div>
-          <div className="categoria"></div>
-          <div className="categoria"></div>
-          <div className="categoria"></div>
-          <div className="categoria"></div>
         </div>
       </article>
 
