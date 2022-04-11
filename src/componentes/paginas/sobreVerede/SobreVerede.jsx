@@ -1,12 +1,28 @@
-import React from "react";
-import "./SobreVerede.scss";
+import React, {useState} from 'react'
+import NavBar from './componentes/NavBarSobreVerede'
+import {BrowserRouter as Router} from 'react-router-dom'
+import {Sidebar ,PortadaSection,InfoSection,Servicios, Reconocimiento,Sucursales} from './componentes'
+import Footer from '../../subComponentes/footer/Footer'
 
 function SobreVerede() {
-  return (
-    <section className="contenedorSobreVerede">
-      <div>Sobre Verede</div>
-    </section>
-  );
+  const [isOpen, setIsOpen] = useState(false);
+
+const toggle = () => {
+  setIsOpen(!isOpen)
 }
 
-export default SobreVerede;
+  return (
+    <div>
+      <Sidebar  isOpen={isOpen} toggle= {toggle}/>
+      <NavBar toggle= {toggle}/>
+      <PortadaSection />
+      <InfoSection />
+      <Servicios />
+      <Reconocimiento />
+      <Sucursales path='sucursales'/>
+      <Footer />
+    </div>
+  )
+}
+
+export default SobreVerede

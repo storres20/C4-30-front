@@ -19,7 +19,6 @@ import NavBarSobreVeride from "./componentes/subComponentes/navBar/NavBarSobreVe
 
 
 function App() {
-  //const { data, setData } = useContext(AppContext);
 
   return (
     <div className="App">

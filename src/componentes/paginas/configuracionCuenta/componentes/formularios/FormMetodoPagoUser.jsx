@@ -19,18 +19,7 @@ function FormMetodoPagoUser() {
       </div>
 
       <div>
-        <div className="flex-Inputs inputsContainer">
-          <div>
-            <label>
-              <span className="textInput">N° de la tarjeta</span>
-              <input
-                className="inputCG"
-                required="true"
-                type="text"
-                placeholder="Ingrese n° de la tarjeta*"
-              />
-            </label>
-            <section className="tipoTarjetas">
+      <section className="tipoTarjetas">
               <span className="textInput">Tipo de Tarjeta</span>
               <section className="e-btn-group">
                 <div className="flex-TP">
@@ -81,15 +70,15 @@ function FormMetodoPagoUser() {
                 </div>
               </section>
             </section>
-          </div>
+        <div className="flex-Inputs inputsContainer">
           <div>
             <label>
-              <span className="textInput">Correo Electrónico</span>
+              <span className="textInput">N° de la tarjeta</span>
               <input
                 className="inputCG"
                 required="true"
-                type="email"
-                placeholder="nombre@ejemplo.com*"
+                type="text"
+                placeholder="Ingrese n° de la tarjeta*"
               />
             </label>
             <section className="flex-CG--MP">
@@ -113,7 +102,19 @@ function FormMetodoPagoUser() {
               </label>
             </section>
           </div>
+          <div>
+            <label>
+              <span className="textInput">Correo Electrónico</span>
+              <input
+                className="inputCG"
+                required="true"
+                type="email"
+                placeholder="nombre@ejemplo.com*"
+              />
+            </label>
+          </div>
         </div>
+
         <div className="btnsOptionalContainer">
           <div>
             <label>
