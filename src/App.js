@@ -24,17 +24,17 @@ function App() {
       <Routes>
         <Route path="/Carrito-Compras" element={<CarritoCompras/> } />
         <Route path="/Configuracion-Cuenta" element={<ConfigutacionCuenta/> } />
-        <Route path="/Cambiar-Contrasena" element={<CambiarContrasena/>} />
+        <Route path="/Cambiar-Contrasena/:token" element={<CambiarContrasena/>} />
         <Route path="/Recuperar-Contrasena" element={<RecuperarContrasena />} />
         <Route path="/Verificar-Cuenta" element={<VerificarCuentaUsuario />} />
-        <Route path="/Verificar-Cuenta/Nuevo-Usuario" element={<VerificarCuentaNuevoUsuario />} />
+        <Route path="/Verificar-Cuenta/Nuevo-Usuario/:id" element={<VerificarCuentaNuevoUsuario />} />
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
         <Route path="/Sobre-Verede" element={<SobreVerede/> } />
         <Route path="/" element={<Home />} />
         {/* navs testing */}
         <Route path="/nav" element={<NavBarHome />} />
         <Route path="/nav2" element={<NavBarSobreVeride />} />
-      </Routes> 
+      </Routes>
     </div>
   );
 }
