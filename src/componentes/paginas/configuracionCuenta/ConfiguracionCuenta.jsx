@@ -1,7 +1,7 @@
 import React from "react";
 import "./ConfiguracionCuenta.scss";
 
-function ConfigutacionCuenta() {
+function ConfiguracionCuenta() {
   return (
     <section className="contenedorConfigCuenta">
       <div>ConfigutacionCuenta</div>
@@ -9,4 +9,4 @@ function ConfigutacionCuenta() {
   );
 }
 
-export default ConfigutacionCuenta;
+export default ConfiguracionCuenta;
