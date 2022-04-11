@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import NavBar from './componentes/NavBarSobreVerede'
 import {BrowserRouter as Router} from 'react-router-dom'
-import {Sidebar ,PortadaSection,InfoSection,Servicios, Reconocimiento,Sucursales} from './componentes'
+import {Sidebar,PortadaSection,InfoSection,Servicios, Reconocimiento,Sucursales} from './componentes'
 import Footer from '../../subComponentes/footer/Footer'
 
 function SobreVerede() {
