@@ -15,6 +15,11 @@
   }
 }
 
+.flex-contenedorConfigCuenta {
+  display: flex;
+  flex-direction: column;
+}
+
 .btnsContainer-Configuration {
   display: flex;
   flex-direction: column;
