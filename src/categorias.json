@@ -1,0 +1,41 @@
+{
+  "carta":[
+  {
+   "id_productos":0,
+   "nombre":"Pizzas",
+   "imagen":"https://firebasestorage.googleapis.com/v0/b/veride-d5cf8.appspot.com/o/Pizzas.png?alt=media&token=c77fb95c-baf4-4a49-85aa-1f9a0048b070",
+   "estado":"disponible"
+  },
+  {
+    "id_productos":1,
+    "nombre":"Hamburguesas",
+    "imagen":"https://firebasestorage.googleapis.com/v0/b/veride-d5cf8.appspot.com/o/Hamburguesas.png?alt=media&token=0a01d299-9197-4866-bf67-b041ce5f408a",
+    "estado":"disponible"
+   },
+   {
+    "id_productos":2,
+    "nombre":"Sushi",
+    "imagen":"https://firebasestorage.googleapis.com/v0/b/veride-d5cf8.appspot.com/o/Sushi.png?alt=media&token=0e2c2099-ea60-4521-8927-5df55cdc49c4",
+    "estado":"disponible"
+   },
+   {
+    "id_productos":3,
+    "nombre":"Ensaladas",
+    "imagen":"https://firebasestorage.googleapis.com/v0/b/veride-d5cf8.appspot.com/o/Ensaladas.png?alt=media&token=3eea7c33-c1f9-47d7-84a1-9fd9134ba02f",
+    "estado":"disponible"
+   },
+   {
+    "id_productos":4,
+    "nombre":"Postres",
+    "imagen":"https://firebasestorage.googleapis.com/v0/b/veride-d5cf8.appspot.com/o/Postres.png?alt=media&token=7a33f660-39aa-4cbd-a997-7e4dffaf8b52",
+    "estado":"disponible"
+   },
+   {
+    "id_productos":5,
+    "nombre":"Bebidas",
+    "imagen":"https://firebasestorage.googleapis.com/v0/b/veride-d5cf8.appspot.com/o/Bebidas.png?alt=media&token=669ab338-a7d4-46d2-9933-640b1355d00a",
+    "estado":"disponible"
+   }
+
+]
+}
