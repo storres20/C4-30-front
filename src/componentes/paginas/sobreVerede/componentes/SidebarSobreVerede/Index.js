@@ -24,7 +24,7 @@ function Sidebar({isOpen, toggle}) {
           </SidebarLink>
         </SidebarMenu>
         <SideBtWrap>
-          <SidebarRoute to='/Sobre-Verede' onClick={toggle}>
+          <SidebarRoute to='/Inicio-Sesion' onClick={toggle}>
             Ingresa Aquí
           </SidebarRoute>
         </SideBtWrap>

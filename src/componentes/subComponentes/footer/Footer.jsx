@@ -11,32 +11,31 @@ import twitter from './imagenes/ant-design_twitter-outlined.svg'
 
 
 
-import './Footer.css'
+import './Footer.scss'
 
 export default function Footer() {
   return (
-    <div className='style'>
+    <footer className='footerContainer'>
       <div className='flex-desktop'>
         <div className='flex hide-phone'>
           <div className='divspace'>
             <h1 className='title'>Contenido</h1>
-            <h2 className='subtitle'>Sobre Veridé</h2>
-            <h2 className='subtitle'>Productos</h2>
+            <a className='subtitle' href='/sobre-veride'>Sobre Veridé</a>
+            <a className='subtitle' href='/'>Productos</a>
             <h2 className='subtitle'>Contáctanos</h2>
           </div>
 
           <div className='divspace'>
             <h1 className='title'>Únete</h1>
-            <h2 className='subtitle'>Inicia Sesión</h2>
-            <h2 className='subtitle'>Registrate</h2>
+            <a className='subtitle' href='/inicio-sesion'>Inicia Sesión</a>
+            <a className='subtitle' href='/inicio-sesion'>Registrate</a>
           </div>
 
-          <div>
+          <div className='divspace'>
             <h1 className='title'>Sucursales</h1>
-            <h2 className='subtitle'>Lores Ipsum</h2>
-            <h2 className='subtitle'>Lores Ipsum</h2>
-            <h2 className='subtitle'>Lores Ipsum</h2>
-            <h2 className='subtitle'>Lores Ipsum</h2>
+            <h2 className='subtitle'>Perú</h2>
+            <h2 className='subtitle'>Argentina</h2>
+            <h2 className='subtitle'>México</h2>
           </div>
         </div>
 
@@ -65,6 +64,6 @@ export default function Footer() {
           <img className='iconred' src={twitter} alt="twitter" />
         </div>
       </div>
-    </div>
+    </footer>
   )
 }

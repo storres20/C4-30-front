@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch } from "antd";
+import Swal from 'sweetalert2';
 import tipo from "../../constantes/images";
 import "antd/dist/antd.css";
 import "../../contenedores/ConfiguracionCuenta.scss";
@@ -8,6 +9,99 @@ function FormMetodoPagoUser() {
   function onChange(checked) {
     console.log(`switch to ${checked}`);
   }
+
+  const modalGuardarDatosUsuario = () => {
+    Swal.fire({
+      text: '¿Está seguro que desea actualizar sus datos?',
+      showCancelButton: true,
+      confirmButtonColor: '#57a057',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Confirmar',
+      allowOutsideClick: false,
+      stopKeydownPropagation: false,
+      showCloseButton: true,
+      closeButtonAriaLabel: 'cerrar alerta',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: '¡Datos Actualizados con éxito!',
+          text: 'El pedido fue enviado a cocina con éxito',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+/*         if (camposVacios() !== false) {
+          Swal.fire({
+            title: '¡Datos Actualizados con éxito!',
+            text: 'El pedido fue enviado a cocina con éxito',
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        } */ /* else if (camposVacios() === false) {
+          Swal.fire({
+            title: '¡Data sin Actualizar!',
+            text: 'No se pudo completar la actualización por falta de datos',
+            icon: 'error',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        } */
+      }
+    });
+  };
+
+  const modalCancelarDatosUsuario = () => {
+    Swal.fire({
+      text: '¿Está seguro de cancelar la actualización de sus datos?',
+      showCancelButton: true,
+      confirmButtonColor: '#57a057',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Confirmar',
+      allowOutsideClick: false,
+      stopKeydownPropagation: false,
+      showCloseButton: true,
+      closeButtonAriaLabel: 'cerrar alerta',
+    }).then((result) => {
+      if (result.isConfirmed) {        
+          Swal.fire({
+            title: '¡Acción cancelada con éxito!',
+            text: 'Sus datos volverán a la última actualización',
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+      }
+    });
+  };
+
+  const modalCerrarSesionUsuario = () => {
+    Swal.fire({
+      text: '¿Está seguro que desea cerrar sesión?',
+      showCancelButton: true,
+      confirmButtonColor: '#57a057',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirmar',
+      cancelButtonText: 'Cancelar',
+      allowOutsideClick: false,
+      stopKeydownPropagation: false,
+      showCloseButton: true,
+      closeButtonAriaLabel: 'cerrar alerta',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: '¡La Sesión fue finalizada con éxito!',
+          text: 'Vuelva pronto a Veridé',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    });
+  };
+
   return (
     <div className="container-B">
       <div className="titleContainer">
@@ -81,7 +175,10 @@ function FormMetodoPagoUser() {
                 placeholder="Ingrese n° de la tarjeta*"
               />
             </label>
-            <section className="flex-CG--MP">
+
+          </div>
+          <div>
+          <section className="flex-CG--MP">
               <label className="label-CG-MP">
                 <span className="textInput">Expiración</span>
                 <input
@@ -102,17 +199,6 @@ function FormMetodoPagoUser() {
               </label>
             </section>
           </div>
-          <div>
-            <label>
-              <span className="textInput">Correo Electrónico</span>
-              <input
-                className="inputCG"
-                required="true"
-                type="email"
-                placeholder="nombre@ejemplo.com*"
-              />
-            </label>
-          </div>
         </div>
 
         <div className="btnsOptionalContainer">
@@ -132,11 +218,11 @@ function FormMetodoPagoUser() {
           </div>
         </div>
         <div className="btnsContainer">
-          <button className="btnCerrarSesion">Cerrar Sesión</button>
-          <div>
-            <button className="btnCancelar">Cancelar</button>
-            <button className="btnGuardar">Guardar</button>
-          </div>
+        <button className="btnCerrarSesion" onClick={() => modalCerrarSesionUsuario()}>Cerrar Sesión</button>
+            <div>
+              <button className="btnCancelar" onClick={() => modalCancelarDatosUsuario()} >Cancelar</button>
+              <button className="btnGuardar" onClick={() => modalGuardarDatosUsuario()}>Guardar</button>
+            </div>
         </div>
       </div>
     </div>
