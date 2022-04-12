@@ -81,7 +81,10 @@ function FormMetodoPagoUser() {
                 placeholder="Ingrese n° de la tarjeta*"
               />
             </label>
-            <section className="flex-CG--MP">
+
+          </div>
+          <div>
+          <section className="flex-CG--MP">
               <label className="label-CG-MP">
                 <span className="textInput">Expiración</span>
                 <input
@@ -101,17 +104,6 @@ function FormMetodoPagoUser() {
                 />
               </label>
             </section>
-          </div>
-          <div>
-            <label>
-              <span className="textInput">Correo Electrónico</span>
-              <input
-                className="inputCG"
-                required="true"
-                type="email"
-                placeholder="nombre@ejemplo.com*"
-              />
-            </label>
           </div>
         </div>
 

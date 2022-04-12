@@ -21,7 +21,7 @@ function FormCuentaUser() {
           <div className="flex-Inputs inputsContainer">
             <div>
               <label>
-                <span className="textInput">Nombre</span>
+                <span className="textInput">Nombres</span>
                 <input
                   className="inputCG"
                   required="true"
@@ -31,12 +31,12 @@ function FormCuentaUser() {
                 />
               </label>
               <label>
-                <span className="textInput">Correo</span>
+                <span className="textInput">Número Telefónico</span>
                 <input
                   className="inputCG"
                   required="true"
-                  type="email"
-                  placeholder="nombre@ejemplo.com*"
+                  type="text"
+                  placeholder="Ingresa tu número telefónico*"
                 />
               </label>
             </div>
@@ -50,15 +50,7 @@ function FormCuentaUser() {
                   placeholder="Ingresa tus apellidos*"
                 />
               </label>
-              <label>
-                <span className="textInput">Número Telefónico</span>
-                <input
-                  className="inputCG"
-                  required="true"
-                  type="text"
-                  placeholder="Ingresa tu número telefónico*"
-                />
-              </label>
+
             </div>
           </div>
           <div className="btnsOptionalContainer">

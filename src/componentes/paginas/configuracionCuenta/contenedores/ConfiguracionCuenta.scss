@@ -89,7 +89,7 @@
   gap: 1rem;
   border-left: 1px solid var(--secundary-box-lighter);
   border-right: 1px solid var(--secundary-box-lighter);
-  border-top: 1px solid var(--secundary-box-lighter);
+/*   border-top: 1px solid var(--secundary-box-lighter); */
   padding: 2rem;
   div {
     width: 50%;
@@ -149,7 +149,7 @@
   justify-content: space-between;
   align-items: center;
   .label-CG-MP {
-    width: 40%;
+    width: 47%;
   }
 }
 
@@ -158,10 +158,10 @@
   align-items: center;
   width: 100%;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   img {
-    width: 100px;
-    height: 70px;
+    width: 90px;
+    height: 60px;
     border: 1px solid var(--secundary-box-dark);
     box-shadow: var(--shadow);
     border-radius: var(--border-rad);
@@ -169,7 +169,7 @@
     &:hover {
       border: 1px solid var(--primary-color);
     }
-  } 
+  }
 }
 
 .e-btn {
@@ -178,7 +178,7 @@
 }
 
 .flex-TP {
-  display: contents !important; 
+  display: contents !important;
   div {
     display: flex;
     justify-content: center;
@@ -278,11 +278,23 @@
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 600px) {
+  .e-btn-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   .flexBox-CG {
     display: flex;
     flex-direction: column;
-    margin: 2% 18%;
+    margin: 4% 2%;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .flexBox-CG {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 3rem;
     .container-A {
       width: 100%;
     }
@@ -297,7 +309,7 @@
     gap: 1rem;
     border-left: 1px solid var(--secundary-box-lighter);
     border-right: 1px solid var(--secundary-box-lighter);
-    border-top: 1px solid var(--secundary-box-lighter);
+/*     border-top: 1px solid var(--secundary-box-lighter); */
     padding: 2rem;
     div {
       width: 100%;
@@ -352,11 +364,11 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1050px) {
   .flexBox-CG {
     display: flex;
     flex-direction: column;
-    margin: 1rem 3rem;
+    margin: 2% 18%;
     .container-A {
       width: 100%;
     }
@@ -371,7 +383,7 @@
     gap: 1rem;
     border-left: 1px solid var(--secundary-box-lighter);
     border-right: 1px solid var(--secundary-box-lighter);
-    border-top: 1px solid var(--secundary-box-lighter);
+/*     border-top: 1px solid var(--secundary-box-lighter); */
     padding: 2rem;
     div {
       width: 100%;

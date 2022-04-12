@@ -15,7 +15,7 @@ import './Footer.css'
 
 export default function Footer() {
   return (
-    <div className='style'>
+    <footer className='footerContainer'>
       <div className='flex-desktop'>
         <div className='flex hide-phone'>
           <div className='divspace'>
@@ -65,6 +65,6 @@ export default function Footer() {
           <img className='iconred' src={twitter} alt="twitter" />
         </div>
       </div>
-    </div>
+    </footer>
   )
 }

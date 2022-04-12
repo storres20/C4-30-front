@@ -7,7 +7,7 @@
 }
 
 .icon {
-	margin-right: 10px;
+	margin-right: 2rem;
 }
 
 .iconred {
@@ -17,19 +17,20 @@
 
 /* Mobile View */
 
-$phone: 575px;
+$phone: 767px;
 
 @media (max-width: $phone) {
 	.hide-phone {
 		display: none;
 	}
 
-	.style {
-		margin-left: 38px;
+	.footerContainer {
+		background-color: #efefef;
+		padding: 3rem 2rem;
 	}
 
 	.divcontactanos {
-		margin-bottom: 34px;
+		margin-bottom: 2rem;
 	}
 
 	.title {
@@ -59,7 +60,7 @@ $phone: 575px;
 
 /* Desktop View */
 
-@media (min-width: 576px){
+@media (min-width: 768px){
 	.flex-desktop{
 		display: flex;
 		justify-content: space-between;
@@ -79,7 +80,7 @@ $phone: 575px;
 	}
 	
 	.divspace{
-		padding-right: 60px;
+		padding-right: 1rem;
 	}
 
 	.title {

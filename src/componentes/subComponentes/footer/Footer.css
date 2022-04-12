@@ -1,37 +1,44 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.icon {
+/* .icon {
   margin-right: 10px;
-}
+} */
 
 .iconred {
   margin-right: 20px;
   height: 24px;
 }
 
+.footerContainer {
+  background-color: #eeeeee;
+  padding: 3rem 5rem;
+}
+
 /* Mobile View */
-@media (max-width: 575px) {
+@media (max-width: 589px) {
   .hide-phone {
     display: none;
   }
-  .style {
-    margin-left: 38px;
+  .footerContainer {
+    background-color: #eeeeee;
+		padding: 3rem 2rem;
   }
   .divcontactanos {
-    margin-bottom: 34px;
+    margin-bottom: 2rem;
   }
   .title {
     font-family: "Nunito";
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: small;
     line-height: 24px;
     letter-spacing: 0.1px;
     color: #4f4f4f;
@@ -41,7 +48,7 @@
     font-family: "Nunito";
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: x-small;
     line-height: 24px;
     letter-spacing: 0.2px;
     color: #737373;
@@ -50,7 +57,7 @@
 }
 
 /* Desktop View */
-@media (min-width: 576px) {
+@media (min-width: 590px) {
   .flex-desktop {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -58,32 +65,24 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 30px;
+    padding-bottom: 2rem;
   }
   .flex-red {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 18.7%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 74px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    border-top: 1px solid #c9c9c9;
+    padding-top: 1rem;
   }
   .divspace {
-    padding-right: 60px;
+    padding-right: 1rem;
   }
   .title {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: small;
     line-height: 24px;
     letter-spacing: 0.1px;
     color: #252b42;
@@ -93,7 +92,7 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: x-small;
     line-height: 24px;
     letter-spacing: 0.2px;
     color: #737373;
