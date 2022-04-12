@@ -1,24 +1,11 @@
-import React, { useEffect } from "react";
+
+import { React, useState, useEffect } from "react";
+import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
 import "./Home.scss";
 import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
 import axios from "axios";
 
 export default function Home() {
-  //import cargarCategorias.js
-
-  // async function cargarCategorias() {
-  //   const response = await fetch('https://country-app-v3.herokuapp.com/categories', {
-  //     method: "GET"
-  //   })
-  //   const data = await response.json();
-
-  //   return data;
-  // }
-
-  // async function main() {
-  //   categorias = await cargarCategorias();
-
-  // }
 
   // fetch for the categories
   const cargarCategorias = () => {
@@ -61,9 +48,7 @@ export default function Home() {
         <h2>Más Vendidos</h2>
         <div className="container-destacados">
           {/* <ListadoDestacados> */}
-          <VPH />
-          <VPH />
-          <VPH />
+          <Vistaprodhome productos="destacados"/>
         </div>
       </article>
 
@@ -71,13 +56,7 @@ export default function Home() {
         <h2>Categorías</h2>
         <div className="container-categorias">
           {/* <ListadoCategorias> */}
-          {}
-          <div className="categoria"></div>
-          <div className="categoria"></div>
-          <div className="categoria"></div>
-          <div className="categoria"></div>
-          <div className="categoria"></div>
-          <div className="categoria"></div>
+          
         </div>
       </article>
 
@@ -85,15 +64,18 @@ export default function Home() {
         <h2>Todos los productos (n)</h2>
         <div className="container-productos">
           {/* <ListadoProductos {productos}> */}
-          <VPH />
-          <VPH />
-          <VPH />
-          <VPH />
-          <VPH />
-          <VPH />
-          <VPH />
-          <VPH />
-          <VPH />
+          <Vistaprodhome productos="todos" />
+          {
+            // productos.map((producto) => (
+            //   <li className='card' key={producto.id}>
+            //     <img src={producto.image} alt='' />
+            //     <h3>{producto.name}</h3>
+            //     <p>{producto.description}</p>
+            //     <h4>${producto.price}</h4>
+            //     <p>{producto.state}</p>
+            //   </li>
+            // ))
+          }
         </div>
       </article>
     </section>
