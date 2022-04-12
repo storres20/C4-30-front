@@ -1,6 +1,7 @@
 import React from 'react'
-import {PortadaContainer,PortadaBg ,VideoBg,PortadaContent,PortadaH1,PortadaP,PortadaBoxs,PortadaBox } from './PortadaElements'
+import {PortadaContainer,PortadaBg ,VideoBg,PortadaContent,PortadaH1,PortadaP,PortadaBoxs,PortadaBox, PortadaImg } from './PortadaElements'
 import Video from '../../video/veganFood.mp4'
+import Logo from '../../../../../imagenes/LogoVeride/LogosSinFondo/Logo4-Largo.png'
 
 function PortadaSection () {
   return (
@@ -11,10 +12,10 @@ function PortadaSection () {
 
       <PortadaContent>
         <PortadaH1>
-          Logo Extendido
+          <PortadaImg src={Logo} alt='Veride'/>
         </PortadaH1>
         <PortadaP>
-          Un revolucionario concepto de comida vegana. Divertida, artesanal y riquísima. Veredé es <i>the place to be… yourself!</i>
+          Un revolucionario concepto de comida vegana. Divertida, artesanal y riquísima. Veridé es <i>the place to be… yourself!</i>
         </PortadaP>
         <PortadaBoxs>
           <PortadaBox>

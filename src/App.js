@@ -6,7 +6,7 @@ import VerificarCuentaUsuario from "./componentes/paginas/registro-InicioSesion/
 import VerificarCuentaNuevoUsuario from "./componentes/paginas/registro-InicioSesion/contenedor/VerificarCuenta-NuevoUsuario";
 import RecuperarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/RecuperarContrasena";
 import CambiarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/CambiarContrasena";
-import SobreVerede from "./componentes/paginas/sobreVerede/SobreVerede";
+import SobreVeride from "./componentes/paginas/sobreVerede/SobreVerede";
 import CarritoCompras from "./componentes/paginas/carritoCompras/CarritoCompras";
 import Home from "./componentes/paginas/home/Home";
 import CuentaUser from "./componentes/paginas/configuracionCuenta/contenedores/CuentaUser";
@@ -34,7 +34,7 @@ function App() {
         <Route path="/Verificar-Cuenta" element={<VerificarCuentaUsuario />} />
         <Route path="/Verificar-Cuenta/Nuevo-Usuario/:id" element={<VerificarCuentaNuevoUsuario />} />
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
-        <Route path="/Sobre-Verede" element={<SobreVerede/> } />
+        <Route path="/Sobre-Veride" element={<SobreVeride/> } />
         <Route path="/" element={<Home />} />
         {/* navs testing */}
         <Route path="/nav" element={<NavBarHome />} />

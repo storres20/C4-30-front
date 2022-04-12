@@ -70,13 +70,12 @@ export const PortadaH1 = styled.h1 `
   color:#ffff;
   font-size:48px;
   text-aling:center;
-
-  @media screen and (max-width: 768px){
-    font-size: 40px;
-  }
-  @media screen and (max-width: 480px){
-    font-size: 32px;
-  }
+  display:flex;
+  justify-content: center;
+  align-items: center;
+`
+export const PortadaImg = styled.img `
+  width: 50%;
 `
 export const PortadaP = styled.p `
   margin-top:24px;

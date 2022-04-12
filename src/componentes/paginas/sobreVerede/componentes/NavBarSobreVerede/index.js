@@ -8,11 +8,11 @@ function Navbar({toggle}) {
     <>
       <Nav>
         <NavbarContainer>
-          <ArrowHome>
-            <BiArrowBack />
+          <ArrowHome to='/'>
+            <BiArrowBack/>
           </ArrowHome>
           <NavLogo to='/'>
-            Sobre Veredé
+            Sobre Veridé
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <BiMenuAltRight />
@@ -22,17 +22,17 @@ function Navbar({toggle}) {
               <NavLinks to="about" href="#infoSection">¿Quienes somos?</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="servicios" href="#servicios" >Servicios</NavLinks>
+              <NavLinks to="servicios" href="#serviciosSection" >Servicios</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="testimonios" href="#reconocimiento">Reconocimiento</NavLinks>
+              <NavLinks to="testimonios" href="#reconocimientoSection">Reconocimiento</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="sucursales" href="#sucursales" >Sucursales</NavLinks>
+              <NavLinks to="sucursales" href="#sucursalesSection" >Sucursales</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/Sobre-Verede" >Ingresa Aquí</NavBtnLink>
+            <NavBtnLink to="/inicio-sesion" >Ingresa Aquí</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

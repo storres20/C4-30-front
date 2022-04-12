@@ -4,7 +4,7 @@ import { Link as LinkS}from 'react-scroll'
 import '../../../registro-InicioSesion/componentes/formularios/Formularios.scss'
 
 export const Nav = styled.nav`
-  background: #dfdada1f;;
+  background: #dfdada1f;
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -15,6 +15,11 @@ export const Nav = styled.nav`
   z-index: 10;
   font-family: var(--font-family);
   font-weight:bold ;
+  color: white;
+
+  :hover {
+    color: #CE972B;
+  }
 
   @media screen and (max-width: 960px) {
     transtion: 0.8s all ease
@@ -33,13 +38,17 @@ export const NavbarContainer = styled.div`
     justify-content: flex-start;
   }
 `
-export const ArrowHome = styled.nav `
+export const ArrowHome = styled(LinkR) `
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
     cursor:pointer
+
+    :hover {
+      color: #CE972B;
+    }
 `
 
 export const NavLogo = styled(LinkR)`
