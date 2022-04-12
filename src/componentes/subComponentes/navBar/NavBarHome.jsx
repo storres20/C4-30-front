@@ -11,7 +11,7 @@ export default function NavBarHome() {
         <div className="navbar-left">
             <img src={logo} alt="Veride" />
             <a className="productos" href="/">Productos</a>
-            <a className="sobre-veride" href="/sobre-veride">Sobre Veridē</a>
+            <a className="sobre-veride" href="/Sobre-Verede">Sobre Veridē</a>
         </div>
         <div className="navbar-right">
             <form class="form-inline">
@@ -31,9 +31,9 @@ export default function NavBarHome() {
                     <div className="logged-dropdown-mobile">
                         <i class="uil uil-ellipsis-v"></i>
                         <div className="logged-mobile-dropdown-content">
-                            <a className="link-usuario" href="/cuenta">usuario</a>
+                            <p className="link-usuario">usuario</p>
                             <a className="productos" href="/">Productos</a>
-                            <a className="sobre-veride" href="/sobre-veride">Sobre Veridē</a>
+                            <a className="sobre-veride" href="/Sobre-Verede">Sobre Veridē</a>
                             <a href="configuracion-de-cuenta/personal">Configuración de Cuenta</a>
                             <a href="historial-de-compras">Historial de Compras</a>
                             <a href="logout">Cerrar Sesión<i class="uil uil-signout"></i></a>
@@ -56,7 +56,7 @@ export default function NavBarHome() {
                         <div className="unlogged-dropdown-content">
                             <a className="ingreso2" href="/inicio-sesion">Ingresa aquí</a>
                             <a className="productos" href="/">Productos</a>
-                            <a className="sobre-veride" href="/sobre-veride">Sobre Veridē</a>
+                            <a className="sobre-veride" href="/Sobre-Verede">Sobre Veridē</a>
                         </div>
                     </div>
                 </div>}           
