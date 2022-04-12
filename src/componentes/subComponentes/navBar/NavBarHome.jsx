@@ -1,6 +1,7 @@
 import React from "react";
 import logo from '../../../imagenes/LogoVeride/LogosSinFondo/Logo3-Largo.png';
 import "./NavBar.scss"
+import { FiHeart, FiShoppingBag, FiSearch } from "react-icons/fi";
 
 const isLoggedIn = true;
 
@@ -16,11 +17,14 @@ export default function NavBarHome() {
             <form class="form-inline">
                 <input type="text" placeholder="Buscar..." />
                 <button type="submit" className="boton-buscar">
-                    <i class="uil uil-search"></i>
+                    <FiSearch/>
                 </button>
             </form>
-            <a className="carrito" href="/carrito">
-                <i class="uil uil-shopping-cart"></i>
+            <a className="deseos" href="/lista-de-deseos">
+                <FiHeart/>
+            </a>
+            <a className="carrito" href="/Carrito-Compras">
+                <FiShoppingBag/>
             </a>
             {isLoggedIn ?
             <div className="dropdown">
@@ -30,15 +34,15 @@ export default function NavBarHome() {
                             <a className="link-usuario" href="/cuenta">usuario</a>
                             <a className="productos" href="/">Productos</a>
                             <a className="sobre-veride" href="/sobre-veride">Sobre Veridē</a>
-                            <a href="configuracion-de-cuenta">Configuración de Cuenta</a>
+                            <a href="configuracion-de-cuenta/personal">Configuración de Cuenta</a>
                             <a href="historial-de-compras">Historial de Compras</a>
                             <a href="logout">Cerrar Sesión<i class="uil uil-signout"></i></a>
                         </div>
                     </div>
                     <div className="logged-dropdown-desktop">
-                        <a href="/cuenta" className="cuenta">nombre usuario<i class="uil uil-angle-down"></i></a>
+                        <p className="cuenta">nombre usuario<i class="uil uil-angle-down"></i></p>
                         <div className="logged-desktop-dropdown-content">
-                            <a href="configuracion-de-cuenta">Configuración de Cuenta</a>
+                            <a href="configuracion-de-cuenta/personal">Configuración de Cuenta</a>
                             <a href="historial-de-compras">Historial de Compras</a>
                             <a href="logout">Cerrar Sesión<i class="uil uil-signout"></i></a>
                         </div>
@@ -46,7 +50,7 @@ export default function NavBarHome() {
             </div>
             :
                 <div className="ingreso-container">
-                    <a className="ingreso" href="/inicio-sesion"><span>Ingresa aquí</span></a>
+                    <a className="inicio-sesion" href="/inicio-sesion"><span>Ingresa aquí</span></a>
                     <div className="unlogged-dropdown">
                         <a href="/cuenta" className="cuenta-ingreso"><i class="uil uil-ellipsis-v"></i></a>
                         <div className="unlogged-dropdown-content">
