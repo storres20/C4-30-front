@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 
-import './VPH.css'
+import './VPH.scss'
+//import axios from "axios";
+//import Cat from './Cat'
 
-import imagen from "../imagenes/img.svg"
+//import imagen from "../imagenes/img.svg"
 import bag from "../imagenes/bag.svg"
 import bagbold from "../imagenes/bagbold.svg"
 import heart from "../imagenes/heart.svg"
@@ -12,7 +14,7 @@ import burger from "../imagenes/burger.svg"
 import pizza from "../imagenes/pizza.svg"
 import info from "../imagenes/info.svg"
 
-export default function VPH() {
+export default function VPH({ prod }) {
 
   const [isHeart, setIsHeart] = useState(false)
   const buttonHeart = () => {
@@ -24,20 +26,34 @@ export default function VPH() {
     setIsBag(current => !current)
   }
 
-  const [isImg, setIsImg] = useState(false)
-  const buttonImg = () => {
-    setIsImg(current => !current)
-  }
+  // mostrar CATEGORIAS desde la API
+  /* const [categorias, setCategorias] = useState([]);
+  const cargarCategorias = ({ prod }) => {
+    axios
+      .get("https://country-app-v3.herokuapp.com/categories")
+      .then((data) => {
+        //console.log(data.data)
+
+        //Data de Categorias al useState
+        setCategorias(data.data)
+      })
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    cargarCategorias();
+  }, []); */
+
 
   return (
     <div className='contenedorVPH'>
-      <img className='VPHimg' src={imagen} alt="imagen" onClick={buttonImg} />
-      <h4 className={`postexto ${isImg ? "hidden" : ""}`}>AGOTADO</h4>
+      <img src={prod.image} alt="imagen" />
+      <h4 className={`postexto ${(prod.state === "disponible") ? "hidden" : ""}`}>AGOTADO</h4>
 
       <div className='contenedorTexto'>
         <div className='flex1'>
           <div className='flex2'>
-            <h1>Burgers & Pizza</h1>
+            <h1>{prod.name} </h1>
             <img className='iconinfo' src={info} alt="info" />
           </div>
           <div>
@@ -49,14 +65,14 @@ export default function VPH() {
 
         <div className='flex2'>
           <img className='iconclock' src={clock} alt="clock" />
-          <h2>40-60 min</h2>
-          <h2>$24</h2>
+          <h2>{prod.time_preparation}</h2>
+          <h2>$ {prod.price}</h2>
         </div>
 
         <div className='flex2'>
           <div className='flex3'>
             <img className='icon' src={burger} alt="burger" />
-            <h3>Burger</h3>
+            <h3>{prod.category_id}</h3>
           </div>
           <div className='flex3'>
             <img className='icon' src={pizza} alt="pizza" />
