@@ -9,18 +9,16 @@ import CambiarContrasena from "./componentes/paginas/registro-InicioSesion/conte
 import SobreVeride from "./componentes/paginas/sobreVerede/SobreVerede";
 import CarritoCompras from "./componentes/paginas/carritoCompras/CarritoCompras";
 import Home from "./componentes/paginas/home/Home";
-//navs testing
 import NavBarHome from "./componentes/subComponentes/navBar/NavBarHome";
-import NavBarSobreVeride from "./componentes/subComponentes/navBar/NavBarSobreVeride";
-
 import ConfiguracionCuenta from "./componentes/paginas/configuracionCuenta/contenedores/ConfiguracionCuenta";
-
+import Footer from "./componentes/subComponentes/footer/Footer";
 
 
 function App() {
 
   return (
     <div className="App">
+      <NavBarHome/>
       <Routes>
         <Route path="/Carrito-Compras" element={<CarritoCompras/> } />
 
@@ -32,10 +30,8 @@ function App() {
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
         <Route path="/Sobre-Veride" element={<SobreVeride/> } />
         <Route path="/" element={<Home />} />
-        {/* navs testing */}
-        <Route path="/nav" element={<NavBarHome />} />
-        <Route path="/nav2" element={<NavBarSobreVeride />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
