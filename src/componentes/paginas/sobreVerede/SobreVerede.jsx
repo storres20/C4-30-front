@@ -23,7 +23,7 @@ const toggle = () => {
       <InfoSection />
       <Servicios />
       <Reconocimiento />
-      <Sucursales path='sucursales'/>
+      <Sucursales />
       <Footer />
     </div>
   )
