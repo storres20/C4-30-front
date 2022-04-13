@@ -1,25 +1,32 @@
 // refactorizar
 
 section, .container-productos, .producto, .container-categorias, .categoria, .container-destacados, .destacado, .promo {
-    /* margin: 2vh 1vw; */
     display: inline-block;
+    // border: solid 1px black;
 }
 
-/* h2 {
+article {
+  margin: 2vh 1vw;
+}
+
+h2 {
   padding-left: 2vw;
-} */
+}
 
 .article-promociones {
   display: flex;
+  // border: solid 1px black;
   justify-content: space-around;
   text-align: center;
 
-  .enlacePromo1, .enlacePromo2 {
-    width: 50%;
+  a {
+    width: 45vw;
+    // border: solid 1px black;
   }
   .imgPromo1, .imgPromo2 {
-    width: 90%;
+    width: 100%;
     height: auto;
+    // border: solid 1px black;
   }
 }
 
@@ -34,6 +41,7 @@ section, .container-productos, .producto, .container-categorias, .categoria, .co
 }
 
 .container-categorias {
+
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -42,7 +50,6 @@ section, .container-productos, .producto, .container-categorias, .categoria, .co
   // div {
   //   border: solid 1px black;
   // }
-
 
   img {
     width: 100px;
@@ -55,6 +62,7 @@ section, .container-productos, .producto, .container-categorias, .categoria, .co
 
 .container-productos {
   // display: flex;
+
   justify-content: space-around;
   flex-wrap: wrap;
 
@@ -86,7 +94,6 @@ section, .container-productos, .producto, .container-categorias, .categoria, .co
   .imgPromo1 {
     width: 100%;
   }
-
   .enlacePromo2 {
     display: none;
   }
@@ -105,7 +112,6 @@ section, .container-productos, .producto, .container-categorias, .categoria, .co
 
 //escritorio
 @media only screen and (min-width: 768px) {
-
   .container-productos, .container-destacados {
     grid-template-columns: repeat(3, 1fr);
   }
