@@ -116,3 +116,20 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.todosProductos{
+    overflow-y: scroll;
+		height: 500px;
+		width: auto;
+		
+		text-align: center;
+		//display: flex;
+		//justify-content: space-around;
+		//align-items: center;
+		
+		//flex-flow: column wrap;
+}
+
+.masVendidos{
+  text-align: center;
+}
