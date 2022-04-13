@@ -1,12 +1,14 @@
 import { React, useState, useEffect } from "react";
 //import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
 import "./Home.scss";
+import NavBarHome from "../../subComponentes/navBar/NavBarHome";
 import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
 import axios from "axios";
 import Categorias from "../../subComponentes/categorias/Categorias";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Footer from "../../subComponentes/footer/Footer";
 
 const responsive = {
   superLargeDesktop: {
@@ -97,7 +99,8 @@ export default function Home() {
   }, []);
 
   return (
-    <section>
+    <section className="flex-Home">
+      <NavBarHome/>
       <article className="article-promociones">
         {/* <TarjetaDescuento {1}> */}
         <a href="/promociones">
@@ -151,8 +154,6 @@ export default function Home() {
         </div>
       </article>
 
-     
-
       <article className="article-productos">
         <h2>Todos los productos (n)</h2>
         <div className="todosProductos"> {/* container-productos */}
@@ -176,6 +177,7 @@ export default function Home() {
           }
         </div>
       </article>
+      <Footer/>
     </section>
   );
 }

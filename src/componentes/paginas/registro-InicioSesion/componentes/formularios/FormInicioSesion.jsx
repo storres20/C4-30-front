@@ -19,7 +19,7 @@ const Inicio = ({ isSelectedInicio }) => {
         JSON.stringify({ email, password })
       )
       .then((data) => {
-        window.location.pathname = "/";
+        /* window.location.pathname = "/"; */
         localStorage.setItem("user", data.data.email);
       })
       .catch((error) => {
@@ -77,7 +77,7 @@ const Inicio = ({ isSelectedInicio }) => {
           <div className="tabsCheckbox">
             <label>
               <input type="checkbox" className="checkbox" />
-              <span className="checkmark"> Mantenme conectado</span>
+              <span className="checkmark"> Mantenerme conectado</span>
             </label>
           </div>
           <div className="btnsIngresar">

@@ -75,7 +75,7 @@ const Registro = ({ isSelectedRegistro }) => {
           <div className="tabsCheckbox">
             <label>
               <input type="checkbox" className="checkbox" />
-              <span className="checkmark"> Mantenme conectado</span>
+              <span className="checkmark"> Mantenerme conectado</span>
             </label>
           </div>
           <div className="btnsIngresar">
