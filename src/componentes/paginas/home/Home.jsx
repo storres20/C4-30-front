@@ -1,4 +1,3 @@
-
 import { React, useState, useEffect } from "react";
 import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
 import "./Home.scss";
@@ -16,9 +15,9 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (!localStorage.getItem("user")) {
-      window.location.pathname = "/inicio-sesion";
-    }
+  //   if (!localStorage.getItem("user")) {
+  //     window.location.pathname = "/inicio-sesion";
+  //   }
 
     cargarCategorias();
   }, []);
@@ -31,7 +30,7 @@ export default function Home() {
           <img
             src="https://i.ibb.co/1X7npWT/promo1.png"
             alt="Promo"
-            className="promo"
+            className="imgPromo1"
           />
         </a>
         {/* <TarjetaDescuento {2}> */}
@@ -39,7 +38,7 @@ export default function Home() {
           <img
             src="https://i.ibb.co/8dQpZgy/promo2.png"
             alt="Promo"
-            className="promo"
+            className="imgPromo2"
           />
         </a>
       </article>
