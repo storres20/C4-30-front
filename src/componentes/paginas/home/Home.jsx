@@ -83,7 +83,7 @@ export default function Home() {
       .then((data) => {
 
         //Data de Mas Vendidos; lo cual, es un RANDOM de 10 de la Data de Productos
-        var cont = 5
+        var cont = 3
         var shuffled = data.data.sort(function () { return .5 - Math.random() })
         var selected = shuffled.slice(0, cont)
         setVendidos(selected)
@@ -119,7 +119,7 @@ export default function Home() {
 
       <article className="article-destacados">
         <h2>Más Vendidos</h2>
-        <div className=""> {/* container-destacados */}
+        <div className="masVendidos"> {/* container-destacados */}
           {/* <ListadoDestacados> */}
           {/* <Vistaprodhome productos="destacados" /> */}
 
@@ -151,9 +151,11 @@ export default function Home() {
         </div>
       </article>
 
+     
+
       <article className="article-productos">
         <h2>Todos los productos (n)</h2>
-        <div className=""> {/* container-productos */}
+        <div className="todosProductos"> {/* container-productos */}
           {/* <ListadoProductos {productos}> */}
           {/* <Vistaprodhome productos="todos" /> */}
 
