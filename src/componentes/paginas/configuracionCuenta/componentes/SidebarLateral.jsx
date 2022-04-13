@@ -3,15 +3,35 @@ import "../contenedores/ConfiguracionCuenta.scss";
 import "antd/dist/antd.css";
 import { Link } from "react-router-dom";
 import { FiUser, FiMapPin, FiCreditCard } from "react-icons/fi";
+import { useState } from "react";
 
-function SidebarLateral() {
+function SidebarLateral({setStatus}) {
+
+  const [estadoOrdenes, setEstado] = useState('informacionPersonal');
+
+  const informacionPersonal = () => {
+    setEstado('informacionPersonal')
+    setStatus('informacionPersonal');
+  };
+
+  const ubicacionEntrega = () => {
+    setEstado('ubicacionEntrega');
+    setStatus('ubicacionEntrega');
+  };
+
+  const coneccionTarjetas = () => {
+    setEstado('coneccionTarjetas');
+    setStatus('coneccionTarjetas');
+  };
+  
+  
   return (
     <div className="container-A">
       <div className="titleContainerLeft">
         <h1>Configuración</h1>
       </div>
       <section className="btnsContainer-Configuration">
-        <Link className="btnLeft-CG" role="button" to="/Configuracion-Cuenta/Personal">
+        <button onClick={informacionPersonal} id="toDo" className={(estadoOrdenes === 'informacionPersonal') ? 'clicked' : 'btnLeft-CG'} to="/Configuracion-Cuenta">
             <label className="iconbtn-CG">
               <FiUser className="icon-React" />
             </label>
@@ -19,8 +39,8 @@ function SidebarLateral() {
               <h3>Cuenta</h3>
               <p>Información Personal</p>
             </aside>
-        </Link>
-        <Link className="btnLeft-CG" role="button" to="/Configuracion-Cuenta/Direccion">
+        </button>
+        <button onClick={ubicacionEntrega} id="toDo" className={(estadoOrdenes === 'ubicacionEntrega') ? 'btnLeft-CG clicked ' : 'btnLeft-CG'} to="/Configuracion-Cuenta">
             <label className="iconbtn-CG">
               <FiMapPin className="icon-React" />
             </label>
@@ -28,8 +48,8 @@ function SidebarLateral() {
               <h3>Dirección</h3>
               <p>Ubicación de entrega</p>
             </aside>
-        </Link>
-        <Link className="btnLeft-CG" role="button" to="/Configuracion-Cuenta/Metodo-Pago">
+        </button>
+        <button onClick={coneccionTarjetas} id="toDo" className={(estadoOrdenes === 'coneccionTarjetas') ? 'btnLeft-CG clicked ' : 'btnLeft-CG'} to="/Configuracion-Cuenta">
             <label>
               <FiCreditCard className="icon-React" />
             </label>
@@ -37,7 +57,7 @@ function SidebarLateral() {
               <h3>Método de Pago</h3>
               <p>Conección con Tarjetas</p>
             </aside>
-        </Link>
+        </button>
       </section>
     </div>
   );
