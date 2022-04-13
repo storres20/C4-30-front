@@ -6,7 +6,7 @@ import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, A
 function Navbar({toggle}) {
   return (
     <>
-      <Nav>
+      <Nav id='infoSection'>
         <NavbarContainer>
           <ArrowHome to='/'>
             <BiArrowBack/>

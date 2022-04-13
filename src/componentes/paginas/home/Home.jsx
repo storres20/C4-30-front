@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
 import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
+import NavBarHome from "../../subComponentes/navBar/NavBarHome";
 import "./Home.scss";
 import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
 import axios from "axios";
@@ -24,6 +25,7 @@ export default function Home() {
 
   return (
     <section>
+      <NavBarHome />
       <article className="article-promociones">
         {/* <TarjetaDescuento {1}> */}
         <a href="/promociones">

@@ -18,7 +18,6 @@ function App() {
 
   return (
     <div className="App">
-      <NavBarHome/>
       <Routes>
         <Route path="/Carrito-Compras" element={<CarritoCompras/> } />
 
