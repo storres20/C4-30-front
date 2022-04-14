@@ -134,7 +134,7 @@ export default function Home() {
           > */}
 
             {vendidos.map(prod => {
-              return <VPH key={prod.id} prod={prod} />
+              return <VPH key={prod.id} prod={prod} categorias={categorias} />
             })}
 
           {/* </Carousel> */}
@@ -162,7 +162,7 @@ export default function Home() {
           {/* <Vistaprodhome productos="todos" /> */}
 
           {productos.map(prod => {
-            return <VPH key={prod.id} prod={prod} />
+            return <VPH key={prod.id} prod={prod} categorias={categorias}/>
           })}
 
           {
