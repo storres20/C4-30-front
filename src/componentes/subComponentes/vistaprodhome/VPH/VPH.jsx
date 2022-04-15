@@ -10,7 +10,7 @@ import bagbold from "../imagenes/bagbold.svg"
 import heart from "../imagenes/heart.svg"
 import heartbold from "../imagenes/heartbold.svg"
 import clock from "../imagenes/clock.svg"
-import burger from "../imagenes/burger.svg"
+//import burger from "../imagenes/burger.svg"
 import pizza from "../imagenes/pizza.svg"
 import info from "../imagenes/info.svg"
 

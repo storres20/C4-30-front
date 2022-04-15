@@ -126,17 +126,9 @@ export default function Home() {
       <article className="article-destacados">
         <h2>Más Vendidos</h2>
         <div className="masVendidos"> {/* container-destacados */}
-          {/* <Carousel responsive={responsive}
-            infinite={true}
-            swipeable={false}
-            draggable={false}
-            autoPlay={false}
-            autoPlaySpeed={10000}
-          > */}
-            {vendidos.map(prod => {
-              return <VPH key={prod.id} prod={prod} categorias={categorias} />
-            })}
-          {/* </Carousel> */}
+          {vendidos.map(prod => {
+            return <VPH key={prod.id} prod={prod} categorias={categorias} />
+          })}
         </div>
       </article>
 
@@ -146,10 +138,10 @@ export default function Home() {
 
           {categorias.map(prod => {
             return <Categorias
-                      key={prod.id}
-                      prod={prod}
-                      setSelectedCategorias={setSelectedCategorias}
-                      selectedCategorias={selectedCategorias} />
+              key={prod.id}
+              prod={prod}
+              setSelectedCategorias={setSelectedCategorias}
+              selectedCategorias={selectedCategorias} />
           })}
 
         </div>
@@ -159,25 +151,26 @@ export default function Home() {
         <h2>Todos los productos ({productos.length})</h2>
         <div className="todosProductos"> {/* container-productos */}
 
-        {/* Filtros activados => muestra solo la(s) categoria(s) elegida(s) */}
+          {/* Filtros activados => muestra solo la(s) categoria(s) elegida(s) */}
           {selectedCategorias.length > 0 && productos.filter(p => selectedCategorias.some(c => c === p.category_id)).map(prod => {
             return <VPH
-                      key={prod.id}
-                      prod={prod}
-                      categorias={categorias}/>
-            })
+              key={prod.id}
+              prod={prod}
+              categorias={categorias} />
+          })
           }
           {/* Estado inicial => muestra todo */}
           {selectedCategorias.length === 0 && productos.map(prod => {
             return <VPH
-                      key={prod.id}
-                      prod={prod}
-                      categorias={categorias}/>})
+              key={prod.id}
+              prod={prod}
+              categorias={categorias} />
+          })
           }
 
         </div>
       </article>
-      <Footer/>
+      <Footer />
     </section>
   );
 }

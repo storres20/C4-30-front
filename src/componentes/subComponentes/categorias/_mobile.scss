@@ -1,0 +1,41 @@
+$phone: 575px;
+
+@media (max-width: $phone) {
+	.contenedor {
+		width: 118px;
+		height: 80px;
+		border: 2px solid #edeef2;
+		border-radius: 10px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #545563;
+
+		//cursor: pointer;
+	}
+
+	.click {
+		color: #c9a731;
+		border: 2px solid #c9a731;
+	}
+
+	.imgCat {
+		width: 24px !important;
+		height: auto;
+	}
+
+	.textCat {
+		font-family: "Nunito";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 10px;
+		line-height: 18px;
+
+		text-align: center;
+		letter-spacing: 0.1px;
+
+		margin: 6px 0;
+	}
+}
