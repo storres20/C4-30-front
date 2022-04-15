@@ -14,7 +14,7 @@ import burger from "../imagenes/burger.svg"
 import pizza from "../imagenes/pizza.svg"
 import info from "../imagenes/info.svg"
 
-export default function VPH({ prod }) {
+export default function VPH({ prod, categorias }) {
 
   const [isHeart, setIsHeart] = useState(false)
   const buttonHeart = () => {
@@ -44,7 +44,11 @@ export default function VPH({ prod }) {
     cargarCategorias();
   }, []); */
 
-
+  let categoria;
+  if (categorias) {
+    categoria = categorias.find(e => e.id === prod.category_id);
+  }
+  
   return (
     <div className='contenedorVPH'>
       <img src={prod.image} alt="imagen" />
@@ -70,13 +74,13 @@ export default function VPH({ prod }) {
         </div>
 
         <div className='flex2'>
-          <div className='flex3'>
+          {/* <div className='flex3'>
             <img className='icon' src={burger} alt="burger" />
             <h3>{prod.category_id}</h3>
-          </div>
+          </div> */}
           <div className='flex3'>
             <img className='icon' src={pizza} alt="pizza" />
-            <h3>Pizza</h3>
+            <h3>{categoria && categoria.name}</h3>
           </div>
         </div>
       </div>

@@ -3,15 +3,24 @@ import {React, useState} from 'react'
 import "./Categorias.scss";
 
 
-export default function Categorias({ prod }) {
+export default function Categorias({ prod, setSelectedCategorias, selectedCategorias }) {
 
-  // Solo para probar el cambio de color de la CATEGORIA al dar click
-  const [isClick, setIsClick] = useState(false)
+  // Filtrado por categoria
+  const [isClick, setIsClick] = useState(false);
+
+  const removeItem = (id) => {
+    setSelectedCategorias(selectedCategorias.filter((c)=>(c !== id)));
+  }
   const buttonClick = () => {
     setIsClick(current => !current)
+    if (!isClick) {
+      setSelectedCategorias(selectedCategorias.concat(prod.id));
+    }
+    else {
+      removeItem(prod.id);
+    }
   }
-  
-  
+
   return (
     <div>
       <div className={`contenedor ${isClick ? "click" : ""}`} onClick={buttonClick}>
