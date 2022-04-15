@@ -142,10 +142,13 @@ $phone: 575px;
 
 		.icon {
 			width: 12px;
-			height: auto;
+			height: 12px;
 
 			margin-left: 10px;
 			margin-right: 8px;
+			
+			margin-top: auto;
+			margin-bottom: auto;
 		}
 
 		.hidden {
