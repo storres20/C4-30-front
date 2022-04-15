@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const InfoContainer = styled.section`
   /* height: 800px; */
-  height: 508px;
+  /* height: 508px; */
+  height:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +17,8 @@ export const InfoContainer = styled.section`
 
   @media screen and (max-width: 480px) {
     /* height: 1300px; */
-    height: 512px;
+    /* height: 512px; */
+    height: 100%;
   }
 `;
 
@@ -26,6 +28,9 @@ export const InfoSubtitulo = styled.p`
   text-align: center;
   padding: 0 5rem;
   max-width: 900px;
+  @media screen and (max-width: 480px) {
+    padding: 2rem 3rem;
+  }
 `;
 
 export const InfoH1 = styled.h1`
@@ -33,7 +38,7 @@ export const InfoH1 = styled.h1`
   color: hsla(228, 28%, 20%, 1);
 
   margin-bottom: 2rem;
-/*   @media screen and (max-width: 480px) {
-    font-size: 2rem;
-  } */
+  @media screen and (max-width: 480px) {
+    margin: 2rem;
+  }
 `;
