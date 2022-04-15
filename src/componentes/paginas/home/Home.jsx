@@ -97,6 +97,9 @@ export default function Home() {
     cargarVendidos(); // Los Mas Vendidos - muestra de manera Random
   }, []);
 
+  // Filtrado por categoria
+  const [selectedCategorias, setSelectedCategorias] = useState([]);
+
   return (
     <section>
       <NavBarHome />
@@ -122,9 +125,6 @@ export default function Home() {
       <article className="article-destacados">
         <h2>Más Vendidos</h2>
         <div className="masVendidos"> {/* container-destacados */}
-          {/* <ListadoDestacados> */}
-          {/* <Vistaprodhome productos="destacados" /> */}
-
           {/* <Carousel responsive={responsive}
             infinite={true}
             swipeable={false}
@@ -132,50 +132,48 @@ export default function Home() {
             autoPlay={false}
             autoPlaySpeed={10000}
           > */}
-
             {vendidos.map(prod => {
               return <VPH key={prod.id} prod={prod} categorias={categorias} />
             })}
-
           {/* </Carousel> */}
-
         </div>
       </article>
 
       <article className="article-categorias">
         <h2>Categorías</h2>
         <div className="container-categorias">
-          {/* <ListadoCategorias> */}
+
           {categorias.map(prod => {
-            return <Categorias key={prod.id} prod={prod} />
+            return <Categorias
+                      key={prod.id}
+                      prod={prod}
+                      setSelectedCategorias={setSelectedCategorias}
+                      selectedCategorias={selectedCategorias} />
           })}
 
         </div>
       </article>
 
-     
-
       <article className="article-productos">
-        <h2>Todos los productos (n)</h2>
+        <h2>Todos los productos ({productos.length})</h2>
         <div className="todosProductos"> {/* container-productos */}
-          {/* <ListadoProductos {productos}> */}
-          {/* <Vistaprodhome productos="todos" /> */}
 
-          {productos.map(prod => {
-            return <VPH key={prod.id} prod={prod} categorias={categorias}/>
-          })}
-
-          {
-            // productos.map((producto) => (
-            //   <li className='card' key={producto.id}>
-            //     <img src={producto.image} alt='' />
-            //     <h3>{producto.name}</h3>
-            //     <p>{producto.description}</p>
-            //     <h4>${producto.price}</h4>
-            //     <p>{producto.state}</p>
-            //   </li>
-            // ))
+        {/* Filtros activados => muestra solo la(s) categoria(s) elegida(s) */}
+          {selectedCategorias.length > 0 && productos.filter(p => selectedCategorias.some(c => c === p.category_id)).map(prod => {
+            return <VPH
+                      key={prod.id}
+                      prod={prod}
+                      categorias={categorias}/>
+            })
           }
+          {/* Estado inicial => muestra todo */}
+          {selectedCategorias.length == 0 && productos.map(prod => {
+            return <VPH
+                      key={prod.id}
+                      prod={prod}
+                      categorias={categorias}/>})
+          }
+
         </div>
       </article>
     </section>
