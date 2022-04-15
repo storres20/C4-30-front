@@ -1,16 +1,16 @@
 import { React, useState, useEffect } from "react";
-import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
+//import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
 import NavBarHome from "../../subComponentes/navBar/NavBarHome";
 import "./Home.scss";
 import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
 import axios from "axios";
 import Categorias from "../../subComponentes/categorias/Categorias";
 
-import Carousel from "react-multi-carousel";
+//import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Footer from "../../subComponentes/footer/Footer";
 
-const responsive = {
+/* const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
@@ -36,7 +36,7 @@ const responsive = {
     breakpoint: { max: 464, min: 0 },
     items: 1
   }
-};
+}; */
 
 export default function Home() {
 
@@ -168,7 +168,7 @@ export default function Home() {
             })
           }
           {/* Estado inicial => muestra todo */}
-          {selectedCategorias.length == 0 && productos.map(prod => {
+          {selectedCategorias.length === 0 && productos.map(prod => {
             return <VPH
                       key={prod.id}
                       prod={prod}
