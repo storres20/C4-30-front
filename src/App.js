@@ -7,7 +7,7 @@ import VerificarCuentaNuevoUsuario from "./componentes/paginas/registro-InicioSe
 import RecuperarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/RecuperarContrasena";
 import CambiarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/CambiarContrasena";
 import SobreVeride from "./componentes/paginas/sobreVerede/SobreVerede";
-import CarritoCompras from "./componentes/paginas/carritoCompras/CarritoCompras";
+import CarritoCompras from "./componentes/paginas/carritoCompras/contenedores/CarritoCompras";
 import Home from "./componentes/paginas/home/Home";
 import NavBarHome from "./componentes/subComponentes/navBar/NavBarHome";
 import ConfiguracionCuenta from "./componentes/paginas/configuracionCuenta/contenedores/ConfiguracionCuenta";

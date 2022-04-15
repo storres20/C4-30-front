@@ -167,7 +167,7 @@ export default function Home() {
             })
           }
           {/* Estado inicial => muestra todo */}
-          {selectedCategorias.length == 0 && productos.map(prod => {
+          {selectedCategorias.length === 0 && productos.map(prod => {
             return <VPH
                       key={prod.id}
                       prod={prod}
