@@ -4,7 +4,7 @@ import { Link as LinkS}from 'react-scroll'
 import '../../../registro-InicioSesion/componentes/formularios/Formularios.scss'
 
 export const Nav = styled.nav`
-  background: #dfdada1f;
+  background: #2c2a2a37;
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -18,7 +18,7 @@ export const Nav = styled.nav`
   color: white;
 
   :hover {
-    color: #CE972B;
+    color: #CE972B ;
   }
 
   @media screen and (max-width: 960px) {
@@ -94,7 +94,7 @@ height: 80px;
 `
 
 export const NavLinks = styled.a`
-  color: #ffff;
+  color: #ffff ;
   display: flex;
   align-items:center;
   text-decoration: none;
@@ -102,8 +102,9 @@ export const NavLinks = styled.a`
   height: 100%;
   cursor: pointer;
 
-  &.active {
-    border-bottom: 3px solid #CE972B;
+  :hover {
+    /* border-bottom: 3px solid #CE972B; */
+    color:  #CE972B;
   }
 `
 export const NavBtn =styled.nav`
@@ -125,10 +126,10 @@ export const NavBtnLink =styled(LinkR)`
   cursor:pointer;
   transition: all 0.2s ease-in-out;
   text-decoration:none;
-  &:hover {
+  :hover {
     transition: all 0.2s ease-in-out;
     background:#ffff ;
-    color:#CE972B;
+    color:#CE972B ;
   }
 `
 

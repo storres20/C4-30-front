@@ -295,7 +295,7 @@
   }
 }
 
-.btnCerrarSesion {
+.btnCerrarSesion, .btnLimpiarCarrito {
   padding: 0.7rem 1rem;
   border-radius: var(--border-rad);
   background-color: transparent;
@@ -457,14 +457,14 @@
     }
   }
 
-  .btnsContainer {
+  .btnsContainer ,.btnsContainerCarritoCompras {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     div {
       gap: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--secundary-box-lighter);
+      // padding-top: 1rem;
+      // border-top: 1px solid var(--secundary-box-lighter);
     }
   }
 
