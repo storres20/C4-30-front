@@ -1,6 +1,9 @@
 import React from 'react'
-import {PortadaContainer,PortadaBg ,VideoBg,PortadaContent,PortadaH1,PortadaP,PortadaBoxs,PortadaBox, PortadaImg } from './PortadaElements'
+import {PortadaContainer,PortadaBg ,VideoBg,PortadaContent,PortadaH1,PortadaP,PortadaBoxs,PortadaBox, PortadaImg,PortadaIcon, PortadaH2,PortadaP2 } from './PortadaElements'
 import Video from '../../video/veganFood.mp4'
+import platita from '../../../registro-InicioSesion/imagenes/plantita.png'
+import reciclaje from '../../../registro-InicioSesion/imagenes/Reciclaje.png'
+import variedad from '../../../registro-InicioSesion/imagenes/variedad.png'
 import Logo from '../../../../../imagenes/LogoVeride/LogosSinFondo/Logo4-Largo.png'
 
 function PortadaSection () {
@@ -19,13 +22,19 @@ function PortadaSection () {
         </PortadaP>
         <PortadaBoxs>
           <PortadaBox>
-
+            <PortadaIcon src={platita}/>
+              <PortadaH2>Saludable</PortadaH2>
+              <PortadaP2>Nos preocupamos en tu bienestar por eso pensamos saludable.</PortadaP2>
           </PortadaBox>
           <PortadaBox>
-          
+            <PortadaIcon src={reciclaje}/>
+              <PortadaH2>Ecológico</PortadaH2>
+              <PortadaP2>Contribuimos y fomentamos en preservar nuestro hogar, el planeta tierra. </PortadaP2>
           </PortadaBox>
           <PortadaBox>
-          
+            <PortadaIcon src={variedad}/>
+              <PortadaH2>Variado</PortadaH2>
+              <PortadaP2> Contamos con una carta variada para todos los gustos.</PortadaP2>
           </PortadaBox>
         </PortadaBoxs>
       </PortadaContent>

@@ -20,7 +20,7 @@ export default function NavBarHome() {
                     <FiSearch/>
                 </button>
             </form>
-            <a className="deseos" href="/lista-de-deseos">
+            <a className="deseos" href="/Lista-De-Deseos">
                 <FiHeart/>
             </a>
             <a className="carrito" href="/Carrito-Compras">
@@ -42,7 +42,7 @@ export default function NavBarHome() {
                     <div className="logged-dropdown-desktop">
                         <p className="cuenta">nombre usuario<i class="uil uil-angle-down"></i></p>
                         <div className="logged-desktop-dropdown-content">
-                            <a href="configuracion-de-cuenta/personal">Configuración de Cuenta</a>
+                            <a href="configuracion-de-cuenta">Configuración de Cuenta</a>
                             <a href="historial-de-compras">Historial de Compras</a>
                             <a href="logout">Cerrar Sesión<i class="uil uil-signout"></i></a>
                         </div>

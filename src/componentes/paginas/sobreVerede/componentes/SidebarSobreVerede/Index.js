@@ -10,16 +10,16 @@ function Sidebar({isOpen, toggle}) {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to='about' onClick={toggle}>
+          <SidebarLink  href="#infoSection" onClick={toggle}>
               Quienes somos
           </SidebarLink>
-          <SidebarLink to='services' onClick={toggle}>
+          <SidebarLink to='services' href="#serviciosSection"  onClick={toggle}>
               Servicios
           </SidebarLink>
-          <SidebarLink to='testimony' onClick={toggle}>
+          <SidebarLink to='testimony' href="#reconocimientoSection" onClick={toggle}>
               Testimonios
           </SidebarLink>
-          <SidebarLink to='sucursales' onClick={toggle}>
+          <SidebarLink to='sucursales' href="#sucursalesSection" onClick={toggle}>
               Sucursales
           </SidebarLink>
         </SidebarMenu>

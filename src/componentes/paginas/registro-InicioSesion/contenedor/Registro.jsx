@@ -1,6 +1,6 @@
 import React from 'react'
 import FormRegistro from '../componentes/formularios/FormRegistro'
-import Slider from '../componentes/slider/Slider'
+import Slider from '../componentes/slider/slider'
 import './Contenedor.scss' 
 
 

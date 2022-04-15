@@ -101,26 +101,66 @@ export const PortadaBoxs = styled.div `
   margin-top: 6rem;
   justify-content: center;
   align-items: center;
+
   @media screen and (max-width: 768px){
     gap: 1.5rem;
     margin-top: 2rem;
   }
   @media screen and (max-width: 480px){
-    gap: 1.5rem;
-    margin-top: 2rem;
+    /* gap: 1.5rem;
+    margin-top: 2rem; */
+    gap: 1rem 8rem;
+    margin-top: 1rem;
   }
 `
 export const PortadaBox = styled.div  `
-  background-color: #f46532;
+  background-color: #CE972B;
   border-radius: 8px;
   width: 20rem;
   height: 12rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  align-content: flex-start;
+  padding: 1.3rem;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
   @media screen and (max-width: 768px){
     width: 18rem;
     height: 9rem;
   }
   @media screen and (max-width: 480px){
-    width: 17rem;
+    width: 100%;
     height: 9rem;
   }
+`
+
+export const PortadaIcon = styled.img `
+  width: 23%;
+  @media screen and (max-width: 768px){
+    width: 18%;
+  }
+`
+
+export const PortadaH2 = styled.h2 `
+  padding-left: 0vw;
+  font-weight: 600;
+
+
+  @media screen and (max-width: 768px){
+    margin-bottom: 0em;
+  }
+  @media screen and (max-width: 480px){
+
+  }
+`
+
+export const PortadaP2 = styled.p `
+  font-size: 13px;
+  color:white;
+  font-weight: 400;
+  @media screen and (max-width: 768px){
+    font-size: 11px;
+  } 
 `

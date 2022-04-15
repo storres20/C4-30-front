@@ -6,7 +6,7 @@ import InfoSection from './componentes/Informacion';
 import Servicios from './componentes/Servicios';
 import Reconocimiento from './componentes/Reconocimiento';
 import Sucursales from './componentes/Sucursales';
-import Sidebar from './componentes/SidebarSobreVerede/index';
+import Sidebar from './componentes/SidebarSobreVerede/Index';
 
 function SobreVerede() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const toggle = () => {
       <InfoSection />
       <Servicios />
       <Reconocimiento />
-      <Sucursales path='sucursales'/>
+      <Sucursales />
       <Footer />
     </div>
   )

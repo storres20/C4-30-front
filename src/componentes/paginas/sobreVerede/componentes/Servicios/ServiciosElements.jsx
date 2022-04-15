@@ -13,7 +13,8 @@ export const ServiciosContainer = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    height: 1300px;
+    /* height: 1300px; */
+    height: 100%;
   }
 `;
 export const ServiciosH1 = styled.h1`
@@ -22,6 +23,7 @@ export const ServiciosH1 = styled.h1`
   margin-bottom: 64px;
   @media screen and (max-width: 480px) {
     font-size: 2rem;
+    margin: 64px;
   }
 `;
 export const ServiciosWrapper = styled.div`
@@ -64,6 +66,9 @@ export const ServiciosCard = styled.div`
 
   @media screen and (max-width: 768px) {
     padding: 2rem 4rem;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 2rem 2rem;
   }
 `;
 export const ServiciosIcon = styled.img`

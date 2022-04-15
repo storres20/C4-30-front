@@ -93,6 +93,7 @@ const Inicio = ({ isSelectedInicio }) => {
         </form>
 
         <div className="RedesSocialesBox">
+          <br />
           <h4>O inicia sesión con</h4>
           <div className="RedesSocialesInicio">
             <FcGoogle style={style} />
