@@ -184,7 +184,7 @@
 }
 
 .btns-Duo {
-  color: black;
+  color: black !important;
   text-decoration: none;
   font-size: medium;
   font-weight: bold;
@@ -193,6 +193,13 @@
   text-align: center;
   width: 80px;
   padding-bottom: 0.5rem;
+  &:hover {
+    color: var(--primary-color) !important;
+  }
+  &:hover:after {    
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -202,14 +209,9 @@
     bottom: 0;
     left: 0;
     background-color: var(--primary-color);
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
-  &:hover:after {
-    color: var(--primary-color);
-    transform: scaleX(1);
-    transform-origin: bottom left;
   }
 }
 

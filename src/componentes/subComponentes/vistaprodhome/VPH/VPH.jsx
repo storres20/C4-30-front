@@ -10,8 +10,8 @@ import bagbold from "../imagenes/bagbold.svg"
 import heart from "../imagenes/heart.svg"
 import heartbold from "../imagenes/heartbold.svg"
 import clock from "../imagenes/clock.svg"
-import burger from "../imagenes/burger.svg"
-import pizza from "../imagenes/pizza.svg"
+//import burger from "../imagenes/burger.svg"
+//import pizza from "../imagenes/pizza.svg"
 import info from "../imagenes/info.svg"
 
 export default function VPH({ prod, categorias }) {
@@ -79,7 +79,7 @@ export default function VPH({ prod, categorias }) {
             <h3>{prod.category_id}</h3>
           </div> */}
           <div className='flex3'>
-            <img className='icon' src={pizza} alt="pizza" />
+            <img className='icon' src={categoria && categoria.image} alt="pizza" />
             <h3>{categoria && categoria.name}</h3>
           </div>
         </div>

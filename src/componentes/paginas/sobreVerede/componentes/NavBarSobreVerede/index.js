@@ -1,5 +1,5 @@
 import React from 'react';
-import {BiMenuAltRight, BiArrowBack} from 'react-icons/bi'
+import {BiMenuAltRight, BiArrowBack} from 'react-icons/bi';
 import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, ArrowHome, NavBtn, NavBtnLink} from './NavbarElements'
 
 
@@ -32,7 +32,7 @@ function Navbar({toggle}) {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/inicio-sesion" >Ingresa Aquí</NavBtnLink>
+            <NavBtnLink to="/Inicio-Sesion" >Ingresa Aquí</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

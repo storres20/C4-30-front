@@ -51,6 +51,16 @@ const Registro = ({ isSelectedRegistro }) => {
       >
         <form className="login" method="post" onSubmit={handleSubmit}>
           <div className="inputsBox">
+          <label>
+              <span className="textInput">Usuario</span>
+              <input
+                className="input"
+                required="true"
+                type="text"
+                placeholder="Ingresa tu Nombre*"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </label>
             <label>
               <span className="textInput">Correo</span>
               <input
@@ -75,7 +85,7 @@ const Registro = ({ isSelectedRegistro }) => {
           <div className="tabsCheckbox">
             <label>
               <input type="checkbox" className="checkbox" />
-              <span className="checkmark"> Mantenme conectado</span>
+              <span className="checkmark"> Mantenerme conectado</span>
             </label>
           </div>
           <div className="btnsIngresar">
@@ -84,6 +94,7 @@ const Registro = ({ isSelectedRegistro }) => {
         </form>
 
         <div className="RedesSocialesBox">
+          <br />
           <h4>O registrate con</h4>
           <div className="RedesSocialesRegistro">
             <FcGoogle style={style} />

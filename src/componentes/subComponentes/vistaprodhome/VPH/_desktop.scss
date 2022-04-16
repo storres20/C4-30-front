@@ -7,7 +7,7 @@
 
 		border-radius: 16px;
 
-		width: 350px;
+		width: 320px;
 		height: auto;
 
 		position: relative;
@@ -20,7 +20,7 @@
 			border-top-left-radius: 16px;
 			border-top-right-radius: 16px;
 
-			width: 350px;
+			width: 320px;
 		}
 
 		.postexto {
@@ -135,10 +135,13 @@
 
 		.icon {
 			width: 12px;
-			height: auto;
+			height: 12px;
 
 			margin-left: 10px;
 			margin-right: 8px;
+			
+			margin-top: auto;
+			margin-bottom: auto;
 		}
 
 		.hidden {

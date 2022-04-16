@@ -1,15 +1,16 @@
 import { React, useState, useEffect } from "react";
-import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
+//import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
 import NavBarHome from "../../subComponentes/navBar/NavBarHome";
 import "./Home.scss";
 import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
 import axios from "axios";
 import Categorias from "../../subComponentes/categorias/Categorias";
 
-import Carousel from "react-multi-carousel";
+//import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Footer from "../../subComponentes/footer/Footer";
 
-const responsive = {
+/* const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
@@ -35,7 +36,7 @@ const responsive = {
     breakpoint: { max: 464, min: 0 },
     items: 1
   }
-};
+}; */
 
 export default function Home() {
 
@@ -101,7 +102,7 @@ export default function Home() {
   const [selectedCategorias, setSelectedCategorias] = useState([]);
 
   return (
-    <section>
+    <section className="section">
       <NavBarHome />
       <article className="article-promociones">
         {/* <TarjetaDescuento {1}> */}
@@ -125,17 +126,9 @@ export default function Home() {
       <article className="article-destacados">
         <h2>Más Vendidos</h2>
         <div className="masVendidos"> {/* container-destacados */}
-          {/* <Carousel responsive={responsive}
-            infinite={true}
-            swipeable={false}
-            draggable={false}
-            autoPlay={false}
-            autoPlaySpeed={10000}
-          > */}
-            {vendidos.map(prod => {
-              return <VPH key={prod.id} prod={prod} categorias={categorias} />
-            })}
-          {/* </Carousel> */}
+          {vendidos.map(prod => {
+            return <VPH key={prod.id} prod={prod} categorias={categorias} />
+          })}
         </div>
       </article>
 
@@ -145,10 +138,10 @@ export default function Home() {
 
           {categorias.map(prod => {
             return <Categorias
-                      key={prod.id}
-                      prod={prod}
-                      setSelectedCategorias={setSelectedCategorias}
-                      selectedCategorias={selectedCategorias} />
+              key={prod.id}
+              prod={prod}
+              setSelectedCategorias={setSelectedCategorias}
+              selectedCategorias={selectedCategorias} />
           })}
 
         </div>
@@ -158,24 +151,26 @@ export default function Home() {
         <h2>Todos los productos ({productos.length})</h2>
         <div className="todosProductos"> {/* container-productos */}
 
-        {/* Filtros activados => muestra solo la(s) categoria(s) elegida(s) */}
+          {/* Filtros activados => muestra solo la(s) categoria(s) elegida(s) */}
           {selectedCategorias.length > 0 && productos.filter(p => selectedCategorias.some(c => c === p.category_id)).map(prod => {
             return <VPH
-                      key={prod.id}
-                      prod={prod}
-                      categorias={categorias}/>
-            })
+              key={prod.id}
+              prod={prod}
+              categorias={categorias} />
+          })
           }
           {/* Estado inicial => muestra todo */}
-          {selectedCategorias.length == 0 && productos.map(prod => {
+          {selectedCategorias.length === 0 && productos.map(prod => {
             return <VPH
-                      key={prod.id}
-                      prod={prod}
-                      categorias={categorias}/>})
+              key={prod.id}
+              prod={prod}
+              categorias={categorias} />
+          })
           }
 
         </div>
       </article>
+      <Footer />
     </section>
   );
 }

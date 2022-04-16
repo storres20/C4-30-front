@@ -13,6 +13,9 @@ export const ReconocimientoContainer =styled.div`
   @media screen and (max-width: 768px){
     height: 1500px;
   }
+  @media screen and (max-width: 480px){
+    height: 100%;
+  }
 
 `
 export const  ReconocimientoH1 =styled.h1`
@@ -22,6 +25,7 @@ export const  ReconocimientoH1 =styled.h1`
   margin-bottom:64px;
   @media screen and (max-width: 480px) {
     font-size:2rem;
+    margin: 64px;
   }
 `
 export const ReconocimientoWrapper =styled.div`
@@ -40,6 +44,16 @@ export const ReconocimientoWrapper =styled.div`
 
   @media screen and (max-width:768px) {
     grid-template-columns:1fr;
+  }
+  @media screen and (max-width:480px) {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    grid-gap: 53px;
+    padding: 50px 50px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 `
 export const ReconocimientoCard =styled.div`

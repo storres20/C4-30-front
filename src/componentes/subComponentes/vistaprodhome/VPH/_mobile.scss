@@ -14,6 +14,8 @@ $phone: 575px;
 
 		position: relative;
 		
+		display: inline-block;
+		
 		margin-bottom: 21px;
 
 		img {
@@ -55,10 +57,15 @@ $phone: 575px;
 		}
 
 		h1 {
-			@include texto(700, 10px, 24px, #2b2b43);
+			@include texto(700, 10px, 10px, #2b2b43);
 
 			margin: 0;
-			margin-top: 4px;
+			
+			width: 90px;
+			text-align: left;
+			margin-top: auto;
+			margin-bottom: auto;
+			
 		}
 
 		h2 {
@@ -85,6 +92,7 @@ $phone: 575px;
 		.flex1 {
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
 		}
 
 		.flex2 {
@@ -105,21 +113,22 @@ $phone: 575px;
 		}
 
 		.iconinfo {
-			margin-top: 10px;
 			margin-left: 10px;
 			width: 12px;
 			height: 12px;
+			margin-top: auto;
+			margin-bottom: auto;
 		}
 
 		.iconheart {
-			margin-top: 10px;
+			margin-bottom: 4px;
 			margin-right: 10px;
 			width: 15px;
 			height: 15px;
 		}
 
 		.iconbag {
-			margin-top: 10px;
+			margin-bottom: 4px;
 			width: 15px;
 			height: 14px;
 		}
@@ -133,10 +142,13 @@ $phone: 575px;
 
 		.icon {
 			width: 12px;
-			height: auto;
+			height: 12px;
 
 			margin-left: 10px;
 			margin-right: 8px;
+			
+			margin-top: auto;
+			margin-bottom: auto;
 		}
 
 		.hidden {

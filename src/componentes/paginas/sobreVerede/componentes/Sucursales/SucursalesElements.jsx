@@ -14,7 +14,8 @@ export const SucursalesContainer =styled.div`
   } */
 
   @media screen and (max-width:480px) {
-    height: 1300px;
+    /* height: 1300px; */
+    height:100%;
   }
 
 `
@@ -24,6 +25,7 @@ export const  SucursalesH1 =styled.h1`
   margin-bottom:64px;
   @media screen and (max-width: 480px) {
     font-size:2rem;
+    margin: 64px;
   }
 `
 export const SucursalesWrapper =styled.div`
