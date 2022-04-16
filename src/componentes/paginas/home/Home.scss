@@ -18,7 +18,6 @@
 
 .section, .container-productos, .producto, .container-categorias, .categoria, .container-destacados, .destacado, .promo {
     display: inline-block;
-    // border: solid 1px black;
 }
 
 article {
@@ -27,16 +26,11 @@ article {
 
 .article-promociones {
   display: flex;
-  // border: solid 1px black;
   justify-content: space-around;
   text-align: center;
 
-  a {
-    width: 45vw;
-    // border: solid 1px black;
-  }
   .imgPromo1, .imgPromo2 {
-    width: 100%;
+    width: 95%;
     height: auto;
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
@@ -64,36 +58,21 @@ article {
 }
 
 .container-categorias {
-
   display: flex;
   justify-content: space-around;
-  text-align: center;
-  
-  // border: solid 1px black;
-  // div {
-  //   border: solid 1px black;
-  // }
-
-  img {
-    width: 100px;
-  }
-
-  li {
-    list-style: none;
-  }
 }
 
-.container-productos {
-  // display: flex;
+// .container-productos {
+//   // display: flex;
 
-  justify-content: space-around;
-  flex-wrap: wrap;
+//   justify-content: space-around;
+//   flex-wrap: wrap;
 
-  display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
+//   display: grid;
+//   // grid-template-columns: repeat(3, 1fr);
+//   gap: 10px;
+//   grid-auto-rows: minmax(100px, auto);
+// }
 
 .contenedorVPH {
   margin: 1vh 1vw;
@@ -101,21 +80,8 @@ article {
 
 //mobile
 @media only screen and (max-width: 768px) {
-  // .article-promociones {
-  //   a {
-  //     border: solid 1px black;
-  //     width: 100%;
-      
-  //     img {
-  //       border: solid 1px black;
-  //       width: 100%;
-  //       height: 100%;
-  //       object-fit: cover;
-  //     }
-  //   }
-  // }
-  .imgPromo1 {
-    width: 100%;
+  .enlacePromo1 {
+    border: solid 1px red;
   }
   .enlacePromo2 {
     display: none;
@@ -125,11 +91,11 @@ article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
   }
 
-  .container-productos, .container-destacados {
-    grid-template-columns : 1fr, 1fr;
+  .todosProductos, .masVendidos {
+    display: grid;
+		grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -144,13 +110,7 @@ article {
     overflow-y: scroll;
 		height: 500px;
 		width: auto;
-		
 		text-align: center;
-		//display: flex;
-		//justify-content: space-around;
-		//align-items: center;
-		
-		//flex-flow: column wrap;
 }
 
 .masVendidos{
