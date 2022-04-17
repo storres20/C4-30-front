@@ -1,7 +1,7 @@
 import React from "react";
 import logo from '../../../imagenes/LogoVeride/LogosSinFondo/Logo3-Largo.png';
 import "./NavBar.scss"
-import { FiHeart, FiShoppingBag, FiSearch } from "react-icons/fi";
+import { FiHeart, FiShoppingBag, FiSearch, FiMenu, FiChevronDown, FiLogOut } from "react-icons/fi";
 
 const isLoggedIn = true;
 
@@ -29,22 +29,22 @@ export default function NavBarHome() {
             {isLoggedIn ?
             <div className="dropdown">
                     <div className="logged-dropdown-mobile">
-                        <i class="uil uil-ellipsis-v"></i>
+                        <FiMenu/>
                         <div className="logged-mobile-dropdown-content">
                             <p className="link-usuario">usuario</p>
                             <a className="productos" href="/">Productos</a>
                             <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
                             <a href="configuracion-de-cuenta/personal">Configuración de Cuenta</a>
                             <a href="historial-de-compras">Historial de Compras</a>
-                            <a href="logout">Cerrar Sesión<i class="uil uil-signout"></i></a>
+                            <a href="logout">Cerrar Sesión<FiLogOut/></a>
                         </div>
                     </div>
                     <div className="logged-dropdown-desktop">
-                        <p className="cuenta">nombre usuario<i class="uil uil-angle-down"></i></p>
+                        <p className="cuenta">nombre usuario<FiChevronDown/></p>
                         <div className="logged-desktop-dropdown-content">
                             <a href="configuracion-de-cuenta">Configuración de Cuenta</a>
                             <a href="historial-de-compras">Historial de Compras</a>
-                            <a href="logout">Cerrar Sesión<i class="uil uil-signout"></i></a>
+                            <a href="logout">Cerrar Sesión<FiLogOut/></a>
                         </div>
                     </div>
             </div>
@@ -52,11 +52,11 @@ export default function NavBarHome() {
                 <div className="ingreso-container">
                     <a className="inicio-sesion" href="/inicio-sesion"><span>Ingresa aquí</span></a>
                     <div className="unlogged-dropdown">
-                        <a href="/cuenta" className="cuenta-ingreso"><i class="uil uil-ellipsis-v"></i></a>
+                        <FiMenu />
                         <div className="unlogged-dropdown-content">
-                            <a className="ingreso2" href="/inicio-sesion">Ingresa aquí</a>
-                            <a className="productos" href="/">Productos</a>
-                            <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
+                            <a href="/inicio-sesion">Ingresa aquí</a>
+                            <a href="/">Productos</a>
+                            <a href="/Sobre-Veride">Sobre Veridē</a>
                         </div>
                     </div>
                 </div>}           
