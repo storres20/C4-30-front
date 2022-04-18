@@ -106,7 +106,7 @@ export default function Home() {
       <NavBarHome />
       <article className="article-promociones">
         {/* <TarjetaDescuento {1}> */}
-        <a href="/promociones">
+        <a href="/promociones" className="enlacePromo1">
           <img
             src="https://i.ibb.co/1X7npWT/promo1.png"
             alt="Promo"
@@ -114,7 +114,7 @@ export default function Home() {
           />
         </a>
         {/* <TarjetaDescuento {2}> */}
-        <a href="/promociones">
+        <a href="/promociones" className="enlacePromo2">
           <img
             src="https://i.ibb.co/8dQpZgy/promo2.png"
             alt="Promo"

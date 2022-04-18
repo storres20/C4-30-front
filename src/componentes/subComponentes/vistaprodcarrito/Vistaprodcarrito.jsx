@@ -11,8 +11,7 @@ export default function Vistaprodcarrito() {
       <VPC/>
       <VPC/>
       <VPC/>
-      <VPC/>
-      
+      <VPC/>    
     </div>
   )
 }

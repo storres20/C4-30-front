@@ -31,7 +31,7 @@ function SidebarLateral({setStatus}) {
         <h1>Configuración</h1>
       </div>
       <section className="btnsContainer-Configuration">
-        <button onClick={informacionPersonal} id="toDo" className={(estadoOrdenes === 'informacionPersonal') ? 'clicked' : 'btnLeft-CG'} to="/Configuracion-Cuenta">
+        <button onClick={informacionPersonal} id="toDo" className={(estadoOrdenes === 'informacionPersonal') ? 'clicked' : 'btnLeft-CG'} to="/Configuracion-de-Cuenta">
             <label className="iconbtn-CG">
               <FiUser className="icon-React" />
             </label>
@@ -40,7 +40,7 @@ function SidebarLateral({setStatus}) {
               <p>Información Personal</p>
             </aside>
         </button>
-        <button onClick={ubicacionEntrega} id="toDo" className={(estadoOrdenes === 'ubicacionEntrega') ? 'btnLeft-CG clicked ' : 'btnLeft-CG'} to="/Configuracion-Cuenta">
+        <button onClick={ubicacionEntrega} id="toDo" className={(estadoOrdenes === 'ubicacionEntrega') ? 'btnLeft-CG clicked ' : 'btnLeft-CG'} to="/Configuracion-de-Cuenta">
             <label className="iconbtn-CG">
               <FiMapPin className="icon-React" />
             </label>
@@ -49,7 +49,7 @@ function SidebarLateral({setStatus}) {
               <p>Ubicación de entrega</p>
             </aside>
         </button>
-        <button onClick={coneccionTarjetas} id="toDo" className={(estadoOrdenes === 'coneccionTarjetas') ? 'btnLeft-CG clicked ' : 'btnLeft-CG'} to="/Configuracion-Cuenta">
+        <button onClick={coneccionTarjetas} id="toDo" className={(estadoOrdenes === 'coneccionTarjetas') ? 'btnLeft-CG clicked ' : 'btnLeft-CG'} to="/Configuracion-de-Cuenta">
             <label>
               <FiCreditCard className="icon-React" />
             </label>

@@ -1,0 +1,163 @@
+.contenedorHistorialCompras {
+  display: flex;
+  margin: 2% 7% !important;
+  gap: 37px;
+  justify-content: space-between;
+}
+
+// *********
+.container-A-carritoCompras{
+  width: 60% ;
+  @media screen and (max-width: 1045px) {
+    width: 100% ;
+    display: flex ;
+    flex-direction: column;
+  }
+}
+
+.boxBtnCarritoCompras {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 20px;
+  // box-shadow: var(--shadow);
+  background-color: transparent;
+  color: var(--secundary-text);
+  border: transparent;
+  cursor: pointer;
+  justify-content: center;
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding: 0.7rem 0;
+    border-radius: 15px;
+  }
+  aside {
+    width: 75%;
+    border: none;
+  }
+  h3,
+  p {
+    color: var(--secundary-box-dark);
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .icon-React {
+    font-size: x-large;
+  }
+  &:hover,
+  &:active {
+    h3,
+    p,
+    aside {
+      border: none;
+    }
+    .icon-React {
+      background-color: transparent;
+    }
+  }
+}
+
+// ****** 
+.boxPrincipalDetalleCompra{
+  width: 100%;
+}
+.container-B-CarritoCompra {
+  width: 100% !important;
+  margin-top: 0rem !important;
+  margin-bottom: 21.5px;
+  // margin-top: 2rem;
+  margin-top: 0.7rem;
+  .titleContainer {
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+  .subtitleContainer {
+    padding: 1rem 2rem 0.7rem;
+  }
+}
+
+.container-detallesProducto-CC {
+  display: flex;
+  justify-content: flex-start !important;
+  gap: 1rem;
+  border-bottom: 1px solid var(--secundary-box-lighter);
+  padding: 2rem;
+  border-radius: 0 0 1rem 1rem;
+  label {
+    gap: 0.3rem !important;
+  }
+  div {
+    width: 100% !important;
+  }
+}
+
+.container-parte-B {
+  border-radius: 0rem !important;
+}
+
+.textDatos-CC {
+  font-weight: 700;
+  label {
+    display: none;
+  }
+  img {
+    width: 3rem;
+    border-radius: 0.3rem;
+    border-color: 3rem solid #0000;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    /* width: 100%; */
+    padding: 1re;
+    padding: 0 0.3rem;
+  }
+  .e-btn {
+    width: max-content !important;
+  }
+}
+
+.container-detallesProducto-CC label {
+  .boxNumTarjeta {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.contenedorTablaProductos {
+  width: 100%;
+  text-align:left;
+  .precio {
+    width: 3rem;
+  }
+}
+
+.boxPrecioTotalCompra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem !important;
+  h2{
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 27px;
+    /* or 113% */
+
+    letter-spacing: 0.1px;
+  }
+}
+
+/* .btnsCarritoCompras {
+  align-items: center;
+}
+
+ */

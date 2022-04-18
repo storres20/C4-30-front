@@ -1,23 +1,18 @@
 import React from "react";
-import "../contenedores/CarritoCompras.scss";
+import "../contenedores/HistorialCompras.scss";
 import "antd/dist/antd.css";
-import Vistaprodcarrito from "../../../subComponentes/vistaprodcarrito/Vistaprodcarrito";
+import Vistaprodcarrito from "../../../subComponentes/vistaprodhistorial/Vistaprodhistorial";
 
 function SidebarLateral() {
   return (
     <div className="container-A-carritoCompras">
       <div className="titleContainerLeft">
-        <h1>Carrito de Compra</h1>
+        <h1>Historial de Compras (25)</h1>
       </div>
       <section className="btnsContainer-Configuration">
         <button id="toDo" className=' boxBtnCarritoCompras' to="/Configuracion-de-Cuenta">
             <Vistaprodcarrito />
         </button>
-        <div className=" btnsContainerCarritoCompras">
-            <div>
-              <button className="btnCerrarSesion btnLimpiarCarrito" >Limpiar Carrito</button>
-            </div>
-        </div>
       </section>
       
     </div>
