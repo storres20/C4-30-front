@@ -8,6 +8,7 @@ import RecuperarContrasena from "./componentes/paginas/registro-InicioSesion/con
 import CambiarContrasena from "./componentes/paginas/registro-InicioSesion/contenedor/CambiarContrasena";
 import SobreVeride from "./componentes/paginas/sobreVerede/SobreVerede";
 import CarritoCompras from "./componentes/paginas/carritoCompras/contenedores/CarritoCompras";
+import HistorialCompras from "./componentes/paginas/historialCompras/contenedores/HistorialCompras";
 import Home from "./componentes/paginas/home/Home";
 import ConfiguracionCuenta from "./componentes/paginas/configuracionCuenta/contenedores/ConfiguracionCuenta";
 import ListaDeDeseos from "./componentes/paginas/listaDeDeseos/ListaDeDeseos";
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/Carrito-Compras" element={<CarritoCompras/> } />
         <Route path="/Lista-De-Deseos" element={<ListaDeDeseos/> } />
+        <Route path="/Historial-De-Compras" element={<HistorialCompras/> } />
 
         <Route path="/Configuracion-de-Cuenta" element={<ConfiguracionCuenta/> } />
         <Route path="/Cambiar-Contrasena/:token" element={<CambiarContrasena/>} />
