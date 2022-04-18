@@ -10,7 +10,7 @@ function SidebarLateral() {
         <h1>Configuración</h1>
       </div>
       <section className="btnsContainer-Configuration">
-        <button id="toDo" className=' boxBtnCarritoCompras' to="/Configuracion-Cuenta">
+        <button id="toDo" className=' boxBtnCarritoCompras' to="/Configuracion-de-Cuenta">
             <Vistaprodcarrito />
         </button>
         <div className=" btnsContainerCarritoCompras">

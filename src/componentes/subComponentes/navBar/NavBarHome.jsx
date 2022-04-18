@@ -34,7 +34,7 @@ export default function NavBarHome() {
                             <p className="link-usuario">usuario</p>
                             <a className="productos" href="/">Productos</a>
                             <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
-                            <a href="configuracion-de-cuenta/personal">Configuración de Cuenta</a>
+                            <a href="/Configuracion-de-Cuental">Configuración de Cuenta</a>
                             <a href="historial-de-compras">Historial de Compras</a>
                             <a href="logout">Cerrar Sesión<FiLogOut/></a>
                         </div>
@@ -42,7 +42,7 @@ export default function NavBarHome() {
                     <div className="logged-dropdown-desktop">
                         <p className="cuenta">nombre usuario<FiChevronDown/></p>
                         <div className="logged-desktop-dropdown-content">
-                            <a href="configuracion-de-cuenta">Configuración de Cuenta</a>
+                            <a href="/Configuracion-de-Cuenta">Configuración de Cuenta</a>
                             <a href="historial-de-compras">Historial de Compras</a>
                             <a href="logout">Cerrar Sesión<FiLogOut/></a>
                         </div>
