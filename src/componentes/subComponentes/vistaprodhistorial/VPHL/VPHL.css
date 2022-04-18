@@ -25,8 +25,8 @@
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
-    width: 474px;
-    height: 140px;
+/*     width: 474px;
+    height: 140px; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -100,8 +100,8 @@
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
-    width: 358px;
-    height: 140px;
+/*     width: 358px;
+    height: 140px; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
