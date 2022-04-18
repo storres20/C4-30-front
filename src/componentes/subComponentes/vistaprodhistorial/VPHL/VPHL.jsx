@@ -16,7 +16,7 @@ export default function VPHL() {
           </div>
 
           <div className="contenedorPM">
-            <div className="flex2">
+            <div className="flex22">
               <h3>Total a Pagar</h3>
               <h4> $24</h4>
             </div>

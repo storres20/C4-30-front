@@ -8,14 +8,14 @@
   width: -webkit-fill-available;
 }
 
-.flex2 {
+.flex22 {
   display: flex;
   flex-direction: column;
 }
-.flex2 h3 {
+.flex22 h3 {
   font-size: medium;
 }
-.flex2 h4 {
+.flex22 h4 {
   font-size: x-large;
 }
 
