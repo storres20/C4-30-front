@@ -1,4 +1,7 @@
 .Flex-Deseos {
     display: flex;
     flex-direction: column;
+    article {
+        padding: 2rem;
+    }
 }

@@ -7,7 +7,7 @@ function SidebarLateral() {
   return (
     <div className="container-A-carritoCompras">
       <div className="titleContainerLeft">
-        <h1>Configuración</h1>
+        <h1>Carrito de Compra</h1>
       </div>
       <section className="btnsContainer-Configuration">
         <button id="toDo" className=' boxBtnCarritoCompras' to="/Configuracion-de-Cuenta">
