@@ -1,0 +1,65 @@
+.modalDescripcion {  
+    display: flex;
+    flex-direction: column;
+      img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        margin: 1rem 0;
+      }
+      h3 {
+        background-color: #C59826;
+        padding: 2%;
+        color: beige;
+        text-align: center;
+        border-radius: 50px;
+        font-size: medium;
+      }
+      h6 {
+        background-color: black;
+        padding: 4%;
+        color: beige;
+        text-align: center;
+        border-radius: 50px;
+        width: 50%;
+        font-size: medium;
+      }
+      h5 {
+        text-align: start;
+        width: 100%;
+        font-size: x-large;
+        border-bottom: 2px solid black;
+        margin-top: 1rem;
+      }
+      p {
+        font-size: small;
+      }
+  
+  }
+  
+  .precioInfo { 
+    grid-area: precioInfo; 
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  
+  .detailsInfo { 
+    grid-area: detailsInfo; 
+    text-align: justify;
+    align-self: flex-start;
+    margin-top: 5%;
+  }
+
+  .btnInfo {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: start;
+    display: flex;
+    position: relative;
+    z-index: 15;
+    align-items: flex-end;
+    justify-content: center;
+  }
