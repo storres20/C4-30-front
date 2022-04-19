@@ -4,15 +4,19 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { AppProvider } from "./AppContext";
+//import { AppProvider } from "./AppContext";
+import SearchContextProvider from "./context/SearchContext";
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvider>
+    {/* <AppProvider> */}
+    <SearchContextProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </AppProvider>
+    </SearchContextProvider>
+    {/* </AppProvider> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
