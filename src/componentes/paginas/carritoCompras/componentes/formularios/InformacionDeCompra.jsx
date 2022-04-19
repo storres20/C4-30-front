@@ -4,24 +4,12 @@ import "antd/dist/antd.css";
 import "../../contenedores/CarritoCompras.scss";
 import tipo from "../../constantes/images";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 
-function FormCuentaUser() {
-  const [data, setData] = useState([]);
-  const [state, setState] = useState({
-    amount: "12.0",
-    state: "Entregado",
-    products: { ...data },
-  });
-  const params = useParams();
-
+function FormCuentaUser({ state }) {
   const modalGuardarDatosUsuario = () => {
-    axios.post(
-      `https://country-app-v3.herokuapp.com/buy/${localStorage.getItem("id")}`,
-      {
-        ...state,
-      }
-    );
+    axios.post(`https://country-app-v3.herokuapp.com/buy/${localStorage.getItem("id")}`, {
+      ...state,
+    });
 
     Swal.fire({
       text: "¿Está seguro de confirmar su compra?",
@@ -71,17 +59,6 @@ function FormCuentaUser() {
       }
     });
   };
-
-  useEffect(() => {
-    if (params.order_id) {
-      axios
-        .get(`https://country-app-v3.herokuapp.com/orders/view/${params.order_id}`)
-        .then(({ data }) => {
-          setData(data);
-          setState({ ...state, products: data.products });
-        });
-    }
-  }, []);
 
   return (
     <section className="boxPrincipalDetalleCompra">
