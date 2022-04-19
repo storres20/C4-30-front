@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import "./Vistaprodhistorial.css";
+import "./Vistaprodhistorial.scss";
 
 import VPHL from "./VPHL/VPHL";
 import axios from "axios";

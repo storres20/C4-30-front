@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-import "./Vistaprodcarrito.css";
+import "./Vistaprodcarrito.scss";
 
 import VPC from "./VPC/VPC";
 
