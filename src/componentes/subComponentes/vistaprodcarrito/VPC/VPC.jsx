@@ -50,12 +50,12 @@ export default function VPC({ products, id, setState = null }) {
   return (
     <div className="contenedorVPC">
       <div className="contenedorImagen">
-        <img src={imagen} alt="imagen" onClick={buttonImg} />
-        <h3 className={`postexto ${isImg ? "hidden" : ""}`}>AGOTADO</h3>
+        <img src={products.image} alt="imagen" onClick={buttonImg} />
+        {/* <h3 className={`postexto ${isImg ? "hidden" : ""}`}>AGOTADO</h3> */}
       </div>
 
       <div>
-        <p className="equis" style={{ padding: "10px" }} onClick={handleDelete}>
+        <p className="equis" onClick={handleDelete}>
           X
         </p>
         <div className="contenedorTexto">
@@ -71,10 +71,10 @@ export default function VPC({ products, id, setState = null }) {
 
           <p>{products.description}</p>
 
-          <div className="flex4">
+{/*           <div className="flex4">
             <h5>Read more</h5>
             <img className="icondown" src={down} alt="down" />
-          </div>
+          </div> */}
 
           <div className="flex2">
             <div className="flex3">

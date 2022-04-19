@@ -38,24 +38,6 @@ export default function VPH({ prod, categorias }) {
     }
   };
 
-  // mostrar CATEGORIAS desde la API
-  /* const [categorias, setCategorias] = useState([]);
-  const cargarCategorias = ({ prod }) => {
-    axios
-      .get("https://country-app-v3.herokuapp.com/categories")
-      .then((data) => {
-        //console.log(data.data)
-
-        //Data de Categorias al useState
-        setCategorias(data.data)
-      })
-      .catch((error) => console.log(error));
-  };
-
-  useEffect(() => {
-    cargarCategorias();
-  }, []); */
-
   let categoria;
   if (categorias) {
     categoria = categorias.find((e) => e.id === prod.category_id);
@@ -143,15 +125,11 @@ export default function VPH({ prod, categorias }) {
         </div>
 
         <div className="flex2">
-          {/* <div className='flex3'>
-            <img className='icon' src={burger} alt="burger" />
-            <h3>{prod.category_id}</h3>
-          </div> */}
           <div className="flex3">
             <img
               className="icon"
               src={categoria && categoria.image}
-              alt="pizza"
+              alt=""
             />
             <h3>{categoria && categoria.name}</h3>
           </div>
