@@ -9,25 +9,37 @@ export default function SliderInfinito() {
         <div className="slider">
           <div className="slide-track">
             <div className="slide">
-              <img className='slideImg' src="https://i.ibb.co/1X7npWT/promo1.png" height="200" width="550" alt="" />
+              <Link to="/promociones">
+                <img className='slideImg' src="https://i.ibb.co/5TRsPJm/promo1.png" height="200" width="550" alt="" />
+              </Link>
             </div>
             <div className="slide">
-              <img className='slideImg' src="https://i.ibb.co/8dQpZgy/promo2.png" height="200" width="550" alt="" />
+              <Link to="/promociones">
+                <img className='slideImg' src="https://i.ibb.co/mBWQGHp/promo2.png" height="200" width="550" alt="" />
+              </Link>
             </div>
             <div className="slide">
-              <img className='slideImg' src="https://i.ibb.co/nBRcZJd/promo3.png" height="200" width="550" alt="" />
+              <Link to="/promociones">
+                <img className='slideImg' src="https://i.ibb.co/dQwcBhj/promo3.png" height="200" width="550" alt="" />
+              </Link>
             </div>
 
             {/* Repetir */}
 
             <div className="slide">
-              <img className='slideImg' src="https://i.ibb.co/1X7npWT/promo1.png" height="200" width="550" alt="" />
+              <Link to="/promociones">
+                <img className='slideImg' src="https://i.ibb.co/5TRsPJm/promo1.png" height="200" width="550" alt="" />
+              </Link>
             </div>
             <div className="slide">
-              <img className='slideImg' src="https://i.ibb.co/8dQpZgy/promo2.png" height="200" width="550" alt="" />
+              <Link to="/promociones">
+                <img className='slideImg' src="https://i.ibb.co/mBWQGHp/promo2.png" height="200" width="550" alt="" />
+              </Link>
             </div>
             <div className="slide">
-              <img className='slideImg' src="https://i.ibb.co/nBRcZJd/promo3.png" height="200" width="550" alt="" />
+              <Link to="/promociones">
+                <img className='slideImg' src="https://i.ibb.co/dQwcBhj/promo3.png" height="200" width="550" alt="" />
+              </Link>
             </div>
 
           </div>
