@@ -121,7 +121,7 @@ export default function VPH({ prod, categorias }) {
         <div className="flex2">
           <img className="iconclock" src={clock} alt="clock" />
           <h2>{prod.time_preparation}</h2>
-          <h2>$ {prod.price}</h2>
+          <h2>$ {prod.price}.00</h2>
         </div>
 
         <div className="flex2">

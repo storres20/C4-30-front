@@ -12,10 +12,10 @@ import pizza from "../imagenes/pizza.svg";
 import axios from "axios";
 
 export default function VPC({ products, id, setState = null }) {
-  const [isPM, setIsPM] = useState(products.count || 0);
+  const [isPM, setIsPM] = useState(products.count || 1);
   const buttonMinus = () => {
     //setIsMinus(current => !current)
-    setIsPM((current) => (current === 0 ? 0 : current - 1));
+    setIsPM((current) => (current === 1 ? 1 : current - 1));
     axios.post(`https://country-app-v3.herokuapp.com/orders/${id}/minus`, {
       count: isPM,
       product_id: products.id,
@@ -79,13 +79,13 @@ export default function VPC({ products, id, setState = null }) {
           <div className="flex2">
             <div className="flex3">
               <img className="icon" src={burger} alt="burger" />
-              <h4>Burger</h4>
+              <h4>{products.category_id}</h4>
             </div>
           </div>
 
           <div className="contenedorPM">
             <div className="flex1">
-              <h6>$ {products.price}</h6>
+              <h6>$ {products.price}.00</h6>
               <div className="flex2">
                 <img
                   className="iconpm"
