@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "antd/dist/antd.css";
 import "../../contenedores/HistorialCompras.scss";
 import tipo from "../../constantes/images";
+import axios from "axios"
+import { useParams } from "react-router-dom";
 
 
 function FormCuentaUser() {
+  const [state, setState] = useState()
+  const params = useParams()
+
+  useEffect(() => {
+    if (params.buy_id) {
+      axios
+        .get(`https://country-app-v3.herokuapp.com/buy/show/${params.buy_id}`)
+        .then(({ data }) => {
+          setState(data)
+        });
+    }
+  }, []);
+
+  console.log(state)
 
   return (
     <section className='boxPrincipalDetalleCompra'>
@@ -74,7 +90,7 @@ function FormCuentaUser() {
               </label>
 
             </div>
-            
+
           </div>
         </div>
         <div className="btnsContainer">

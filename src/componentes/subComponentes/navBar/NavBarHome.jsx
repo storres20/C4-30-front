@@ -35,7 +35,7 @@ export default function NavBarHome() {
                             <a className="productos" href="/">Productos</a>
                             <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
                             <a href="/Configuracion-de-Cuental">Configuración de Cuenta</a>
-                            <a href="historial-de-compras">Historial de Compras</a>
+                            <a href="/historial-de-compras">Historial de Compras</a>
                             <a href="logout">Cerrar Sesión<FiLogOut/></a>
                         </div>
                     </div>
