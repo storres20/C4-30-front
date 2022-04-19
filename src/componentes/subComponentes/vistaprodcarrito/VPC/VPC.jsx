@@ -81,10 +81,6 @@ export default function VPC({ products, id, setState = null }) {
               <img className="icon" src={burger} alt="burger" />
               <h4>Burger</h4>
             </div>
-            <div className="flex3">
-              <img className="icon" src={pizza} alt="pizza" />
-              <h4>Pizza</h4>
-            </div>
           </div>
 
           <div className="contenedorPM">
