@@ -87,7 +87,7 @@ export default function VPH({ prod, categorias }) {
             <img className="iconinfo" src={info} alt="info" />
             </button>
           </div>
-          <div>
+          <div className="btnsProductVPH">
             <img
               className="iconheart"
               src={isHeart ? heartbold : heart}

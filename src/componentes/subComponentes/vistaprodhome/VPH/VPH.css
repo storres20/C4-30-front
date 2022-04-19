@@ -108,20 +108,15 @@
     margin-right: 8px;
   }
   .contenedorVPH .iconinfo {
-    margin-top: 18px;
-    margin-left: 10px;
     width: 20px;
     height: 20px;
   }
   .contenedorVPH .iconheart {
-    margin-top: 16px;
-    margin-right: 10px;
     width: 24px;
     height: 21px;
     cursor: pointer;
   }
   .contenedorVPH .iconbag {
-    margin-top: 16px;
     width: 20px;
     height: 19px;
     cursor: pointer;
@@ -247,19 +242,15 @@
     margin-right: 8px;
   }
   .contenedorVPH .iconinfo {
-    margin-top: 10px;
-    margin-left: 10px;
     width: 12px;
     height: 12px;
   }
+
   .contenedorVPH .iconheart {
-    margin-top: 10px;
-    margin-right: 10px;
     width: 15px;
     height: 15px;
   }
   .contenedorVPH .iconbag {
-    margin-top: 10px;
     width: 15px;
     height: 14px;
   }
@@ -280,3 +271,10 @@
   }
 }
 /*# sourceMappingURL=VPH.css.map */
+
+.btnsProductVPH {
+  gap: 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
