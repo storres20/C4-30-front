@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Switch } from "antd";
 import Swal from 'sweetalert2';
 import "antd/dist/antd.css";
 import "../../contenedores/ConfiguracionCuenta.scss";
+import axios from "axios";
 
 function FormCuentaUser() {
+  const [state, setState] = useState({ name: "", last_name: "", phone: "" })
+
   function onChange(checked) {
     console.log(`switch to ${checked}`);
   }
 
   const modalGuardarDatosUsuario = () => {
+    axios.put(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`, { user: { ...state } })
+
     Swal.fire({
       text: '¿Está seguro que desea actualizar sus datos?',
       showCancelButton: true,
@@ -64,7 +69,7 @@ function FormCuentaUser() {
       showCloseButton: true,
       closeButtonAriaLabel: 'cerrar alerta',
     }).then((result) => {
-      if (result.isConfirmed) {        
+      if (result.isConfirmed) {
           Swal.fire({
             title: '¡Acción cancelada con éxito!',
             text: 'Sus datos volverán a la última actualización',
@@ -97,9 +102,28 @@ function FormCuentaUser() {
           showConfirmButton: false,
           timer: 1500,
         });
+        localStorage.removeItem("user")
+        setTimeout(() => {
+          window.location.pathname = "/Sobre-Veride"
+        }, 500)
       }
     });
+
   };
+
+  const getDataUser = () => {
+    axios.get(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`).then(({ data }) => {
+      setState({
+        name: data.name,
+        phone: data.phone,
+        last_name: data.last_name
+      })
+    })
+  }
+
+  useEffect(() => {
+    getDataUser()
+  }, [])
 
   return (
     <div className="container-B">
@@ -120,8 +144,9 @@ function FormCuentaUser() {
                   className="inputCG"
                   required="true"
                   type="text"
+                  defaultValue={state.name}
                   placeholder="Ingresa tu nombre*"
-
+                  onChange={(event) => setState({ ...state, name: event.target.value })}
                 />
               </label>
               <label>
@@ -131,6 +156,8 @@ function FormCuentaUser() {
                   required="true"
                   type="text"
                   placeholder="Ingresa tu número telefónico*"
+                  defaultValue={state.phone}
+                  onChange={(event) => setState({ ...state, phone: event.target.value })}
                 />
               </label>
             </div>
@@ -142,6 +169,8 @@ function FormCuentaUser() {
                   required="true"
                   type="text"
                   placeholder="Ingresa tus apellidos*"
+                  defaultValue={state.last_name}
+                  onChange={(event) => setState({ ...state, last_name: event.target.value })}
                 />
               </label>
 

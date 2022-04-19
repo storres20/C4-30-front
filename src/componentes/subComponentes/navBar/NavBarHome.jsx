@@ -44,7 +44,7 @@ export default function NavBarHome() {
                         <div className="logged-desktop-dropdown-content">
                             <a href="/Configuracion-de-Cuenta">Configuración de Cuenta</a>
                             <a href="historial-de-compras">Historial de Compras</a>
-                            <a href="logout">Cerrar Sesión<FiLogOut/></a>
+                            <a href="/Sobre-Veride" onClick={() => localStorage.removeItem("user")}>Cerrar Sesión<FiLogOut/></a>
                         </div>
                     </div>
             </div>
@@ -59,8 +59,8 @@ export default function NavBarHome() {
                             <a href="/Sobre-Veride">Sobre Veridē</a>
                         </div>
                     </div>
-                </div>}           
-        </div>        
+                </div>}
+        </div>
     </nav>
     );
   };
