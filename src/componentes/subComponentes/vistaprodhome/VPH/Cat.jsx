@@ -15,7 +15,7 @@ const Cat = ({prod}) => {
         setCategorias(data.data)
       })
       .catch((error) => console.log(error));
-  };
+  };z
 
   useEffect(() => {
     cargarCategorias();
