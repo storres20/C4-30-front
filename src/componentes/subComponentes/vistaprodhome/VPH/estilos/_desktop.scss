@@ -8,7 +8,7 @@
 		border-radius: 16px;
 
 		width: 320px;
-		height: auto;
+		//height: auto;
 
 		position: relative;
 
@@ -58,7 +58,16 @@
 			@include texto(700, 18px, 24px, #2b2b43);
 
 			margin: 0;
-			margin-top: 16px;
+			width: 170px;
+			text-align: left;
+			//margin-top: 16px;
+			/* margin-top: auto;
+			margin-bottom: auto; */
+			
+			display: flex;
+			align-items: center;
+			
+			height: 50px
 		}
 
 		h2 {
@@ -105,14 +114,16 @@
 		}
 
 		.iconinfo {
-			margin-top: 18px;
-			margin-left: 10px;
+			/* margin-top: 18px;
+			margin-left: 10px; */
+			display: flex;
+			align-items: center;
 			width: 20px;
 			height: 20px;
 		}
 
 		.iconheart {
-			margin-top: 16px;
+			margin-top: 14px;
 			margin-right: 10px;
 			width: 24px;
 			height: 21px;
@@ -120,7 +131,7 @@
 		}
 
 		.iconbag {
-			margin-top: 16px;
+			margin-top: 14px;
 			width: 20px;
 			height: 19px;
 			cursor: pointer;
@@ -146,6 +157,11 @@
 
 		.hidden {
 			display: none;
+		}
+		
+		.btnInfo {
+			margin-top: auto;
+			margin-bottom: auto;
 		}
 	}
 }
