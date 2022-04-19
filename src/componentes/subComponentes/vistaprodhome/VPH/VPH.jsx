@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-
-import "./VPH.scss";
-//import axios from "axios";
-//import Cat from './Cat'
-
-//import imagen from "../imagenes/img.svg"
+import "./estilos/VPH.scss";
+import "./estilos/InfoModal.scss";
 import bag from "../imagenes/bag.svg";
 import bagbold from "../imagenes/bagbold.svg";
 import heart from "../imagenes/heart.svg";
 import heartbold from "../imagenes/heartbold.svg";
 import clock from "../imagenes/clock.svg";
-//import burger from "../imagenes/burger.svg"
-//import pizza from "../imagenes/pizza.svg"
 import info from "../imagenes/info.svg";
+import Swal from 'sweetalert2';
 import axios from "axios";
 
 export default function VPH({ prod, categorias }) {

@@ -1,6 +1,6 @@
 import React from 'react';
-import {BiMenuAltRight, BiArrowBack} from 'react-icons/bi';
-import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, ArrowHome, NavBtn, NavBtnLink} from './NavbarElements'
+import {BiMenuAltRight /*, BiArrowBack */} from 'react-icons/bi';
+import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks /*, ArrowHome */, NavBtn, NavBtnLink} from './NavbarElements'
 
 
 function Navbar({toggle}) {
@@ -8,11 +8,11 @@ function Navbar({toggle}) {
     <>
       <Nav>
         <NavbarContainer>
-          <ArrowHome to='/'>
+{/*           <ArrowHome to='/Productos'>
             <BiArrowBack/>
-          </ArrowHome>
-          <NavLogo to='/'>
-            Sobre Veridé
+          </ArrowHome> */}
+          <NavLogo to='/Productos'>
+            Productos
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <BiMenuAltRight />
