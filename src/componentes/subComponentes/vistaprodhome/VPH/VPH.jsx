@@ -77,19 +77,19 @@ export default function VPH({ prod, categorias }) {
               className="btnInfo"
               onClick={() =>
                 Swal.fire({
-                  html: `<article className="modalDescripcion">
-                    <section className="tittleInfo">
+                  html: `<article class="modalDescripcion">
+                    <section class="tittleInfo">
                       <h3>DESTALLES DEL PRODUCTO</h3>
                     </section>
-                    <section className="imgInfo">
+                    <section class="imgInfo">
                       <img src=${prod.image} alt="producto" />
                     </section>
 
-                    <section className="nameInfo">
+                    <section class="nameInfo">
                       <h5>${prod.name.toUpperCase()}</h5>
                     </section>
 
-                    <section className="detailsInfo">
+                    <section class="detailsInfo">
                       <p> <strong> Descripción: </strong> ${
                         prod.description
                       } </p>
@@ -98,7 +98,7 @@ export default function VPH({ prod, categorias }) {
                       } </p>
                       <p> <strong> Estado: </strong> ${prod.state} </p>
                     </section>
-                    <section className="precioInfo">
+                    <section class="precioInfo">
                     <h6>S/. ${prod.price}</h6>
                   </section>
                   </article>`,

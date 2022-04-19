@@ -11,6 +11,7 @@ import "react-multi-carousel/lib/styles.css";
 import Footer from "../../subComponentes/footer/Footer";
 
 import { SearchContext } from "../../../context/SearchContext";
+import SliderInfinito from "../../subComponentes/sliderinfinito/SliderInfinito";
 
 
 export default function Home() {
@@ -90,24 +91,7 @@ export default function Home() {
   return (
     <section className="section">
       <NavBarHome />
-      <article className="article-promociones">
-        {/* <TarjetaDescuento {1}> */}
-        <a href="/promociones" className="enlacePromo1">
-          <img
-            src="https://i.ibb.co/1X7npWT/promo1.png"
-            alt="Promo"
-            className="imgPromo1"
-          />
-        </a>
-        {/* <TarjetaDescuento {2}> */}
-        <a href="/promociones" className="enlacePromo2">
-          <img
-            src="https://i.ibb.co/8dQpZgy/promo2.png"
-            alt="Promo"
-            className="imgPromo2"
-          />
-        </a>
-      </article>
+      <SliderInfinito/>
 
       <article className="article-destacados">
         <h2>Más Vendidos</h2>
