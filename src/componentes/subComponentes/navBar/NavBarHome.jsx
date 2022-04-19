@@ -3,7 +3,7 @@ import logo from '../../../imagenes/LogoVeride/LogosSinFondo/Logo3-Largo.png';
 import "./NavBar.scss"
 import { FiHeart, FiShoppingBag, FiSearch, FiMenu, FiChevronDown, FiLogOut } from "react-icons/fi";
 
-const isLoggedIn = false;
+const isLoggedIn = true;
 
 export default function NavBarHome() {
     return (
