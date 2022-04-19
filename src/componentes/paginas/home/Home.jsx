@@ -2,41 +2,14 @@ import { React, useState, useEffect } from "react";
 //import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
 import NavBarHome from "../../subComponentes/navBar/NavBarHome";
 import "./Home.scss";
+
 import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
 import axios from "axios";
 import Categorias from "../../subComponentes/categorias/Categorias";
 
-//import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import Footer from "../../subComponentes/footer/Footer";
+import SliderInfinito from "../../subComponentes/sliderinfinito/SliderInfinito";
 
-/* const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5,
-    slidesToSlide: 5 // optional, default to 1.
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 1 // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 764 },
-    items: 4,
-    slidesToSlide: 4 // optional, default to 1.
-  },
-  tabletsm: {
-    breakpoint: { max: 767, min: 464 },
-    items: 3,
-    slidesToSlide: 3 // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-}; */
 
 export default function Home() {
 
@@ -104,24 +77,28 @@ export default function Home() {
   return (
     <section className="section">
       <NavBarHome />
-      <article className="article-promociones">
+      {/* PROMOCIONES - ANTIGUO */}
+      {/* <article className="article-promociones"> */}
         {/* <TarjetaDescuento {1}> */}
-        <a href="/promociones" className="enlacePromo1">
+        {/* <a href="/promociones" className="enlacePromo1">
           <img
             src="https://i.ibb.co/1X7npWT/promo1.png"
             alt="Promo"
             className="imgPromo1"
           />
-        </a>
+        </a> */}
         {/* <TarjetaDescuento {2}> */}
-        <a href="/promociones" className="enlacePromo2">
+        {/* <a href="/promociones" className="enlacePromo2">
           <img
             src="https://i.ibb.co/8dQpZgy/promo2.png"
             alt="Promo"
             className="imgPromo2"
           />
         </a>
-      </article>
+      </article> */}
+      
+      {/* Slider Infinito para las PROMOCIONES */}
+      <SliderInfinito/>
 
       <article className="article-destacados">
         <h2>Más Vendidos</h2>
