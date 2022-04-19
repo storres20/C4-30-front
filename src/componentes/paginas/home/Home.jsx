@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useContext } from "react";
 //import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
 import NavBarHome from "../../subComponentes/navBar/NavBarHome";
 import "./Home.scss";
@@ -9,6 +9,8 @@ import Categorias from "../../subComponentes/categorias/Categorias";
 
 import Footer from "../../subComponentes/footer/Footer";
 import SliderInfinito from "../../subComponentes/sliderinfinito/SliderInfinito";
+
+import { SearchContext } from "../../../context/SearchContext";
 
 
 export default function Home() {
@@ -37,15 +39,27 @@ export default function Home() {
   //mostrar PRODUCTOS y MAS VENDIDOS desde la API
   const [productos, setProductos] = useState([]);
   const [vendidos, setVendidos] = useState([]);
+  
+  
+  //Almacena el contenido del CONTEXT en una CONSTANTE
+  const searchContext = useContext(SearchContext);
+  console.log(searchContext.query); // para pruebas del CONTEXT
 
-  const cargarProductos = () => {
+  const cargarProductos = (e) => {
     axios
       .get("https://country-app-v3.herokuapp.com/api/v1/products")
       .then((data) => {
         console.log(data.data);
+        
+        data = data.data;
+        
+        //Filtrado con el input del BUSCADOR
+        const searchResult = data && data.filter((item) => item.name.toLowerCase().includes(e.query));
 
         //Data de Productos al useState
-        setProductos(data.data);
+        //setProductos(data.data);
+        setProductos(searchResult);
+        
       })
       .catch((error) => console.log(error));
   };
@@ -66,9 +80,9 @@ export default function Home() {
   };
 
   useEffect(() => {
-    cargarProductos(); // Todos los Productos
+    cargarProductos(searchContext); // Todos los Productos
     cargarVendidos(); // Los Mas Vendidos - muestra de manera Random
-  }, []);
+  }, [searchContext]);
 
   // Filtrado por categoria
   const [selectedCategorias, setSelectedCategorias] = useState([]);
