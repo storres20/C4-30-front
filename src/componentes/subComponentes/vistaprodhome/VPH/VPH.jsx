@@ -25,7 +25,17 @@ export default function VPH({ prod, categorias }) {
   const [isBag, setIsBag] = useState(false);
 
   const buttonBag = () => {
+    const user = localStorage.getItem("user");
     setIsBag((current) => !current);
+
+    if (!isBag && user) {
+      axios.post(`https://country-app-v3.herokuapp.com/orders/${localStorage.getItem("id")}`, {
+        state: "sin pagar",
+        products: {
+          ...prod,
+        },
+      });
+    }
   };
 
   let categoria;

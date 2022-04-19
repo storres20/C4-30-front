@@ -1,17 +1,38 @@
-import React from 'react'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
-import './Vistaprodcarrito.css'
+import "./Vistaprodcarrito.css";
 
-import VPC from './VPC/VPC'
+import VPC from "./VPC/VPC";
 
-export default function Vistaprodcarrito() {
+export default function Vistaprodcarrito({ setListOrders, listOrders }) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://country-app-v3.herokuapp.com/orders/${localStorage.getItem("id")}`)
+      .then(({ data }) => {
+        setData(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    const ids = data.map((item) => item.id);
+    setListOrders([...ids]);
+  }, []);
+
+  useEffect(() => {
+    if (listOrders.length === 0) {
+      setData([]);
+    }
+  }, [listOrders]);
+
   return (
-    <div className='flex0'>
+    <div className="flex0">
       {/* Estos VPC luego pueden ser mapeados con la data de la API */}
-      <VPC/>
-      <VPC/>
-      <VPC/>
-      <VPC/>    
+      {data.map((item) => (
+        <VPC key={item.id} {...item} />
+      ))}
     </div>
-  )
+  );
 }
