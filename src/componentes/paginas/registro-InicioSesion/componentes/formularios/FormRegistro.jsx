@@ -7,6 +7,7 @@ import "./Formularios.scss";
 const Registro = ({ isSelectedRegistro }) => {
   const style = { fontSize: "3em" };
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
@@ -15,7 +16,7 @@ const Registro = ({ isSelectedRegistro }) => {
     axios
       .post(
         "https://country-app-v3.herokuapp.com/sign_up",
-        JSON.stringify({ email, password })
+        JSON.stringify({ email, password, name })
       )
       .then((data) => {
         window.location.pathname = `/Verificar-Cuenta/Nuevo-Usuario/${data.data.id}`;
@@ -27,12 +28,6 @@ const Registro = ({ isSelectedRegistro }) => {
         }
       });
   };
-
-  useEffect(() => {
-    if (localStorage.getItem("user")) {
-      window.location.pathname = "/";
-    }
-  }, []);
 
   return (
     <>
@@ -58,7 +53,7 @@ const Registro = ({ isSelectedRegistro }) => {
                 required="true"
                 type="text"
                 placeholder="Ingresa tu Nombre*"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
               />
             </label>
             <label>
@@ -82,24 +77,24 @@ const Registro = ({ isSelectedRegistro }) => {
               />
             </label>
           </div>
-          <div className="tabsCheckbox">
+          {/* <div className="tabsCheckbox">
             <label>
               <input type="checkbox" className="checkbox" />
               <span className="checkmark"> Mantenerme conectado</span>
             </label>
-          </div>
+          </div> */}
           <div className="btnsIngresar">
             <button type="submit">Registrarse</button>
           </div>
         </form>
 
-        <div className="RedesSocialesBox">
+        {/* <div className="RedesSocialesBox">
           <br />
           <h4>O registrate con</h4>
           <div className="RedesSocialesRegistro">
             <FcGoogle style={style} />
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   );

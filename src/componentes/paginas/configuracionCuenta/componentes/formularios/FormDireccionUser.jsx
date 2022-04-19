@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Switch } from "antd";
 import Swal from 'sweetalert2';
 import "antd/dist/antd.css";
 import "../../contenedores/ConfiguracionCuenta.scss";
+import axios from "axios"
 
 function FormDireccionUser() {
+  const [state, setState] = useState({ district: "", direction: "", house_number: "", reference_house: "" })
+
   function onChange(checked) {
     console.log(`switch to ${checked}`);
   }
 
   const modalGuardarDatosUsuario = () => {
+    axios.put(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`, { user: { ...state } })
+
     Swal.fire({
       text: '¿Está seguro que desea actualizar sus datos?',
       showCancelButton: true,
@@ -64,7 +69,7 @@ function FormDireccionUser() {
       showCloseButton: true,
       closeButtonAriaLabel: 'cerrar alerta',
     }).then((result) => {
-      if (result.isConfirmed) {        
+      if (result.isConfirmed) {
           Swal.fire({
             title: '¡Acción cancelada con éxito!',
             text: 'Sus datos volverán a la última actualización',
@@ -101,6 +106,21 @@ function FormDireccionUser() {
     });
   };
 
+  const getDataUser = () => {
+    axios.get(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`).then(({ data }) => {
+      setState({
+        district: data.district,
+        direction: data.direction,
+        house_number: data.house_number,
+        reference_house: data.reference_house
+      })
+    })
+  }
+
+  useEffect(() => {
+    getDataUser()
+  }, [])
+
   return (
     <div className="container-B">
       <div className="titleContainer">
@@ -120,6 +140,8 @@ function FormDireccionUser() {
                 className="inputCG"
                 required="true"
                 type="text"
+                defaultValue={state.district}
+                onChange={(event) => setState({ ...state, district: event.target.value })}
                 placeholder="Ingresa tu distrito*"
               />
             </label>
@@ -128,7 +150,9 @@ function FormDireccionUser() {
               <input
                 className="inputCG"
                 required="true"
-                type="email"
+                type="text"
+                defaultValue={state.house_number}
+                onChange={(event) => setState({ ...state, house_number: event.target.value })}
                 placeholder="Ingresa tu n° de casa o dpto.*"
               />
             </label>
@@ -140,6 +164,8 @@ function FormDireccionUser() {
                 className="inputCG"
                 required="true"
                 type="text"
+                defaultValue={state.direction}
+                onChange={(event) => setState({ ...state, direction: event.target.value })}
                 placeholder="Ingresa tu dirección*"
               />
             </label>
@@ -150,6 +176,8 @@ function FormDireccionUser() {
                 className="inputCG"
                 required="false"
                 type="text"
+                defaultValue={state.reference_house}
+                onChange={(event) => setState({ ...state, reference_house: event.target.value })}
                 placeholder="Ingresa un lugar de referencia*"
               />
             </label>

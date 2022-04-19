@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Switch } from "antd";
 import Swal from 'sweetalert2';
 import tipo from "../../constantes/images";
 import "antd/dist/antd.css";
 import "../../contenedores/ConfiguracionCuenta.scss";
+import axios from "axios";
 
 function FormMetodoPagoUser() {
+  const [state, setState] = useState({ card_number: "", card_type: "", cvv: "", expiration: "" })
+
   function onChange(checked) {
     console.log(`switch to ${checked}`);
   }
 
   const modalGuardarDatosUsuario = () => {
+    axios.put(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`, { user: { ...state } })
+
     Swal.fire({
       text: '¿Está seguro que desea actualizar sus datos?',
       showCancelButton: true,
@@ -65,7 +70,7 @@ function FormMetodoPagoUser() {
       showCloseButton: true,
       closeButtonAriaLabel: 'cerrar alerta',
     }).then((result) => {
-      if (result.isConfirmed) {        
+      if (result.isConfirmed) {
           Swal.fire({
             title: '¡Acción cancelada con éxito!',
             text: 'Sus datos volverán a la última actualización',
@@ -102,6 +107,21 @@ function FormMetodoPagoUser() {
     });
   };
 
+  const getDataUser = () => {
+    axios.get(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`).then(({ data }) => {
+      setState({
+        card_type: data.card_type,
+        card_number: data.card_number,
+        cvv: data.cvv,
+        expiration: data.expiration
+      })
+    })
+  }
+
+  useEffect(() => {
+    getDataUser()
+  }, [])
+
   return (
     <div className="container-B">
       <div className="titleContainer">
@@ -123,6 +143,8 @@ function FormMetodoPagoUser() {
                       id="radioVisa"
                       name="align"
                       value="visa"
+                      checked={state.card_type === "visa"}
+                      onChange={() => setState({ ...state, card_type: "visa" }) }
                     />
                     <label className="e-btn" htmlFor="radioVisa">
                       <img src={tipo.visa} alt="Tarjeta" />
@@ -134,6 +156,8 @@ function FormMetodoPagoUser() {
                       id="radioDiners"
                       name="align"
                       value="diners"
+                      checked={state.card_type === "diners"}
+                      onChange={() => setState({ ...state, card_type: "diners" }) }
                     />
                     <label className="e-btn" htmlFor="radioDiners">
                       <img src={tipo.diners} alt="Tarjeta" />
@@ -145,6 +169,8 @@ function FormMetodoPagoUser() {
                       id="radioMaster"
                       name="align"
                       value="right"
+                      checked={state.card_type === "master"}
+                      onChange={() => setState({ ...state, card_type: "master" }) }
                     />
                     <label className="e-btn" htmlFor="radioMaster">
                       <img src={tipo.master} alt="Tarjeta" />
@@ -156,6 +182,8 @@ function FormMetodoPagoUser() {
                       id="radioAmerican"
                       name="align"
                       value="american"
+                      checked={state.card_type === "american"}
+                      onChange={() => setState({ ...state, card_type: "american" }) }
                     />
                     <label className="e-btn" htmlFor="radioAmerican">
                       <img src={tipo.american} alt="Tarjeta" />
@@ -172,6 +200,8 @@ function FormMetodoPagoUser() {
                 className="inputCG"
                 required="true"
                 type="text"
+                defaultValue={state.card_number}
+                onChange={(event) => setState({ ...state, card_number: event.target.value }) }
                 placeholder="Ingrese n° de la tarjeta*"
               />
             </label>
@@ -185,6 +215,8 @@ function FormMetodoPagoUser() {
                   className="inputCG"
                   required="true"
                   type="email"
+                  defaultValue={state.expiration}
+                  onChange={(event) => setState({ ...state, expiration: event.target.value }) }
                   placeholder="Mes/Año*"
                 />
               </label>
@@ -194,6 +226,8 @@ function FormMetodoPagoUser() {
                   className="inputCG"
                   required="true"
                   type="email"
+                  defaultValue={state.cvv}
+                  onChange={(event) => setState({ ...state, cvv: event.target.value }) }
                   placeholder="CVV*"
                 />
               </label>

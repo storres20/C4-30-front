@@ -39,29 +39,27 @@ import Footer from "../../subComponentes/footer/Footer";
 }; */
 
 export default function Home() {
-
   // mostrar CATEGORIAS desde la API
   const [categorias, setCategorias] = useState([]);
   const cargarCategorias = () => {
     axios
       .get("https://country-app-v3.herokuapp.com/categories")
       .then((data) => {
-        console.log(data.data)
+        console.log(data.data);
 
         //Data de Categorias al useState
-        setCategorias(data.data)
+        setCategorias(data.data);
       })
       .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    //   if (!localStorage.getItem("user")) {
-    //     window.location.pathname = "/inicio-sesion";
-    //   }
+    if (!localStorage.getItem("user")) {
+      window.location.pathname = "/inicio-sesion";
+    }
 
     cargarCategorias();
   }, []);
-
 
   //mostrar PRODUCTOS y MAS VENDIDOS desde la API
   const [productos, setProductos] = useState([]);
@@ -71,10 +69,10 @@ export default function Home() {
     axios
       .get("https://country-app-v3.herokuapp.com/api/v1/products")
       .then((data) => {
-        console.log(data.data)
+        console.log(data.data);
 
         //Data de Productos al useState
-        setProductos(data.data)
+        setProductos(data.data);
       })
       .catch((error) => console.log(error));
   };
@@ -83,12 +81,13 @@ export default function Home() {
     axios
       .get("https://country-app-v3.herokuapp.com/api/v1/products")
       .then((data) => {
-
         //Data de Mas Vendidos; lo cual, es un RANDOM de 10 de la Data de Productos
-        var cont = 3
-        var shuffled = data.data.sort(function () { return .5 - Math.random() })
-        var selected = shuffled.slice(0, cont)
-        setVendidos(selected)
+        var cont = 3;
+        var shuffled = data.data.sort(function () {
+          return 0.5 - Math.random();
+        });
+        var selected = shuffled.slice(0, cont);
+        setVendidos(selected);
       })
       .catch((error) => console.log(error));
   };
@@ -125,9 +124,11 @@ export default function Home() {
 
       <article className="article-destacados">
         <h2>Más Vendidos</h2>
-        <div className="masVendidos"> {/* container-destacados */}
-          {vendidos.map(prod => {
-            return <VPH key={prod.id} prod={prod} categorias={categorias} />
+        <div className="masVendidos">
+          {" "}
+          {/* container-destacados */}
+          {vendidos.map((prod) => {
+            return <VPH key={prod.id} prod={prod} categorias={categorias} />;
           })}
         </div>
       </article>
@@ -135,39 +136,40 @@ export default function Home() {
       <article className="article-categorias">
         <h2>Categorías</h2>
         <div className="container-categorias">
-
-          {categorias.map(prod => {
-            return <Categorias
-              key={prod.id}
-              prod={prod}
-              setSelectedCategorias={setSelectedCategorias}
-              selectedCategorias={selectedCategorias} />
+          {categorias.map((prod) => {
+            return (
+              <Categorias
+                key={prod.id}
+                prod={prod}
+                setSelectedCategorias={setSelectedCategorias}
+                selectedCategorias={selectedCategorias}
+              />
+            );
           })}
-
         </div>
       </article>
 
       <article className="article-productos">
         <h2>Todos los productos ({productos.length})</h2>
-        <div className="todosProductos"> {/* container-productos */}
-
+        <div className="todosProductos">
+          {" "}
+          {/* container-productos */}
           {/* Filtros activados => muestra solo la(s) categoria(s) elegida(s) */}
-          {selectedCategorias.length > 0 && productos.filter(p => selectedCategorias.some(c => c === p.category_id)).map(prod => {
-            return <VPH
-              key={prod.id}
-              prod={prod}
-              categorias={categorias} />
-          })
-          }
+          {selectedCategorias.length > 0 &&
+            productos
+              .filter((p) =>
+                selectedCategorias.some((c) => c === p.category_id)
+              )
+              .map((prod) => {
+                return (
+                  <VPH key={prod.id} prod={prod} categorias={categorias} />
+                );
+              })}
           {/* Estado inicial => muestra todo */}
-          {selectedCategorias.length === 0 && productos.map(prod => {
-            return <VPH
-              key={prod.id}
-              prod={prod}
-              categorias={categorias} />
-          })
-          }
-
+          {selectedCategorias.length === 0 &&
+            productos.map((prod) => {
+              return <VPH key={prod.id} prod={prod} categorias={categorias} />;
+            })}
         </div>
       </article>
       <Footer />

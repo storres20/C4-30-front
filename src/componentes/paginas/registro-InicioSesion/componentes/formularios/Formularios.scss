@@ -163,6 +163,8 @@
   text-align: center;
   width: 100%;
   cursor: pointer;
+  margin-top: 20px;
+  
   button {
     width: 100%;
     padding: 0.7rem 1rem;
@@ -196,7 +198,7 @@
   &:hover {
     color: var(--primary-color) !important;
   }
-  &:hover:after {    
+  &:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
