@@ -7,7 +7,7 @@ import heart from "../imagenes/heart.svg";
 import heartbold from "../imagenes/heartbold.svg";
 import clock from "../imagenes/clock.svg";
 import info from "../imagenes/info.svg";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 import axios from "axios";
 
 export default function VPH({ prod, categorias }) {
@@ -23,15 +23,38 @@ export default function VPH({ prod, categorias }) {
     setIsBag((current) => !current);
 
     if (!isBag) {
-      axios.post(`https://country-app-v3.herokuapp.com/orders/${localStorage.getItem("id")}`, {
-        state: "sin pagar",
-        products: {
-          ...prod,
-          count: 0,
-        },
-      });
+      axios.post(
+        `https://country-app-v3.herokuapp.com/orders/${localStorage.getItem(
+          "id"
+        )}`,
+        {
+          state: "sin pagar",
+          products: {
+            ...prod,
+            count: 0,
+          },
+        }
+      );
     }
   };
+
+  // mostrar CATEGORIAS desde la API
+  /* const [categorias, setCategorias] = useState([]);
+  const cargarCategorias = ({ prod }) => {
+    axios
+      .get("https://country-app-v3.herokuapp.com/categories")
+      .then((data) => {
+        //console.log(data.data)
+
+        //Data de Categorias al useState
+        setCategorias(data.data)
+      })
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    cargarCategorias();
+  }, []); */
 
   let categoria;
   if (categorias) {
@@ -49,12 +72,12 @@ export default function VPH({ prod, categorias }) {
         <div className="flex1">
           <div className="flex2">
             <h1>{prod.name} </h1>
-            
+
             <button
               className="btnInfo"
-              onClick={() => Swal.fire({
-                html:
-                  `<article className="modalDescripcion">
+              onClick={() =>
+                Swal.fire({
+                  html: `<article className="modalDescripcion">
                     <section className="tittleInfo">
                       <h3>DESTALLES DEL PRODUCTO</h3>
                     </section>
@@ -66,33 +89,38 @@ export default function VPH({ prod, categorias }) {
                       <h5>${prod.name.toUpperCase()}</h5>
                     </section>
 
-                    <section className="detailsInfo"> 
-                      <p> <strong> Descripción: </strong> ${prod.description} </p>
-                      <p> <strong> Categoría: </strong> ${categoria && categoria.name} </p>
+                    <section className="detailsInfo">
+                      <p> <strong> Descripción: </strong> ${
+                        prod.description
+                      } </p>
+                      <p> <strong> Categoría: </strong> ${
+                        categoria && categoria.name
+                      } </p>
                       <p> <strong> Estado: </strong> ${prod.state} </p>
                     </section>
                     <section className="precioInfo">
                     <h6>S/. ${prod.price}</h6>
                   </section>
-                  </article>`,                
-                allowOutsideClick: false,
-                stopKeydownPropagation: false,
-                showCloseButton: true,
-                showConfirmButton: false,
-                closeButtonAriaLabel: 'cerrar alerta',
-                showClass: {
-                  popup: 'animate__animated animate__fadeInDown',
-                },
-                hideClass: {
-                  popup: 'animate__animated animate__fadeOutUp',
-                },
-              })}
+                  </article>`,
+                  allowOutsideClick: false,
+                  stopKeydownPropagation: false,
+                  showCloseButton: true,
+                  showConfirmButton: false,
+                  closeButtonAriaLabel: "cerrar alerta",
+                  showClass: {
+                    popup: "animate__animated animate__fadeInDown",
+                  },
+                  hideClass: {
+                    popup: "animate__animated animate__fadeOutUp",
+                  },
+                })
+              }
               type="button"
             >
-            <img className="iconinfo" src={info} alt="info" />
+              <img className="iconinfo" src={info} alt="info" />
             </button>
           </div>
-          <div className="btnsProductVPH">
+          <div>
             <img
               className="iconheart"
               src={isHeart ? heartbold : heart}
@@ -115,11 +143,15 @@ export default function VPH({ prod, categorias }) {
         </div>
 
         <div className="flex2">
+          {/* <div className='flex3'>
+            <img className='icon' src={burger} alt="burger" />
+            <h3>{prod.category_id}</h3>
+          </div> */}
           <div className="flex3">
             <img
               className="icon"
               src={categoria && categoria.image}
-              alt=""
+              alt="pizza"
             />
             <h3>{categoria && categoria.name}</h3>
           </div>

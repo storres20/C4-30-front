@@ -11,7 +11,7 @@ import burger from "../imagenes/burger.svg";
 import pizza from "../imagenes/pizza.svg";
 import axios from "axios";
 
-export default function VPC({ products, id }) {
+export default function VPC({ products, id, setState = null }) {
   const [isPM, setIsPM] = useState(products.count || 0);
   const buttonMinus = () => {
     //setIsMinus(current => !current)
@@ -19,6 +19,10 @@ export default function VPC({ products, id }) {
     axios.post(`https://country-app-v3.herokuapp.com/orders/${id}/minus`, {
       count: isPM,
       product_id: products.id,
+      user_id: localStorage.getItem("id")
+    }).then(({ data }) => {
+      console.log(data)
+      setState(data)
     });
   };
 
@@ -27,6 +31,10 @@ export default function VPC({ products, id }) {
     axios.post(`https://country-app-v3.herokuapp.com/orders/${id}/aument`, {
       count: isPM,
       product_id: products.id,
+      user_id: localStorage.getItem("id")
+    }).then(({ data }) => {
+      console.log(data)
+      setState(data)
     });
   };
 
@@ -37,14 +45,6 @@ export default function VPC({ products, id }) {
 
   const handleDelete = () => {
     axios.delete(`https://country-app-v3.herokuapp.com/orders/${id}`);
-  };
-
-  const handleView = () => {
-    window.location.pathname = `/Carrito-Compras/${id}`;
-
-    axios.get(`https://country-app-v3.herokuapp.com/orders/view/${id}`).then((data) => {
-      console.log(data);
-    });
   };
 
   return (
@@ -58,7 +58,7 @@ export default function VPC({ products, id }) {
         <p className="equis" style={{ padding: "10px" }} onClick={handleDelete}>
           X
         </p>
-        <div className="contenedorTexto" onClick={handleView}>
+        <div className="contenedorTexto">
           <div className="flex1">
             <div>
               <h1>{products.name}</h1>
