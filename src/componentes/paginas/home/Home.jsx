@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+//import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
 import NavBarHome from "../../subComponentes/navBar/NavBarHome";
 import "./Home.scss";
 
