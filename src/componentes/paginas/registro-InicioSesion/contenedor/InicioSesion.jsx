@@ -6,10 +6,10 @@ import "./Contenedor.scss"
 function InicioSesion() {
   return (
     <section className="grid-Contenedor">
-        <div class="contenedorIzquierdo">
+        <div className="contenedorIzquierdo">
           <InicioRegistro />
         </div>
-        <div class="contenedirDerecho">
+        <div className="contenedirDerecho">
           <Slider />
         </div>
     </section>
