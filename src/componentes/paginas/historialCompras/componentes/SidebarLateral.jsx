@@ -1,7 +1,8 @@
 import React from "react";
 import "../contenedores/HistorialCompras.scss";
 import "antd/dist/antd.css";
-import Vistaprodcarrito from "../../../subComponentes/vistaprodhistorial/Vistaprodhistorial";
+/* import Vistaprodcarrito from "../../../subComponentes/vistaprodhistorial/Vistaprodhistorial"; */
+import VPHL from "../../../subComponentes/vistaprodhistorial/VPHL/VPHL";
 
 function SidebarLateral() {
   return (
@@ -11,7 +12,7 @@ function SidebarLateral() {
       </div>
       <section className="btnsContainer-Configuration">
         <button id="toDo" className=' boxBtnCarritoCompras' to="/Configuracion-de-Cuenta">
-            <Vistaprodcarrito />
+            <VPHL />
         </button>
       </section>
       

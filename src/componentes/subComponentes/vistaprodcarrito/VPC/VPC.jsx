@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import './VPC.css'
+import './VPC.scss'
 
 import imagen from "../imagenes/img.svg"
 import plus from "../imagenes/plus.svg"

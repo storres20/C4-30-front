@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./VPH.scss";
 import "./InfoModal.scss";
-//import axios from "axios";
+import axios from "axios"
 //import Cat from './Cat'
 
 //import imagen from "../imagenes/img.svg"

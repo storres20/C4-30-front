@@ -8,10 +8,10 @@ function Navbar({toggle}) {
     <>
       <Nav>
         <NavbarContainer>
-          <ArrowHome to='/'>
+          <ArrowHome to='/Home'>
             <BiArrowBack/>
           </ArrowHome>
-          <NavLogo to='/'>
+          <NavLogo to='/Home'>
             Sobre Veridé
           </NavLogo>
           <MobileIcon onClick={toggle}>

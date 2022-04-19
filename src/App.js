@@ -30,7 +30,8 @@ function App() {
         <Route path="/Verificar-Cuenta/Nuevo-Usuario/:id" element={<VerificarCuentaNuevoUsuario />} />
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
         <Route path="/Sobre-Veride" element={<SobreVeride/> } />
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<SobreVeride />} />
       </Routes>
     </div>
   );

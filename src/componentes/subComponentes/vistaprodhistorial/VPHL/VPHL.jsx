@@ -1,9 +1,19 @@
 import React from "react";
 
-import "./VPHL.css";
+import "./VPHL.scss";
 
 export default function VPHL() {
+/*   const [state, setState] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://country-app-v3.herokuapp.com/buy/${localStorage.getItem("id")}`)
+      .then((data) => setState(data));
+  }, []);
+
+  console.log(state); */
   return (
+    <div className="flex0">
     <div className="contenedorVPHL">
       <div className="flex-VPHL">
         <p className="equis">X</p>
@@ -23,6 +33,7 @@ export default function VPHL() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
