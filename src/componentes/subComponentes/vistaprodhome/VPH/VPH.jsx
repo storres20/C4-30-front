@@ -1,20 +1,14 @@
 import React, { useState } from "react";
-import "./VPH.scss";
-import "./InfoModal.scss";
-//import axios from "axios";
-//import Cat from './Cat'
-
-//import imagen from "../imagenes/img.svg"
+import "./estilos/VPH.scss";
+import "./estilos/InfoModal.scss";
 import bag from "../imagenes/bag.svg";
 import bagbold from "../imagenes/bagbold.svg";
 import heart from "../imagenes/heart.svg";
 import heartbold from "../imagenes/heartbold.svg";
 import clock from "../imagenes/clock.svg";
-//import burger from "../imagenes/burger.svg"
-//import pizza from "../imagenes/pizza.svg"
 import info from "../imagenes/info.svg";
 import Swal from 'sweetalert2';
-/* import axios from "axios"; */
+import axios from "axios";
 
 export default function VPH({ prod, categorias }) {
   const [isHeart, setIsHeart] = useState(false);
@@ -25,7 +19,17 @@ export default function VPH({ prod, categorias }) {
   const [isBag, setIsBag] = useState(false);
 
   const buttonBag = () => {
+    const user = localStorage.getItem("user");
     setIsBag((current) => !current);
+
+    if (!isBag && user) {
+      axios.post(`https://country-app-v3.herokuapp.com/orders/${localStorage.getItem("id")}`, {
+        state: "sin pagar",
+        products: {
+          ...prod,
+        },
+      });
+    }
   };
 
   let categoria;
@@ -87,7 +91,7 @@ export default function VPH({ prod, categorias }) {
             <img className="iconinfo" src={info} alt="info" />
             </button>
           </div>
-          <div>
+          <div className="btnsProductVPH">
             <img
               className="iconheart"
               src={isHeart ? heartbold : heart}

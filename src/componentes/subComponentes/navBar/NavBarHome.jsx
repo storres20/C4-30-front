@@ -6,6 +6,7 @@ import { FiHeart, FiShoppingBag, FiSearch, FiMenu, FiChevronDown, FiLogOut } fro
 import { SearchContext } from "../../../context/SearchContext";
 
 const isLoggedIn = false;
+// const isLoggedIn = true;
 
 export default function NavBarHome(props) {
 
@@ -20,7 +21,7 @@ export default function NavBarHome(props) {
         <nav className="navHome">
             <div className="navbar-left">
                 <img src={logo} alt="Veride" />
-                <a className="productos" href="/">Productos</a>
+                <a className="productos" href="/Productos">Productos</a>
                 <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
             </div>
             <div className="navbar-right">
@@ -44,7 +45,7 @@ export default function NavBarHome(props) {
                             <FiMenu />
                             <div className="logged-mobile-dropdown-content">
                                 <p className="link-usuario">usuario</p>
-                                <a className="productos" href="/">Productos</a>
+                                <a className="productos" href="/Productos">Productos</a>
                                 <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
                                 <a href="/Configuracion-de-Cuental">Configuración de Cuenta</a>
                                 <a href="historial-de-compras">Historial de Compras</a>
@@ -67,7 +68,7 @@ export default function NavBarHome(props) {
                             <FiMenu />
                             <div className="unlogged-dropdown-content">
                                 <a href="/inicio-sesion">Ingresa aquí</a>
-                                <a href="/">Productos</a>
+                                <a href="/Productos">Productos</a>
                                 <a href="/Sobre-Veride">Sobre Veridē</a>
                             </div>
                         </div>

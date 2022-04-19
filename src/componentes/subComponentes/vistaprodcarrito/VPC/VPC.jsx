@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import './VPC.css'
+import './estilos/VPC.scss'
 
 import imagen from "../imagenes/img.svg"
 import plus from "../imagenes/plus.svg"
@@ -10,7 +10,7 @@ import clock from "../imagenes/clock.svg"
 import burger from "../imagenes/burger.svg"
 import pizza from "../imagenes/pizza.svg"
 
-export default function VPC() {
+export default function VPC({ products }) {
 
   const [isPM, setIsPM] = useState(1)
   const buttonMinus = () => {
@@ -38,18 +38,18 @@ export default function VPC() {
       <div>
       <p className='equis'>X</p>
       <div className='contenedorTexto'>
-      
+
         <div className='flex1'>
           <div>
-            <h1>Nigiri Set</h1>
+            <h1>{products.name}</h1>
           </div>
           <div className='flex1'>
             <img className='iconclock' src={clock} alt="clock" />
-            <h2>40-60 min</h2>
+            <h2>{products.time_preparation}</h2>
           </div>
         </div>
 
-        <p>Ea his sensibus eleifend, mollis iudicabit omittantur id mel. Et cum ignota euismod corpora, et saepe.</p>
+        <p>{products.description}</p>
 
         <div className='flex4'>
           <h5>Read more</h5>
@@ -69,12 +69,12 @@ export default function VPC() {
 
         <div className='contenedorPM'>
           <div className='flex1'>
-            <h6>$24</h6>
-            <div className='flex2'>
+            <h6>$ {products.price}</h6>
+            {/* <div className='flex2'>
               <img className='iconpm' src={minus} alt="minus" onClick={buttonMinus} />
               <h1 className='textopm'> {isPM} </h1>
               <img className='iconpm' src={plus} alt="plus" onClick={buttonPlus} />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

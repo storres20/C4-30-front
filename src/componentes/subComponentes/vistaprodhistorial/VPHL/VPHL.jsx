@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./VPHL.css";
+import "./estilos/VPHL.scss";
 
 export default function VPHL() {
   return (
