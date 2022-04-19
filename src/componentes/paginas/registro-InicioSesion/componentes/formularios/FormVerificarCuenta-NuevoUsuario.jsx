@@ -20,8 +20,9 @@ function FormVerificarCuentaNuevoUsuario() {
         JSON.stringify({ code: Number(verifyAccount) })
       )
       .then((data) => {
-        window.location.pathname = "/";
+        window.location.pathname = "/Configuracion-de-Cuenta";
         localStorage.setItem("user", data.data.email);
+        localStorage.setItem("id", data.data.id);
         localStorage.removeItem("confirmation_email");
       })
       .catch((error) => {
@@ -32,9 +33,6 @@ function FormVerificarCuentaNuevoUsuario() {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("user")) {
-      window.location.pathname = "/";
-    }
     if (!localStorage.getItem("confirmation_email")) {
       window.location.pathname = "/inicio-sesion";
     }
