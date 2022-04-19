@@ -1,6 +1,7 @@
 import React from "react";
 
 import axios from "axios";
+import "./estilos/VPHL.scss";
 
 export default function VPHL({ id }) {
   const buy_id = id
@@ -18,7 +19,7 @@ export default function VPHL({ id }) {
       console.log(data);
     });
   }
-import "./estilos/VPHL.scss";
+
 
   return (
     <div className="contenedorVPHL">
