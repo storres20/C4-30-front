@@ -14,7 +14,7 @@ import clock from "../imagenes/clock.svg";
 //import pizza from "../imagenes/pizza.svg"
 import info from "../imagenes/info.svg";
 import Swal from 'sweetalert2';
-/* import axios from "axios"; */
+import axios from "axios";
 
 export default function VPH({ prod, categorias }) {
   const [isHeart, setIsHeart] = useState(false);
