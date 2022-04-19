@@ -19,8 +19,9 @@ const Inicio = ({ isSelectedInicio }) => {
         JSON.stringify({ email, password })
       )
       .then((data) => {
-        /* window.location.pathname = "/"; */
+        window.location.pathname = "/";
         localStorage.setItem("user", data.data.email);
+        localStorage.setItem("id", data.data.id);
       })
       .catch((error) => {
         if (error.request) {
@@ -74,12 +75,12 @@ const Inicio = ({ isSelectedInicio }) => {
             </label>
           </div>
 
-          <div className="tabsCheckbox">
+          {/* <div className="tabsCheckbox">
             <label>
               <input type="checkbox" className="checkbox" />
               <span className="checkmark"> Mantenerme conectado</span>
             </label>
-          </div>
+          </div> */}
           <div className="btnsIngresar">
             <button type="submit">Ingresar</button>
           </div>
@@ -92,13 +93,13 @@ const Inicio = ({ isSelectedInicio }) => {
           </div>
         </form>
 
-        <div className="RedesSocialesBox">
+        {/* <div className="RedesSocialesBox">
           <br />
           <h4>O inicia sesión con</h4>
           <div className="RedesSocialesInicio">
             <FcGoogle style={style} />
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   );

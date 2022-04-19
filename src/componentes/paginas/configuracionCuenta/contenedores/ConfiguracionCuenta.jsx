@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./ConfiguracionCuenta.scss";
 import "antd/dist/antd.css";
 import SidebarLateral from "../componentes/SidebarLateral";
@@ -20,6 +20,12 @@ function ConfiguracionCuenta() {
   } else {
     renderizado = <FormCuentaUser />;
   }
+
+  useEffect(() => {
+    if (!localStorage.getItem("user")) {
+      window.location.pathname = "/inicio-sesion";
+    }
+  }, []);
 
   return (
     <section className="flex-contenedorConfigCuenta">

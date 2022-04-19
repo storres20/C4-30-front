@@ -14,7 +14,7 @@ function Slider() {
   }
 
   useEffect(() => {
-    
+
     resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
