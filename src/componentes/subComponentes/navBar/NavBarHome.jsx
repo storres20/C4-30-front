@@ -3,14 +3,14 @@ import logo from '../../../imagenes/LogoVeride/LogosSinFondo/Logo3-Largo.png';
 import "./NavBar.scss"
 import { FiHeart, FiShoppingBag, FiSearch, FiMenu, FiChevronDown, FiLogOut } from "react-icons/fi";
 
-const isLoggedIn = false;
+const isLoggedIn = true;
 
 export default function NavBarHome() {
     return (
     <nav className="navHome">
         <div className="navbar-left">
             <img src={logo} alt="Veride" />
-            <a className="productos" href="/">Productos</a>
+            <a className="productos" href="/Productos">Productos</a>
             <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
         </div>
         <div className="navbar-right">
@@ -32,7 +32,7 @@ export default function NavBarHome() {
                         <FiMenu/>
                         <div className="logged-mobile-dropdown-content">
                             <p className="link-usuario">usuario</p>
-                            <a className="productos" href="/">Productos</a>
+                            <a className="productos" href="/Productos">Productos</a>
                             <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
                             <a href="/Configuracion-de-Cuental">Configuración de Cuenta</a>
                             <a href="historial-de-compras">Historial de Compras</a>

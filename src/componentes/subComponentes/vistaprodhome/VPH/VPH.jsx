@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import "./VPH.scss";
+import "./InfoModal.scss";
 //import axios from "axios";
 //import Cat from './Cat'
 
@@ -13,6 +13,7 @@ import clock from "../imagenes/clock.svg";
 //import burger from "../imagenes/burger.svg"
 //import pizza from "../imagenes/pizza.svg"
 import info from "../imagenes/info.svg";
+import Swal from 'sweetalert2';
 import axios from "axios";
 
 export default function VPH({ prod, categorias }) {
@@ -24,34 +25,18 @@ export default function VPH({ prod, categorias }) {
   const [isBag, setIsBag] = useState(false);
 
   const buttonBag = () => {
-    // const user = localStorage.getItem("user");
+    const user = localStorage.getItem("user");
     setIsBag((current) => !current);
 
-    // if (!isBag && user) {
-    //   axios.post("http://localhost:3001/orders/create", {
-    //     producto: prod,
-    //     user,
-    //   });
-    // }
+    if (!isBag && user) {
+      axios.post(`https://country-app-v3.herokuapp.com/orders/${localStorage.getItem("id")}`, {
+        state: "sin pagar",
+        products: {
+          ...prod,
+        },
+      });
+    }
   };
-
-  // mostrar CATEGORIAS desde la API
-  /* const [categorias, setCategorias] = useState([]);
-  const cargarCategorias = ({ prod }) => {
-    axios
-      .get("https://country-app-v3.herokuapp.com/categories")
-      .then((data) => {
-        //console.log(data.data)
-
-        //Data de Categorias al useState
-        setCategorias(data.data)
-      })
-      .catch((error) => console.log(error));
-  };
-
-  useEffect(() => {
-    cargarCategorias();
-  }, []); */
 
   let categoria;
   if (categorias) {
@@ -69,9 +54,50 @@ export default function VPH({ prod, categorias }) {
         <div className="flex1">
           <div className="flex2">
             <h1>{prod.name} </h1>
+            
+            <button
+              className="btnInfo"
+              onClick={() => Swal.fire({
+                html:
+                  `<article class="modalDescripcion">
+                    <section class="tittleInfo">
+                      <h3>DESTALLES DEL PRODUCTO</h3>
+                    </section>
+                    <section class="imgInfo">
+                      <img src=${prod.image} alt="producto" />
+                    </section>
+
+                    <section class="nameInfo">
+                      <h5>${prod.name.toUpperCase()}</h5>
+                    </section>
+
+                    <section class="detailsInfo"> 
+                      <p> <strong> Descripción: </strong> ${prod.description} </p>
+                      <p> <strong> Categoría: </strong> ${categoria && categoria.name} </p>
+                      <p> <strong> Estado: </strong> ${prod.state} </p>
+                    </section>
+                    <section class="precioInfo">
+                    <h6>S/. ${prod.price}</h6>
+                  </section>
+                  </article>`,                
+                allowOutsideClick: false,
+                stopKeydownPropagation: false,
+                showCloseButton: true,
+                showConfirmButton: false,
+                closeButtonAriaLabel: 'cerrar alerta',
+                showClass: {
+                  popup: 'animate__animated animate__fadeInDown',
+                },
+                hideClass: {
+                  popup: 'animate__animated animate__fadeOutUp',
+                },
+              })}
+              type="button"
+            >
             <img className="iconinfo" src={info} alt="info" />
+            </button>
           </div>
-          <div>
+          <div className="btnsProductVPH">
             <img
               className="iconheart"
               src={isHeart ? heartbold : heart}
@@ -94,15 +120,11 @@ export default function VPH({ prod, categorias }) {
         </div>
 
         <div className="flex2">
-          {/* <div className='flex3'>
-            <img className='icon' src={burger} alt="burger" />
-            <h3>{prod.category_id}</h3>
-          </div> */}
           <div className="flex3">
             <img
               className="icon"
               src={categoria && categoria.image}
-              alt="pizza"
+              alt=""
             />
             <h3>{categoria && categoria.name}</h3>
           </div>
