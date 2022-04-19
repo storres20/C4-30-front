@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import "antd/dist/antd.css";
-import "../../contenedores/CarritoCompras.scss";
-import tipo from "../../constantes/images";
+import "../contenedores/CarritoCompras.scss";
+import tipo from "../constantes/images";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
