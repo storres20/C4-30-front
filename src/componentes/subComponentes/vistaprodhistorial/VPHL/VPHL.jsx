@@ -1,6 +1,5 @@
 import React from "react";
 
-import "./VPHL.css";
 import axios from "axios";
 
 export default function VPHL({ id }) {
@@ -19,6 +18,7 @@ export default function VPHL({ id }) {
       console.log(data);
     });
   }
+import "./estilos/VPHL.scss";
 
   return (
     <div className="contenedorVPHL">
