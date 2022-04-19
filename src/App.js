@@ -20,8 +20,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/Carrito-Compras" element={<CarritoCompras/> } />
+        <Route path="/Carrito-Compras/:order_id" element={<CarritoCompras/> } />
         <Route path="/Lista-De-Deseos" element={<ListaDeDeseos/> } />
         <Route path="/Historial-De-Compras" element={<HistorialCompras/> } />
+        <Route path="/Historial-De-Compras/:buy_id" element={<HistorialCompras/> } />
 
         <Route path="/Configuracion-de-Cuenta" element={<ConfiguracionCuenta/> } />
         <Route path="/Cambiar-Contrasena/:token" element={<CambiarContrasena/>} />
