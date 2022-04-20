@@ -19,7 +19,7 @@ const Inicio = ({ isSelectedInicio }) => {
         JSON.stringify({ email, password })
       )
       .then((data) => {
-        window.location.pathname = "/";
+        window.location.pathname = "/Productos";
         localStorage.setItem("user", data.data.email);
         localStorage.setItem("id", data.data.id);
       })

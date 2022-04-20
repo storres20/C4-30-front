@@ -17,7 +17,7 @@ function FormVerificarCuentaNuevoUsuario() {
     axios
       .post(
         `https://country-app-v3.herokuapp.com/verify_code/${params.id}`,
-        JSON.stringify({ code: Number(verifyAccount) })
+        JSON.stringify({ code: verifyAccount })
       )
       .then((data) => {
         window.location.pathname = "/Configuracion-de-Cuenta";
@@ -69,7 +69,7 @@ function FormVerificarCuentaNuevoUsuario() {
             <input
               className="inputB"
               required="true"
-              type="number"
+              type="text"
               placeholder="*"
               onChange={(e) => setVerifyAccount(e.target.value)}
             />

@@ -17,7 +17,7 @@ function FormVerificarCuenta() {
       .post(
         "https://country-app-v3.herokuapp.com/recovert_account",
         JSON.stringify({
-          code: Number(code),
+          code,
           email: localStorage.getItem("verify_account"),
         })
       )
@@ -73,7 +73,7 @@ function FormVerificarCuenta() {
             <input
               className="inputB"
               required="true"
-              type="number"
+              type="text"
               placeholder="*"
               onChange={(e) => setCode(e.target.value)}
             />
