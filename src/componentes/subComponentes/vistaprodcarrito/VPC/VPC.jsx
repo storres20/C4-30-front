@@ -11,7 +11,7 @@ import burger from "../imagenes/burger.svg";
 import pizza from "../imagenes/pizza.svg";
 import axios from "axios";
 
-export default function VPC({ products, id, setState = null }) {
+export default function VPC({ products, id, setState = null, productosCarrito, setProductosCarrito }) {
   const [isPM, setIsPM] = useState(products.count || 1);
   const buttonMinus = () => {
     //setIsMinus(current => !current)
@@ -45,6 +45,8 @@ export default function VPC({ products, id, setState = null }) {
 
   const handleDelete = () => {
     axios.delete(`https://country-app-v3.herokuapp.com/orders/${id}`);
+    //Actualiza el estado del carrito y limpia el producto eliminado
+    setProductosCarrito(productosCarrito.filter((p) => p.id !== id));
   };
 
   return (
@@ -56,7 +58,7 @@ export default function VPC({ products, id, setState = null }) {
 
       <div>
         <p className="equis" onClick={handleDelete}>
-          X
+          x
         </p>
         <div className="contenedorTexto">
           <div className="flex1">

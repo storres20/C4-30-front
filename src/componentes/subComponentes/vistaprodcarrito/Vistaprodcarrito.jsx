@@ -31,7 +31,7 @@ export default function Vistaprodcarrito({ setListOrders, listOrders }) {
     <div className="flex0">
       {/* Estos VPC luego pueden ser mapeados con la data de la API */}
       {data.map((item) => (
-        <VPC key={item.id} {...item} />
+        <VPC key={item.id} {...item} productosCarrito={data} setProductosCarrito={setData} />
       ))}
     </div>
   );
