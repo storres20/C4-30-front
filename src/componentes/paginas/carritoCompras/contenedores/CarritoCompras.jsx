@@ -7,7 +7,7 @@ import Footer from "../../../subComponentes/footer/Footer";
 import InformacionDeCompra from "../componentes/InformacionDeCompra";
 import axios from "axios";
 
-function ConfiguracionCuenta({user}) {
+function CarritoCompras({user}) {
   const [data, setData] = useState([]);
   const [state, setState] = useState({
     amount: "12.0",
@@ -44,4 +44,4 @@ function ConfiguracionCuenta({user}) {
   );
 }
 
-export default ConfiguracionCuenta;
+export default CarritoCompras;
