@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./estilos/VPH.scss";
 import "./estilos/InfoModal.scss";
 import bag from "../imagenes/bag.svg";
@@ -11,15 +11,21 @@ import Swal from "sweetalert2";
 import axios from "axios";
 
 export default function VPH({ prod, categorias }) {
-  const [isHeart, setIsHeart] = useState(false);
+  const [isHeart, setIsHeart] = useState(prod.favorite);
+
   const buttonHeart = () => {
-    setIsHeart((current) => !current);
+    axios.put(`https://country-app-v3.herokuapp.com/api/v1/products/${prod.id}`, {
+      products: {
+        favorite: isHeart,
+      },
+    });
   };
+
+  console.log(isHeart);
 
   const [isBag, setIsBag] = useState(false);
 
   const buttonBag = () => {
-    const user = localStorage.getItem("user");
     setIsBag((current) => !current);
 
     if (!isBag) {
@@ -43,6 +49,10 @@ export default function VPH({ prod, categorias }) {
     categoria = categorias.find((e) => e.id === prod.category_id);
   }
 
+  useEffect(() => {
+    buttonHeart();
+  }, [isHeart]);
+
   return (
     <div className="contenedorVPH">
       <img src={prod.image} alt="imagen" />
@@ -57,9 +67,9 @@ export default function VPH({ prod, categorias }) {
 
             <button
               className="btnInfo"
-              onClick={() => Swal.fire({
-                html:
-                  `<article class="modalDescripcion">
+              onClick={() =>
+                Swal.fire({
+                  html: `<article class="modalDescripcion">
                     <section class="tittleInfo">
                       <h3>DESTALLES DEL PRODUCTO</h3>
                     </section>
@@ -71,10 +81,16 @@ export default function VPH({ prod, categorias }) {
                       <h5>${prod.name.toUpperCase()}</h5>
                     </section>
 
-                    <section class="detailsInfo"> 
-                      <p> <strong> Descripción: </strong> ${prod.description} </p>
-                      <p> <strong> Categoría: </strong> ${categoria && categoria.name} </p>
-                      <p> <strong> Tiempo de preparación: </strong> ${prod.time_preparation} </p>
+                    <section class="detailsInfo">
+                      <p> <strong> Descripción: </strong> ${
+                        prod.description
+                      } </p>
+                      <p> <strong> Categoría: </strong> ${
+                        categoria && categoria.name
+                      } </p>
+                      <p> <strong> Tiempo de preparación: </strong> ${
+                        prod.time_preparation
+                      } </p>
                       <p> <strong> Estado: </strong> ${prod.state} </p>
                     </section>
                     <section class="precioInfo">
@@ -102,9 +118,11 @@ export default function VPH({ prod, categorias }) {
           <div>
             <img
               className="iconheart"
-              src={isHeart ? heartbold : heart}
+              src={isHeart === true ? heartbold : heart}
               alt="heart"
-              onClick={buttonHeart}
+              onClick={() => {
+                setIsHeart(!isHeart);
+              }}
             />
             <img
               className="iconbag"
@@ -123,11 +141,7 @@ export default function VPH({ prod, categorias }) {
 
         <div className="flex2">
           <div className="flex3">
-            <img
-              className="icon"
-              src={categoria && categoria.image}
-              alt=""
-            />
+            <img className="icon" src={categoria && categoria.image} alt="" />
             <h3>{categoria && categoria.name}</h3>
           </div>
         </div>
