@@ -44,6 +44,8 @@ export default function Home() {
   //Almacena el contenido del CONTEXT en una CONSTANTE
   const searchContext = useContext(SearchContext);
   console.log(searchContext.query); // para pruebas del CONTEXT
+  
+  const [isContext, setIsContext] = useState([]);
 
   const cargarProductos = (e) => {
     axios
@@ -86,6 +88,7 @@ export default function Home() {
   useEffect(() => {
     cargarProductos(searchContext); // Todos los Productos
     cargarVendidos(searchContext); // Los Mas Vendidos - muestra de manera Random
+    setIsContext(searchContext.query); // valor del CONTEXT al useState
   }, [searchContext]);
 
   // Filtrado por categoria
@@ -117,7 +120,7 @@ export default function Home() {
       {/* Slider Infinito para las PROMOCIONES */}
       <SliderInfinito/>
 
-      <article className="article-destacados">
+      <article className={`article-destacados ${isContext ? "hidden" : ""}`}>
         <h2>Más Vendidos</h2>
         <div className="masVendidos">
           {" "}
