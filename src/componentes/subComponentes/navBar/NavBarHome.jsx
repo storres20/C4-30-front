@@ -17,7 +17,7 @@ export default function NavBarHome({user}) {
     const searchQueryHandler = () => {
         searchContext.searchHandler(searchQuery);
     };
-    
+
     /* Inicio de Busqueda al presionar ENTER en el INPUT BUSCADOR del NAVBAR */
     const handleEnter = (e) => {
         if (e.key === 'Enter') {
@@ -63,7 +63,7 @@ export default function NavBarHome({user}) {
                             </div>
                         </div>
                         <div className="logged-dropdown-desktop">
-                            <p className="cuenta">{user.name}<FiChevronDown /></p>
+                            <p className="cuenta">{user?.name}<FiChevronDown /></p>
                             <div className="logged-desktop-dropdown-content">
                                 <a href="/Configuracion-de-Cuenta">Configuración de Cuenta</a>
                                 <a href="historial-de-compras">Historial de Compras</a>
