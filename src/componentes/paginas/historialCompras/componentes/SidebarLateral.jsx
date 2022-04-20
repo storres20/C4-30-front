@@ -13,7 +13,9 @@ function SidebarLateral() {
       .get(
         `https://country-app-v3.herokuapp.com/buy/${localStorage.getItem("id")}`
       )
-      .then(({ data }) => setState(data));
+      .then(({ data }) => {
+        setState(data)
+      });
   }, []);
 
   return (
