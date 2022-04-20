@@ -17,6 +17,14 @@ export default function NavBarHome({user}) {
     const searchQueryHandler = () => {
         searchContext.searchHandler(searchQuery);
     };
+    
+    /* Inicio de Busqueda al presionar ENTER en el INPUT BUSCADOR del NAVBAR */
+    const handleEnter = (e) => {
+        if (e.key === 'Enter') {
+            searchQueryHandler();
+        }
+    };
+    /*  */
 
     return (
         <nav className="navHome">
@@ -26,14 +34,15 @@ export default function NavBarHome({user}) {
                 <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
             </div>
             <div className="navbar-right">
-                <form className="form-inline">
+                <div className="form-inline">
                     <input type="text" placeholder="Buscar..."
                         onChange={(e) => setSearchQuery(e.target.value)}
+                        onKeyUp={(e) => handleEnter(e)}
                         value={searchQuery} />
                     <button type="button" className="boton-buscar" onClick={searchQueryHandler} >
                         <FiSearch />
                     </button>
-                </form>
+                </div>
                 <a className="deseos" href="/Lista-De-Deseos">
                     <FiHeart />
                 </a>

@@ -45,6 +45,8 @@ export default function Home({user}) {
   //Almacena el contenido del CONTEXT en una CONSTANTE
   const searchContext = useContext(SearchContext);
   console.log(searchContext.query); // para pruebas del CONTEXT
+  
+  const [isContext, setIsContext] = useState([]);
 
   const cargarProductos = (e) => {
     axios
@@ -65,8 +67,10 @@ export default function Home({user}) {
       .catch((error) => console.log(error));
   };
 
-  const cargarVendidos = () => {
-    axios
+  const cargarVendidos = (e) => {
+    
+    if(!e.query){
+      axios
       .get("https://country-app-v3.herokuapp.com/api/v1/products")
       .then((data) => {
         //Data de Mas Vendidos; lo cual, es un RANDOM de 10 de la Data de Productos
@@ -78,11 +82,14 @@ export default function Home({user}) {
         setVendidos(selected);
       })
       .catch((error) => console.log(error));
+    }
+    
   };
 
   useEffect(() => {
     cargarProductos(searchContext); // Todos los Productos
-    cargarVendidos(); // Los Mas Vendidos - muestra de manera Random
+    cargarVendidos(searchContext); // Los Mas Vendidos - muestra de manera Random
+    setIsContext(searchContext.query); // valor del CONTEXT al useState
   }, [searchContext]);
 
   // Filtrado por categoria
@@ -93,7 +100,7 @@ export default function Home({user}) {
       <NavBarHome user={user}/>
       <SliderInfinito/>
 
-      <article className="article-destacados">
+      <article className={`article-destacados ${isContext ? "hidden" : ""}`}>
         <h2>Más Vendidos</h2>
         <div className="masVendidos">
           {" "}
