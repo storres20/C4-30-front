@@ -11,14 +11,18 @@ import burger from "../imagenes/burger.svg";
 import pizza from "../imagenes/pizza.svg";
 import axios from "axios";
 
-export default function VPC({ products, id }) {
-  const [isPM, setIsPM] = useState(products.count || 0);
+export default function VPC({ products, id, setState = null }) {
+  const [isPM, setIsPM] = useState(products.count || 1);
   const buttonMinus = () => {
     //setIsMinus(current => !current)
-    setIsPM((current) => (current === 0 ? 0 : current - 1));
+    setIsPM((current) => (current === 1 ? 1 : current - 1));
     axios.post(`https://country-app-v3.herokuapp.com/orders/${id}/minus`, {
       count: isPM,
       product_id: products.id,
+      user_id: localStorage.getItem("id")
+    }).then(({ data }) => {
+      console.log(data)
+      setState(data)
     });
   };
 
@@ -27,6 +31,10 @@ export default function VPC({ products, id }) {
     axios.post(`https://country-app-v3.herokuapp.com/orders/${id}/aument`, {
       count: isPM,
       product_id: products.id,
+      user_id: localStorage.getItem("id")
+    }).then(({ data }) => {
+      console.log(data)
+      setState(data)
     });
   };
 
@@ -39,26 +47,18 @@ export default function VPC({ products, id }) {
     axios.delete(`https://country-app-v3.herokuapp.com/orders/${id}`);
   };
 
-  const handleView = () => {
-    window.location.pathname = `/Carrito-Compras/${id}`;
-
-    axios.get(`https://country-app-v3.herokuapp.com/orders/view/${id}`).then((data) => {
-      console.log(data);
-    });
-  };
-
   return (
     <div className="contenedorVPC">
       <div className="contenedorImagen">
-        <img src={imagen} alt="imagen" onClick={buttonImg} />
-        <h3 className={`postexto ${isImg ? "hidden" : ""}`}>AGOTADO</h3>
+        <img src={products.image} alt="imagen" onClick={buttonImg} />
+        {/* <h3 className={`postexto ${isImg ? "hidden" : ""}`}>AGOTADO</h3> */}
       </div>
 
       <div>
-        <p className="equis" style={{ padding: "10px" }} onClick={handleDelete}>
+        <p className="equis" onClick={handleDelete}>
           X
         </p>
-        <div className="contenedorTexto" onClick={handleView}>
+        <div className="contenedorTexto">
           <div className="flex1">
             <div>
               <h1>{products.name}</h1>
@@ -71,25 +71,21 @@ export default function VPC({ products, id }) {
 
           <p>{products.description}</p>
 
-          <div className="flex4">
+{/*           <div className="flex4">
             <h5>Read more</h5>
             <img className="icondown" src={down} alt="down" />
-          </div>
+          </div> */}
 
           <div className="flex2">
             <div className="flex3">
               <img className="icon" src={burger} alt="burger" />
-              <h4>Burger</h4>
-            </div>
-            <div className="flex3">
-              <img className="icon" src={pizza} alt="pizza" />
-              <h4>Pizza</h4>
+              <h4>{products.category_id}</h4>
             </div>
           </div>
 
           <div className="contenedorPM">
             <div className="flex1">
-              <h6>$ {products.price}</h6>
+              <h6>$ {products.price}.00</h6>
               <div className="flex2">
                 <img
                   className="iconpm"

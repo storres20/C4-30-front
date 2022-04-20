@@ -5,8 +5,8 @@ import { FiHeart, FiShoppingBag, FiSearch, FiMenu, FiChevronDown, FiLogOut } fro
 
 import { SearchContext } from "../../../context/SearchContext";
 
-const isLoggedIn = false;
-// const isLoggedIn = true;
+/* const isLoggedIn = false; */
+const isLoggedIn = true;
 
 export default function NavBarHome(props) {
 
@@ -33,7 +33,9 @@ export default function NavBarHome(props) {
                 <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
             </div>
             <div className="navbar-right">
+
                 <div class="form-inline">
+
                     <input type="text" placeholder="Buscar..."
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onKeyUp={(e) => handleEnter(e)}

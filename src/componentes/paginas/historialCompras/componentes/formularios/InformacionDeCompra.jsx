@@ -64,7 +64,7 @@ function FormCuentaUser() {
                 <p><span className="textDatos-CC">Fecha :</span> 20/02/2022 </p>
                 <p><span className="textDatos-CC">Hora :</span> 15:02 hrs</p>
                 <div className="boxProductosDetallesCarritoCompras">
-                  <table class="contenedorTablaProductos">
+                  <table className="contenedorTablaProductos">
                     <tr>
                       <th>Productos</th>
                       <th>Unds</th>

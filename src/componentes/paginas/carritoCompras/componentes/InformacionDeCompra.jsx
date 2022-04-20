@@ -1,27 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import Swal from "sweetalert2";
 import "antd/dist/antd.css";
-import "../../contenedores/CarritoCompras.scss";
-import tipo from "../../constantes/images";
+import "../contenedores/CarritoCompras.scss";
+import tipo from "../constantes/images";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 
-function FormCuentaUser() {
-  const [data, setData] = useState([]);
-  const [state, setState] = useState({
-    amount: "12.0",
-    state: "Entregado",
-    products: { ...data },
-  });
-  const params = useParams();
+function FormCuentaUser({ state, props }) {
+  
+  const navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate(`/historial-de-compras/${localStorage.getItem("id")}`);
+  };
   const modalGuardarDatosUsuario = () => {
-    axios.post(
-      `https://country-app-v3.herokuapp.com/buy/${localStorage.getItem("id")}`,
-      {
-        ...state,
-      }
-    );
+    axios.post(`https://country-app-v3.herokuapp.com/buy/${localStorage.getItem("id")}`, {
+      ...state,
+    });
 
     Swal.fire({
       text: "¿Está seguro de confirmar su compra?",
@@ -38,11 +33,12 @@ function FormCuentaUser() {
       if (result.isConfirmed) {
         Swal.fire({
           title: "¡Compra realizada con éxito!",
-          text: "La compra fue enviada a entrega con éxito",
+          text: "Su compra estará próxima a entrega",
           icon: "success",
           showConfirmButton: false,
           timer: 1500,
         });
+        handleClick(props);
       }
     });
   };
@@ -71,17 +67,6 @@ function FormCuentaUser() {
       }
     });
   };
-
-  useEffect(() => {
-    if (params.order_id) {
-      axios
-        .get(`https://country-app-v3.herokuapp.com/orders/view/${params.order_id}`)
-        .then(({ data }) => {
-          setData(data);
-          setState({ ...state, products: data.products });
-        });
-    }
-  }, []);
 
   return (
     <section className="boxPrincipalDetalleCompra">
