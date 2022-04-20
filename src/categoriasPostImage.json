@@ -1,0 +1,41 @@
+{
+  "carta":[
+  {
+   "id_productos":0,
+   "nombre":"Pizzas",
+   "imagen":"https://i.postimg.cc/cHb7kKsJ/Pizzas.png",
+   "estado":"disponible"
+  },
+  {
+    "id_productos":1,
+    "nombre":"Hamburguesas",
+    "imagen":"https://i.postimg.cc/6q4rk93f/Hamburguesas.png",
+    "estado":"disponible"
+   },
+   {
+    "id_productos":2,
+    "nombre":"Sushi",
+    "imagen":"https://i.postimg.cc/bdXx8KSc/Sushi.png",
+    "estado":"disponible"
+   },
+   {
+    "id_productos":3,
+    "nombre":"Ensaladas",
+    "imagen":"https://i.postimg.cc/KcCwRjnF/Ensaladas.png",
+    "estado":"disponible"
+   },
+   {
+    "id_productos":4,
+    "nombre":"Postres",
+    "imagen":"https://i.postimg.cc/Kc1CGB3J/Postres.png",
+    "estado":"disponible"
+   },
+   {
+    "id_productos":5,
+    "nombre":"Bebidas",
+    "imagen":"https://i.postimg.cc/G22JjPnN/Bebidas.png",
+    "estado":"disponible"
+   }
+
+]
+}
