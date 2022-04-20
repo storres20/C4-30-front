@@ -37,3 +37,13 @@ export const ProductosWrapper =styled.div`
     width: 100%;
   }
 `
+export const InfoContent = styled.p`
+  color: hsla(228, 28%, 20%, 1);
+  font-size: medium;
+  text-align: center;
+  padding: 1rem 5rem;
+  max-width: 900px;
+  @media screen and (max-width: 480px) {
+    padding: 2rem 3rem;
+  }
+`;
