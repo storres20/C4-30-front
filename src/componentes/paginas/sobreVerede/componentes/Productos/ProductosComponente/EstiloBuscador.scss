@@ -1,0 +1,31 @@
+$primary-color: #828282;
+$secondary-color: #c9a731;
+$element-background-color: #edeef2;
+
+.form-inline {
+    text-align: center;
+    display: inline-block;
+    input {
+      box-sizing: border-box;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 0.5em;
+      background-color: $element-background-color;
+      &:focus, &:active {
+          outline: none;
+          border: 1.8px solid var(--primary-color);
+        }
+    }
+    button {
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+    }
+  }
+
+.boton-buscar {
+    color: $primary-color;
+    &:hover {
+        color: $secondary-color;
+    }
+}

@@ -35,7 +35,7 @@ export default function NavBarHome({user}) {
             </div>
             <div className="navbar-right">
                 <div className="form-inline">
-                    <input type="text" placeholder="Buscar..."
+                    <input type="text" placeholder="Buscar Producto..."
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onKeyUp={(e) => handleEnter(e)}
                         value={searchQuery} />
