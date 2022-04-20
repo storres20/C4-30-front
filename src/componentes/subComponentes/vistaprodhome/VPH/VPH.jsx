@@ -74,10 +74,11 @@ export default function VPH({ prod, categorias }) {
                     <section className="detailsInfo"> 
                       <p> <strong> Descripción: </strong> ${prod.description} </p>
                       <p> <strong> Categoría: </strong> ${categoria && categoria.name} </p>
+                      <p> <strong> Tiempo de preparación: </strong> ${prod.time_preparation} </p>
                       <p> <strong> Estado: </strong> ${prod.state} </p>
                     </section>
                     <section className="precioInfo">
-                    <h6>S/. ${prod.price}</h6>
+                    <h6>S/. ${prod.price}.00</h6>
                   </section>
                   </article>`,
                   allowOutsideClick: false,
