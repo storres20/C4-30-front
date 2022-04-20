@@ -64,8 +64,10 @@ export default function Home() {
       .catch((error) => console.log(error));
   };
 
-  const cargarVendidos = () => {
-    axios
+  const cargarVendidos = (e) => {
+    
+    if(!e.query){
+      axios
       .get("https://country-app-v3.herokuapp.com/api/v1/products")
       .then((data) => {
         //Data de Mas Vendidos; lo cual, es un RANDOM de 10 de la Data de Productos
@@ -77,11 +79,13 @@ export default function Home() {
         setVendidos(selected);
       })
       .catch((error) => console.log(error));
+    }
+    
   };
 
   useEffect(() => {
     cargarProductos(searchContext); // Todos los Productos
-    cargarVendidos(); // Los Mas Vendidos - muestra de manera Random
+    cargarVendidos(searchContext); // Los Mas Vendidos - muestra de manera Random
   }, [searchContext]);
 
   // Filtrado por categoria
