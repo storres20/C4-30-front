@@ -33,7 +33,7 @@ export default function NavBarHome(props) {
                 <a className="sobre-veride" href="/Sobre-Veride">Sobre Veridē</a>
             </div>
             <div className="navbar-right">
-                <div class="form-inline">
+                <div className="form-inline">
                     <input type="text" placeholder="Buscar..."
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onKeyUp={(e) => handleEnter(e)}
