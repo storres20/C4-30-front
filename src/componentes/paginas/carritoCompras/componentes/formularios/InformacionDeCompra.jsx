@@ -5,7 +5,7 @@ import "../../contenedores/CarritoCompras.scss";
 import tipo from "../../constantes/images";
 
 
-function FormCuentaUser() {
+function FormCuentaUser({user}) {
 
   const modalGuardarDatosUsuario = () => {
     Swal.fire({
@@ -72,9 +72,9 @@ function FormCuentaUser() {
           <div className="flex-Inputs inputsContainer container-detallesProducto-CC">
             <div>
               <label >
-                <p><span className="textDatos-CC">Nombres :</span> Rosamaria </p>
-                <p><span className="textDatos-CC">Apellidos :</span> Gutierrez</p>
-                <p><span className="textDatos-CC">Dirección :</span> Oscar Benavides 3008</p>
+                <p><span className="textDatos-CC">Nombres :</span> {user.name} </p>
+                <p><span className="textDatos-CC">Apellidos :</span> {user.last_name}</p>
+                <p><span className="textDatos-CC">Dirección :</span> {user.direction}</p>
                 <label className="boxNumTarjeta textDatos-CC">
                   <p><span className="textDatos-CC">Número de Tarjeta :</span> **********5432</p>
                   <label className="e-btn" htmlFor="radioVisa">

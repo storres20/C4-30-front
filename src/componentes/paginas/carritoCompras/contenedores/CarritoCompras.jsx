@@ -6,19 +6,20 @@ import SidebarLateral from "../componentes/SidebarLateral";
 import Footer from "../../../subComponentes/footer/Footer";
 import InformacionDeCompra from "../componentes/formularios/InformacionDeCompra";
 
-function ConfiguracionCuenta() {
+function ConfiguracionCuenta({user}) {
   useEffect(() => {
     if (!localStorage.getItem("user")) {
       window.location.pathname = "/inicio-sesion";
     }
   }, []);
+// console.log(user)
 
   return (
     <section className="flex-contenedorConfigCuenta">
-      <NavBarHome />
+      <NavBarHome  user={user}/>
       <div className="contenedorConfigCuenta flexBox-CG contenedorCarritoCompras">
         <SidebarLateral />
-        <InformacionDeCompra />
+        <InformacionDeCompra user={user}/>
       </div>
       <Footer />
     </section>
