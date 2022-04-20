@@ -13,6 +13,15 @@
     display: inline-block;
     margin-bottom: 30px;
   }
+
+  .contenedorVPH :hover {
+      transform: scale(1.02);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+
   .contenedorVPH img {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
