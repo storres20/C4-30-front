@@ -45,7 +45,7 @@ export default function Home({user}) {
   //Almacena el contenido del CONTEXT en una CONSTANTE
   const searchContext = useContext(SearchContext);
   console.log(searchContext.query); // para pruebas del CONTEXT
-  
+
   const [isContext, setIsContext] = useState([]);
 
   const cargarProductos = (e) => {
@@ -68,7 +68,7 @@ export default function Home({user}) {
   };
 
   const cargarVendidos = (e) => {
-    
+
     if(!e.query){
       axios
       .get("https://country-app-v3.herokuapp.com/api/v1/products")
@@ -83,7 +83,7 @@ export default function Home({user}) {
       })
       .catch((error) => console.log(error));
     }
-    
+
   };
 
   useEffect(() => {

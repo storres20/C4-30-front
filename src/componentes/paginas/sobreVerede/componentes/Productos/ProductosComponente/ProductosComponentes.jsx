@@ -63,14 +63,14 @@ function ProductosComponentes() {
     const searchQueryHandler = () => {
         searchContext.searchHandler(searchQuery);
     };
-    
+
     /* Inicio de Busqueda al presionar ENTER en el INPUT BUSCADOR del NAVBAR */
     const handleEnter = (e) => {
         if (e.key === 'Enter') {
             searchQueryHandler();
         }
     };
-    
+
   return (
     <section>
       <div className="form-inline-Search">
