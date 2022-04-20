@@ -10,9 +10,9 @@ export const ProductosContainer =styled.div`
   align-items:center;
   background: #E5E5E5;
 
-  @media screen and (max-width: 480px) {
+/*   @media screen and (max-width: 480px) {
     padding: 5rem 1rem;
-  }
+  } */
 
 `
 export const  ProductosH1 =styled.h1`
@@ -39,7 +39,7 @@ export const InfoContent = styled.p`
   color: hsla(228, 28%, 20%, 1);
   font-size: medium;
   text-align: center;
-  padding: 1rem 5rem;
+  padding-bottom: 3rem;
   max-width: 900px;
   @media screen and (max-width: 480px) {
     padding: 2rem 3rem;
