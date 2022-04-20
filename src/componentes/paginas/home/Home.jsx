@@ -1,13 +1,16 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useContext } from "react";
 //import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
 import NavBarHome from "../../subComponentes/navBar/NavBarHome";
 import "./Home.scss";
-
 import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
 import axios from "axios";
 import Categorias from "../../subComponentes/categorias/Categorias";
 
+//import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import Footer from "../../subComponentes/footer/Footer";
+
+import { SearchContext } from "../../../context/SearchContext";
 import SliderInfinito from "../../subComponentes/sliderinfinito/SliderInfinito";
 
 
@@ -38,14 +41,26 @@ export default function Home({user}) {
   const [productos, setProductos] = useState([]);
   const [vendidos, setVendidos] = useState([]);
 
-  const cargarProductos = () => {
+
+  //Almacena el contenido del CONTEXT en una CONSTANTE
+  const searchContext = useContext(SearchContext);
+  console.log(searchContext.query); // para pruebas del CONTEXT
+
+  const cargarProductos = (e) => {
     axios
       .get("https://country-app-v3.herokuapp.com/api/v1/products")
       .then((data) => {
         console.log(data.data);
 
+        data = data.data;
+
+        //Filtrado con el input del BUSCADOR
+        const searchResult = data && data.filter((item) => item.name.toLowerCase().includes(e.query));
+
         //Data de Productos al useState
-        setProductos(data.data);
+        //setProductos(data.data);
+        setProductos(searchResult);
+
       })
       .catch((error) => console.log(error));
   };
@@ -66,37 +81,16 @@ export default function Home({user}) {
   };
 
   useEffect(() => {
-    cargarProductos(); // Todos los Productos
+    cargarProductos(searchContext); // Todos los Productos
     cargarVendidos(); // Los Mas Vendidos - muestra de manera Random
-  }, []);
+  }, [searchContext]);
 
   // Filtrado por categoria
   const [selectedCategorias, setSelectedCategorias] = useState([]);
 
   return (
     <section className="section">
-      <NavBarHome user={user} />
-      {/* PROMOCIONES - ANTIGUO */}
-      {/* <article className="article-promociones"> */}
-        {/* <TarjetaDescuento {1}> */}
-        {/* <a href="/promociones" className="enlacePromo1">
-          <img
-            src="https://i.ibb.co/1X7npWT/promo1.png"
-            alt="Promo"
-            className="imgPromo1"
-          />
-        </a> */}
-        {/* <TarjetaDescuento {2}> */}
-        {/* <a href="/promociones" className="enlacePromo2">
-          <img
-            src="https://i.ibb.co/8dQpZgy/promo2.png"
-            alt="Promo"
-            className="imgPromo2"
-          />
-        </a>
-      </article> */}
-      
-      {/* Slider Infinito para las PROMOCIONES */}
+      <NavBarHome user={user}/>
       <SliderInfinito/>
 
       <article className="article-destacados">

@@ -6,10 +6,10 @@ import "./Contenedor.scss"
 function CambiarContrasena() {
   return (
     <section className="grid-Contenedor">
-      <div class="contenedorIzquierdo">
+      <div className="contenedorIzquierdo">
         <FormCambiarContrasena />
       </div>
-      <div class="contenedirDerecho">
+      <div className="contenedirDerecho">
         <Slider />
       </div>
     </section>

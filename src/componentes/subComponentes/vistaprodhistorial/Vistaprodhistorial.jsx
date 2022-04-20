@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 
-import './Vistaprodhistorial.css'
+import "./Vistaprodhistorial.scss";
 
-import VPHL from './VPHL/VPHL'
+import VPHL from "./VPHL/VPHL";
 
-export default function Vistaprodhistorial() {
+export default function Vistaprodhistorial({ state }) {
+
   return (
-    <div className='flex0'>
+    <div className="flex0">
       {/* Estos VPC luego pueden ser mapeados con la data de la API */}
-      <VPHL/>
-      <VPHL/>
-      <VPHL/>
-      <VPHL/>    
+      {state?.map((item) => (
+        <VPHL {...item} key={item.id} />
+      ))}
     </div>
-  )
+  );
 }

@@ -1,85 +1,110 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-import './VPC.css'
+import './estilos/VPC.scss'
 
-import imagen from "../imagenes/img.svg"
-import plus from "../imagenes/plus.svg"
-import minus from "../imagenes/minus.svg"
-import down from "../imagenes/down.svg"
-import clock from "../imagenes/clock.svg"
-import burger from "../imagenes/burger.svg"
-import pizza from "../imagenes/pizza.svg"
+import imagen from "../imagenes/img.svg";
+import plus from "../imagenes/plus.svg";
+import minus from "../imagenes/minus.svg";
+import down from "../imagenes/down.svg";
+import clock from "../imagenes/clock.svg";
+import burger from "../imagenes/burger.svg";
+import pizza from "../imagenes/pizza.svg";
+import axios from "axios";
 
-export default function VPC() {
-
-  const [isPM, setIsPM] = useState(1)
+export default function VPC({ products, id, setState = null }) {
+  const [isPM, setIsPM] = useState(products.count || 1);
   const buttonMinus = () => {
     //setIsMinus(current => !current)
-    setIsPM(current => (current === 0) ? 0 : current-1)
-  }
+    setIsPM((current) => (current === 1 ? 1 : current - 1));
+    axios.post(`https://country-app-v3.herokuapp.com/orders/${id}/minus`, {
+      count: isPM,
+      product_id: products.id,
+      user_id: localStorage.getItem("id")
+    }).then(({ data }) => {
+      console.log(data)
+      setState(data)
+    });
+  };
 
   const buttonPlus = () => {
-    setIsPM(current => current+1)
-  }
+    setIsPM((current) => current + 1);
+    axios.post(`https://country-app-v3.herokuapp.com/orders/${id}/aument`, {
+      count: isPM,
+      product_id: products.id,
+      user_id: localStorage.getItem("id")
+    }).then(({ data }) => {
+      console.log(data)
+      setState(data)
+    });
+  };
 
-  const [isImg, setIsImg] = useState(false)
+  const [isImg, setIsImg] = useState(false);
   const buttonImg = () => {
-    setIsImg(current => !current)
-  }
+    setIsImg((current) => !current);
+  };
+
+  const handleDelete = () => {
+    axios.delete(`https://country-app-v3.herokuapp.com/orders/${id}`);
+  };
 
   return (
-    <div className='contenedorVPC'>
-
-      <div className='contenedorImagen'>
-        <img src={imagen} alt="imagen" onClick={buttonImg} />
-        <h3 className={`postexto ${isImg ? "hidden" : ""}`}>AGOTADO</h3>
+    <div className="contenedorVPC">
+      <div className="contenedorImagen">
+        <img src={products.image} alt="imagen" onClick={buttonImg} />
+        {/* <h3 className={`postexto ${isImg ? "hidden" : ""}`}>AGOTADO</h3> */}
       </div>
 
       <div>
-      <p className='equis'>X</p>
-      <div className='contenedorTexto'>
-      
-        <div className='flex1'>
-          <div>
-            <h1>Nigiri Set</h1>
+        <p className="equis" onClick={handleDelete}>
+          X
+        </p>
+        <div className="contenedorTexto">
+          <div className="flex1">
+            <div>
+              <h1>{products.name}</h1>
+            </div>
+            <div className="flex1">
+              <img className="iconclock" src={clock} alt="clock" />
+              <h2>{products.time_preparation}</h2>
+            </div>
           </div>
-          <div className='flex1'>
-            <img className='iconclock' src={clock} alt="clock" />
-            <h2>40-60 min</h2>
+
+          <p>{products.description}</p>
+
+{/*           <div className="flex4">
+            <h5>Read more</h5>
+            <img className="icondown" src={down} alt="down" />
+          </div> */}
+
+          <div className="flex2">
+            <div className="flex3">
+              <img className="icon" src={burger} alt="burger" />
+              <h4>{products.category_id}</h4>
+            </div>
           </div>
-        </div>
 
-        <p>Ea his sensibus eleifend, mollis iudicabit omittantur id mel. Et cum ignota euismod corpora, et saepe.</p>
-
-        <div className='flex4'>
-          <h5>Read more</h5>
-          <img className='icondown' src={down} alt="down" />
-        </div>
-
-        <div className='flex2'>
-          <div className='flex3'>
-            <img className='icon' src={burger} alt="burger" />
-            <h4>Burger</h4>
-          </div>
-          <div className='flex3'>
-            <img className='icon' src={pizza} alt="pizza" />
-            <h4>Pizza</h4>
-          </div>
-        </div>
-
-        <div className='contenedorPM'>
-          <div className='flex1'>
-            <h6>$24</h6>
-            <div className='flex2'>
-              <img className='iconpm' src={minus} alt="minus" onClick={buttonMinus} />
-              <h1 className='textopm'> {isPM} </h1>
-              <img className='iconpm' src={plus} alt="plus" onClick={buttonPlus} />
+          <div className="contenedorPM">
+            <div className="flex1">
+              <h6>$ {products.price}.00</h6>
+              <div className="flex2">
+                <img
+                  className="iconpm"
+                  src={minus}
+                  alt="minus"
+                  onClick={buttonMinus}
+                />
+                <h1 className="textopm"> {isPM} </h1>
+                <img
+                  className="iconpm"
+                  src={plus}
+                  alt="plus"
+                  onClick={buttonPlus}
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
-
     </div>
-  )
+  );
 }

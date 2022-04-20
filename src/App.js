@@ -37,6 +37,7 @@ function App() {
         <Route path="/Carrito-Compras" element={<CarritoCompras user={user}/> } />
         <Route path="/Lista-De-Deseos" element={<ListaDeDeseos/> } />
         <Route path="/Historial-De-Compras" element={<HistorialCompras/> } />
+        <Route path="/Historial-De-Compras/:buy_id" element={<HistorialCompras/> } />
 
         <Route path="/Configuracion-de-Cuenta" element={<ConfiguracionCuenta user={user}/> } />
         <Route path="/Cambiar-Contrasena/:token" element={<CambiarContrasena/>} />
@@ -44,8 +45,9 @@ function App() {
         <Route path="/Verificar-Cuenta" element={<VerificarCuentaUsuario />} />
         <Route path="/Verificar-Cuenta/Nuevo-Usuario/:id" element={<VerificarCuentaNuevoUsuario />} />
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
-        <Route path="/Sobre-Veride" element={<SobreVeride/> } />
-        <Route path="/" element={<Home user={user}/>} />
+        <Route path="/Sobre-Veride" element={<SobreVeride/> } />     
+        <Route path="/Productos" element={<Home user={user}/>} />
+        <Route path="/" element={<SobreVeride/> } />
       </Routes>
     </div>
   );
