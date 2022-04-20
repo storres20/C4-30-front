@@ -5,8 +5,8 @@ import { FiHeart, FiShoppingBag, FiSearch, FiMenu, FiChevronDown, FiLogOut } fro
 
 import { SearchContext } from "../../../context/SearchContext";
 
-const isLoggedIn = false;
-// const isLoggedIn = true;
+/* const isLoggedIn = false; */
+const isLoggedIn = true;
 
 export default function NavBarHome(props) {
 
