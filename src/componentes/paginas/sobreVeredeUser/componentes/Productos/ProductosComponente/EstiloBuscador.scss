@@ -2,9 +2,9 @@ $primary-color: #828282;
 $secondary-color: #c9a731;
 $element-background-color: #edeef2;
 
-.form-inline {
-    text-align: center;
-    display: inline-block;
+.form-inline-Search {
+  display: flex;
+  justify-content: center;
     input {
       box-sizing: border-box;
       padding: 0.5em 1em;

@@ -73,7 +73,7 @@ function ProductosComponentes() {
     
   return (
     <section>
-      <div className="form-inline">
+      <div className="form-inline-Search">
         <input
           type="text"
           placeholder="Buscar Producto..."
