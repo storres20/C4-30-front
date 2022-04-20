@@ -1,5 +1,7 @@
 import "./App.css";
+import { useState, useEffect} from "react";
 import { Route, Routes } from "react-router-dom";
+import axios from 'axios';
 
 import InicioSesion from "./componentes/paginas/registro-InicioSesion/contenedor/InicioSesion";
 import VerificarCuentaUsuario from "./componentes/paginas/registro-InicioSesion/contenedor/VerificarCuenta-Usuario";
@@ -17,15 +19,29 @@ import SobreVeredeUser from "./componentes/paginas/sobreVeredeUser/SobreVeredeUs
 
 function App() {
 
+  
+   //Información de usuario al useState
+   const [user, setUser] = useState("");
+   const getDataUser = () => {
+       axios.get(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`).then(({ data }) => {
+           console.log(data);
+           setUser(data)
+       })}
+       
+       useEffect(() => {
+       getDataUser()
+       }, []);
+       
+
   return (
     <div className="App">
       <Routes>
-        <Route path="/Carrito-Compras" element={<CarritoCompras/> } />
+        <Route path="/Carrito-Compras" element={<CarritoCompras user={user}/> } />
         <Route path="/Lista-De-Deseos" element={<ListaDeDeseos/> } />
         <Route path="/Historial-De-Compras" element={<HistorialCompras/> } />
         <Route path="/Historial-De-Compras/:buy_id" element={<HistorialCompras/> } />
 
-        <Route path="/Configuracion-de-Cuenta" element={<ConfiguracionCuenta/> } />
+        <Route path="/Configuracion-de-Cuenta" element={<ConfiguracionCuenta user={user}/> } />
         <Route path="/Cambiar-Contrasena/:token" element={<CambiarContrasena/>} />
         <Route path="/Recuperar-Contrasena" element={<RecuperarContrasena />} />
         <Route path="/Verificar-Cuenta" element={<VerificarCuentaUsuario />} />
@@ -33,7 +49,8 @@ function App() {
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
         <Route path="/Sobre-Veride-Visitante" element={<SobreVeride/> } />
         <Route path="/Sobre-Veride" element={<SobreVeredeUser/> } />      
-        <Route path="/Productos" element={<Home />} />
+ 
+        <Route path="/Productos" element={<Home user={user}/>} />
         <Route path="/" element={<SobreVeride/> } />
       </Routes>
     </div>

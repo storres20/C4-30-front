@@ -30,28 +30,10 @@ function FormDireccionUser() {
       if (result.isConfirmed) {
         Swal.fire({
           title: '¡Datos Actualizados con éxito!',
-          text: 'El pedido fue enviado a cocina con éxito',
           icon: 'success',
           showConfirmButton: false,
           timer: 1500,
         });
-/*         if (camposVacios() !== false) {
-          Swal.fire({
-            title: '¡Datos Actualizados con éxito!',
-            text: 'El pedido fue enviado a cocina con éxito',
-            icon: 'success',
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        } */ /* else if (camposVacios() === false) {
-          Swal.fire({
-            title: '¡Data sin Actualizar!',
-            text: 'No se pudo completar la actualización por falta de datos',
-            icon: 'error',
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        } */
       }
     });
   };

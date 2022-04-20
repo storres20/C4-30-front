@@ -7,7 +7,7 @@ import Footer from "../../../subComponentes/footer/Footer";
 import InformacionDeCompra from "../componentes/InformacionDeCompra";
 import axios from "axios";
 
-function ConfiguracionCuenta() {
+function ConfiguracionCuenta({user}) {
   const [data, setData] = useState([]);
   const [state, setState] = useState({
     amount: "12.0",
@@ -20,6 +20,7 @@ function ConfiguracionCuenta() {
       window.location.pathname = "/inicio-sesion";
     }
   }, []);
+// console.log(user)
 
   useEffect(() => {
     axios
@@ -33,10 +34,10 @@ function ConfiguracionCuenta() {
 
   return (
     <section className="flex-contenedorConfigCuenta">
-      <NavBarHome />
+      <NavBarHome  user={user}/>
       <div className="contenedorConfigCuenta flexBox-CG contenedorCarritoCompras">
         <SidebarLateral />
-        <InformacionDeCompra state={state} />
+        <InformacionDeCompra state={state} user={user} />
       </div>
       <Footer />
     </section>

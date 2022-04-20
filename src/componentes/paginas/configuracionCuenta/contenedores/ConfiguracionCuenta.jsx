@@ -9,7 +9,7 @@ import FormDireccionUser from "../componentes/formularios/FormDireccionUser";
 import FormMetodoPagoUser from "../componentes/formularios/FormMetodoPagoUser";
 import NavBarHome from "../../../subComponentes/navBar/NavBarHome";
 
-function ConfiguracionCuenta() {
+function ConfiguracionCuenta({user}) {
   const [status, setStatus] = useState("informacionPersonal");
   let renderizado;
 
@@ -29,7 +29,7 @@ function ConfiguracionCuenta() {
 
   return (
     <section className="flex-contenedorConfigCuenta">
-      <NavBarHome />
+      <NavBarHome user={user} />
       <div className="contenedorConfigCuenta flexBox-CG">
         <SidebarLateral setStatus={setStatus} />
         {renderizado}

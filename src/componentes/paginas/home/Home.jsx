@@ -14,7 +14,7 @@ import { SearchContext } from "../../../context/SearchContext";
 import SliderInfinito from "../../subComponentes/sliderinfinito/SliderInfinito";
 
 
-export default function Home() {
+export default function Home({user}) {
   // mostrar CATEGORIAS desde la API
   const [categorias, setCategorias] = useState([]);
   const cargarCategorias = () => {
@@ -90,7 +90,7 @@ export default function Home() {
 
   return (
     <section className="section">
-      <NavBarHome />
+      <NavBarHome user={user}/>
       <SliderInfinito/>
 
       <article className="article-destacados">
