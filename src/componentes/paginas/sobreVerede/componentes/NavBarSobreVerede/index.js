@@ -16,6 +16,9 @@ function Navbar({toggle}) {
               <NavLinks to="about" href="#infoSection">¿Quienes somos?</NavLinks>
             </NavItem>
             <NavItem>
+              <NavLinks to="productos" href="#productosSection" >Productos</NavLinks>
+            </NavItem>
+            <NavItem>
               <NavLinks to="servicios" href="#serviciosSection" >Servicios</NavLinks>
             </NavItem>
             <NavItem>
@@ -23,9 +26,6 @@ function Navbar({toggle}) {
             </NavItem>
             <NavItem>
               <NavLinks to="sucursales" href="#sucursalesSection" >Sucursales</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="productos" href="#productosSection" >Productos</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
