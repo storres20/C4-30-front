@@ -9,6 +9,7 @@ import { SearchContext } from "../../../context/SearchContext";
 const isLoggedIn = true;
 
 export default function NavBarHome({user}) {
+    console.log(user)
 
     const [searchQuery, setSearchQuery] = useState("");
     const searchContext = useContext(SearchContext);
@@ -57,7 +58,7 @@ export default function NavBarHome({user}) {
                             <div className="logged-desktop-dropdown-content">
                                 <a href="/Configuracion-de-Cuenta">Configuración de Cuenta</a>
                                 <a href="historial-de-compras">Historial de Compras</a>
-                                <a href="/Sobre-Veride" onClick={() => localStorage.removeItem("user")}>Cerrar Sesión<FiLogOut /></a>
+                                <a href="/Sobre-Veride" onClick={() => localStorage.clear()}>Cerrar Sesión<FiLogOut /></a>
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ import "../contenedores/CarritoCompras.scss";
 import tipo from "../constantes/images";
 import axios from "axios";
 
-function FormCuentaUser({ state, props }) {
+function FormCuentaUser({ state, props, user }) {
   
   const navigate = useNavigate();
 
@@ -84,19 +84,17 @@ function FormCuentaUser({ state, props }) {
             <div>
               <label>
                 <p>
-                  <span className="textDatos-CC">Nombres :</span> Rosamaria{" "}
+                  <span className="textDatos-CC">Nombres :</span> {user.name}
                 </p>
                 <p>
-                  <span className="textDatos-CC">Apellidos :</span> Gutierrez
+                  <span className="textDatos-CC">Apellidos :</span>{user.last_name}
                 </p>
                 <p>
-                  <span className="textDatos-CC">Dirección :</span> Oscar
-                  Benavides 3008
+                  <span className="textDatos-CC">Dirección :</span> {user.direction}
                 </p>
                 <label className="boxNumTarjeta textDatos-CC">
                   <p>
-                    <span className="textDatos-CC">Número de Tarjeta :</span>{" "}
-                    **********5432
+                    <span className="textDatos-CC">Número de Tarjeta :</span>{user.card_number}
                   </p>
                   <label className="e-btn" htmlFor="radioVisa">
                     <img src={tipo.visa} alt="Tarjeta-Visa" />

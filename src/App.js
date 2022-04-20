@@ -30,6 +30,7 @@ function App() {
        useEffect(() => {
        getDataUser()
        }, []);
+       
 
   return (
     <div className="App">
