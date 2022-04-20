@@ -4,7 +4,7 @@ import "antd/dist/antd.css";
 import NavBarHome from "../../../subComponentes/navBar/NavBarHome";
 import SidebarLateral from "../componentes/SidebarLateral";
 import Footer from "../../../subComponentes/footer/Footer";
-import InformacionDeCompra from "../componentes/formularios/InformacionDeCompra";
+import InformacionDeCompra from "../componentes/InformacionDeCompra";
 import axios from "axios";
 
 function ConfiguracionCuenta() {
