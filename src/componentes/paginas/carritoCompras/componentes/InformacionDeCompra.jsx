@@ -7,6 +7,8 @@ import tipo from "../constantes/images";
 import axios from "axios";
 
 function FormCuentaUser({ state, props, user }) {
+
+  const [productos, setProductos] = useState([]);
   
   const navigate = useNavigate();
 
@@ -41,6 +43,10 @@ function FormCuentaUser({ state, props, user }) {
         handleClick(props);
       }
     });
+    
+    //Limpiar el carrito una vez hecha la compra
+      axios
+        .put(`https://country-app-v3.herokuapp.com/orders/clear/$${localStorage.getItem("id")}`,)
   };
 
   const modalCancelarDatosUsuario = () => {
@@ -66,6 +72,26 @@ function FormCuentaUser({ state, props, user }) {
         });
       }
     });
+  };
+
+  //Fecha para "Detalles del Pedido"
+  const date = new Date();
+  const [day, month, year] = [date.getDate(), date.getMonth()+1, date.getFullYear()];
+  const [hour, minute] = [date.getHours(), date.getMinutes()];
+
+  //Get de los productos del carrito actual
+  useEffect(() => {
+    axios
+      .get(`https://country-app-v3.herokuapp.com/orders/${localStorage.getItem("id")}`)
+      .then(({ data }) => {
+        setProductos(data);
+      });
+  }, []);
+
+  //Suma del total de los productos del carrito
+  let precio;
+  if (productos.length !== 0) {
+    precio = productos.map(p => p.products.price).reduce((prev, curr) => prev + curr);
   };
 
   return (
@@ -116,33 +142,27 @@ function FormCuentaUser({ state, props, user }) {
             <div>
               <label>
                 <p>
-                  <span className="textDatos-CC">Fecha :</span> 20/02/2022
+                  <span className="textDatos-CC">Fecha :</span> {day}/{month}/{year}
                 </p>
                 <p>
-                  <span className="textDatos-CC">Hora :</span> 15:02 hrs
+                  <span className="textDatos-CC">Hora :</span> {hour}:{minute < 10 ? "0"+minute : minute} hs
                 </p>
                 <div className="boxProductosDetallesCarritoCompras">
                   <table className="contenedorTablaProductos">
-                    <tr>
-                      <th>Productos</th>
-                      <th>Unds</th>
-                      <th className="precio">Precio($)</th>
-                    </tr>
-                    <tr>
-                      <td>Item 1</td>
-                      <td>4</td>
-                      <td>15.80</td>
-                    </tr>
-                    <tr>
-                      <td>Item 1</td>
-                      <td>4</td>
-                      <td>15.80</td>
-                    </tr>
-                    <tr>
-                      <td>Item 1</td>
-                      <td>4</td>
-                      <td>15.80</td>
-                    </tr>
+                    <tbody>
+                      <tr>
+                        <th>Productos</th>
+                        <th>Unidades</th>
+                        <th className="precio">Precio($)</th>
+                      </tr>
+                    {productos && productos.map((item) =>
+                      <tr>
+                        <td>{item.products.name}</td>
+                        <td>{item.products.count}</td>
+                        <td>{item.products.price}.00</td>
+                      </tr>
+                    )}
+                    </tbody>
                   </table>
                 </div>
               </label>
@@ -152,7 +172,7 @@ function FormCuentaUser({ state, props, user }) {
         <div className="btnsContainer">
           <div className="boxPrecioTotalCompra">
             <h3>Precio Total</h3>
-            <h2>$16.80 </h2>
+            <h2>${precio ? precio+".00" : "0.00"}</h2>
           </div>
           <div className="btnsCarritoCompras">
             <button
