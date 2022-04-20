@@ -13,7 +13,7 @@
   {
     "id_productos":1,
     "nombre":"Mega Burger",
-    "descripcion":"Pan de hamburguesa de zapallo y harina de arroz + hamburguesa de lentejas y tofu + lechuga + tomate + palta + cebolla caramelizada + queso fundido de calabaza + berenjenas shichimi togarashi. Acompañada de papas al horno y ensalda coleslaw.",
+    "descripcion":"Pan de hamburguesa de zapallo y harina de arroz, hamburguesa de lentejas y tofu, lechuga, tomate, palta, cebolla caramelizada, queso fundido de calabaza + berenjenas shichimi togarashi. Acompañada de papas al horno y ensalda coleslaw.",
     "precio":11,
     "categoria":"hamburguesas",
     "tiempoPreparacion":"10-15 min",
@@ -27,14 +27,14 @@
     "descripcion":"Hamburguesas de hongos con cheddar de zanahoria y papa, portobellos en vinagreta, lechuga, tomate y salsa mkm en pan brioche. Acompañada de papas al horno y ensalda coleslaw.",
     "precio":13,
     "categoria":"hamburguesas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"10-20 min",
     "imagen":"https://i.postimg.cc/JhwT08RY/Ribarde.png",
     "estado":"disponible"
    },
   {
     "id_productos":3,
     "nombre":"Power",
-    "descripcion":"Pan de hamburguesa de zapallo y harina de arroz + hamburguesa de lentejas y tofu + lechuga + tomate + palta + cebolla caramelizada + queso fundido de calabaza + berenjenas shichimi togarashi. Acompañada de papas al horno y ensalda coleslaw.",
+    "descripcion":"Pan de hamburguesa de zapallo y harina de arroz, hamburguesa de lentejas y tofu, lechuga, tomate, palta, cebolla caramelizada, queso fundido de calabaza, berenjenas shichimi togarashi. Acompañada de papas al horno y ensalda coleslaw.",
     "precio":11,
     "categoria":"hamburguesas",
     "tiempoPreparacion":"10-15 min",
@@ -48,7 +48,7 @@
     "descripcion":"Milanesa de Girgola, lechuga, tomate, salsa golf, guacamole, pan de chipa. Acompañada de papas al horno y ensalda coleslaw.",
     "precio":11,
     "categoria":"hamburguesas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"15-20 min",
     "imagen":"https://i.postimg.cc/VsF2hJzf/Popeye.png",
     "estado":"disponible"
   },
@@ -88,7 +88,7 @@
     "descripcion":"Salsa pomodoro, queso de maní, tomate cherry, calabaza, portobellos asados en tempura, tofu salteados con barbacoa y finalizar con queso cheddar.",
     "precio":20,
     "categoria":"pizzas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"15-25 min",
     "imagen":"https://i.postimg.cc/vmQV32hH/Valentina.png",
     "estado":"disponible"
   },
@@ -108,7 +108,7 @@
     "descripcion":"Crema de trufas, gírgolas, aceitunas, hierba buena, pimenton y kale.",
     "precio":16,
     "categoria":"pizzas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"15-20 min",
     "imagen":"https://i.postimg.cc/KzGD3vwf/Trufa-y-g-rgolas.png",
     "estado":"disponible"
   },
@@ -158,7 +158,7 @@
     "descripcion":"Coliflor en tempura, con crema cevichera de ají amarillo, palta rostizada, batata, tomate cherry, aceite de ajíes, hojas de cilantro.",
     "precio":11,
     "categoria":"Ensaladas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"10-20 min",
     "imagen":"https://i.postimg.cc/cHhTF8wP/Tempura-Vegetal.png",
     "estado":"agotado"
   },
@@ -168,7 +168,7 @@
     "descripcion":"Coliflor en tempura, con crema cevichera de ají amarillo, palta rostizada, batata, tomate cherry, aceite de ajíes, hojas de cilantro.",
     "precio":11,
     "categoria":"Ensaladas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"15-25 min",
     "imagen":"https://i.postimg.cc/TYMhtHYM/Fraganc.png",
     "estado":"agotado"
   },
@@ -198,7 +198,7 @@
     "descripcion":"Queso trufado, palta, girgolas salteadas, cubierto de zanahoria, crispy kale. 10 PIEZAS",
     "precio":12,
     "categoria":"sushi",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"15-25 min",
     "imagen":"https://i.postimg.cc/Sxb8zxz9/Uramaki-Super-Kale.png",
     "estado":"disponible"
   },
@@ -218,7 +218,7 @@
     "descripcion":"Shari, alga nori, portobellos anticucheros, queso crema tofu, verdeo rostizado, cubierto de palta, crema de ajo ahumada, batata crispy. 10 PIEZAS",
     "precio":12,
     "categoria":"sushi",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"15-25 min",
     "imagen":"https://i.postimg.cc/hvwLY8jZ/Uramaki-Crispy.png",
     "estado":"disponible"
   },
@@ -228,7 +228,7 @@
     "descripcion":"Shari, alga nori, palta, queso crema de tofu, pepino japonés, tempura, panko, sweet chilli. 10 PIEZAS",
     "precio":12,
     "categoria":"sushi",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"20-25 min",
     "imagen":"https://i.postimg.cc/15k0cKbf/Uramaki-Furai.png",
     "estado":"disponible"
   },
@@ -308,7 +308,7 @@
     "descripcion":"Crema de cheescake cocida, base de almendras, mermelada de frutos rojos",
     "precio":9,
     "categoria":"postres",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"15-20 min",
     "imagen":"https://i.postimg.cc/kGZGCfW8/Cheesecake-frutos-rojos.png",
     "estado":"disponible"
   },
@@ -348,7 +348,7 @@
     "descripcion":"",
     "precio":2,
     "categoria":"bebidas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"0-5 min",
     "imagen":"https://i.postimg.cc/KvztyWhK/Agua-mineral.png",
     "estado":"disponible"
   },
@@ -358,7 +358,7 @@
     "descripcion":"Zumo de limón, estevia y agua mineral",
     "precio":4,
     "categoria":"bebidas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"0-5 min",
     "imagen":"https://i.postimg.cc/d0Lqs8tj/Limonada-Cl-sica.png",
     "estado":"agotado"
   },
@@ -368,7 +368,7 @@
     "descripcion":"Gin Tonic",
     "precio":7,
     "categoria":"bebidas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"5-10 min",
     "imagen":"https://i.postimg.cc/76JYVSFZ/Gin-Tonic.png",
     "estado":"disponible"
   },
@@ -378,7 +378,7 @@
     "descripcion":"Jugo de frutas según temporada",
     "precio":7,
     "categoria":"bebidas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"5-15 min",
     "imagen":"https://i.postimg.cc/W19Nc9j4/Jugos-Frutales.png",
     "estado":"disponible"
   },  {
@@ -387,7 +387,7 @@
     "descripcion":"Jugo de naranja, jugo de limón y almíbar de canela y café",
     "precio":6,
     "categoria":"bebidas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"5-10 min",
     "imagen":"https://i.postimg.cc/wvQ4nr8f/Refresco-de-naranja.png",
     "estado":"disponible"
   },
@@ -397,7 +397,7 @@
     "descripcion":"Jugo de pomelo, jugo de limón y almíbar de hibiscus",
     "precio":6,
     "categoria":"bebidas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"5-10 min",
     "imagen":"https://i.postimg.cc/mkdXgFr7/Refresco-de-Pomelo.png",
     "estado":"disponible"
   },
@@ -417,7 +417,7 @@
     "descripcion":"Preparado de hierbas como: muña, hierba Luisa, uña de gato, anís, manzanilla y limón",
     "precio":3,
     "categoria":"bebidas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"5-10 min",
     "imagen":"https://i.postimg.cc/yxq6rkKX/Hierbas-Antigripales.png",
     "estado":"agotado"
   },
@@ -427,7 +427,7 @@
     "descripcion":"Pan de hamburguesa de zapallo y harina de arroz + hamburguesa de lentejas y tofu + lechuga + tomate + palta + cebolla caramelizada + queso fundido de calabaza + berenjenas shichimi togarashi. Acompañada de papas al horno y ensalda coleslaw.",
     "precio":3,
     "categoria":"hamburguesas",
-    "tiempoPreparacion":"10-15 min",
+    "tiempoPreparacion":"20-25 min",
     "imagen":"https://i.postimg.cc/Nj2JQFvr/Relleno-Franc-s.png",
     "estado":"agotado"
   },
