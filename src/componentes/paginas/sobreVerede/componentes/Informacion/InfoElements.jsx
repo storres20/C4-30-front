@@ -9,8 +9,8 @@ export const InfoContainer = styled.section`
   justify-content: center;
   justify-content: center;
   align-items: center;
-  background: #e5e5e5;
-
+  background: background:#ffff;;
+  padding: 5rem 0;
   @media screen and (max-width: 768px) {
     height: 700px;
   }
@@ -26,11 +26,11 @@ export const InfoSubtitulo = styled.p`
   color: hsla(228, 28%, 20%, 1);
   font-size: medium;
   text-align: center;
-  padding: 0 5rem;
+  padding: 1rem 0;
   max-width: 900px;
-  @media screen and (max-width: 480px) {
+/*   @media screen and (max-width: 480px) {
     padding: 2rem 3rem;
-  }
+  } */
 `;
 
 export const InfoH1 = styled.h1`

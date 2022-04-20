@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PortadaContainer = styled.div`
-background:#E5E5E5;
+background:#ffff;
 display:flex;
 justify-content: center;
 align-items: center;

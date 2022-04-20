@@ -19,10 +19,8 @@ export const  ProductosH1 =styled.h1`
   font-size:2.5rem;
   color:hsla(228, 28%, 20%, 1);
 ;
-  margin-bottom:64px;
   @media screen and (max-width: 480px) {
     font-size:2rem;
-    margin: 64px;
   }
 `
 export const ProductosWrapper =styled.div`
