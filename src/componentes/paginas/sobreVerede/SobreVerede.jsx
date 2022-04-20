@@ -7,6 +7,7 @@ import Servicios from './componentes/Servicios';
 import Reconocimiento from './componentes/Reconocimiento';
 import Sucursales from './componentes/Sucursales';
 import Sidebar from './componentes/SidebarSobreVerede/Index';
+import Productos from './componentes/Productos';
 
 function SobreVerede() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ const toggle = () => {
       <NavBar toggle= {toggle}/>
       <PortadaSection />
       <InfoSection />
+      <Productos/>
       <Servicios />
       <Reconocimiento />
       <Sucursales />

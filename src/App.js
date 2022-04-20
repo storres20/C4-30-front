@@ -12,6 +12,7 @@ import HistorialCompras from "./componentes/paginas/historialCompras/contenedore
 import Home from "./componentes/paginas/home/Home";
 import ConfiguracionCuenta from "./componentes/paginas/configuracionCuenta/contenedores/ConfiguracionCuenta";
 import ListaDeDeseos from "./componentes/paginas/listaDeDeseos/ListaDeDeseos";
+import SobreVeredeUser from "./componentes/paginas/sobreVeredeUser/SobreVeredeUser";
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
         <Route path="/Verificar-Cuenta" element={<VerificarCuentaUsuario />} />
         <Route path="/Verificar-Cuenta/Nuevo-Usuario/:id" element={<VerificarCuentaNuevoUsuario />} />
         <Route path="/Inicio-Sesion" element={<InicioSesion />} />
-        <Route path="/Sobre-Veride" element={<SobreVeride/> } />     
+        <Route path="/Sobre-Veride-Visitante" element={<SobreVeride/> } />
+        <Route path="/Sobre-Veride" element={<SobreVeredeUser/> } />      
         <Route path="/Productos" element={<Home />} />
         <Route path="/" element={<SobreVeride/> } />
       </Routes>

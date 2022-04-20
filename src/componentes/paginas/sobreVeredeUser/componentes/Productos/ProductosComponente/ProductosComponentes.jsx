@@ -1,0 +1,108 @@
+import { React, useState, useEffect, useContext } from "react";
+import axios from "axios";
+import { SearchContext } from "../../../../../../context/SearchContext";
+import Categorias from "../../../../../subComponentes/categorias/Categorias";
+import VPSV from "../../../../../subComponentes/vistaprodSobreVeride/VPSV/VPSV";
+
+function ProductosComponentes() {
+    const [categorias, setCategorias] = useState([]);
+    //Almacena el contenido del CONTEXT en una CONSTANTE
+    const searchContext = useContext(SearchContext);
+    console.log(searchContext.query); // para pruebas del CONTEXT
+    const cargarCategorias = () => {
+      axios
+        .get("https://country-app-v3.herokuapp.com/categories")
+        .then((data) => {
+          console.log(data.data);
+  
+          //Data de Categorias al useState
+          setCategorias(data.data);
+        })
+        .catch((error) => console.log(error));
+    };
+  
+    useEffect(() => {
+      if (!localStorage.getItem("user")) {
+        window.location.pathname = "/inicio-sesion";
+      }
+  
+      cargarCategorias();
+    }, []);
+  
+    //mostrar PRODUCTOS y MAS VENDIDOS desde la API
+    const [productos, setProductos] = useState([]);
+  
+    const cargarProductos = (e) => {
+      axios
+        .get("https://country-app-v3.herokuapp.com/api/v1/products")
+        .then((data) => {
+          console.log(data.data);
+  
+          data = data.data;
+  
+          //Filtrado con el input del BUSCADOR
+          const searchResult =
+            data &&
+            data.filter((item) => item.name.toLowerCase().includes(e.query));
+  
+          //Data de Productos al useState
+          //setProductos(data.data);
+          setProductos(searchResult);
+        })
+        .catch((error) => console.log(error));
+    };
+  
+    useEffect(() => {
+      cargarProductos(searchContext); // Todos los Productos
+    }, [searchContext]);
+  
+    // Filtrado por categoria
+    const [selectedCategorias, setSelectedCategorias] = useState([]);
+  return (
+    <section>
+              <article className="article-categorias">
+            <h2>Categorías</h2>
+            <div className="container-categorias">
+              {categorias.map((prod) => {
+                return (
+                  <Categorias
+                    key={prod.id}
+                    prod={prod}
+                    setSelectedCategorias={setSelectedCategorias}
+                    selectedCategorias={selectedCategorias}
+                  />
+                );
+              })}
+            </div>
+          </article>
+
+          <article className="article-productos">
+            <h2>Todos los productos ({productos.length})</h2>
+            <div className="todosProductos">
+              {" "}
+              {/* container-productos */}
+              {/* Filtros activados => muestra solo la(s) categoria(s) elegida(s) */}
+              {selectedCategorias.length > 0 &&
+                productos
+                  .filter((p) =>
+                    selectedCategorias.some((c) => c === p.category_id)
+                  )
+                  .map((prod) => {
+                    return (
+                      <VPSV key={prod.id} prod={prod} categorias={categorias} />
+                    );
+                  })}
+              {/* Estado inicial => muestra todo */}
+              {selectedCategorias.length === 0 &&
+                productos.map((prod) => {
+                  return (
+                    <VPSV key={prod.id} prod={prod} categorias={categorias} />
+                  );
+                })}
+            </div>
+          </article>
+    </section>
+  )
+}
+
+export default ProductosComponentes

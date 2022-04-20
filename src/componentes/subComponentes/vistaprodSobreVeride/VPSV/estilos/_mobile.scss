@@ -1,0 +1,143 @@
+/* Mobile View */
+
+$phone: 575px;
+
+@media (max-width: $phone) {
+  .contenedorVPSV {
+    //border: 2px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 16px;
+    width: 177px;
+    height: auto;
+    margin: 1rem;
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+
+      width: 177px;
+    }
+
+    .postexto {
+      position: absolute;
+
+      //opcional: centro del centro
+      /* top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%); */
+
+      top: 0;
+      right: 0;
+
+      background: #4e60ff;
+      border-radius: 0 16px;
+      margin: 0;
+      padding: 3px 9px;
+    }
+
+    .contenedorTexto {
+      margin: 1rem;
+    }
+
+    @mixin texto($f-weight, $f-size, $l-height, $color) {
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: $f-weight;
+      font-size: $f-size;
+      line-height: $l-height;
+      color: $color;
+    }
+
+    h1 {
+      @include texto(700, 10px, 10px, #2b2b43);
+
+      margin: 0;
+
+      width: 90px;
+    }
+
+    h2 {
+      @include texto(600, 10px, 16px, #83859c);
+
+      margin: 0;
+      margin-top: 6px;
+      margin-right: 8px;
+    }
+
+    h3 {
+      @include texto(600, 8px, 16px, #545563);
+
+      margin: 0;
+      margin-right: 10px;
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
+
+    h4 {
+      @include texto(700, 8px, 16px, #ffffff);
+    }
+
+    .flex1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .flex2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .flex3 {
+      display: flex;
+      justify-content: start;
+      background-color: #edeef2;
+      border-radius: 100px;
+    }
+
+    .iconinfo {
+      width: 12px;
+      height: 12px;
+    }
+
+    .iconheart {
+      margin-bottom: 4px;
+      margin-right: 10px;
+      width: 15px;
+      height: 15px;
+    }
+
+    .iconbag {
+      margin-bottom: 4px;
+      width: 15px;
+      height: 14px;
+    }
+
+    .iconclock {
+      margin-top: 4px;
+      margin-right: 6px;
+      width: 12px;
+      height: auto;
+    }
+
+    .icon {
+      width: 12px;
+      height: 12px;
+
+      margin-left: 10px;
+      margin-right: 8px;
+
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+}

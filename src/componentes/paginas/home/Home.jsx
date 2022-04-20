@@ -1,9 +1,9 @@
 import { React, useState, useEffect, useContext } from "react";
+import axios from "axios";
 //import Vistaprodhome from "../../subComponentes/vistaprodhome/Vistaprodhome";
 import NavBarHome from "../../subComponentes/navBar/NavBarHome";
 import "./Home.scss";
 import VPH from "../../subComponentes/vistaprodhome/VPH/VPH";
-import axios from "axios";
 import Categorias from "../../subComponentes/categorias/Categorias";
 
 //import Carousel from "react-multi-carousel";
