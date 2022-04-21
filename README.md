@@ -103,7 +103,7 @@ Se plantearon como usuarios a todas las personas interesadas en una alimentació
 
 ## 2.2 Historias de Usuario ✍
 
-A continuación, mostraremos algunas de las historias de Usuario según el rol:
+A continuación les mostraremos algunas de las historias de usuario para cada rol; si desea verlas completas puede acceder a [Este Link](https://www.figma.com/file/C9ugIa5aFFNbmdgjC1hPhf/Untitled?node-id=2%3A3)
 
 ***
 
@@ -227,23 +227,19 @@ A continuación se muestran las estadísticas del performance:
 
 ### 4.1 Para la Backend:
 
--   [Ruby:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
+- [Ruby:]()El lenguaje Ruby se utiliza principalmente en el desarrollo de aplicaciones web, pero también se puede utilizar para desarrollar otro tipo de aplicaciones de software, como veremos más adelante. Este lenguaje está disponible en plataformas como Windows, Linux y muchas otras, considerándose multiplataforma.
 
--   [Ruby on Rails:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
+- [Ruby on Rails:]() Ruby on Rails es un marco de trabajo (framework) para el desarrollo de aplicaciones web, escrito en el leguaje de programación Ruby. Ruby es un lenguaje dinámico orientado a objetos, con sintaxis inspirada en Python, Perl y Smalltalk.
 
--   [Rails Cors:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
+- [Rails Cors:]()   El Intercambio de Recursos de Origen Cruzado (CORS (en-US)) es un mecanismo que utiliza cabeceras HTTP adicionales para permitir que un user agent (en-US) obtenga permiso para acceder a recursos seleccionados desde un servidor, en un origen distinto (dominio) al que pertenece.
 
--   [Dote v:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
-
--   [Posgresql:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
+- [PostgreSQL:]()  Consiste en un gestor de bases de datos relacionales, soporta diferentes tipos de datos y está orientado a objetos. Es de código abierto, es decir, cuentan con una comunidad de desarrolladores que implementan mejoras o resuelven errores de forma altruista.
 
 ## 4.2 Para el Diseño UX/UI:
 
--   [Figma:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
+-   [Figma:](https://www.figma.com/)  Figma es una aplicación basada en navegador para diseñar UI y UX que cuenta con excelentes herramientas de diseño, creación de prototipos y generación de código.
 
--   [PostImage:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
-
--   [Canva:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
+-   [PostImage:](https://postimages.org/)  Esta es simplemente una de las mejores soluciones que le permite alojar todo tipo de imágenes para sitios web, blogs y otras interfaces en el sitio web.
 
 ## 4.3 Para la Frontend:
 
@@ -255,7 +251,7 @@ A continuación se muestran las estadísticas del performance:
 
 ### 4.4 Para el despliegue:
 
-- [Heroku:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
+- [Heroku:](https://www.heroku.com/)  Heroku integra servicios de datos y un ecosistema que permite implementar y ejecutar aplicaciones modernas. Proporciona a los desarrolladores un enfoque centrado en la aplicación que se integra con las herramientas y flujos de trabajo de desarrolladores más populares.
 
 - [Netlify:](http://netlify.com) Es un servicio de hosting
 para sitios web estáticos.
@@ -269,11 +265,12 @@ Netlify y después puedes [conectar](https://www.netlify.com/blog/2016/07/22/dep
 ***
 
 # 5. Autores 📍
-- [Yadira Condezo](https://github.com/)
-- [Bautista Iglesias](https://github.com/)
-- [Italo Ion Perez](https://github.com/)
-- [Katerin Tello](https://github.com/)
-- [Rosamaria Rodriguez](https://github.com/RJRCH123)
+
+- [Yadira Condezo](https://github.com/bluezin): Backend y Frontend
+- [Bautista Iglesias](https://github.com/Baut1): Frontend
+- [Italo Ion Perez](https://github.com/storres20): Frontend
+- [Katerin Tello](https://github.com/KaterinT): Frontend
+- [Rosamaria Rodriguez](https://github.com/RJRCH123): Diseñadora UX/UI y Frontend
 
 ****
 
