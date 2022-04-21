@@ -3,7 +3,6 @@ import { Switch } from "antd";
 import Swal from "sweetalert2";
 import "antd/dist/antd.css";
 import "../../contenedores/ConfiguracionCuenta.scss";
-import "./extra.scss";
 import axios from "axios";
 
 function FormCuentaUser() {
@@ -226,7 +225,7 @@ function FormCuentaUser() {
               <label>
                 <span className="textInput">Nombres</span>
                 <input
-                  className={`inputCG ${state.name === "" ? "redBlank" : ""}`}
+                  className="inputCG"
                   required={true}
                   type="text"
                   defaultValue={state.name}
@@ -237,7 +236,7 @@ function FormCuentaUser() {
               <label>
                 <span className="textInput">Número Telefónico</span>
                 <input
-                  className={`inputCG ${state.phone === "" ? "redBlank" : ""}`}
+                  className="inputCG"
                   required={true}
                   type="text"
                   placeholder="Ingresa tu número telefónico*"
@@ -251,7 +250,7 @@ function FormCuentaUser() {
               <label>
                 <span className="textInput">Apellidos</span>
                 <input
-                  className={`inputCG ${state.last_name === "" ? "redBlank" : ""}`}
+                  className="inputCG"
                   required={true}
                   type="text"
                   placeholder="Ingresa tus apellidos*"

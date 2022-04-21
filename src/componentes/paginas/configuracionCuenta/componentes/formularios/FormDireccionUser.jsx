@@ -3,7 +3,6 @@ import { Switch } from "antd";
 import Swal from 'sweetalert2';
 import "antd/dist/antd.css";
 import "../../contenedores/ConfiguracionCuenta.scss";
-import "./extra.scss";
 import axios from "axios"
 
 function FormDireccionUser() {
@@ -153,7 +152,7 @@ function FormDireccionUser() {
             <label>
               <span className="textInput">Distrito </span>
               <input
-                className={`inputCG ${state.district === "" ? "redBlank" : ""}`}
+                className="inputCG"
                 required={true}
                 type="text"
                 defaultValue={state.district}
@@ -164,7 +163,7 @@ function FormDireccionUser() {
             <label>
               <span className="textInput">N° Casa/Dpto</span>
               <input
-                className={`inputCG ${state.house_number === "" ? "redBlank" : ""}`}
+                className="inputCG"
                 required={true}
                 type="text"
                 defaultValue={state.house_number}
@@ -177,7 +176,7 @@ function FormDireccionUser() {
             <label>
               <span className="textInput">Dirección</span>
               <input
-                className={`inputCG ${state.direction === "" ? "redBlank" : ""}`}
+                className="inputCG"
                 required={true}
                 type="text"
                 defaultValue={state.direction}
@@ -189,7 +188,7 @@ function FormDireccionUser() {
             <label>
               <span className="textInput">Referencia </span>
               <input
-                className={`inputCG ${state.reference_house === "" ? "redBlank" : ""}`}
+                className="inputCG"
                 required={false}
                 type="text"
                 defaultValue={state.reference_house}

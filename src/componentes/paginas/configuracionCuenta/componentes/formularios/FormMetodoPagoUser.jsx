@@ -4,7 +4,6 @@ import Swal from 'sweetalert2';
 import tipo from "../../constantes/images";
 import "antd/dist/antd.css";
 import "../../contenedores/ConfiguracionCuenta.scss";
-import "./extra.scss";
 import axios from "axios";
 
 function FormMetodoPagoUser() {
@@ -272,7 +271,7 @@ function FormMetodoPagoUser() {
             <label>
               <span className="textInput">N° de la tarjeta</span>
               <input
-                className={`inputCG ${state.card_number === "" ? "redBlank" : ""}`}
+                className="inputCG"
                 required={true}
                 type="text"
                 defaultValue={state.card_number}
@@ -287,7 +286,7 @@ function FormMetodoPagoUser() {
               <label className="label-CG-MP">
                 <span className="textInput">Expiración</span>
                 <input
-                  className={`inputCG ${state.expiration === "" ? "redBlank" : ""}`}
+                  className="inputCG"
                   required={true}
                   type="email"
                   defaultValue={state.expiration}
@@ -299,7 +298,7 @@ function FormMetodoPagoUser() {
               <label className="label-CG-MP">
                 <span className="textInput">CVV</span>
                 <input
-                  className={`inputCG ${state.cvv === "" ? "redBlank" : ""}`}
+                  className="inputCG"
                   required={true}
                   type="email"
                   defaultValue={state.cvv}
