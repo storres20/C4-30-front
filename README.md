@@ -31,7 +31,7 @@
 ***
 
 <div align="center">
-<img src="./src/imagenes/LogoVeride/LogosConFondo/Logo2-Largo.png" width="400" alt=''>
+<img src="./src/imagenes/LogoVeride/LogosConFondo/Logo2-Largo.png" width="800" alt=''>
 </div>
 
 
@@ -137,39 +137,39 @@ A continuación, le mostraremos el proceso y algunas imágenes de referencia par
 
 ## 📌 Landing Page: 'Sobre Veredé'
 
-<img src="./src/imagenes/Readme/Sobre-Veride.png" width="400" alt=''>
+<img src="./src/imagenes/Readme/Sobre-Veride.png" width="800" alt=''>
 </div>
 
 <div align="center">
 
 ## 📌 Inicio Sesión y Registro
 
-<img src="./src/imagenes/Readme/Login-Figma.png" width="400" alt=''>
+<img src="./src/imagenes/Readme/Login-Figma.png" width="800" alt=''>
 </div>
 
 <div align="center">
 
 ## 📌 Verificación de Cuenta 
 
-<img src="./src/imagenes/Readme/Verificar.png" width="400" alt=''>
+<img src="./src/imagenes/Readme/Verificar.png" width="800" alt=''>
 </div>
 
 <div align="center">
 
 ## 📌 Configuración de Cuenta 
 
-<img src="./src/imagenes/Readme/Configuracion-Figma.png" width="400" alt=''>
+<img src="./src/imagenes/Readme/Configuracion-Figma.png" width="800" alt=''>
 </div>
 
 <div align="center">
 
 ## 📌 Catálogo de Productos 
 
-<img src="./src/imagenes/Readme/Productos.png" width="400" alt=''>
+<img src="./src/imagenes/Readme/Productos.png" width="800" alt=''>
 
 ## 📌 Detalle de Productos 
 
-<img src="./src/imagenes/Readme/Info-Productos.png" width="400" alt=''>
+<img src="./src/imagenes/Readme/Info-Productos.png" width="800" alt=''>
 
 </div>
 
@@ -177,14 +177,14 @@ A continuación, le mostraremos el proceso y algunas imágenes de referencia par
 
 ## 📌 Carro de compras 
 
-<img src="./src/imagenes/Readme/Carrito-Figma.png" width="400" alt=''>
+<img src="./src/imagenes/Readme/Carrito-Figma.png" width="800" alt=''>
 </div>
 
 <div align="center">
 
 ## 📌 Historial de Compras
 
-<img src="./src/imagenes/Readme/Historial.png" width="400" alt=''>
+<img src="./src/imagenes/Readme/Historial.png" width="800" alt=''>
 
 </div>
 
@@ -208,7 +208,7 @@ A continuación se muestran las estadísticas del performance:
 
 ## 📌 Vista Desktop
 
-<img src="./src/img/Readme/PWA-Desktop.png" width="400" alt=''>
+<img src="./src/imagenes/Readme/PWA-Desktop.png" width="800" alt=''>
 
 </div>
 
@@ -216,7 +216,7 @@ A continuación se muestran las estadísticas del performance:
 
 ## 📌 Vista Mobile
 
-<img src="./src/img/Readme/PWA-Mobile.png" width="400" alt=''>
+<img src="./src/imagenes/Readme/PWA-Mobile.png" width="800" alt=''>
 
 </div>
 
