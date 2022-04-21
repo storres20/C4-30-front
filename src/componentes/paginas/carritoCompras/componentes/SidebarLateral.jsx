@@ -4,7 +4,7 @@ import "antd/dist/antd.css";
 import Vistaprodcarrito from "../../../subComponentes/vistaprodcarrito/Vistaprodcarrito";
 import axios from "axios";
 
-function SidebarLateral() {
+function SidebarLateral({ setState , state}) {
   const [listOrders, setListOrders] = useState([]);
 
   const clearData = () => {
@@ -30,6 +30,8 @@ function SidebarLateral() {
           <Vistaprodcarrito
             listOrders={listOrders}
             setListOrders={setListOrders}
+            setState={setState}
+            state={state}
           />
         </button>
         <div className=" btnsContainerCarritoCompras">

@@ -5,12 +5,16 @@ import "./Vistaprodcarrito.scss";
 
 import VPC from "./VPC/VPC";
 
-export default function Vistaprodcarrito({ setListOrders, listOrders }) {
+export default function Vistaprodcarrito({ setListOrders, listOrders, setState, state }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`https://country-app-v3.herokuapp.com/orders/${localStorage.getItem("id")}`)
+      .get(
+        `https://country-app-v3.herokuapp.com/orders/${localStorage.getItem(
+          "id"
+        )}`
+      )
       .then(({ data }) => {
         setData(data);
       });
@@ -31,7 +35,14 @@ export default function Vistaprodcarrito({ setListOrders, listOrders }) {
     <div className="flex0">
       {/* Estos VPC luego pueden ser mapeados con la data de la API */}
       {data.map((item) => (
-        <VPC key={item.id} {...item} productosCarrito={data} setProductosCarrito={setData} />
+        <VPC
+          key={item.id}
+          {...item}
+          productosCarrito={data}
+          setProductosCarrito={setData}
+          setState={setState}
+          state={state}
+        />
       ))}
     </div>
   );
