@@ -272,7 +272,7 @@ function FormMetodoPagoUser() {
             <label>
               <span className="textInput">N° de la tarjeta</span>
               <input
-                className="inputCG"
+                className={`inputCG ${state.card_number === "" ? "redBlank" : ""}`}
                 required={true}
                 type="text"
                 defaultValue={state.card_number}
@@ -287,7 +287,7 @@ function FormMetodoPagoUser() {
               <label className="label-CG-MP">
                 <span className="textInput">Expiración</span>
                 <input
-                  className="inputCG"
+                  className={`inputCG ${state.expiration === "" ? "redBlank" : ""}`}
                   required={true}
                   type="email"
                   defaultValue={state.expiration}
@@ -299,7 +299,7 @@ function FormMetodoPagoUser() {
               <label className="label-CG-MP">
                 <span className="textInput">CVV</span>
                 <input
-                  className="inputCG"
+                  className={`inputCG ${state.cvv === "" ? "redBlank" : ""}`}
                   required={true}
                   type="email"
                   defaultValue={state.cvv}
