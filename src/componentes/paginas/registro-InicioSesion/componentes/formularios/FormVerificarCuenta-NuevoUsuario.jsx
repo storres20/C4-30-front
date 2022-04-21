@@ -49,7 +49,7 @@ function FormVerificarCuentaNuevoUsuario() {
       <section className="container">
         <div className="btnVolver">
           <Link to="/Inicio-Sesion">
-            <button type="button">
+            <button name="" type="button">
               <i className="uil uil-arrow-left"></i>
             </button>
           </Link>
@@ -74,7 +74,7 @@ function FormVerificarCuentaNuevoUsuario() {
               onChange={(e) => setVerifyAccount(e.target.value)}
             />
             <div className="btnsIngresarOtros">
-              <button type="submit">Verificar Cuenta</button>
+              <button name="" type="submit">Verificar Cuenta</button>
             </div>
           </div>
         </form>

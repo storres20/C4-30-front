@@ -275,6 +275,7 @@ function FormCuentaUser() {
           <button
             className="btnCerrarSesion"
             onClick={() => modalCerrarSesionUsuario()}
+            name=""
           >
             Cerrar Sesión
           </button>
@@ -282,12 +283,14 @@ function FormCuentaUser() {
             <button
               className="btnCancelar"
               onClick={() => modalCancelarDatosUsuario()}
+              name=""
             >
               Cancelar
             </button>
             <button
               className="btnGuardar"
               onClick={() => modalGuardarDatosUsuario()}
+              name=""
             >
               Guardar
             </button>

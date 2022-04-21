@@ -26,6 +26,7 @@ function SidebarLateral({ setState , state}) {
           id="toDo"
           className=" boxBtnCarritoCompras"
           to="/Configuracion-de-Cuenta"
+          name=""
         >
           <Vistaprodcarrito
             listOrders={listOrders}
@@ -39,6 +40,7 @@ function SidebarLateral({ setState , state}) {
             <button
               className="btnCerrarSesion btnLimpiarCarrito"
               onClick={clearData}
+              name=""
             >
               Limpiar Carrito
             </button>

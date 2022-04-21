@@ -82,6 +82,7 @@ function ProductosComponentes() {
           type="button"
           className="boton-buscar"
           onClick={searchQueryHandler}
+          name=""
         >
           <FiSearch />
         </button>

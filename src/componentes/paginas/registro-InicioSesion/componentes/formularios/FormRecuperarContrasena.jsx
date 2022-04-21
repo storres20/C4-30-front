@@ -43,7 +43,7 @@ function FormRecuperarContrasena() {
       <section className="container">
         <div className="btnVolver">
           <Link to="/Inicio-Sesion">
-            <button type="button">
+            <button name="" type="button">
               <i className="uil uil-arrow-left"></i>
             </button>
           </Link>
@@ -71,7 +71,7 @@ function FormRecuperarContrasena() {
               />
             </label>
             <div className="btnsIngresarOtros">
-              <button type="submit">Enviar Clave</button>
+              <button name="" type="submit">Enviar Clave</button>
             </div>
           </div>
         </form>

@@ -14,6 +14,7 @@ function SidebarLateral({ state, setState }) {
           id="toDo"
           className=" boxBtnCarritoCompras"
           to="/Configuracion-de-Cuenta"
+          name=""
         >
           <Vistaprodcarrito state={state} setState={setState} />
         </button>

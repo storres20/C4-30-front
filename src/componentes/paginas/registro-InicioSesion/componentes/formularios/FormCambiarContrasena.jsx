@@ -50,7 +50,7 @@ function FormCambiarContrasena() {
       <section className="container">
         <div className="btnVolver">
           <Link to="/Inicio-Sesion">
-            <button type="button">
+            <button type="button" name="">
               <i className="uil uil-arrow-left"></i>
             </button>
           </Link>
@@ -88,7 +88,7 @@ function FormCambiarContrasena() {
               />
             </label>
             <div className="btnsIngresarOtros">
-              <button type="submit">Cambiar Contraseña</button>
+              <button name="" type="submit">Cambiar Contraseña</button>
             </div>
           </div>
         </form>

@@ -26,6 +26,7 @@ export default function VPSV({ prod, categorias }) {
 
             <button
               className="btnInfo"
+              name=""
               onClick={() =>
                 Swal.fire({
                   html: `<article class="modalDescripcion">

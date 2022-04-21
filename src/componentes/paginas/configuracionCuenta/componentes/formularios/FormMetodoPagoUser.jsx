@@ -328,10 +328,10 @@ function FormMetodoPagoUser() {
           </div>
         </div>
         <div className="btnsContainer">
-        <button className="btnCerrarSesion" onClick={() => modalCerrarSesionUsuario()}>Cerrar Sesión</button>
+        <button className="btnCerrarSesion" name="" onClick={() => modalCerrarSesionUsuario()}>Cerrar Sesión</button>
             <div>
-              <button className="btnCancelar" onClick={() => modalCancelarDatosUsuario()} >Cancelar</button>
-              <button className="btnGuardar" onClick={() => modalGuardarDatosUsuario()}>Guardar</button>
+              <button className="btnCancelar" name="" onClick={() => modalCancelarDatosUsuario()} >Cancelar</button>
+              <button className="btnGuardar" name="" onClick={() => modalGuardarDatosUsuario()}>Guardar</button>
             </div>
         </div>
       </div>

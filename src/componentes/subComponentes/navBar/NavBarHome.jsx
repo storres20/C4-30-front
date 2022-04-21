@@ -55,6 +55,7 @@ export default function NavBarHome({ user }) {
             type="button"
             className="boton-buscar"
             onClick={searchQueryHandler}
+            name=""
           >
             <FiSearch />
           </button>

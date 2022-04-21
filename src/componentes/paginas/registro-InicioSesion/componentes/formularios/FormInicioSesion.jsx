@@ -82,7 +82,7 @@ const Inicio = ({ isSelectedInicio }) => {
             </label>
           </div> */}
           <div className="btnsIngresar">
-            <button type="submit">Ingresar</button>
+            <button name="" type="submit">Ingresar</button>
           </div>
           <br />
           <div className="center">

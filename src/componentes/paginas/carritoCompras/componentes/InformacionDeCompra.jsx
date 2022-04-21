@@ -151,7 +151,7 @@ function FormCuentaUser({ state, user, setState }) {
                   </p>
                   {user.card_type && (
                     <label className="e-btn" htmlFor="radioVisa">
-                      <img src={`${tipo[user.card_type]}`} alt="Tarjeta-Visa" />
+                      <img src={`${tipo[user.card_type]}`} alt="Tarjeta" />
                     </label>
                   )}
                 </label>
@@ -212,12 +212,14 @@ function FormCuentaUser({ state, user, setState }) {
             <button
               className="btnCancelar"
               onClick={() => modalCancelarDatosUsuario()}
+              name=""
             >
               Cancelar
             </button>
             <button
               className="btnGuardar"
               onClick={() => modalGuardarDatosUsuario()}
+              name=""
             >
               Comprar
             </button>

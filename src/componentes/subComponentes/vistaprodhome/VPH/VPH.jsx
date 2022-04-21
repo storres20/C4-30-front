@@ -68,6 +68,7 @@ export default function VPH({ prod, categorias }) {
 
             <button
               className="btnInfo"
+              name=""
               onClick={() =>
                 Swal.fire({
                   html: `<article class="modalDescripcion">

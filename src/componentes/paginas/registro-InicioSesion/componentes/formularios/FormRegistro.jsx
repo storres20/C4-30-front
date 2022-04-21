@@ -84,7 +84,7 @@ const Registro = ({ isSelectedRegistro }) => {
             </label>
           </div> */}
           <div className="btnsIngresar">
-            <button type="submit">Registrarse</button>
+            <button name="" type="submit">Registrarse</button>
           </div>
         </form>
 

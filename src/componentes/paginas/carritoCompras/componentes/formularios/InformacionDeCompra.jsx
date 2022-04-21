@@ -78,7 +78,7 @@ function FormCuentaUser({user}) {
                 <label className="boxNumTarjeta textDatos-CC">
                   <p><span className="textDatos-CC">Número de Tarjeta :</span> **********5432</p>
                   <label className="e-btn" htmlFor="radioVisa">
-                    <img src={tipo.visa} alt="Tarjeta-Visa" />
+                    <img src={tipo.visa} alt="Tarjeta" />
                   </label>
                 </label>
               </label>
@@ -134,8 +134,8 @@ function FormCuentaUser({user}) {
               <h2>$16.80 </h2>
             </div>
             <div className="btnsCarritoCompras">
-              <button className="btnCancelar" onClick={() => modalCancelarDatosUsuario()} >Cancelar</button>
-              <button className="btnGuardar" onClick={() => modalGuardarDatosUsuario()}>Comprar</button>
+              <button className="btnCancelar" name="" onClick={() => modalCancelarDatosUsuario()} >Cancelar</button>
+              <button className="btnGuardar" name="" onClick={() => modalGuardarDatosUsuario()}>Comprar</button>
             </div>
           </div>
         </div>

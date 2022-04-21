@@ -24,7 +24,7 @@ const InicioRegistro = () => {
       <section className="container">
         <div className="btnVolver">
           <Link to="/">
-            <button type="button">
+            <button name="" type="button">
               <i className="uil uil-arrow-left"></i>
             </button>
           </Link>
