@@ -71,7 +71,7 @@ export default function NavBarHome({ user }) {
             <div className="logged-dropdown-mobile">
               <FiMenu />
               <div className="logged-mobile-dropdown-content">
-                <p className="link-usuario">usuario</p>
+                <p className="link-usuario">{user?.name}</p>
                 <a className="productos" href="/Productos">
                   Productos
                 </a>

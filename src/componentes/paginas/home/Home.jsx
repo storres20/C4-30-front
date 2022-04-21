@@ -70,7 +70,7 @@ export default function Home({user}) {
       .get("https://country-app-v3.herokuapp.com/api/v1/products")
       .then((data) => {
         //Data de Mas Vendidos; lo cual, es un RANDOM de 10 de la Data de Productos
-        var cont = 3;
+        var cont = 4;
         var shuffled = data.data.sort(function () {
           return 0.5 - Math.random();
         });

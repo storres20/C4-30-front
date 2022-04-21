@@ -61,8 +61,6 @@ function FormCuentaUser({ state, user, setState }) {
         );
       }
     });
-
-    //Limpiar el carrito una vez hecha la compra
   };
 
   const modalCancelarDatosUsuario = () => {
@@ -92,12 +90,13 @@ function FormCuentaUser({ state, user, setState }) {
 
   //Fecha para "Detalles del Pedido"
   const date = new Date();
-  const [day, month, year] = [
+  const [day, month, year, hour, minute] = [
     date.getDate(),
     date.getMonth() + 1,
     date.getFullYear(),
+    date.getHours(),
+    date.getMinutes()
   ];
-  const [hour, minute] = [date.getHours(), date.getMinutes()];
 
   //Get de los productos del carrito actual
   useEffect(() => {
@@ -112,11 +111,9 @@ function FormCuentaUser({ state, user, setState }) {
       });
   }, [state]);
 
-  //Suma del total de los productos del carrito
-
   useEffect(() => {
     setState({ ...state, amount: precio });
-  }, [precio]);
+  }, [precio, productos]);
 
   return (
     <section className="boxPrincipalDetalleCompra">
