@@ -90,7 +90,12 @@ Constará con una vista inicial que ofrece información general de la empresa; y
 
 
 ## 1.4  Interación con la página
-Se puede acceder a la página mediante el siguiente [link](karma-burger.netlify.app/). Recordar registrarse para poder interactuar con las funcionalidades del usuario. 
+
+|  PÁGINA WEB | DESCARGABLE (PWA) |
+|--|--| 
+| Se puede acceder a la página mediante el siguiente link. Recordar registrarse para poder interactuar con las funcionalidades del usuario. | Además, tiene la opción de descargase como PWA en cualquier dispositivo.|
+| [https://veride.netlify.app](https://veride.netlify.app/)| <img src="./src/imagenes/Readme/pwa.png" width="100" alt=''>|
+
 
 ***
 
