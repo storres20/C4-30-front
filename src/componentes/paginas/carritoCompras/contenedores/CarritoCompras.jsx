@@ -7,10 +7,10 @@ import Footer from "../../../subComponentes/footer/Footer";
 import InformacionDeCompra from "../componentes/InformacionDeCompra";
 import axios from "axios";
 
-function CarritoCompras({user}) {
+function CarritoCompras({ user }) {
   const [data, setData] = useState([]);
   const [state, setState] = useState({
-    amount: "12.0",
+    amount: 0,
     state: "Entregado",
     products: { list: [...data] },
   });
@@ -20,11 +20,13 @@ function CarritoCompras({user}) {
       window.location.pathname = "/inicio-sesion";
     }
   }, []);
-// console.log(user)
-
   useEffect(() => {
     axios
-      .get(`https://country-app-v3.herokuapp.com/orders/${localStorage.getItem("id")}`)
+      .get(
+        `https://country-app-v3.herokuapp.com/orders/${localStorage.getItem(
+          "id"
+        )}`
+      )
       .then(({ data }) => {
         setData(data);
         const new_data = data.map((item) => item.products);
@@ -32,12 +34,13 @@ function CarritoCompras({user}) {
       });
   }, []);
 
+
   return (
     <section className="flex-contenedorConfigCuenta">
-      <NavBarHome  user={user}/>
+      <NavBarHome user={user} />
       <div className="contenedorConfigCuenta flexBox-CG contenedorCarritoCompras">
-        <SidebarLateral />
-        <InformacionDeCompra state={state} user={user} />
+        <SidebarLateral setState={setState} state={state} />
+        <InformacionDeCompra state={state} user={user} setState={setState} />
       </div>
       <Footer />
     </section>

@@ -22,7 +22,6 @@ function FormVerificarCuenta() {
         })
       )
       .then((data) => {
-        console.log(data);
         localStorage.removeItem("verify_account");
         window.location.pathname = `/Cambiar-Contrasena/${data.data.token}`;
       })

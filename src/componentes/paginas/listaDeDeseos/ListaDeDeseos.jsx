@@ -13,7 +13,6 @@ function ListaDeDeseos() {
     axios
       .get("https://country-app-v3.herokuapp.com/categories")
       .then((data) => {
-        console.log(data.data);
 
         //Data de Categorias al useState
         setCategorias(data.data);
@@ -36,8 +35,6 @@ function ListaDeDeseos() {
     axios
       .get("https://country-app-v3.herokuapp.com/api/v1/products")
       .then((data) => {
-        console.log(data.data);
-
         //Data de Productos al useState
         setProductos(data.data);
       })
@@ -48,11 +45,13 @@ function ListaDeDeseos() {
     cargarProductos(); // Todos los Productos
   }, []);
 
+  const selectFavorites = productos.filter((item) => item.favorite === true);
+
   return (
     <section className="Flex-Deseos">
       <NavBarHome />
       <article className="article-productos">
-        <h2>Lista de Deseos ({productos.length})</h2>
+        <h2>Lista de Deseos ({selectFavorites.length})</h2>
         <div className="todosProductos">
           {" "}
           {/* container-productos */}

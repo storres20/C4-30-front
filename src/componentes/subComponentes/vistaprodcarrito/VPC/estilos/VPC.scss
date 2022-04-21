@@ -19,11 +19,11 @@
   }
   .contenedorVPC .contenedorImagen {
     position: relative;
-/*     margin-top: 16px;
+    /*     margin-top: 16px;
     margin-left: 17px;
     margin-bottom: 17px; */
     height: 107px;
-  } 
+  }
   .contenedorVPC img {
     /* border-top-left-radius: 16px; */
     /* border-top-right-radius: 16px; */
@@ -46,36 +46,37 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
-/*   .contenedorVPC .contenedorTexto {
+  /*   .contenedorVPC .contenedorTexto {
     margin: 0px 31px 0px 17px;
   } */
   .contenedorVPC .equis {
     font-family: "Nunito";
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 17px;
     line-height: 20px;
     color: #737373;
     font-family: "Montserrat";
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
     margin: 0;
-/*     margin-top: 7px;
+    /*     margin-top: 7px;
     margin-right: 8px; */
-    height: 12px;
+    height: 20px;
+    padding: 4px;
     cursor: pointer;
   }
   .contenedorVPC p {
@@ -109,8 +110,8 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .contenedorVPC h3 {
     font-family: "Nunito";
@@ -145,8 +146,8 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .contenedorVPC h6 {
     font-family: "Nunito";
@@ -162,27 +163,27 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .contenedorVPC .flex2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .contenedorVPC .flex3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
     background-color: #edeef2;
     border-radius: 100px;
     margin-right: 8px;
@@ -192,8 +193,8 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
   }
   .contenedorVPC .iconclock {
     width: 12px;
@@ -206,7 +207,8 @@
   }
   .contenedorVPC .icon {
     width: 12px;
-    height: auto;
+    height: 12px;
+    margin-top: 5px;
     margin-left: 10px;
     margin-right: 8px;
   }
@@ -243,7 +245,7 @@
   }
   .contenedorVPC .contenedorImagen {
     position: relative;
-/*     margin-top: 16px;
+    /*     margin-top: 16px;
     margin-left: 17px;
     margin-bottom: 17px; */
     height: 107px;
@@ -273,13 +275,13 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
-/*   .contenedorVPC .contenedorTexto {
+  /*   .contenedorVPC .contenedorTexto {
     margin: 0px 31px 0px 17px;
   } */
   .contenedorVPC .equis {
@@ -291,14 +293,14 @@
     color: #737373;
     font-family: "Montserrat";
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
     margin: 0;
     margin-top: 7px;
     margin-right: 8px;
@@ -336,8 +338,8 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .contenedorVPC h3 {
     font-family: "Nunito";
@@ -372,8 +374,8 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .contenedorVPC h6 {
     font-family: "Nunito";
@@ -389,27 +391,27 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .contenedorVPC .flex2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .contenedorVPC .flex3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
     background-color: #edeef2;
     border-radius: 100px;
     margin-right: 8px;
@@ -419,8 +421,8 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
   }
   .contenedorVPC .iconclock {
     width: 12px;
@@ -432,8 +434,9 @@
     height: 14px;
   }
   .contenedorVPC .icon {
+    margin-top: 5px;
     width: 12px;
-    height: auto;
+    height: 12px;
     margin-left: 10px;
     margin-right: 8px;
   }

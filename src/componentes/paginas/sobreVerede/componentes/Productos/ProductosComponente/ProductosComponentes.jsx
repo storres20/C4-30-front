@@ -15,8 +15,6 @@ function ProductosComponentes() {
     axios
       .get("https://country-app-v3.herokuapp.com/categories")
       .then((data) => {
-        console.log(data.data);
-
         //Data de Categorias al useState
         setCategorias(data.data);
       })
@@ -34,8 +32,6 @@ function ProductosComponentes() {
     axios
       .get("https://country-app-v3.herokuapp.com/api/v1/products")
       .then((data) => {
-        console.log(data.data);
-
         data = data.data;
 
         // Filtrado con el input del BUSCADOR
