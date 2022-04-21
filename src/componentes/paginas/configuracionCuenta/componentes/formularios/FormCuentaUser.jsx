@@ -11,31 +11,100 @@ function FormCuentaUser() {
   function onChange(checked) {
     console.log(`switch to ${checked}`);
   }
+  
+  
+  //only letters en "Names"
+  const handleName = (event) => {
+    //console.log(event);
+    
+    //filter only letters
+    let letters = event.target.value.replace(/[^A-Za-z \t\r\n\f]/g, '').replace(/(\..*)\./g, '$1');
+    
+    //input show only letters
+    event.target.value = letters;
+    
+    //update "state" with only letters
+    setState({ ...state, name: event.target.value });
+  }
+  
+  
+  //only letters en "LastNames"
+  const handleLastName = (event) => {
+    //console.log(event);
+    
+    //filter only letters
+    let letters = event.target.value.replace(/[^A-Za-z \t\r\n\f]/g, '').replace(/(\..*)\./g, '$1');
+    
+    //input show only letters
+    event.target.value = letters;
+    
+    //update "state" with only letters
+    setState({ ...state, last_name: event.target.value });
+  }
+  
+  
+  //only numbers en "Phone Number"
+  const handlePhone = (event) => {
+    //console.log(event);
+    
+    //filter only numbers
+    let numb = event.target.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
+    
+    //input show only numbers
+    event.target.value = numb;
+    
+    //update "state" with only numbers
+    setState({ ...state, phone: event.target.value });
+  }
+  
 
   const modalGuardarDatosUsuario = () => {
-    axios.put(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`, { user: { ...state } })
-
-    Swal.fire({
-      text: '¿Está seguro que desea actualizar sus datos?',
-      showCancelButton: true,
-      confirmButtonColor: '#57a057',
-      cancelButtonColor: '#d33',
-      cancelButtonText: 'Cancelar',
-      confirmButtonText: 'Confirmar',
-      allowOutsideClick: false,
-      stopKeydownPropagation: false,
-      showCloseButton: true,
-      closeButtonAriaLabel: 'cerrar alerta',
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: '¡Datos Actualizados con éxito!',
-          text: 'El pedido fue enviado a cocina con éxito',
-          icon: 'success',
-          showConfirmButton: false,
-          timer: 1500,
-        });
-/*         if (camposVacios() !== false) {
+    console.log(state);
+    
+    //
+    let inputs = state.name && state.last_name && state.phone;
+    
+    if (!inputs) {
+      Swal.fire({
+        title: '¡Data sin Actualizar!',
+        text: 'Completar los campos vacíos',
+        icon: 'warning',
+        showConfirmButton: false,
+        timer: 3000,
+      });
+    }
+    
+    else if (state.phone.length !== 9) {
+      console.log("phone wrong");
+      
+      Swal.fire({
+        title: '¡Data sin Actualizar!',
+        text: 'Número Telefónico debe tener 09 dígitos',
+        icon: 'warning',
+        showConfirmButton: false,
+        timer: 3000,
+      });
+    }
+    else{
+    
+    if(inputs){
+  
+      Swal.fire({
+        text: '¿Está seguro que desea actualizar sus datos?',
+        showCancelButton: true,
+        confirmButtonColor: '#57a057',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Confirmar',
+        allowOutsideClick: false,
+        stopKeydownPropagation: false,
+        showCloseButton: true,
+        closeButtonAriaLabel: 'cerrar alerta',
+      }).then((result) => {
+        if (result.isConfirmed) {
+        
+          axios.put(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`, { user: { ...state } })
+        
           Swal.fire({
             title: '¡Datos Actualizados con éxito!',
             text: 'El pedido fue enviado a cocina con éxito',
@@ -43,17 +112,27 @@ function FormCuentaUser() {
             showConfirmButton: false,
             timer: 1500,
           });
-        } */ /* else if (camposVacios() === false) {
-          Swal.fire({
-            title: '¡Data sin Actualizar!',
-            text: 'No se pudo completar la actualización por falta de datos',
-            icon: 'error',
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        } */
-      }
-    });
+          /* if (camposVacios() !== false) {
+            Swal.fire({
+              title: '¡Datos Actualizados con éxito!',
+              text: 'El pedido fue enviado a cocina con éxito',
+              icon: 'success',
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          } */ /* else if (camposVacios() === false) {
+            Swal.fire({
+              title: '¡Data sin Actualizar!',
+              text: 'No se pudo completar la actualización por falta de datos',
+              icon: 'error',
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          } */
+        }
+      });
+    }
+  }
   };
 
   const modalCancelarDatosUsuario = () => {
@@ -142,22 +221,23 @@ function FormCuentaUser() {
                 <span className="textInput">Nombres</span>
                 <input
                   className="inputCG"
-                  required="true"
+                  required={true}
                   type="text"
                   defaultValue={state.name}
                   placeholder="Ingresa tu nombre*"
-                  onChange={(event) => setState({ ...state, name: event.target.value })}
+                  onChange={(event) => handleName(event)}
                 />
               </label>
               <label>
                 <span className="textInput">Número Telefónico</span>
                 <input
                   className="inputCG"
-                  required="true"
+                  required={true}
                   type="text"
                   placeholder="Ingresa tu número telefónico*"
                   defaultValue={state.phone}
-                  onChange={(event) => setState({ ...state, phone: event.target.value })}
+                  maxLength="9"
+                  onChange={(event) => handlePhone(event)}
                 />
               </label>
             </div>
@@ -166,11 +246,11 @@ function FormCuentaUser() {
                 <span className="textInput">Apellidos</span>
                 <input
                   className="inputCG"
-                  required="true"
+                  required={true}
                   type="text"
                   placeholder="Ingresa tus apellidos*"
                   defaultValue={state.last_name}
-                  onChange={(event) => setState({ ...state, last_name: event.target.value })}
+                  onChange={(event) => handleLastName(event)}
                 />
               </label>
 
