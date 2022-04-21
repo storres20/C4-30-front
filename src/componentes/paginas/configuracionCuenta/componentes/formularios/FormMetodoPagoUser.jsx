@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import tipo from "../../constantes/images";
 import "antd/dist/antd.css";
 import "../../contenedores/ConfiguracionCuenta.scss";
+import "./extra.scss";
 import axios from "axios";
 
 function FormMetodoPagoUser() {
