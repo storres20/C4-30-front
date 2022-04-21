@@ -31,7 +31,7 @@ const Inicio = ({ isSelectedInicio }) => {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("user")) {
+    if (!localStorage.getItem("user")) {
       window.location.pathname = "/";
     }
   }, []);
