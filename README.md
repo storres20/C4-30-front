@@ -25,6 +25,7 @@
     - [4.2 Para el Diseño UX/UI](##4.2-Para-el-Diseño-UX/UI)
     - [4.3 Para la Frontend](##4.2-Para-la-Frontend)
     - [4.4 Para el despliegue](##4.2-Para-el-despliegue)
+    - [4.5 Para la organización](##4.5-Para-la-organización)
 
 * [5.Autores](#5-Autores)
 
@@ -108,7 +109,8 @@ Se plantearon como usuarios a todas las personas interesadas en una alimentació
 
 ## 2.2 Historias de Usuario ✍
 
-A continuación les mostraremos algunas de las historias de usuario para cada rol; si desea verlas completas puede acceder a [Este Link](https://www.figma.com/file/C9ugIa5aFFNbmdgjC1hPhf/Untitled?node-id=2%3A3)
+Para acceder a las historias de usuario y los criterios de aceptación para cada rol, por favor, puede acceder a [Este Link](https://www.figma.com/file/C9ugIa5aFFNbmdgjC1hPhf/Untitled?node-id=2%3A3)
+
 
 ***
 
@@ -237,7 +239,7 @@ A continuación se muestran las estadísticas del performance:
 
 # 4. Tecnologías empleadas 👩🏾‍💻
 
-### 4.1 Para la Backend:
+### 4.1 Para el Backend:
 
 - [Ruby:]()El lenguaje Ruby se utiliza principalmente en el desarrollo de aplicaciones web, pero también se puede utilizar para desarrollar otro tipo de aplicaciones de software, como veremos más adelante. Este lenguaje está disponible en plataformas como Windows, Linux y muchas otras, considerándose multiplataforma.
 
@@ -253,7 +255,7 @@ A continuación se muestran las estadísticas del performance:
 
 -   [PostImage:](https://postimages.org/)  Esta es simplemente una de las mejores soluciones que le permite alojar todo tipo de imágenes para sitios web, blogs y otras interfaces en el sitio web.
 
-## 4.3 Para la Frontend:
+## 4.3 Para el Frontend:
 
 -   [Sass:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
 
@@ -273,6 +275,11 @@ Netlify y después puedes [conectar](https://www.netlify.com/blog/2016/07/22/dep
 
 - [PWA:](https://www.iebschool.com/blog/progressive-web-apps-analitica-usabilidad/) Progressive web apps (PWA) o aplicación web progresiva es una solución basada en la web tradicional que todos conocemos. 
 
+### 4.4 Para la organización:
+
+- [Trello]()
+
+- [GitHub Projects]()
 
 ***
 
