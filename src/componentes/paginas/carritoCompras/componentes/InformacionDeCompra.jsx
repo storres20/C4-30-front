@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "antd/dist/antd.css";
 import "../contenedores/CarritoCompras.scss";
-import tipo from "../constantes/images";
+import tipo from "../../configuracionCuenta/constantes/images";
 import axios from "axios";
 
-function FormCuentaUser({ state, props, user }) {
-
+function FormCuentaUser({ state, user, setState }) {
   const [productos, setProductos] = useState([]);
-  
+
+  let precio;
+  if (productos.length !== 0) {
+    precio = productos
+      .map((p) => p.products.price * p.products.count)
+      .reduce((prev, curr) => prev + curr);
+  }
+
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate(`/historial-de-compras/${localStorage.getItem("id")}`);
-  };
   const modalGuardarDatosUsuario = () => {
-    axios.post(`https://country-app-v3.herokuapp.com/buy/${localStorage.getItem("id")}`, {
-      ...state,
-    });
-
     Swal.fire({
       text: "¿Está seguro de confirmar su compra?",
       showCancelButton: true,
@@ -40,13 +39,30 @@ function FormCuentaUser({ state, props, user }) {
           showConfirmButton: false,
           timer: 1500,
         });
-        handleClick(props);
+
+        axios
+          .post(
+            `https://country-app-v3.herokuapp.com/buy/${localStorage.getItem(
+              "id"
+            )}`,
+            {
+              ...state,
+              amount: precio,
+            }
+          )
+          .then(({ data }) => {
+            navigate(`/historial-de-compras/${data.id}`);
+          });
+
+        axios.put(
+          `https://country-app-v3.herokuapp.com/orders/clear/$${localStorage.getItem(
+            "id"
+          )}`
+        );
       }
     });
-    
+
     //Limpiar el carrito una vez hecha la compra
-      axios
-        .put(`https://country-app-v3.herokuapp.com/orders/clear/$${localStorage.getItem("id")}`,)
   };
 
   const modalCancelarDatosUsuario = () => {
@@ -76,23 +92,31 @@ function FormCuentaUser({ state, props, user }) {
 
   //Fecha para "Detalles del Pedido"
   const date = new Date();
-  const [day, month, year] = [date.getDate(), date.getMonth()+1, date.getFullYear()];
+  const [day, month, year] = [
+    date.getDate(),
+    date.getMonth() + 1,
+    date.getFullYear(),
+  ];
   const [hour, minute] = [date.getHours(), date.getMinutes()];
 
   //Get de los productos del carrito actual
   useEffect(() => {
     axios
-      .get(`https://country-app-v3.herokuapp.com/orders/${localStorage.getItem("id")}`)
+      .get(
+        `https://country-app-v3.herokuapp.com/orders/${localStorage.getItem(
+          "id"
+        )}`
+      )
       .then(({ data }) => {
         setProductos(data);
       });
-  }, []);
+  }, [state]);
 
   //Suma del total de los productos del carrito
-  let precio;
-  if (productos.length !== 0) {
-    precio = productos.map(p => p.products.price).reduce((prev, curr) => prev + curr);
-  };
+
+  useEffect(() => {
+    setState({ ...state, amount: precio });
+  }, [precio]);
 
   return (
     <section className="boxPrincipalDetalleCompra">
@@ -113,18 +137,23 @@ function FormCuentaUser({ state, props, user }) {
                   <span className="textDatos-CC">Nombres :</span> {user.name}
                 </p>
                 <p>
-                  <span className="textDatos-CC">Apellidos :</span>{user.last_name}
+                  <span className="textDatos-CC">Apellidos :</span>
+                  {user.last_name}
                 </p>
                 <p>
-                  <span className="textDatos-CC">Dirección :</span> {user.direction}
+                  <span className="textDatos-CC">Dirección :</span>{" "}
+                  {user.direction}
                 </p>
                 <label className="boxNumTarjeta textDatos-CC">
                   <p>
-                    <span className="textDatos-CC">Número de Tarjeta :</span>{user.card_number}
+                    <span className="textDatos-CC">Número de Tarjeta :</span>
+                    {user.card_number}
                   </p>
-                  <label className="e-btn" htmlFor="radioVisa">
-                    <img src={tipo.visa} alt="Tarjeta-Visa" />
-                  </label>
+                  {user.card_type && (
+                    <label className="e-btn" htmlFor="radioVisa">
+                      <img src={`${tipo[user.card_type]}`} alt="Tarjeta-Visa" />
+                    </label>
+                  )}
                 </label>
               </label>
             </div>
@@ -142,10 +171,12 @@ function FormCuentaUser({ state, props, user }) {
             <div>
               <label>
                 <p>
-                  <span className="textDatos-CC">Fecha :</span> {day}/{month}/{year}
+                  <span className="textDatos-CC">Fecha :</span> {day}/{month}/
+                  {year}
                 </p>
                 <p>
-                  <span className="textDatos-CC">Hora :</span> {hour}:{minute < 10 ? "0"+minute : minute} hs
+                  <span className="textDatos-CC">Hora :</span> {hour}:
+                  {minute < 10 ? "0" + minute : minute} hs
                 </p>
                 <div className="boxProductosDetallesCarritoCompras">
                   <table className="contenedorTablaProductos">
@@ -155,13 +186,16 @@ function FormCuentaUser({ state, props, user }) {
                         <th>Unidades</th>
                         <th className="precio">Precio($)</th>
                       </tr>
-                    {productos && productos.map((item) =>
-                      <tr>
-                        <td>{item.products.name}</td>
-                        <td>{item.products.count}</td>
-                        <td>{item.products.price}.00</td>
-                      </tr>
-                    )}
+                      {productos &&
+                        productos.map((item, index) => (
+                          <tr key={`${index}-${item?.id}`}>
+                            <td>{item.products.name}</td>
+                            <td>{item.products.count}</td>
+                            <td>
+                              {item.products.price * item.products.count}.00
+                            </td>
+                          </tr>
+                        ))}
                     </tbody>
                   </table>
                 </div>
@@ -172,7 +206,7 @@ function FormCuentaUser({ state, props, user }) {
         <div className="btnsContainer">
           <div className="boxPrecioTotalCompra">
             <h3>Precio Total</h3>
-            <h2>${precio ? precio+".00" : "0.00"}</h2>
+            <h2>$ {precio ? precio + ".00" : "0.00"}</h2>
           </div>
           <div className="btnsCarritoCompras">
             <button

@@ -14,14 +14,15 @@ export default function VPH({ prod, categorias }) {
   const [isHeart, setIsHeart] = useState(prod.favorite);
 
   const buttonHeart = () => {
-    axios.put(`https://country-app-v3.herokuapp.com/api/v1/products/${prod.id}`, {
-      products: {
-        favorite: isHeart,
-      },
-    });
+    axios.put(
+      `https://country-app-v3.herokuapp.com/api/v1/products/${prod.id}`,
+      {
+        products: {
+          favorite: isHeart,
+        },
+      }
+    );
   };
-
-  console.log(isHeart);
 
   const [isBag, setIsBag] = useState(false);
 
@@ -37,7 +38,7 @@ export default function VPH({ prod, categorias }) {
           state: "sin pagar",
           products: {
             ...prod,
-            count: 0,
+            count: 1,
           },
         }
       );
@@ -117,6 +118,9 @@ export default function VPH({ prod, categorias }) {
           </div>
           <div>
             <img
+              style={{
+                marginRight: `${prod.state !== "disponible" && "-5px"}`,
+              }}
               className="iconheart"
               src={isHeart === true ? heartbold : heart}
               alt="heart"
@@ -124,12 +128,14 @@ export default function VPH({ prod, categorias }) {
                 setIsHeart(!isHeart);
               }}
             />
-            <img
-              className="iconbag"
-              src={isBag ? bagbold : bag}
-              alt="bag"
-              onClick={buttonBag}
-            />
+            {prod.state === "disponible" && (
+              <img
+                className="iconbag"
+                src={isBag ? bagbold : bag}
+                alt="bag"
+                onClick={buttonBag}
+              />
+            )}
           </div>
         </div>
 

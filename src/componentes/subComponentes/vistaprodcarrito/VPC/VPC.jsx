@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import './estilos/VPC.scss'
+import "./estilos/VPC.scss";
 
 import imagen from "../imagenes/img.svg";
 import plus from "../imagenes/plus.svg";
@@ -11,31 +11,58 @@ import burger from "../imagenes/burger.svg";
 import pizza from "../imagenes/pizza.svg";
 import axios from "axios";
 
-export default function VPC({ products, id, setState = null, productosCarrito, setProductosCarrito }) {
-  const [isPM, setIsPM] = useState(products.count || 1);
+export default function VPC({
+  products,
+  id,
+  setState,
+  state,
+  productosCarrito,
+  setProductosCarrito,
+}) {
+  const [isPM, setIsPM] = useState(products.count);
+  const [categoria, setCategoria] = useState([]);
+
+  const cargarCategorias = () => {
+    axios
+      .get("https://country-app-v3.herokuapp.com/categories")
+      .then(({ data }) => {
+        //Data de Categorias al useState
+        const new_category = data.find((e) => e.id === products.category_id);
+        setCategoria(new_category);
+      })
+      .catch((error) => console.log(error));
+  };
+
   const buttonMinus = () => {
     //setIsMinus(current => !current)
-    setIsPM((current) => (current === 1 ? 1 : current - 1));
-    axios.post(`https://country-app-v3.herokuapp.com/orders/${id}/minus`, {
-      count: isPM,
-      product_id: products.id,
-      user_id: localStorage.getItem("id")
-    }).then(({ data }) => {
-      console.log(data)
-      setState(data)
-    });
+    setIsPM((current) => (current === 0 ? 0 : current - 1));
+    if (isPM === 0) return;
+
+    axios
+      .post(`https://country-app-v3.herokuapp.com/orders/${id}/minus`, {
+        count: isPM,
+        product_id: products.id,
+        user_id: localStorage.getItem("id"),
+      })
+      .then(({ data }) => {
+        const new_data = data.map((item) => item.products);
+        setState({ ...state, products: { list: new_data } });
+      });
   };
 
   const buttonPlus = () => {
     setIsPM((current) => current + 1);
-    axios.post(`https://country-app-v3.herokuapp.com/orders/${id}/aument`, {
-      count: isPM,
-      product_id: products.id,
-      user_id: localStorage.getItem("id")
-    }).then(({ data }) => {
-      console.log(data)
-      setState(data)
-    });
+    axios
+      .post(`https://country-app-v3.herokuapp.com/orders/${id}/aument`, {
+        count: isPM,
+        product_id: products.id,
+        user_id: localStorage.getItem("id"),
+      })
+      .then(({ data }) => {
+        const new_data = data.map((item) => item.products);
+
+        setState({ ...state, products: { list: new_data } });
+      });
   };
 
   const [isImg, setIsImg] = useState(false);
@@ -44,10 +71,21 @@ export default function VPC({ products, id, setState = null, productosCarrito, s
   };
 
   const handleDelete = () => {
-    axios.delete(`https://country-app-v3.herokuapp.com/orders/${id}`);
+    axios
+      .delete(`https://country-app-v3.herokuapp.com/orders/${id}`)
+      .then((data) => {
+        setProductosCarrito(productosCarrito.filter((p) => p.id !== id));
+        setState({ ...state })
+      });
+
     //Actualiza el estado del carrito y limpia el producto eliminado
-    setProductosCarrito(productosCarrito.filter((p) => p.id !== id));
   };
+
+  useEffect(() => {
+    cargarCategorias();
+  }, []);
+
+  console.log(categoria);
 
   return (
     <div className="contenedorVPC">
@@ -73,15 +111,15 @@ export default function VPC({ products, id, setState = null, productosCarrito, s
 
           <p>{products.description}</p>
 
-{/*           <div className="flex4">
+          {/*           <div className="flex4">
             <h5>Read more</h5>
             <img className="icondown" src={down} alt="down" />
           </div> */}
 
           <div className="flex2">
             <div className="flex3">
-              <img className="icon" src={burger} alt="burger" />
-              <h4>{products.category_id}</h4>
+              <img className="icon" src={categoria.image} alt="burger" />
+              <h4>{categoria.name}</h4>
             </div>
           </div>
 
