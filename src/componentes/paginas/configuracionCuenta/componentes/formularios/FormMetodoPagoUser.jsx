@@ -102,7 +102,6 @@ function FormMetodoPagoUser() {
         
           Swal.fire({
             title: '¡Datos Actualizados con éxito!',
-            text: 'El pedido fue enviado a cocina con éxito',
             icon: 'success',
             showConfirmButton: false,
             timer: 1500,
