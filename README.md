@@ -161,6 +161,13 @@ A continuación, le mostraremos el proceso y algunas imágenes de referencia par
 
 <div align="center">
 
+## 📌 Maquetación enviada al correo electrónico para el 'Código de verificación'
+
+<img src="./src/imagenes/Readme/verificar-correo.png" width="800" alt=''>
+</div>
+
+<div align="center">
+
 ## 📌 Configuración de Cuenta 
 
 <img src="./src/imagenes/Readme/Configuracion-Figma.png" width="800" alt=''>
