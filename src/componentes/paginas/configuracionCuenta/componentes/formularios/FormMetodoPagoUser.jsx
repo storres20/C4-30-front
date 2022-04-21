@@ -13,30 +13,92 @@ function FormMetodoPagoUser() {
     console.log(`switch to ${checked}`);
   }
 
+  
+  //only numbers en "Card Number"
+  const handleCardNumber = (event) => {
+    //console.log(event);
+    
+    //filter only numbers
+    let numb = event.target.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
+    
+    //input show only numbers
+    event.target.value = numb;
+    
+    //update "state" with only numbers
+    setState({ ...state, card_number: event.target.value });
+  }
+  
+  
+  //only numbers en "Expiration"
+  const handleExpiration = (event) => {
+    //console.log(event);
+    
+    //filter only numbers
+    let numb = event.target.value.replace(/[^0-9/]/g, '').replace(/(\..*)\./g, '$1');
+    
+    //input show only numbers
+    event.target.value = numb;
+    
+    if (event.target.value.length === 2 && event.target.value[1] !== "/") {
+      event.target.value = event.target.value + "/";
+    }
+    
+    else if (event.target.value.length === 2 &&event.target.value[1] === "/") {
+      event.target.value = event.target.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
+    }
+    
+    //update "state" with only numbers
+    setState({ ...state, expiration: event.target.value });
+  }
+  
+  
+  //only numbers en "CVV"
+  const handleCVV = (event) => {
+    //console.log(event);
+    
+    //filter only numbers
+    let numb = event.target.value.replace(/[^0-9/]/g, '').replace(/(\..*)\./g, '$1');
+    
+    //input show only numbers
+    event.target.value = numb;
+    
+    //update "state" with only numbers
+    setState({ ...state, cvv: event.target.value });
+  }
+  
+  
   const modalGuardarDatosUsuario = () => {
-    axios.put(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`, { user: { ...state } })
-
-    Swal.fire({
-      text: '¿Está seguro que desea actualizar sus datos?',
-      showCancelButton: true,
-      confirmButtonColor: '#57a057',
-      cancelButtonColor: '#d33',
-      cancelButtonText: 'Cancelar',
-      confirmButtonText: 'Confirmar',
-      allowOutsideClick: false,
-      stopKeydownPropagation: false,
-      showCloseButton: true,
-      closeButtonAriaLabel: 'cerrar alerta',
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: '¡Datos Actualizados con éxito!',
-          text: 'El pedido fue enviado a cocina con éxito',
-          icon: 'success',
-          showConfirmButton: false,
-          timer: 1500,
-        });
-/*         if (camposVacios() !== false) {
+    
+    // if every field is complete
+    let inputs = state.card_type && state.card_number && state.cvv && state.expiration;
+    
+    if (!inputs) {
+      Swal.fire({
+        title: '¡Data sin Actualizar!',
+        text: 'Completar los campos vacíos',
+        icon: 'warning',
+        showConfirmButton: false,
+        timer: 3000,
+      });
+    }
+    
+    else if (inputs) {
+      Swal.fire({
+        text: '¿Está seguro que desea actualizar sus datos?',
+        showCancelButton: true,
+        confirmButtonColor: '#57a057',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Confirmar',
+        allowOutsideClick: false,
+        stopKeydownPropagation: false,
+        showCloseButton: true,
+        closeButtonAriaLabel: 'cerrar alerta',
+      }).then((result) => {
+        if (result.isConfirmed) {
+        
+          axios.put(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`, { user: { ...state } })
+        
           Swal.fire({
             title: '¡Datos Actualizados con éxito!',
             text: 'El pedido fue enviado a cocina con éxito',
@@ -44,17 +106,30 @@ function FormMetodoPagoUser() {
             showConfirmButton: false,
             timer: 1500,
           });
-        } */ /* else if (camposVacios() === false) {
-          Swal.fire({
-            title: '¡Data sin Actualizar!',
-            text: 'No se pudo completar la actualización por falta de datos',
-            icon: 'error',
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        } */
-      }
-    });
+  /*         if (camposVacios() !== false) {
+            Swal.fire({
+              title: '¡Datos Actualizados con éxito!',
+              text: 'El pedido fue enviado a cocina con éxito',
+              icon: 'success',
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          } */ /* else if (camposVacios() === false) {
+            Swal.fire({
+              title: '¡Data sin Actualizar!',
+              text: 'No se pudo completar la actualización por falta de datos',
+              icon: 'error',
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          } */
+        }
+      });
+    }
+    
+    
+
+    
   };
 
   const modalCancelarDatosUsuario = () => {
@@ -198,10 +273,10 @@ function FormMetodoPagoUser() {
               <span className="textInput">N° de la tarjeta</span>
               <input
                 className="inputCG"
-                required="true"
+                required={true}
                 type="text"
                 defaultValue={state.card_number}
-                onChange={(event) => setState({ ...state, card_number: event.target.value }) }
+                onChange={(event) => handleCardNumber(event) }
                 placeholder="Ingrese n° de la tarjeta*"
               />
             </label>
@@ -213,10 +288,11 @@ function FormMetodoPagoUser() {
                 <span className="textInput">Expiración</span>
                 <input
                   className="inputCG"
-                  required="true"
+                  required={true}
                   type="email"
                   defaultValue={state.expiration}
-                  onChange={(event) => setState({ ...state, expiration: event.target.value }) }
+                  maxLength="5"
+                  onChange={(event) => handleExpiration(event) }
                   placeholder="Mes/Año*"
                 />
               </label>
@@ -224,10 +300,11 @@ function FormMetodoPagoUser() {
                 <span className="textInput">CVV</span>
                 <input
                   className="inputCG"
-                  required="true"
+                  required={true}
                   type="email"
                   defaultValue={state.cvv}
-                  onChange={(event) => setState({ ...state, cvv: event.target.value }) }
+                  maxLength="3"
+                  onChange={(event) => handleCVV(event) }
                   placeholder="CVV*"
                 />
               </label>
