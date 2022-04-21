@@ -12,30 +12,63 @@ function FormDireccionUser() {
     console.log(`switch to ${checked}`);
   }
 
+  //only letters en "Distrito"
+  const handleDistrito = (event) => {
+    //console.log(event);
+    
+    //filter only letters
+    let letters = event.target.value.replace(/[^A-Za-z \t\r\n\f]/g, '').replace(/(\..*)\./g, '$1');
+    
+    //input show only letters
+    event.target.value = letters;
+    
+    //update "state" with only letters
+    setState({ ...state, district: event.target.value });
+  }
+  
+  
   const modalGuardarDatosUsuario = () => {
-    axios.put(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`, { user: { ...state } })
-
-    Swal.fire({
-      text: '¿Está seguro que desea actualizar sus datos?',
-      showCancelButton: true,
-      confirmButtonColor: '#57a057',
-      cancelButtonColor: '#d33',
-      cancelButtonText: 'Cancelar',
-      confirmButtonText: 'Confirmar',
-      allowOutsideClick: false,
-      stopKeydownPropagation: false,
-      showCloseButton: true,
-      closeButtonAriaLabel: 'cerrar alerta',
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: '¡Datos Actualizados con éxito!',
-          icon: 'success',
-          showConfirmButton: false,
-          timer: 1500,
-        });
-      }
-    });
+  
+    // if every field is complete
+    let inputs = state.district && state.direction && state.house_number && state.reference_house;
+    
+    if (!inputs) {
+      Swal.fire({
+        title: '¡Data sin Actualizar!',
+        text: 'Completar los campos vacíos',
+        icon: 'warning',
+        showConfirmButton: false,
+        timer: 3000,
+      });
+    }
+    
+    else if (inputs) {
+      Swal.fire({
+        text: '¿Está seguro que desea actualizar sus datos?',
+        showCancelButton: true,
+        confirmButtonColor: '#57a057',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Confirmar',
+        allowOutsideClick: false,
+        stopKeydownPropagation: false,
+        showCloseButton: true,
+        closeButtonAriaLabel: 'cerrar alerta',
+      }).then((result) => {
+        if (result.isConfirmed) {
+        
+          axios.put(`https://country-app-v3.herokuapp.com/user/${localStorage.getItem("id")}`, { user: { ...state } })
+          
+          Swal.fire({
+            title: '¡Datos Actualizados con éxito!',
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
+    }
+    
   };
 
   const modalCancelarDatosUsuario = () => {
@@ -120,10 +153,10 @@ function FormDireccionUser() {
               <span className="textInput">Distrito </span>
               <input
                 className="inputCG"
-                required="true"
+                required={true}
                 type="text"
                 defaultValue={state.district}
-                onChange={(event) => setState({ ...state, district: event.target.value })}
+                onChange={(event) => handleDistrito(event)}
                 placeholder="Ingresa tu distrito*"
               />
             </label>
@@ -131,7 +164,7 @@ function FormDireccionUser() {
               <span className="textInput">N° Casa/Dpto</span>
               <input
                 className="inputCG"
-                required="true"
+                required={true}
                 type="text"
                 defaultValue={state.house_number}
                 onChange={(event) => setState({ ...state, house_number: event.target.value })}
@@ -144,7 +177,7 @@ function FormDireccionUser() {
               <span className="textInput">Dirección</span>
               <input
                 className="inputCG"
-                required="true"
+                required={true}
                 type="text"
                 defaultValue={state.direction}
                 onChange={(event) => setState({ ...state, direction: event.target.value })}
@@ -156,7 +189,7 @@ function FormDireccionUser() {
               <span className="textInput">Referencia </span>
               <input
                 className="inputCG"
-                required="false"
+                required={false}
                 type="text"
                 defaultValue={state.reference_house}
                 onChange={(event) => setState({ ...state, reference_house: event.target.value })}
