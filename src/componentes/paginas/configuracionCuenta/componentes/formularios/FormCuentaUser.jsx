@@ -59,9 +59,9 @@ function FormCuentaUser() {
   
 
   const modalGuardarDatosUsuario = () => {
-    console.log(state);
+    //console.log(state);
     
-    //
+    // if every field is complete
     let inputs = state.name && state.last_name && state.phone;
     
     if (!inputs) {
