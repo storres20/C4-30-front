@@ -6,7 +6,7 @@ import InfoSection from './componentes/Informacion';
 import Servicios from './componentes/Servicios';
 import Reconocimiento from './componentes/Reconocimiento';
 import Sucursales from './componentes/Sucursales';
-import Sidebar from './componentes/SidebarSobreVerede/Index';
+import Sidebar from './componentes/SidebarSobreVerede/index';
 import Productos from './componentes/Productos';
 
 function SobreVerede() {
