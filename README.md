@@ -46,6 +46,20 @@ El proyecto consiste en la realización de un ecommerce para el restaurante **Ve
 
 Constará con una vista inicial que ofrece información general de la empresa; y desde la cual se puede acceder a la sección de 'Inicio Sesión' y/o 'Registro'.
 
+<div align="center">
+
+| VIDEODEMOSTRACIÓN |  
+|--|
+| <img title='Javascript' src="https://www.freepnglogos.com/uploads/youtube-logo-png-images-0.png"   alt="Youtube" width="40" height="40"/> [Link de Youtube](https://www.youtube.com/watch?v=SdN3ATBP80g) |
+</div>
+
+<div align="center">
+
+| DEMO |  
+|--|
+| <img title='Javascript' src="./src/imagenes/LogoVeride/LogosSinFondo/Logo5.png"   alt="Veride" width="40" height="40"/> [Link del Despliegue](https://veride.netlify.app/) |
+</div>
+
 ## 1.2 Descripción de Roles
 
 <div align="center">
@@ -208,9 +222,10 @@ A continuación, le mostraremos el proceso y algunas imágenes de referencia par
 
 ## 3.3 Resultado Final 💁🏼
 
+
 ### 3.2.1 VideoDemostración:
 
-A continuación, se adjuntará una breve videodemostración del resultado final tanto en diseño como en funcionalidad. 
+A continuación, se adjuntará una breve [videodemostración](https://www.youtube.com/watch?v=SdN3ATBP80g) del resultado final tanto en diseño como en funcionalidad. 
 
 ### 3.2.2 Estadísticas PWA :
 
