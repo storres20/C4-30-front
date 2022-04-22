@@ -29,9 +29,9 @@ export default function VPHL({ id, amount, created_at, setState, state }) {
   return (
     <div className="contenedorVPHL">
       <div className="flex-VPHL">
-        <p className="equis" onClick={handleDelete}>
+{/*         <p className="equis" onClick={handleDelete}>
           X
-        </p>
+        </p> */}
         <div className="contenedorTextoVPHL" onClick={handleClick}>
           <div className="flex1">
             <div>
