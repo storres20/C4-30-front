@@ -38,7 +38,7 @@
 
 # 1. Veridē
 
-**Veridē** es un restaurante cuyo diferenciador es ofrecer platillos vegano-vegetarianos saludables yr ecomendado por especialistas asemejándose de los platillos cotidianos en comidas rápidas como: Pizzas, hamburguesas, sushi, postres, etc. 
+**Veridē** es un restaurante cuyo diferenciador es ofrecer platillos vegano-vegetarianos saludables recomendado por especialistas en nutrición; asemejándose a los platillos cotidianos en comidas rápidas como: Pizzas, hamburguesas, sushi, postres, etc. 
 
 ## 1.1  Descripción del Proyecto
 
