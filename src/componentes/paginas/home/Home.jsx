@@ -124,7 +124,7 @@ export default function Home({user}) {
       </article>
 
       <article className="article-productos">
-        <h2>Todos los productos ({productos.length})</h2>
+        <h2>Todos los productos</h2>
         <div className="todosProductos">
           {" "}
           {/* container-productos */}
