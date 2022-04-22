@@ -111,12 +111,16 @@ function FormDireccionUser() {
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: '¡La Sesión fue finalizada con éxito!',
-          text: 'Vuelva pronto a Veridé',
-          icon: 'success',
+          title: "¡La Sesión fue finalizada con éxito!",
+          text: "Vuelva pronto a Veridé",
+          icon: "success",
           showConfirmButton: false,
           timer: 1500,
         });
+        localStorage.removeItem("user");
+        setTimeout(() => {
+          window.location.pathname = "/";
+        }, 500);
       }
     });
   };

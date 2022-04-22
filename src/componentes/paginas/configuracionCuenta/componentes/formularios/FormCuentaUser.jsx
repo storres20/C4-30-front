@@ -107,7 +107,6 @@ function FormCuentaUser() {
         
           Swal.fire({
             title: '¡Datos Actualizados con éxito!',
-            text: 'El pedido fue enviado a cocina con éxito',
             icon: 'success',
             showConfirmButton: false,
             timer: 1500,
@@ -183,7 +182,7 @@ function FormCuentaUser() {
         });
         localStorage.removeItem("user");
         setTimeout(() => {
-          window.location.pathname = "/Sobre-Veride";
+          window.location.pathname = "/";
         }, 500);
       }
     });
