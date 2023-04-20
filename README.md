@@ -1,33 +1,33 @@
 ![](https://komarev.com/ghpvc/?username=Veride&color=yellow)
 
-## ÍNDICE
+## INDEX
 * [1.Veridē](#1-veridē)
-  - [1.1 Descripción del Proyecto](##1.1-Descripción-del-Proyecto)
-  - [1.2 Descripción de Roles](##1.2-Descripción-de-Roles)
-  - [1.3 Vistas según el Rol](##1.3-Vistas-según-el-Rol)
-  - [1.4 Interación con la página](##1.4-Interación-con-la-página)
+  - [1.1 Project Description](##1.1-Project-Description)
+  - [1.2 Role Description](##1.2-Role-Description)
+  - [1.3 Views according to Role](##1.3-Views-according-to-Role)
+  - [1.4 Interaction with the page](##1.4-Interaction-with-the-page)
 
-* [2.Estudio de Usuario](#2-Estudio-de-Usuario)
-    - [2.1 Descripción general](##2.1-Descripción-general)
-    - [2.2 Historias de Usuario ](##2.1-Historias-de-Usuario)
+* [2.User Study](#2-User-Study)
+    - [2.1 General Description](##2.1-General-Description)
+    - [2.2 User Stories ](##2.1-User-Stories)
 
-* [3.Realización del Proyecto](#3-Realización-del-Proyecto)
+* [3.Project implementation](#3-Project-implementation)
     - [3.1 MER](##3.1-MER)
-    - [3.2 Diseño ](##2.1-Diseño)
+    - [3.2 Design ](##2.1-Design)
         - [3.2.1 Wireframe ](##3.2.1-Wireframe)
-        - [3.2.2 Prototipo de Alta Fidelidad ](##3.2.2-Prototipo-de-Alta-Fidelidad)
-    - [3.3 Resultado Final ](##3.3-Resultado-Final)
-         - [3.3.1 VideoDemostración ](##3.2.3-VideoDemostración)
-         - [3.3.1 Estadísticas PWA ](##3.2.3-Estadísticas-PWA)
+        - [3.2.2 High Fidelity Prototype ](##3.2.2-High-Fidelity-Prototype)
+    - [3.3 Final Result ](##3.3-Final-Result)
+         - [3.3.1 VideoDemo ](##3.2.3-VideoDemo)
+         - [3.3.1 PWA statistics ](##3.2.3-PWA-statistics)
 
-* [4.Tecnologías empleadas](#4-Tecnologías-empleadas)
-    - [4.1 Para la Backend](##4.1-Para-la-Backend)
-    - [4.2 Para el Diseño UX/UI](##4.2-Para-el-Diseño-UX/UI)
-    - [4.3 Para la Frontend](##4.2-Para-la-Frontend)
-    - [4.4 Para el despliegue](##4.2-Para-el-despliegue)
-    - [4.5 Para la organización](##4.5-Para-la-organización)
+* [4.Technologies used](#4-Tecnologías-empleadas)
+    - [4.1 For Backend](##4.1-For-Backend)
+    - [4.2 For UX/UI](##4.2-For-UX/UI)
+    - [4.3 For Frontend](##4.2-For-Frontend)
+    - [4.4 For deploy](##4.2-For-deploy)
+    - [4.5 For organization](##4.5-For-organization)
 
-* [5.Autores](#5-Autores)
+* [5.Authors](#5-Authors)
 
 ***
 
@@ -38,17 +38,17 @@
 
 # 1. Veridē
 
-**Veridē** es un restaurante cuyo diferenciador es ofrecer platillos vegano-vegetarianos saludables recomendado por especialistas en nutrición; asemejándose a los platillos cotidianos en comidas rápidas como: Pizzas, hamburguesas, sushi, postres, etc. 
+**Veridē** is a restaurant whose differentiator is to offer healthy vegan-vegetarian dishes recommended by nutrition specialists; resembling everyday fast food dishes such as: pizzas, hamburgers, sushi, desserts, etc. 
 
-## 1.1  Descripción del Proyecto
+## 1.1 Project Description
 
-El proyecto consiste en la realización de un ecommerce para el restaurante **Veridē**, enfocada para los siguientes roles: 🤵 Visitante y 👩 Usuario; con la finalidad de brindarles una herramienta que facilite sus actividades.
+The project consists of the realization of an ecommerce for the restaurant **Veridē**, focused for the following roles: 🤵 Visitor and 👩 User; in order to provide them with a tool that facilitates their activities.
 
-Constará con una vista inicial que ofrece información general de la empresa; y desde la cual se puede acceder a la sección de 'Inicio Sesión' y/o 'Registro'.
+It will consist of an initial view that offers general information about the company; and from which you can access the 'Login' and/or 'Register' section.
 
 <div align="center">
 
-| VIDEODEMOSTRACIÓN |  
+| VIDEODEMO |  
 |--|
 | <img title='Javascript' src="https://www.freepnglogos.com/uploads/youtube-logo-png-images-0.png"   alt="Youtube" width="40" height="40"/> [Link de Youtube](https://www.youtube.com/watch?v=SdN3ATBP80g) |
 </div>
@@ -60,25 +60,25 @@ Constará con una vista inicial que ofrece información general de la empresa; y
 | <img title='Javascript' src="./src/imagenes/LogoVeride/LogosSinFondo/Logo5.png"   alt="Veride" width="40" height="40"/> [Link del Despliegue](https://veride.netlify.app/) |
 </div>
 
-## 1.2 Descripción de Roles
+## 1.2 Role Description
 
 <div align="center">
 
-| ROLES | DESCRIPCIÓN | 
+| ROLES | DESCRIPTION | 
 |--|--| 
-| 🤵 Visitante | Tendrá la opción de conocer sobre **Veridē** sin embargo deberá registrarse para tener los beneficios de un usuario.| 
-| 👩 Usuario | Tendrá los beneficios de un usuario registrado, entre los mas importantes, el poder realizar el flujo de compra con seguridad. |
+| 🤵 Visitor | You will have the option to learn about **Veridē** however you will need to register to have the benefits of a user. | 
+| 👩 User | You will have the benefits of a registered user, among the most important, being able to make the purchase flow with security. |
 
 </div>
 
 
 
-## 1.3  Vistas según el Rol
+## 1.3  Views according to Role
 
 
 <div align="center">
 
-## 🤵 Visitante
+## 🤵 Visitor
 
 | N° | SUB VISTAS | DESCRIPCIÓN |
 |--|--|--|
